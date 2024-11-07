@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.env_checker import check_env
 from stable_baselines3.common.callbacks import EvalCallback, StopTrainingOnRewardThreshold, CallbackList
-from end_of_episode_callback import CustomCallback
+from ChangeEnvAfterEpisode import EndofEpisodeReward, Demands
 import torch as th
 
 import sys
@@ -56,22 +56,25 @@ def train_agent_single_config(configuration_file_train, configuration_file_eval,
         resolution=64,
         useRayCasts=False, # set to True if you want to use raycasts
         no_graphics= not watch_eval, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=2.0, # the speed at which the simulation runs
+        timescale=1.0, # the speed at which the simulation runs
         log_folder = "aailogseval" # env logs eval
     )
     print("env eval created")
+    evaluation_set = [Demands(1, 2, 0, 0), Demands(0.1, 2, 0, 0), Demands(1, 1, 0, 1), Demands(1, 5, 0.5, 0), Demands(1, 2, 1, 0)]
     env_train = UnityToGymWrapper(aai_env_train, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
     env_eval = UnityToGymWrapper(aai_env_eval, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
     # Create aai_env_eval_new type using AnimalAIWrapper, fulfilling same interface, same as UnityToGymWrapper, 
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=0.7, verbose=1)
-    eval_callback = EvalCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=3000, deterministic=True, render=False)
-    episode_callback = CustomCallback()
-    callback_list = CallbackList([eval_callback, episode_callback])
-
+    callback_for_eval = EndofEpisodeReward(aai_env = aai_env_eval, config = configuration_file_eval, instances = evaluation_set)
+    eval_callback = EvalCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=3000, deterministic=True)
+    episode_callback = EndofEpisodeReward(aai_env = aai_env_train, config = configuration_file_train, instances = evaluation_set)
+    callback_list_train = CallbackList([eval_callback, episode_callback])
+    # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
+   
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function
-    model = PPO("CnnPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1) # the PPO agent
+    model = PPO("CnnPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1, normalize_advantage=False) # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
     # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
-    model.learn(num_steps, reset_num_timesteps=False, callback=callback_list) # the training loop
+    model.learn(num_steps, reset_num_timesteps=False, callback=callback_list_train) # the training loop
     env_train.close()
     env_eval.close()
 
@@ -81,4 +84,4 @@ env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
 configuration_file_train = r"example.yaml"
 configuration_file_eval = r"example_eval.yaml"
 
-rewards = train_agent_single_config(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e4)
+rewards = train_agent_single_config(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e5)
