@@ -100,5 +100,3 @@ class EndofEpisodeReward(BaseCallback):
         This event is triggered before exiting the `learn()` method.
         """
         pass
-    
-class EndofEpisodeRewardEval()
