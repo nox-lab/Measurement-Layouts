@@ -2,12 +2,12 @@
 import sys
 import random
 import os
-
+from generating_configs import gen_config_from_demands_batch_random
 from animalai.environment import AnimalAIEnvironment
 from mlagents_envs.exception import UnityCommunicationException
 
 # IMPORTANT! Replace configuration file with the correct path here:
-configuration_file = r"example.yaml"
+configuration_file = r"AAIO_configs\trainset.yaml"
 
 with open(configuration_file) as f:
     print(f.read()) 
