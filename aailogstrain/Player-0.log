@@ -10,11 +10,11 @@ Direct3D:
     VRAM:     1906 MB
     Driver:   32.0.15.5613
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.155 seconds
+- Completed reload, in  0.121 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 6.708900 ms
+UnloadTime: 1.436800 ms
 Environment loaded with options:
   PlayerMode: False
   useCamera: True
@@ -42,13 +42,18 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -61,7 +66,18 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -74,20 +90,36 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -100,7 +132,18 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -118,12 +161,13 @@ Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -136,6 +180,14 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
@@ -153,19 +205,35 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -178,7 +246,18 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -191,20 +270,36 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -217,7 +312,18 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -235,12 +341,14 @@ Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -256,13 +364,15 @@ Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -276,12 +386,10 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -294,7 +402,18 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -307,20 +426,43 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -333,7 +475,11 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -351,12 +497,13 @@ Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -369,8 +516,19 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -383,1818 +541,35 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Episode Begin
-Value of showNotification: False
-Current Pass Mark: 0
-Number of Goals Collected: 0
-Resetting Arena
-Spawnables has 4 entries
-Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2216,7 +591,7 @@ Memory Statistics:
 [ALLOC_TEMP_TLS] TLS Allocator
   StackAllocators : 
     [ALLOC_TEMP_MAIN]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 3176 frames, [16.0 KB-32.0 KB]: 240 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [2.0 KB-4.0 KB]: 22046 frames, [4.0 KB-8.0 KB]: 7243 frames, [8.0 KB-16.0 KB]: 123 frames, [16.0 KB-32.0 KB]: 1399 frames, [2.0 MB-4.0 MB]: 1 frames
       Initial Block Size 4.0 MB
       Current Block Size 4.0 MB
       Peak Allocated Bytes 2.3 MB
@@ -2314,7 +689,7 @@ Memory Statistics:
     [ALLOC_TEMP_UnityGfxDeviceWorker]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 11.0 KB
+      Peak Allocated Bytes 16.6 KB
       Overflow Count 0
     [ALLOC_TEMP_AssetGarbageCollectorHelper] x 11
       Initial Block Size 64.0 KB
@@ -2387,22 +762,22 @@ Memory Statistics:
       Peak Allocated Bytes 54 B
       Overflow Count 0
 [ALLOC_DEFAULT] Dual Thread Allocator
-  Peak main deferred allocation count 108
+  Peak main deferred allocation count 105
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1
-      Peak Allocated bytes 2.3 MB
+      Peak Allocated bytes 3.0 MB
     [ALLOC_DEFAULT_MAIN]
-      Peak usage frame count: [8.0 MB-16.0 MB]: 3417 frames
+      Peak usage frame count: [8.0 MB-16.0 MB]: 30812 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 14.1 MB
+      Peak Allocated memory 15.1 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
-      Peak usage frame count: [16.0 MB-32.0 MB]: 3417 frames
+      Peak usage frame count: [16.0 MB-32.0 MB]: 30812 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 18.3 MB
+      Peak Allocated memory 18.5 MB
       Peak Large allocation bytes 16.0 MB
 [ALLOC_TEMP_JOB_1_FRAME]
   Initial Block Size 2.0 MB
@@ -2416,7 +791,7 @@ Memory Statistics:
   Overflow Count (full) 0
 [ALLOC_TEMP_JOB_4_FRAMES (JobTemp)]
   Initial Block Size 2.0 MB
-  Used Block Count 3
+  Used Block Count 2
   Overflow Count (too large) 0
   Overflow Count (full) 0
 [ALLOC_TEMP_JOB_ASYNC (Background)]
@@ -2425,37 +800,37 @@ Memory Statistics:
   Overflow Count (too large) 0
   Overflow Count (full) 0
 [ALLOC_GFX] Dual Thread Allocator
-  Peak main deferred allocation count 1
+  Peak main deferred allocation count 3
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1
-      Peak Allocated bytes 2.3 MB
+      Peak Allocated bytes 3.0 MB
     [ALLOC_GFX_MAIN]
-      Peak usage frame count: [1.0 MB-2.0 MB]: 3416 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [1.0 MB-2.0 MB]: 30811 frames, [2.0 MB-4.0 MB]: 1 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
       Peak Allocated memory 2.7 MB
       Peak Large allocation bytes 0 B
     [ALLOC_GFX_THREAD]
-      Peak usage frame count: [256.0 KB-0.5 MB]: 936 frames, [0.5 MB-1.0 MB]: 2481 frames
+      Peak usage frame count: [256.0 KB-0.5 MB]: 1 frames, [0.5 MB-1.0 MB]: 30811 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 0.6 MB
+      Peak Allocated memory 0.9 MB
       Peak Large allocation bytes 0 B
 [ALLOC_CACHEOBJECTS] Dual Thread Allocator
   Peak main deferred allocation count 2
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1
-      Peak Allocated bytes 2.3 MB
+      Peak Allocated bytes 3.0 MB
     [ALLOC_CACHEOBJECTS_MAIN]
-      Peak usage frame count: [16.0 MB-32.0 MB]: 3417 frames
+      Peak usage frame count: [16.0 MB-32.0 MB]: 30812 frames
       Requested Block Size 4.0 MB
       Peak Block count 5
       Peak Allocated memory 29.0 MB
       Peak Large allocation bytes 11.8 MB
     [ALLOC_CACHEOBJECTS_THREAD]
-      Peak usage frame count: [1.0 MB-2.0 MB]: 3416 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [1.0 MB-2.0 MB]: 30811 frames, [2.0 MB-4.0 MB]: 1 frames
       Requested Block Size 4.0 MB
       Peak Block count 1
       Peak Allocated memory 2.8 MB
@@ -2465,15 +840,15 @@ Memory Statistics:
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1
-      Peak Allocated bytes 2.3 MB
+      Peak Allocated bytes 3.0 MB
     [ALLOC_TYPETREE_MAIN]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 3417 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 30812 frames
       Requested Block Size 2.0 MB
       Peak Block count 1
       Peak Allocated memory 4.7 KB
       Peak Large allocation bytes 0 B
     [ALLOC_TYPETREE_THREAD]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 3417 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 30812 frames
       Requested Block Size 2.0 MB
       Peak Block count 1
       Peak Allocated memory 5.4 KB

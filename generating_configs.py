@@ -1,5 +1,5 @@
 from typing import Callable
-
+from demands import Demands
 import numpy as np
 
 gen_config_example_deleteme: Callable[[str], str] = (
@@ -26,7 +26,7 @@ arenas:
 
 
 def gen_config_from_demands(
-    reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, filename: str,
+    reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number : int, filename: str,
 ) -> str:
     # Validate
     assert reward_size >= 0 and reward_size <= 1.9
@@ -51,10 +51,12 @@ def gen_config_from_demands(
       agent_rotation = 90*x_pos + 90
     else:
       agent_rotation = 90*x_pos + 180
-    generated_config = f"""
+      
+    initial_part = """
     !ArenaConfig
-    arenas:
-      0: !Arena
+    arenas:"""
+    generated_config = f"""
+      {env_number}: !Arena
         timeLimit: {time_limit}
         items:
         - !Item
@@ -69,7 +71,27 @@ def gen_config_from_demands(
           positions:
           - !Vector3 {{x: 20, y: 0, z: 20}}
           rotations: [{agent_rotation}]
-    """
+        """
     with open(filename, "w") as text_file:
-      text_file.write(generated_config)
+      text_file.write(initial_part + generated_config)
     return generated_config
+  
+def gen_config_from_demands_batch(envs : list[Demands], filename: str) -> str:
+  new_conf = ""
+  initial_part = """
+    !ArenaConfig
+    arenas:"""
+  for i, env in enumerate(envs):
+    env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, 100, i, f"temp")
+    new_conf += env_conf
+  with open(filename, "w") as text_file:
+    text_file.write(initial_part + new_conf)
+  return new_conf
+np.random.seed(0)
+
+  
+def gen_config_from_demands_batch_random(n_envs: int, filename: str) -> tuple[str, Demands]:
+  demands_list = []
+  for i in range(n_envs):
+    demands_list.append(Demands(np.random.uniform(0,1.9), np.random.uniform(0,5.3), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
+  return gen_config_from_demands_batch(demands_list, "example.yaml"), demands_list

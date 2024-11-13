@@ -1,26 +1,83 @@
-!ArenaConfig
-arenas:
-  0: !Arena
-    passMark: 0
-    timeLimit: 30
-    items:
-    - !Item
-      name: Agent
-      positions:
-      - !Vector3 {x: 20.0, y: 0.0, z: 13.0}      
-      rotations:
-      - 0
-      sizes:
-      - !Vector3 {x: 1.0, y: 1.0, z: 1.0}
-      colors:
-      - !RGB {r: 0, g: 0, b: 0}
-    - !Item
-      name: GoodGoal
-      positions:
-      - !Vector3 {x: 20.0, y: 0.0, z: 20.0}
-      rotations:
-      - 0
-      sizes:
-      - !Vector3 {x: 1.0, y: 1.0, z: 1.0}
-      colors:
-      - !RGB {r: 0, g: 256, b: 0}
+
+    !ArenaConfig
+    arenas:
+      0: !Arena
+        timeLimit: 100
+        items:
+        - !Item
+          name: GoodGoal
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 22}
+          rotations: [0]
+          sizes:
+          - !Vector3 {x: 1, y: 1, z: 1}
+        - !Item
+          name: Agent
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 20}
+          rotations: [0]
+        
+      1: !Arena
+        timeLimit: 100
+        items:
+        - !Item
+          name: GoodGoal
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 22}
+          rotations: [0]
+          sizes:
+          - !Vector3 {x: 0.1, y: 0.1, z: 0.1}
+        - !Item
+          name: Agent
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 20}
+          rotations: [0]
+        
+      2: !Arena
+        timeLimit: 100
+        items:
+        - !Item
+          name: GoodGoal
+          positions:
+          - !Vector3 {x: 21, y: 0, z: 20}
+          rotations: [0]
+          sizes:
+          - !Vector3 {x: 1, y: 1, z: 1}
+        - !Item
+          name: Agent
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 20}
+          rotations: [90]
+        
+      3: !Arena
+        timeLimit: 100
+        items:
+        - !Item
+          name: GoodGoal
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 25}
+          rotations: [0]
+          sizes:
+          - !Vector3 {x: 1, y: 1, z: 1}
+        - !Item
+          name: Agent
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 20}
+          rotations: [90]
+        
+      4: !Arena
+        timeLimit: 100
+        items:
+        - !Item
+          name: GoodGoal
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 22}
+          rotations: [0]
+          sizes:
+          - !Vector3 {x: 1, y: 1, z: 1}
+        - !Item
+          name: Agent
+          positions:
+          - !Vector3 {x: 20, y: 0, z: 20}
+          rotations: [180]
+        

@@ -2,19 +2,14 @@ from stable_baselines3.common.callbacks import BaseCallback
 import numpy as np
 import random
 from generating_configs import gen_config_from_demands
-class Demands():
-    def __init__(self, reward_size, reward_distance, reward_behind, Xpos):
-        self.reward_size = reward_size
-        self.reward_distance = reward_distance
-        self.reward_behind = reward_behind
-        self.Xpos = Xpos
+from demands import Demands
 class EndofEpisodeReward(BaseCallback):
     """
     A custom callback that derives from ``BaseCallback``.
 
     :param verbose: (int) Verbosity level 0: not output 1: info 2: debug
     """
-    def __init__(self, aai_env, config : str, instances : list[Demands] = None, verbose=0):
+    def __init__(self, aai_env, config : str = None, instances : list[Demands] = None, verbose=0):
         super(EndofEpisodeReward, self).__init__(verbose)
         # Those variables will be accessible in the callback
         # (they are defined in the base class)
@@ -69,6 +64,8 @@ class EndofEpisodeReward(BaseCallback):
         if final_score < -0.9 and self.num_episodes < 100 and not self.instances:
             return True
         print(final_score)
+        print(self.aai_env)
+        
         instance_point = self.num_episodes % len(self.instances)
         if not self.instances:
             self.num_episodes = 0
