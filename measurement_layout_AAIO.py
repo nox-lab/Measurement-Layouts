@@ -2,19 +2,9 @@
 import pymc as pm
 import numpy as np
 import arviz as az
-import random as rm
-from scipy import stats
-import pandas as pd
 import matplotlib.pyplot as plt
-from IPython.display import Image
 from typing import Callable
 import numpy.typing as npt
-import graphviz
-import pytensor.tensor as pt
-import sys
-from io import StringIO
-
-from pytensor import function
 from pytensor.printing import Print
 
 includeIrrelevantFeatures = True
