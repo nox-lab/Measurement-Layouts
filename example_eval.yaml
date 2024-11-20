@@ -18,7 +18,7 @@
           rotations: [0]
         
       1: !Arena
-        timeLimit: 100
+        timeLimit: 10
         items:
         - !Item
           name: GoodGoal
@@ -50,7 +50,7 @@
           rotations: [90]
         
       3: !Arena
-        timeLimit: 100
+        timeLimit: 10
         items:
         - !Item
           name: GoodGoal
@@ -66,7 +66,7 @@
           rotations: [90]
         
       4: !Arena
-        timeLimit: 100
+        timeLimit: 10
         items:
         - !Item
           name: GoodGoal
