@@ -12,11 +12,11 @@ includeNoise=True
 environmentData = dict()
 abilityMax = {
     "navigationAbility": 5.3,
-    "visualAbility": 1000,
+    "visualAbility": 10,
 }
 abilityMin = {
     "navigationAbility": 0.0,
-    "visualAbility": 0.0,
+    "visualAbility": 1e-6,
 }
 def rbf_kernel(X, length_scale=1.0):
     """
@@ -40,7 +40,7 @@ def rbf_kernel(X, length_scale=1.0):
 def margin(a, b):
   return a - b
 
-def scaledBeta(name, a, b, min, max, shape):
+def scaledBeta(name, a, b, min, max, shape=None):
 
   beta = pm.Beta(f"{name}_raw", a, b, shape = shape)
   print(beta.shape)
@@ -59,8 +59,8 @@ def setupModel(taskResults, cholesky):
       if includeNoise:
         sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
       else:
-        rightLeftEffect = pm.Deterministic("rightLeftEffect", 0)
-      sigma_vis = pm.HalfNormal("sigma_vis", sigma=50)
+        sigma_performance = 0
+      sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
       ability_visual_raw = pm.GaussianRandomWalk("ability_visual_raw", mu = 0, sigma = sigma_vis, shape = T)
@@ -80,12 +80,9 @@ def setupModel(taskResults, cholesky):
         rightLeftEffect = 0
 
       # Performance
-      apparent_size = pm.Deterministic("apparent_size", demands_distance/demands_size)
-      apparent_size_print = Print("apparent_size_print")(apparent_size)
-      ability_visual_print = Print("ability_visual_print")(ability_visual)
       navigation_performance = pm.Deterministic("navigation_performance", logistic(performance_from_capability_and_demand_batch(ability_nav, demands_distance*(1/2 * demands_behind + 1)) + rightLeftEffect))
-      visual_performance = pm.Deterministic("visual_performance", logistic(performance_from_capability_and_demand_batch(np.log(ability_visual), np.log(apparent_size))))
-      task_performance = pm.Bernoulli("task_performance", p=(1 - sigma_performance)*(navigation_performance*visual_performance) + sigma_performance*1, observed=taskResults)
+      visual_performance = pm.Deterministic("visual_performance", logistic(performance_from_capability_and_demand_batch(np.log(ability_visual), np.log(demands_distance/demands_size))))
+      task_performance = pm.Bernoulli("task_performance", p=(1 - sigma_performance)*(navigation_performance*visual_performance) + sigma_performance*0.5, observed=taskResults)
     return m
 
 def setupModelSingle(taskResults):
@@ -117,7 +114,7 @@ def setupModelSingle(taskResults):
       ##Performance
       #navigationP = pm.Deterministic("navigationP", logistic(margin(navigationAbility, rewardDistance)))
       navigationP = pm.Deterministic("navigationP", logistic(margin(navigationAbility, rewardDistance*(rewardBehind*0.5+1.0)) + rightLeftEffect))  # Including rewardBehind (multiplies by 1.5 if behind) and rightLeftEffect
-      visualP = pm.Deterministic("visualP", logistic(margin(visualAbility, rewardSize)))
+      visualP = pm.Deterministic("visual_performance", logistic(margin(np.log(visualAbility), np.log(rewardDistance/rewardSize))))
 
 
       if includeNoise :
@@ -141,7 +138,7 @@ def logistic(x):
 
 if __name__ == "__main__":
   T = 50  # number of time steps
-  N = 500  # number of samples
+  N = 250  # number of samples
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -152,7 +149,7 @@ if __name__ == "__main__":
   covar_matrix = rbf_kernel(time_steps, length_scale = 10)
   cholesky_matrix = np.linalg.cholesky(covar_matrix + np.eye(T)*0.0000001)
   capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
-  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*500
+  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*10
   capability_bias = logistic((time_steps- 30)/(T/5))
   # Task capability creation, representing a range of arenas
   # Task capability creation, representing a range of arenas
@@ -175,16 +172,21 @@ if __name__ == "__main__":
   # Visualise the true values of the data
   prop_successes = np.mean(successes, axis=1)
   plt.bar(range(T), prop_successes, color="grey", alpha=0.2)
+  plt.plot(range(T), capability_nav, label="True capability navigation value")
+  plt.plot(range(T), capability_vis, label="True capability visual value")
+  plt.plot(range(T), capability_bias, label="True capability bias value")
   plt.xlabel("timestep")
   plt.legend()
   plt.show()
 # %%
-  m = setupModel(successes, cholesky_matrix)
+  m = setupModel(successes, cholesky=cholesky_matrix)
   
-  with m:
-    inference_data = pm.sample(1000, target_accept=0.95, cores=4)
     
-
+  with m:
+    inference_data = pm.sample(500, target_accept=0.95, cores=2)
+    
+    
+    
   for cap, true_mus in [("ability_bias_rl", capability_bias), ("ability_visual", capability_vis), ("ability_navigation", capability_nav)]:
       estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
       # TODO: Understand the hdi function a bit more (why does this 'just work'?)
@@ -200,4 +202,3 @@ if __name__ == "__main__":
       plt.legend()
       plt.savefig(f"estimated_{cap}.png")
       plt.show()
-
