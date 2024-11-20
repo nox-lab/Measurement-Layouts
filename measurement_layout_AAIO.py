@@ -22,7 +22,7 @@ includeNoise=True
 environmentData = dict()
 abilityMax = {
     "navigationAbility": 5.3,
-    "visualAbility": 1.9,
+    "visualAbility": 1000,
 }
 abilityMin = {
     "navigationAbility": 0.0,
@@ -70,7 +70,7 @@ def setupModel(taskResults, cholesky):
         sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
       else:
         rightLeftEffect = pm.Deterministic("rightLeftEffect", 0)
-      sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
+      sigma_vis = pm.HalfNormal("sigma_vis", sigma=500)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
       ability_visual_raw = pm.GaussianRandomWalk("ability_visual_raw", mu = 0, sigma = sigma_vis, shape = T)
@@ -150,8 +150,8 @@ def logistic(x):
 
 
 if __name__ == "__main__":
-  T = 25  # number of time steps
-  N = 100  # number of samples
+  T = 50  # number of time steps
+  N = 500  # number of samples
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -162,7 +162,7 @@ if __name__ == "__main__":
   covar_matrix = rbf_kernel(time_steps, length_scale = 10)
   cholesky_matrix = np.linalg.cholesky(covar_matrix + np.eye(T)*0.0000001)
   capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
-  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
+  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*500
   capability_bias = logistic((time_steps- 30)/(T/5))
   # Task capability creation, representing a range of arenas
   # Task capability creation, representing a range of arenas
@@ -188,11 +188,11 @@ if __name__ == "__main__":
   plt.xlabel("timestep")
   plt.legend()
   plt.show()
-
+# %%
   m = setupModel(successes, cholesky_matrix)
   
   with m:
-    inference_data = pm.sample(500, target_accept=0.95, cores=2)
+    inference_data = pm.sample(1000, target_accept=0.95, cores=2)
     
 
   for cap, true_mus in [("ability_bias_rl", capability_bias), ("ability_visual", capability_vis), ("ability_navigation", capability_nav)]:
@@ -208,5 +208,6 @@ if __name__ == "__main__":
       plt.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
       plt.xlabel("timestep")
       plt.legend()
+      plt.savefig(f"estimated_{cap}.png")
       plt.show()
 

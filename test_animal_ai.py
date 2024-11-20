@@ -37,7 +37,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         resolution=64,
         useRayCasts=False, # set to True if you want to use raycasts
         no_graphics= not watch_train, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=1.0, # the speed at which the simulation runs
+        timescale=5.0, # the speed at which the simulation runs
         log_folder="aailogstrain" # env logs train
     )
     print("env train created")
@@ -68,8 +68,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # Create aai_env_eval_new type using AnimalAIWrapper, fulfilling same interface, same as UnityToGymWrapper, 
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=2, verbose=1)
     callback_for_eval = EndofEpisodeReward(aai_env = aai_env_eval)
-    eval_callback = EvalRewardCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=15000, deterministic=True, n_eval_episodes = N)
-    callback_list_train = CallbackList([eval_callback, callback_for_eval])
+    eval_callback = EvalRewardCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=3000, deterministic=True, n_eval_episodes = N)
+    callback_list_train = CallbackList([callback_for_eval])
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function

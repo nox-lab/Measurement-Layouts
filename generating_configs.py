@@ -51,6 +51,7 @@ def gen_config_from_demands(
       agent_rotation = 90*x_pos + 90
     else:
       agent_rotation = 90*x_pos + 180
+    agent_rotation = agent_rotation % 360 # This stops negative values.
       
     initial_part = """
     !ArenaConfig
@@ -93,5 +94,9 @@ np.random.seed(0)
 def gen_config_from_demands_batch_random(n_envs: int, filename: str) -> tuple[str, Demands]:
   demands_list = []
   for i in range(n_envs):
-    demands_list.append(Demands(np.random.uniform(0,1.9), np.random.uniform(0,5.3), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
-  return gen_config_from_demands_batch(demands_list, "example.yaml"), demands_list
+    size = np.random.uniform(0,1.9) # This should prevent clipping
+    demands_list.append(Demands(size, np.random.uniform(size+0.5,5.3), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
+  return gen_config_from_demands_batch(demands_list, filename), demands_list
+
+N = 20 
+evaluation_set = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml") # the evaluation set, a list of Demands objects, writes to a file.

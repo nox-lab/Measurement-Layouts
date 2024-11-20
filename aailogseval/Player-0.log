@@ -10,11 +10,11 @@ Direct3D:
     VRAM:     1906 MB
     Driver:   32.0.15.5613
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.186 seconds
+- Completed reload, in  0.129 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.539300 ms
+UnloadTime: 0.739500 ms
 Environment loaded with options:
   PlayerMode: False
   useCamera: True
@@ -87,7 +87,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 5]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 24.9 KB
+      Peak Allocated Bytes 16.6 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 14]
       Initial Block Size 32.0 KB
@@ -102,12 +102,12 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 4]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 5.7 KB
+      Peak Allocated Bytes 13.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 3]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 0.6 KB
+      Peak Allocated Bytes 1.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 12]
       Initial Block Size 32.0 KB
@@ -157,7 +157,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 9]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 13.9 KB
+      Peak Allocated Bytes 1.3 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 13]
       Initial Block Size 32.0 KB
@@ -167,22 +167,22 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 8]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 2.9 KB
+      Peak Allocated Bytes 192 B
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 7]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 13.9 KB
+      Peak Allocated Bytes 16.6 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 1]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 0.6 KB
+      Peak Allocated Bytes 2.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 2]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 4.1 KB
+      Peak Allocated Bytes 6.1 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 3]
       Initial Block Size 32.0 KB
@@ -197,7 +197,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 10]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 6.1 KB
+      Peak Allocated Bytes 2.5 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 0]
       Initial Block Size 32.0 KB
@@ -224,13 +224,13 @@ Memory Statistics:
       Peak usage frame count: [8.0 MB-16.0 MB]: 2 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 14.5 MB
+      Peak Allocated memory 14.2 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
       Peak usage frame count: [16.0 MB-32.0 MB]: 2 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 17.8 MB
+      Peak Allocated memory 18.0 MB
       Peak Large allocation bytes 16.0 MB
 [ALLOC_TEMP_JOB_1_FRAME]
   Initial Block Size 2.0 MB
@@ -253,7 +253,7 @@ Memory Statistics:
   Overflow Count (too large) 0
   Overflow Count (full) 0
 [ALLOC_GFX] Dual Thread Allocator
-  Peak main deferred allocation count 1
+  Peak main deferred allocation count 2
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1
@@ -265,10 +265,10 @@ Memory Statistics:
       Peak Allocated memory 2.7 MB
       Peak Large allocation bytes 0 B
     [ALLOC_GFX_THREAD]
-      Peak usage frame count: [256.0 KB-0.5 MB]: 1 frames, [0.5 MB-1.0 MB]: 1 frames
+      Peak usage frame count: [256.0 KB-0.5 MB]: 2 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 0.6 MB
+      Peak Allocated memory 491.2 KB
       Peak Large allocation bytes 0 B
 [ALLOC_CACHEOBJECTS] Dual Thread Allocator
   Peak main deferred allocation count 2

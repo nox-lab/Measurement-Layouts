@@ -2,7 +2,7 @@
 arenas:
   0: !Arena
     passMark: 0
-    timeLimit: 100
+    timeLimit: 250
     items:
     - !Item
       name: Agent
@@ -45,7 +45,7 @@ arenas:
 
   1: !Arena
     passMark: 0
-    timeLimit: 100
+    timeLimit: 250
     items:
     - !Item
       name: Agent
@@ -285,5 +285,95 @@ arenas:
       positions:
       - !Vector3 {x: 32, y: 0, z: 32}
       sizes:
-      - !Vector3 {x: 5, y: 5, z: 5}  
+      - !Vector3 {x: 5, y: 5, z: 5}
+  8: !Arena
+    passMark: 0
+    timeLimit: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 15, y: 0, z: 15}
+      rotations: [225]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 12, y: 0, z: 12}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}  
+  9: !Arena
+    passMark: 0
+    timeLimit: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 15, y: 0, z: 15}
+      rotations: [45]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 12, y: 0, z: 12}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+  10: !Arena
+    passMark: 0
+    timeLimit: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 15, y: 0, z: 15}
+      rotations: [0]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 20, y: 0, z: 15}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+  11: !Arena
+    passMark: 0
+    timeLimit: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 15, y: 0, z: 15}
+      rotations: [0]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 15}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+  12: !Arena
+    passMark: 0
+    timeLimit: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 5, y: 0, z: 5}
+      rotations: [45]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 30, y: 0, z: 15}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
+  13: !Arena
+    passMark: 0
+    timeLimit: 250
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 5, y: 0, z: 5}
+      rotations: [45]
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 15, y: 0, z: 30}
+      sizes:
+      - !Vector3 {x: 1, y: 1, z: 1}
 
