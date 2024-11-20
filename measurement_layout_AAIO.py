@@ -6,15 +6,8 @@ import random as rm
 from scipy import stats
 import pandas as pd
 import matplotlib.pyplot as plt
-from IPython.display import Image
 from typing import Callable
 import numpy.typing as npt
-import graphviz
-import pytensor.tensor as pt
-import sys
-from io import StringIO
-
-from pytensor import function
 from pytensor.printing import Print
 
 includeIrrelevantFeatures = True
@@ -70,7 +63,7 @@ def setupModel(taskResults, cholesky):
         sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
       else:
         rightLeftEffect = pm.Deterministic("rightLeftEffect", 0)
-      sigma_vis = pm.HalfNormal("sigma_vis", sigma=500)
+      sigma_vis = pm.HalfNormal("sigma_vis", sigma=50)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
       ability_visual_raw = pm.GaussianRandomWalk("ability_visual_raw", mu = 0, sigma = sigma_vis, shape = T)
@@ -192,7 +185,7 @@ if __name__ == "__main__":
   m = setupModel(successes, cholesky_matrix)
   
   with m:
-    inference_data = pm.sample(1000, target_accept=0.95, cores=2)
+    inference_data = pm.sample(1000, target_accept=0.95, cores=4)
     
 
   for cap, true_mus in [("ability_bias_rl", capability_bias), ("ability_visual", capability_vis), ("ability_navigation", capability_nav)]:
