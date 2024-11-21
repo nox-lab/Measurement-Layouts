@@ -14,3 +14,25 @@ Begin MonoManager ReloadAssembly
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
+UnloadTime: 1.113100 ms
+Environment loaded with options:
+  PlayerMode: False
+  useCamera: True
+  Resolution: 64
+  grayscale: False
+  useRayCasts: True
+  raysPerSide: 2
+  rayMaxDegrees: 60
+Registered Communicator in Agent.
+Episode Begin
+Value of showNotification: False
+Current Pass Mark: 0
+Number of Goals Collected: 0
+Resetting Arena
+Spawnables has 4 entries
+Episode Begin
+Value of showNotification: False
+Current Pass Mark: 0
+Number of Goals Collected: 0
+Resetting Arena
+Spawnables has 4 entries
