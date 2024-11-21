@@ -137,8 +137,8 @@ def logistic(x):
 
 
 if __name__ == "__main__":
-  T = 50  # number of time steps
-  N = 250  # number of samples
+  T = 100  # number of time steps
+  N = 1000  # number of samples
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -172,8 +172,8 @@ if __name__ == "__main__":
   # Visualise the true values of the data
   prop_successes = np.mean(successes, axis=1)
   plt.bar(range(T), prop_successes, color="grey", alpha=0.2)
-  plt.plot(range(T), capability_nav, label="True capability navigation value")
-  plt.plot(range(T), capability_vis, label="True capability visual value")
+  plt.plot(range(T), capability_nav/5.3, label="True capability navigation value")
+  plt.plot(range(T), capability_vis/10, label="True capability visual value")
   plt.plot(range(T), capability_bias, label="True capability bias value")
   plt.xlabel("timestep")
   plt.legend()
@@ -183,7 +183,7 @@ if __name__ == "__main__":
   
     
   with m:
-    inference_data = pm.sample(500, target_accept=0.95, cores=2)
+    inference_data = pm.sample(1000, target_accept=0.95, cores=4)
     
     
     
