@@ -82,7 +82,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
 env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
 env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-configuration_file_train = r"AAIO_configs\trainset.yaml"
+configuration_file_train = r"AAIO_configs\trainset.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED !!!!!
 configuration_file_eval = r"example_batch_eval.yaml"
 
 rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e6)
