@@ -12,7 +12,7 @@ includeNoise=True
 environmentData = dict()
 abilityMax = {
     "navigationAbility": 5.3,
-    "visualAbility": 10,
+    "visualAbility": 1.9,
 }
 abilityMin = {
     "navigationAbility": 0.0,
@@ -63,8 +63,7 @@ def setupModel(taskResults, cholesky):
       sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
-      ability_visual_raw = pm.GaussianRandomWalk("ability_visual_raw", mu = 0, sigma = sigma_vis, shape = T)
-      ability_visual = pm.Deterministic("ability_visual", np.abs(ability_visual_raw)) # This is to ensure that the visual ability is always positive, as its log is taken.
+      ability_visual = pm.GaussianRandomWalk("ability_visual_raw", mu = 0, sigma = sigma_vis, shape = T)
       
       ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
       if (includeIrrelevantFeatures) :
@@ -81,7 +80,7 @@ def setupModel(taskResults, cholesky):
 
       # Performance
       navigation_performance = pm.Deterministic("navigation_performance", logistic(performance_from_capability_and_demand_batch(ability_nav, demands_distance*(1/2 * demands_behind + 1)) + rightLeftEffect))
-      visual_performance = pm.Deterministic("visual_performance", logistic(performance_from_capability_and_demand_batch(np.log(ability_visual), np.log(demands_distance/demands_size))))
+      visual_performance = pm.Deterministic("visual_performance", logistic(performance_from_capability_and_demand_batch(ability_visual, np.log(demands_distance/demands_size))))
       task_performance = pm.Bernoulli("task_performance", p=(1 - sigma_performance)*(navigation_performance*visual_performance) + sigma_performance*0.5, observed=taskResults)
     return m
 
@@ -137,8 +136,8 @@ def logistic(x):
 
 
 if __name__ == "__main__":
-  T = 100  # number of time steps
-  N = 1000  # number of samples
+  T = 20  # number of time steps
+  N = 200  # number of samples
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -167,7 +166,7 @@ if __name__ == "__main__":
 
   rightlefteffect_ = product_on_time_varying(capability_bias, xpos)
   perf_nav = logistic(performance_from_capability_and_demand_batch(capability_nav, distance*(behind*0.5+1.0)) + rightlefteffect_)
-  perf_vis = logistic(performance_from_capability_and_demand_batch(np.log(capability_vis), np.log(distance/reward_size)))
+  perf_vis = logistic(performance_from_capability_and_demand_batch(capability_vis, np.log(distance/reward_size)))
   successes = np.random.binomial(1, perf_nav*perf_vis, (T, N)) == 1
   # Visualise the true values of the data
   prop_successes = np.mean(successes, axis=1)
@@ -183,7 +182,7 @@ if __name__ == "__main__":
   
     
   with m:
-    inference_data = pm.sample(1000, target_accept=0.95, cores=4)
+    inference_data = pm.sample(300, target_accept=0.95, cores=4)
     
     
     
