@@ -55,9 +55,7 @@ module purge                               # Removes all modules still loaded
 module load rhel8/default-ccl              # REQUIRED - loads the basic environment
 
 #! Insert additional module load commands after this line if needed:
-module load miniconda3/4.5.1
-source .bashrc
-conda init
+eval "$(conda shell.bash hook)"
 conda activate measurement_layouts
 python measurement_layout_AAIO.py
 #! Full path to application executable: 
