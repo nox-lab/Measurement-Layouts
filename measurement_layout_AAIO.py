@@ -63,7 +63,7 @@ def setupModel(taskResults, cholesky):
       sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
-      ability_visual = pm.GaussianRandomWalk("ability_visual_raw", mu = 0, sigma = sigma_vis, shape = T)
+      ability_visual = pm.GaussianRandomWalk("ability_visual", mu = 0, sigma = sigma_vis, shape = T)
       
       ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
       if (includeIrrelevantFeatures) :
@@ -136,8 +136,8 @@ def logistic(x):
 
 
 if __name__ == "__main__":
-  T = 20  # number of time steps
-  N = 200  # number of samples
+  T = 100  # number of time steps
+  N = 1000  # number of samples
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -170,34 +170,37 @@ if __name__ == "__main__":
   successes = np.random.binomial(1, perf_nav*perf_vis, (T, N)) == 1
   # Visualise the true values of the data
   prop_successes = np.mean(successes, axis=1)
-  plt.bar(range(T), prop_successes, color="grey", alpha=0.2)
-  plt.plot(range(T), capability_nav/5.3, label="True capability navigation value")
-  plt.plot(range(T), capability_vis/10, label="True capability visual value")
-  plt.plot(range(T), capability_bias, label="True capability bias value")
+  figtest, axtest = plt.subplots()
+  axtest.bar(range(T), prop_successes, color="grey", alpha=0.2)
+  axtest.plot(range(T), capability_nav/5.3, label="True capability navigation value")
+  axtest.plot(range(T), capability_vis/10, label="True capability visual value")
+  axtest.plot(range(T), capability_bias, label="True capability bias value")
   plt.xlabel("timestep")
   plt.legend()
-  plt.show()
+  figtest.savefig("true_values.png")
 # %%
   m = setupModel(successes, cholesky=cholesky_matrix)
   
     
   with m:
-    inference_data = pm.sample(300, target_accept=0.95, cores=4)
+    inference_data = pm.sample(1000, target_accept=0.95, cores=4)
     
+  bias_fig, bias_ax = plt.subplots()
+  vis_fig, vis_ax = plt.subplots()
+  nav_fig, nav_ax = plt.subplots()
+  
     
-    
-  for cap, true_mus in [("ability_bias_rl", capability_bias), ("ability_visual", capability_vis), ("ability_navigation", capability_nav)]:
+  for cap, true_mus, fig, ax in [("ability_bias_rl", capability_bias, bias_fig, bias_ax), ("ability_visual", capability_vis, vis_fig, vis_ax), ("ability_navigation", capability_nav, nav_fig, nav_ax)]:
       estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
       # TODO: Understand the hdi function a bit more (why does this 'just work'?)
       estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
       low_hdis = [l for l,_ in estimate_hdis]
       high_hdis = [u for _,u in estimate_hdis]
-      plt.plot(range(T), true_mus, label=f"True capability {cap} value")
+      ax.plot(range(T), true_mus, label=f"True capability {cap} value")
       # TODO: Is it justified to do sigmoid of the mean?
-      plt.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
+      ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
       # TODO: how does the hdi change after transformation through a sigmoid?
-      plt.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
+      ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
       plt.xlabel("timestep")
       plt.legend()
-      plt.savefig(f"estimated_{cap}.png")
-      plt.show()
+      fig.savefig(f"estimated_{cap}.png")
