@@ -68,14 +68,14 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # Create aai_env_eval_new type using AnimalAIWrapper, fulfilling same interface, same as UnityToGymWrapper, 
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=2, verbose=1)
     callback_for_eval = EndofEpisodeReward(aai_env = aai_env_eval)
-    eval_callback = EvalRewardCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=3000, deterministic=True, n_eval_episodes = N)
+    eval_callback = EvalRewardCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=15000, deterministic=True, n_eval_episodes = N)
     callback_list_train = CallbackList([callback_for_eval])
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function
     model = PPO("CnnPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1, normalize_advantage=False, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
     # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
-    model.learn(num_steps, reset_num_timesteps=False) # the training loop
+    model.learn(num_steps, reset_num_timesteps=False, callback=eval_callback) # the training loop
     env_train.close()
     env_eval.close()
 

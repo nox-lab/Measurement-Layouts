@@ -16,7 +16,7 @@ abilityMax = {
 }
 abilityMin = {
     "navigationAbility": 0.0,
-    "visualAbility": 1e-6,
+    "visualAbility": -999,
 }
 def rbf_kernel(X, length_scale=1.0):
     """
@@ -148,7 +148,7 @@ if __name__ == "__main__":
   covar_matrix = rbf_kernel(time_steps, length_scale = 10)
   cholesky_matrix = np.linalg.cholesky(covar_matrix + np.eye(T)*0.0000001)
   capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
-  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*10
+  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
   capability_bias = logistic((time_steps- 30)/(T/5))
   # Task capability creation, representing a range of arenas
   # Task capability creation, representing a range of arenas
@@ -173,7 +173,7 @@ if __name__ == "__main__":
   figtest, axtest = plt.subplots()
   axtest.bar(range(T), prop_successes, color="grey", alpha=0.2)
   axtest.plot(range(T), capability_nav/5.3, label="True capability navigation value")
-  axtest.plot(range(T), capability_vis/10, label="True capability visual value")
+  axtest.plot(range(T), capability_vis/1.9, label="True capability visual value")
   axtest.plot(range(T), capability_bias, label="True capability bias value")
   plt.xlabel("timestep")
   plt.legend()
@@ -183,7 +183,7 @@ if __name__ == "__main__":
   
     
   with m:
-    inference_data = pm.sample(1000, target_accept=0.95, cores=4)
+    inference_data = pm.sample(1000, target_accept=0.95, cores=2)
     
   bias_fig, bias_ax = plt.subplots()
   vis_fig, vis_ax = plt.subplots()

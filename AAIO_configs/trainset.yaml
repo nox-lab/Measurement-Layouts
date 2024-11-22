@@ -1,4 +1,5 @@
 !ArenaConfig
+randomizeArenas: true
 arenas:
   0: !Arena
     passMark: 0
