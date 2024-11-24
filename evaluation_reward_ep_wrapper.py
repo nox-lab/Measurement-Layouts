@@ -25,10 +25,10 @@ class EvalRewardCallback(EvalCallback):
                 print(f"Reward: {np.mean(episode_rewards)}, Episode length: {np.mean(episode_lengths)}")
                 instance_demands = self.instances[i]
                 data = {
-                    'xpos': instance_demands.Xpos,
+                    'Xpos': instance_demands.Xpos,
                     'reward_behind': instance_demands.reward_behind,
-                    'distance': instance_demands.reward_distance,
-                    'size': instance_demands.reward_size,
+                    'reward_distance': instance_demands.reward_distance,
+                    'reward_size': instance_demands.reward_size,
                     'reward': np.mean(episode_rewards)
                 }
                 df = pd.DataFrame([data])

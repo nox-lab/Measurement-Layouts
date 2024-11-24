@@ -25,7 +25,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     1, 1000)
     port_eval = port_train - 1
 
-    evaluation_recording_file = "evaluation_results_with_new_train.csv"
+    evaluation_recording_file = "evaluation_results_with_new_train_newset.csv"
     
     # Create the environment and wrap it...
     aai_env_train = AnimalAIEnvironment( # the environment object
@@ -38,8 +38,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
         useRayCasts=True, # set to True if you want to use raycasts
-        no_graphics= True, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=20.0, # the speed at which the simulation runs
+        no_graphics= not watch_train, # set to True if you don't want to use the graphics ('headless' mode)
+        timescale=5.0, # the speed at which the simulation runs
         log_folder="aailogstrain", # env logs train
         targetFrameRate= -1 # no limit on frame rate, fast as possible.
     )
@@ -78,7 +78,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function
-    model = PPO("MlpPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
+    model = PPO("CnnPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
     # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
     model.learn(num_steps, reset_num_timesteps=False, callback=eval_callback) # the training loop
     env_train.close()
@@ -87,7 +87,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
 env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
 env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
+configuration_file_train = r"AAIO_configs\trainset.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
 configuration_file_eval = r"example_batch_eval.yaml" 
 
-rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = False, watch_eval=True,  num_steps = 1e6)
+rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e6)
