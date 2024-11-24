@@ -24,6 +24,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     port_train = 5005 + random.randint(
     1, 1000)
     port_eval = port_train - 1
+
+    evaluation_recording_file = "evaluation_results_with_new_train.csv"
     
     # Create the environment and wrap it...
     aai_env_train = AnimalAIEnvironment( # the environment object
@@ -33,12 +35,13 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         play=False, # note that this is set to False for training
         base_port=port_train, # the port to use for communication between python and the Unity environment
         inference=watch_train, # set to True if you want to watch the agent play
-        useCamera=True, # set to False if you don't want to use the camera (no visual observations)
+        useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts=False, # set to True if you want to use raycasts
-        no_graphics= not watch_train, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=5.0, # the speed at which the simulation runs
-        log_folder="aailogstrain" # env logs train
+        useRayCasts=True, # set to True if you want to use raycasts
+        no_graphics= True, # set to True if you don't want to use the graphics ('headless' mode)
+        timescale=20.0, # the speed at which the simulation runs
+        log_folder="aailogstrain", # env logs train
+        targetFrameRate= -1 # no limit on frame rate, fast as possible.
     )
     print("env train created")
     print(port_eval)
@@ -46,7 +49,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # Include callbacks
     runname = "really_short_testing_stopTRAINING" # the name of the run, used for logging
     N = 20 
-    evaluation_set = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml") # the evaluation set, a list of Demands objects, writes to a file.
+    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml") # the evaluation set, a list of Demands objects, writes to a file.
     aai_env_eval = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_eval,
@@ -62,18 +65,20 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         log_folder = "aailogseval" # env logs eval
     )
     print("env eval created")
+    
     #evaluation_set = [Demands(1, 2, 0, 0), Demands(0.1, 2, 0, 0), Demands(1, 1, 0, 1), Demands(1, 5, 0.5, 0), Demands(1, 2, 1, 0)]
     env_train = UnityToGymWrapper(aai_env_train, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
     env_eval = UnityToGymWrapper(aai_env_eval, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
     # Create aai_env_eval_new type using AnimalAIWrapper, fulfilling same interface, same as UnityToGymWrapper, 
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=2, verbose=1)
     callback_for_eval = EndofEpisodeReward(aai_env = aai_env_eval)
-    eval_callback = EvalRewardCallback(env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=15000, deterministic=True, n_eval_episodes = N)
+    print(demands_list)
+    eval_callback = EvalRewardCallback(evaluation_recording_file, demands_list, env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=10000, deterministic=True, n_eval_episodes = N)
     callback_list_train = CallbackList([callback_for_eval])
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function
-    model = PPO("CnnPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1, normalize_advantage=False, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
+    model = PPO("MlpPolicy", env_train, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
     # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
     model.learn(num_steps, reset_num_timesteps=False, callback=eval_callback) # the training loop
     env_train.close()
@@ -82,7 +87,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
 env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
 env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-configuration_file_train = r"AAIO_configs\trainset.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
+configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
 configuration_file_eval = r"example_batch_eval.yaml" 
 
-rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e6)
+rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = False, watch_eval=True,  num_steps = 1e6)
