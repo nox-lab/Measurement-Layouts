@@ -25,7 +25,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     1, 1000)
     port_eval = port_train - 1
 
-    evaluation_recording_file = "evaluation_results_with_new_train_newset.csv"
+    evaluation_recording_file = "evaluation_results_with_new_train.csv"
     
     # Create the environment and wrap it...
     aai_env_train = AnimalAIEnvironment( # the environment object
@@ -38,8 +38,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
         useRayCasts=True, # set to True if you want to use raycasts
-        no_graphics= not watch_train, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=5.0, # the speed at which the simulation runs
+        no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
+        timescale=10.0, # the speed at which the simulation runs
         log_folder="aailogstrain", # env logs train
         targetFrameRate= -1 # no limit on frame rate, fast as possible.
     )
@@ -48,8 +48,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     print(port_train)
     # Include callbacks
     runname = "really_short_testing_stopTRAINING" # the name of the run, used for logging
-    N = 20 
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml") # the evaluation set, a list of Demands objects, writes to a file.
+    N = 200
+    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75) # the evaluation set, a list of Demands objects, writes to a file.
     aai_env_eval = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_eval,
@@ -60,9 +60,10 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
         useRayCasts=True, # set to True if you want to use raycasts
-        no_graphics= not watch_eval, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=2.0, # the speed at which the simulation runs
-        log_folder = "aailogseval" # env logs eval
+        no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
+        timescale=5.0, # the speed at which the simulation runs
+        log_folder = "aailogseval", # env logs eval
+        targetFrameRate=-1
     )
     print("env eval created")
     
@@ -87,7 +88,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
 env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
 env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-configuration_file_train = r"AAIO_configs\trainset.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
+configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
 configuration_file_eval = r"example_batch_eval.yaml" 
 
-rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e6)
+rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = False, watch_eval=False,  num_steps = 1e6)

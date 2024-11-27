@@ -5,8 +5,8 @@ import arviz as az
 import matplotlib.pyplot as plt
 from typing import Callable
 import numpy.typing as npt
-from pytensor.printing import Print
 import pandas as pd
+from hmmlearn import hmm
 
 
 includeIrrelevantFeatures = True
@@ -48,7 +48,11 @@ def scaledBeta(name, a, b, min, max, shape=None):
   print(beta.shape)
   return pm.Deterministic(name, beta * (max - min) + min)
 
-def setupModel(taskResults, cholesky):
+def setupModelHMM(taskResults):
+  m = hmm.GaussianHMM(n_components=2, covariance_type="full")
+  pass
+
+def setupModel(taskResults, cholesky, includeIrrelevantFeatures=True, includeNoise=True):
     m = pm.Model()
     assert taskResults.shape == (T, N)
     with m:
@@ -140,7 +144,7 @@ def logistic(x):
 if __name__ == "__main__":
   
   T = 100  # number of time steps
-  N = 20  # number of samples
+  N = 500  # number of samples
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -150,6 +154,7 @@ if __name__ == "__main__":
   time_steps = np.linspace(1, T, T)
   covar_matrix = rbf_kernel(time_steps, length_scale = 10)
   cholesky_matrix = np.linalg.cholesky(covar_matrix + np.eye(T)*0.0000001)
+  '''
   df_final = pd.read_csv("evaluation_results_with_new_train.csv")
   successes = df_final["reward"].values # Current in NT form
   successes = successes.reshape((-1, 20)) # We want T x N
@@ -225,7 +230,6 @@ if __name__ == "__main__":
   plt.xlabel("timestep")
   plt.legend()
   figtest.savefig("true_values.png")
-  '''
 # %%
   m = setupModel(successes, cholesky=cholesky_matrix)
   
@@ -237,7 +241,7 @@ if __name__ == "__main__":
   vis_fig, vis_ax = plt.subplots()
   nav_fig, nav_ax = plt.subplots()
   
-  '''  
+
   for cap, true_mus, fig, ax in [("ability_bias_rl", capability_bias, bias_fig, bias_ax), ("ability_visual", capability_vis, vis_fig, vis_ax), ("ability_navigation", capability_nav, nav_fig, nav_ax)]:
       estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
       # TODO: Understand the hdi function a bit more (why does this 'just work'?)
@@ -252,18 +256,3 @@ if __name__ == "__main__":
       plt.xlabel("timestep")
       plt.legend()
       fig.savefig(f"estimated_{cap}.png")
-  '''
-      
-  for cap, fig, ax in [("ability_bias_rl", bias_fig, bias_ax), ("ability_visual", vis_fig, vis_ax), ("ability_navigation", nav_fig, nav_ax)]:
-    estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
-    # TODO: Understand the hdi function a bit more (why does this 'just work'?)
-    estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
-    low_hdis = [l for l,_ in estimate_hdis]
-    high_hdis = [u for _,u in estimate_hdis]
-    # TODO: Is it justified to do sigmoid of the mean?
-    ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
-    # TODO: how does the hdi change after transformation through a sigmoid?
-    ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
-    plt.xlabel("timestep")
-    plt.legend()
-    fig.savefig(f"estimated_{cap}_REAL.png")
