@@ -47,9 +47,9 @@ def scaledBeta(name, a, b, min, max, shape=None):
   print(beta.shape)
   return pm.Deterministic(name, beta * (max - min) + min)
 
-def setupModel(taskResults, cholesky, includeIrrelevantFeatures=True, includeNoise=True):
+def setupModel(taskResults, cholesky, includeIrrelevantFeatures=True, includeNoise=True, N = 200):
     m = pm.Model()
-    assert taskResults.shape == (T, N)
+    assert taskResults.shape[1] == N
     with m:
       ### Environment Variables as Deterministic
       demands_distance = pm.MutableData("rewardDistance", environmentData["reward_distance"])
