@@ -56,10 +56,10 @@ if __name__ == "__main__":
   successes = df_final["reward"].values # Current in NT form
   successes = successes.reshape((-1, N)) # We want T x N
   T = successes.shape[0]  # number of time steps
-  environmentData["reward_distance"] = df_final["distance"].values[0:N]
+  environmentData["reward_distance"] = df_final["reward_distance"].values[0:N]
   environmentData["reward_behind"] = df_final["reward_behind"].values[0:N]
-  environmentData["reward_size"] = df_final["size"].values[0:N]
-  environmentData["Xpos"] = df_final["xpos"].values[0:N]
+  environmentData["reward_size"] = df_final["reward_size"].values[0:N]
+  environmentData["Xpos"] = df_final["Xpos"].values[0:N]
   successes[successes > -1] = 1
   successes[successes <= -1] = 0
   print(successes)
