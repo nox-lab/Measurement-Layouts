@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from typing import Callable
 import numpy.typing as npt
 import pandas as pd
-from hmmlearn import hmm
 
 
 includeIrrelevantFeatures = True
@@ -47,10 +46,6 @@ def scaledBeta(name, a, b, min, max, shape=None):
   beta = pm.Beta(f"{name}_raw", a, b, shape = shape)
   print(beta.shape)
   return pm.Deterministic(name, beta * (max - min) + min)
-
-def setupModelHMM(taskResults):
-  m = hmm.GaussianHMM(n_components=2, covariance_type="full")
-  pass
 
 def setupModel(taskResults, cholesky, includeIrrelevantFeatures=True, includeNoise=True):
     m = pm.Model()
