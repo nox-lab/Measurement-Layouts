@@ -55,6 +55,8 @@ def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures
       demands_distance = pm.MutableData("rewardDistance", environmentData["reward_distance"])
       demands_size = pm.MutableData("rewardSize", environmentData["reward_size"])
       demands_behind = pm.MutableData("rewardBehind", environmentData["reward_behind"])
+      performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
+      product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
       T = taskResults.shape[0]
       # Priors
       if includeNoise:
