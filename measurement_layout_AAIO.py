@@ -55,7 +55,7 @@ def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures
       demands_distance = pm.MutableData("rewardDistance", environmentData["reward_distance"])
       demands_size = pm.MutableData("rewardSize", environmentData["reward_size"])
       demands_behind = pm.MutableData("rewardBehind", environmentData["reward_behind"])
-
+      T = taskResults.shape[0]
       # Priors
       if includeNoise:
         sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
@@ -64,6 +64,7 @@ def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures
       sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
+      
       ability_visual = pm.GaussianRandomWalk("ability_visual", mu = 0, sigma = sigma_vis, shape = T)
       
       ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
