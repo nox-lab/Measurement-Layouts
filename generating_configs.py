@@ -48,7 +48,7 @@ def gen_config_from_demands(
     if reward_behind == 0:
       agent_rotation = 90*x_pos
     elif reward_behind == 0.5:
-      agent_rotation = 90*x_pos + 90
+      agent_rotation = 90*x_pos + 90*np.random.choice([-1, 1]) # Left or right
     else:
       agent_rotation = 90*x_pos + 180
     agent_rotation = agent_rotation % 360 # This stops negative values.
@@ -77,13 +77,13 @@ def gen_config_from_demands(
       text_file.write(initial_part + generated_config)
     return generated_config
   
-def gen_config_from_demands_batch(envs : list[Demands], filename: str) -> str:
+def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limit: int = 100) -> str:
   new_conf = ""
   initial_part = """
     !ArenaConfig
     arenas:"""
   for i, env in enumerate(envs):
-    env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, 100, i, f"temp")
+    env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, i, f"temp")
     new_conf += env_conf
   with open(filename, "w") as text_file:
     text_file.write(initial_part + new_conf)
@@ -91,12 +91,12 @@ def gen_config_from_demands_batch(envs : list[Demands], filename: str) -> str:
 np.random.seed(0)
 
   
-def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3) -> tuple[str, list[Demands]]:
+def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3, time_limit = 100) -> tuple[str, list[Demands]]:
   demands_list = []
   for i in range(n_envs):
     size = np.random.uniform(0,1.9) # This should prevent clipping
     demands_list.append(Demands(size, np.random.uniform(size+0.5,5.3), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
-  return gen_config_from_demands_batch(demands_list, filename), demands_list
+  return gen_config_from_demands_batch(demands_list, filename, time_limit), demands_list
 
 N = 50 
 evaluation_set = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml") # a list of demnads objects, writes to a file.
