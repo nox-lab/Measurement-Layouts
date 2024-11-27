@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from typing import Callable
 import numpy.typing as npt
 import pandas as pd
-from hmmlearn import hmm
 from measurement_layout_AAIO import setupModel
 
 
