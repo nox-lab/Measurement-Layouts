@@ -59,9 +59,10 @@ if __name__ == "__main__":
   environmentData["reward_behind"] = df_final["reward_behind"].values[0:N]
   environmentData["reward_size"] = df_final["reward_size"].values[0:N]
   environmentData["Xpos"] = df_final["Xpos"].values[0:N]
-  successes[successes > -1] = 1
-  successes[successes <= -1] = 0
+  successes[successes > -0.9] = 1 # This threshold will vary with the frame rate. 
+  successes[successes <= -0.9] = 0
   print(successes)
+  print(environmentData)
 # %%
   m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
   
