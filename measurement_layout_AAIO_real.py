@@ -63,7 +63,7 @@ if __name__ == "__main__":
   successes[successes <= -1] = 0
   print(successes)
 # %%
-  m = setupModel(successes, cholesky=None, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
+  m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
   
     
   with m:

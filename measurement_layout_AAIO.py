@@ -47,7 +47,7 @@ def scaledBeta(name, a, b, min, max, shape=None):
   print(beta.shape)
   return pm.Deterministic(name, beta * (max - min) + min)
 
-def setupModel(taskResults, cholesky, includeIrrelevantFeatures=True, includeNoise=True, N = 200):
+def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200):
     m = pm.Model()
     assert taskResults.shape[1] == N
     with m:
