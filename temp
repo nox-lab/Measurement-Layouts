@@ -1,16 +1,16 @@
 
     !ArenaConfig
     arenas:
-      49: !Arena
-        timeLimit: 100
+      199: !Arena
+        timeLimit: 75
         items:
         - !Item
           name: GoodGoal
           positions:
-          - !Vector3 {x: 20.0, y: 0, z: 23.07048694774888}
+          - !Vector3 {x: 30.939349432357822, y: 0, z: 20.0}
           rotations: [0]
           sizes:
-          - !Vector3 {x: 1.4249985726631906, y: 1.4249985726631906, z: 1.4249985726631906}
+          - !Vector3 {x: 1.4565229961517008, y: 1.4565229961517008, z: 1.4565229961517008}
         - !Item
           name: Agent
           positions:

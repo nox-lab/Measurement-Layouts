@@ -13,6 +13,7 @@ import sys
 import random
 import pandas as pd
 import os
+import numpy as np
 
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from animalai.environment import AnimalAIEnvironment
@@ -25,8 +26,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     1, 1000)
     port_eval = port_train - 1
 
-    evaluation_recording_file = "evaluation_results_with_new_train.csv"
-    
+    evaluation_recording_file = "eval_results_harder.csv"
+    np.random.seed(0)
     # Create the environment and wrap it...
     aai_env_train = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
@@ -39,7 +40,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         resolution=64,
         useRayCasts=True, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=10.0, # the speed at which the simulation runs
+        timescale=5.0, # the speed at which the simulation runs
         log_folder="aailogstrain", # env logs train
         targetFrameRate= -1 # no limit on frame rate, fast as possible.
     )
@@ -49,7 +50,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # Include callbacks
     runname = "really_short_testing_stopTRAINING" # the name of the run, used for logging
     N = 200
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75) # the evaluation set, a list of Demands objects, writes to a file.
+    training_set, demands_train = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml", time_limit=100, dist_max = 15) # the training set, a list of Demands objects, writes to a file.
+    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, dist_max = 15) # the evaluation set, a list of Demands objects, writes to a file.
     aai_env_eval = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_eval,

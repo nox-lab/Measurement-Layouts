@@ -51,7 +51,7 @@ if __name__ == "__main__":
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
-  df_final = pd.read_csv("evaluation_results_with_new_train.csv")
+  df_final = pd.read_csv("eval_results_harder.csv")
   successes = df_final["reward"].values # Current in NT form
   successes = successes.reshape((-1, N)) # We want T x N
   T = successes.shape[0]  # number of time steps

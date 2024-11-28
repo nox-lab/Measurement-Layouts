@@ -24,7 +24,6 @@ arenas:
 """
 )
 
-
 def gen_config_from_demands(
     reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number : int, filename: str,
 ) -> str:
@@ -48,7 +47,10 @@ def gen_config_from_demands(
     if reward_behind == 0:
       agent_rotation = 90*x_pos
     elif reward_behind == 0.5:
-      agent_rotation = 90*x_pos + 90*np.random.choice([-1, 1]) # Left or right
+      if x_pos == 0:
+        agent_rotation = np.random.choice([-90, 90])
+      else:
+        agent_rotation = 0
     else:
       agent_rotation = 90*x_pos + 180
     agent_rotation = agent_rotation % 360 # This stops negative values.
@@ -94,9 +96,6 @@ np.random.seed(0)
 def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3, time_limit = 100) -> tuple[str, list[Demands]]:
   demands_list = []
   for i in range(n_envs):
-    size = np.random.uniform(0,1.9) # This should prevent clipping
-    demands_list.append(Demands(size, np.random.uniform(size+0.5,5.3), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
+    size = np.random.uniform(0, size_max) # This should prevent clipping
+    demands_list.append(Demands(size, np.random.uniform(size+0.5,dist_max), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
   return gen_config_from_demands_batch(demands_list, filename, time_limit), demands_list
-
-N = 50 
-evaluation_set = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml") # a list of demnads objects, writes to a file.
