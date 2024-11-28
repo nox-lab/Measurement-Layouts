@@ -7,6 +7,9 @@ from animalai.environment import AnimalAIEnvironment
 from mlagents_envs.exception import UnityCommunicationException
 
 # IMPORTANT! Replace configuration file with the correct path here:
+config, demands = gen_config_from_demands_batch_random(10, r"example_batch_eval.yaml", time_limit=75, dist_max=15)
+for demand in demands:
+    print(demand)
 configuration_file = r"example_batch_eval.yaml"
 
 with open(configuration_file) as f:
