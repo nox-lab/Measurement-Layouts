@@ -61,11 +61,6 @@ if __name__ == "__main__":
   environmentData["Xpos"] = df_final["Xpos"].values[0:N]
   successes[successes > -0.9] = 1 # This threshold will vary with the frame rate. 
   successes[successes <= -0.9] = 0
-  plt.plot(np.average(successes, axis=1))
-  plt.show()
-  print(successes)
-  print(environmentData)
-# %%
   m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
   
     
