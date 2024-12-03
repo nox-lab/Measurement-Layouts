@@ -29,7 +29,7 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
     default_params = {'sigmanav': 2.e-4,
                       'sigmavis': 1.e-4,
                       'sigmabias': 1.e-3,
-                      'x0': np.array([1, 1, 1, 1, 1, 1, 1])
+                      'x0': np.array([1, 1, 1])
                      }
 
     def PX0(self):
@@ -66,7 +66,7 @@ if __name__ == "__main__":
   time_steps = np.linspace(1, T, T)
   capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
   capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
-  capability_bias = logistic((time_steps- 30)/(T/5))
+  capability_bias = logistic((time_steps- learn_time_bias)/(T/5))
   # Task capability creation, representing a range of arenas
   np.random.seed(0)
   # Task capability creation, representing a range of arenas
@@ -80,5 +80,11 @@ if __name__ == "__main__":
   perf_vis = logistic(performance_from_capability_and_demand_batch(capability_vis, np.log(distance/reward_size)))
   successes = np.random.binomial(1, perf_nav*perf_vis, (T, N)) == 1
   my_pmmh = mcmc.PMMH(ssm_cls=Measurement_Layout_AAIO, prior = reg_prior, data=successes, Nx=N,
-                    niter=1000)
+                    niter=100)
   my_pmmh.run()
+  processed_chain = np.array(my_pmmh.chain.theta.tolist())
+  print(type(my_pmmh.chain.theta))
+  print(type(my_pmmh.chain.theta[0]))
+  print(my_pmmh.chain.theta)
+  print(processed_chain.shape)
+  print(np.mean(processed_chain, 0))
