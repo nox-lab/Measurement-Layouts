@@ -1,3 +1,4 @@
+
 # Import the necessary libraries
 from stable_baselines3 import PPO
 import matplotlib.pyplot as plt
@@ -32,7 +33,7 @@ def train_agent_single_config(configuration_file, env_path , log_bool = False, a
         resolution=64,
         useRayCasts=False, # set to True if you want to use raycasts
         no_graphics=False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=2.0
+        timescale=3
     )
 
     env = UnityToGymWrapper(aai_env, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
@@ -44,12 +45,11 @@ def train_agent_single_config(configuration_file, env_path , log_bool = False, a
     model = PPO("CnnPolicy", env, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogs") 
     # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
     
-    for i in range(num_eval):
-        model.learn(num_steps, reset_num_timesteps=False)
+    model.learn(num_steps, reset_num_timesteps=False)
     env.close()
 
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
 env_path = r"..\WINDOWS\AAI\Animal-AI.exe"
-configuration_file = r"AAIO_configs\trainset.yaml"
+configuration_file = r"example_batch_eval.yaml"
 
-rewards = train_agent_single_config(configuration_file=configuration_file, env_path = env_path, watch = True, num_steps = 500, num_eval = 3000)
+rewards = train_agent_single_config(configuration_file=configuration_file, env_path = env_path, watch = True, num_steps = 10000, num_eval = 3000)

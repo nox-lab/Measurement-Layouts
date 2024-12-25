@@ -47,7 +47,7 @@ def scaledBeta(name, a, b, min, max, shape=None):
   print(beta.shape)
   return pm.Deterministic(name, beta * (max - min) + min)
 
-def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200):
+def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200, exclude = None):
     m = pm.Model()
     assert taskResults.shape[1] == N
     with m:
@@ -66,7 +66,7 @@ def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures
       sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
-      
+      # Capabilities
       ability_visual = pm.GaussianRandomWalk("ability_visual", mu = 0, sigma = sigma_vis, shape = T)
       
       ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
@@ -152,18 +152,6 @@ if __name__ == "__main__":
   time_steps = np.linspace(1, T, T)
   covar_matrix = rbf_kernel(time_steps, length_scale = 10)
   cholesky_matrix = np.linalg.cholesky(covar_matrix + np.eye(T)*0.0000001)
-  '''
-  df_final = pd.read_csv("evaluation_results_with_new_train.csv")
-  successes = df_final["reward"].values # Current in NT form
-  successes = successes.reshape((-1, 20)) # We want T x N
-  environmentData["reward_distance"] = df_final["distance"].values[0:20]
-  environmentData["reward_behind"] = df_final["reward_behind"].values[0:20]
-  environmentData["reward_size"] = df_final["size"].values[0:20]
-  environmentData["Xpos"] = df_final["xpos"].values[0:20]
-  successes[successes > -1] = 1
-  successes[successes <= -1] = 0
-  print(successes)
-  '''
   capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
   capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
   capability_bias = logistic((time_steps- 30)/(T/5))
@@ -229,7 +217,7 @@ if __name__ == "__main__":
   plt.legend()
   figtest.savefig("true_values.png")
 # %%
-  m = setupModel(successes, cholesky=cholesky_matrix)
+  m = setupModel(successes, cholesky=cholesky_matrix, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
   
     
   with m:

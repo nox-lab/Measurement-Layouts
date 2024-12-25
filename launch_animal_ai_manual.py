@@ -10,7 +10,7 @@ from mlagents_envs.exception import UnityCommunicationException
 config, demands = gen_config_from_demands_batch_random(10, r"example_batch_eval.yaml", time_limit=75, dist_max=15)
 for demand in demands:
     print(demand)
-configuration_file = r"example_batch_eval.yaml"
+configuration_file = r"AAIO_configs\trainset.yaml"
 
 with open(configuration_file) as f:
     print(f.read()) 
