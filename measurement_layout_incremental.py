@@ -23,13 +23,16 @@ distance = np.random.uniform(0.1, 5.3, N)
 xpos = np.random.choice([-1, 0, 1], N) # -1 if l of agent's actual position, 0 if in line with agent's actual position, 1 if r of agent's actual position
 reward_size = np.random.uniform(0.0, 1.9, N)
 reg_prior_dict = OrderedDict()
-reg_prior_dict['cap'] = dists.MvNormal(cov=np.eye(3))
+reg_prior_dict['sigmanav'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
+reg_prior_dict['sigmavis'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
+reg_prior_dict['sigmabias'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
+reg_prior_dict['x0'] = dists.MvNormal(cov = np.eye(3))
 reg_prior = dists.StructDist(reg_prior_dict)
 class Measurement_Layout_AAIO(ssm.StateSpaceModel):
-    default_params = {'sigmanav': 2.e-4,
-                      'sigmavis': 1.e-4,
-                      'sigmabias': 1.e-3,
-                      'x0': np.array([1, 1, 1])
+    default_params = {'sigmanav': 1,
+                      'sigmavis': 1,
+                      'sigmabias': 1,
+                      'x0': np.array([0, 0, 0])
                      }
 
     def PX0(self):
@@ -64,9 +67,12 @@ if __name__ == "__main__":
   learn_time_vis = 0.2*T
   learn_time_bias = 0.3*T
   time_steps = np.linspace(1, T, T)
-  capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
-  capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
-  capability_bias = logistic((time_steps- learn_time_bias)/(T/5))
+  #capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.3 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
+  #capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
+  #capability_bias = logistic((time_steps- learn_time_bias)/(T/5))
+  capability_nav = 1*np.ones(T) #particular point where significant learning occurs, and rate at which this is is determined by the denominator
+  capability_vis = 2*np.ones(T)
+  capability_bias = 3*np.ones(T)
   # Task capability creation, representing a range of arenas
   np.random.seed(0)
   # Task capability creation, representing a range of arenas
@@ -83,8 +89,5 @@ if __name__ == "__main__":
                     niter=100)
   my_pmmh.run()
   processed_chain = np.array(my_pmmh.chain.theta.tolist())
-  print(type(my_pmmh.chain.theta))
-  print(type(my_pmmh.chain.theta[0]))
-  print(my_pmmh.chain.theta)
   print(processed_chain.shape)
   print(np.mean(processed_chain, 0))

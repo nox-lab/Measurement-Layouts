@@ -26,7 +26,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     1, 1000)
     port_eval = port_train - 1
 
-    evaluation_recording_file = "eval_results_harder.csv"
+    evaluation_recording_file = "eval_results_legit_curriculum.csv"
     np.random.seed(0)
     # Create the environment and wrap it...
     aai_env_train = AnimalAIEnvironment( # the environment object
@@ -50,8 +50,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # Include callbacks
     runname = "really_short_testing_stopTRAINING" # the name of the run, used for logging
     N = 200
-    training_set, demands_train = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml", time_limit=100, dist_max = 15) # the training set, a list of Demands objects, writes to a file.
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, dist_max = 15) # the evaluation set, a list of Demands objects, writes to a file.
+    training_set, demands_train = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml", time_limit=100, dist_max = 5.6) # the training set, a list of Demands objects, writes to a file.
+    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75) # the evaluation set, a list of Demands objects, writes to a file.
     aai_env_eval = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_eval,
@@ -88,9 +88,10 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     env_eval.close()
 
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
+# Still need to report the error
 env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
 env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
+configuration_file_train = r"curriculum.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
 configuration_file_eval = r"example_batch_eval.yaml" 
 
-rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = False, watch_eval=False,  num_steps = 1e6)
+rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval, env_path_train = env_path_train, env_path_eval = env_path_eval, watch_train = True, watch_eval=True,  num_steps = 1e6)
