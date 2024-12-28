@@ -47,8 +47,10 @@ def scaledBeta(name, a, b, min, max, shape=None):
   print(beta.shape)
   return pm.Deterministic(name, beta * (max - min) + min)
 
-def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200, exclude = None):
-    m = pm.Model()
+def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200, exclude = []):
+    m = pm.Model() # we need to exlcude the navigation performacne itslef and the navigation ability/visual performance nad ability when we apply something to the exclude argument.
+    
+    # Possible.
     assert taskResults.shape[1] == N
     with m:
       ### Environment Variables as Deterministic
@@ -58,19 +60,27 @@ def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures
       performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
       product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
       T = taskResults.shape[0]
+      # Some variables need to be initialised
+      '''
+      sigma_performance = 0
+      sigma_nav = 0
+      sigma_vis = 0
+      sigma_bias = 0
+      ability_nav = 0
+      ability_visual = 0
+      ability_bias_rl = 0
+      '''
       # Priors
       if includeNoise:
         sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
-      else:
-        sigma_performance = 0
-      sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
-      sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
-      sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
-      # Capabilities
-      ability_visual = pm.GaussianRandomWalk("ability_visual", mu = 0, sigma = sigma_vis, shape = T)
-      
-      ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
+      if "ability_navigaton" not in exclude:
+        sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
+        ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
+      if "ability_bias_rl" not in exclude:
+        sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
+        ability_visual = pm.GaussianRandomWalk("ability_visual", mu = 0, sigma = sigma_vis, shape = T)
       if (includeIrrelevantFeatures) :
+        sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
         ability_bias_rl = pm.GaussianRandomWalk("ability_bias_rl", mu = 0, sigma = sigma_bias, shape = T)                  # [-inf,inf] A parameter to determine whether left or right have an influence. It's expected to be zero, but negative would be left influence and positive a right influence (or vice versa :-)
         abilityMin["rightLeftBias"] = -np.inf
         abilityMax["rightLeftBias"] = np.inf
@@ -83,8 +93,13 @@ def setupModel(taskResults, cholesky, environmentData, includeIrrelevantFeatures
         rightLeftEffect = 0
 
       # Performance
-      navigation_performance = pm.Deterministic("navigation_performance", logistic(performance_from_capability_and_demand_batch(ability_nav, demands_distance*(1/2 * demands_behind + 1)) + rightLeftEffect))
-      visual_performance = pm.Deterministic("visual_performance", logistic(performance_from_capability_and_demand_batch(ability_visual, np.log(demands_distance/demands_size))))
+      navigation_performance = 1
+      visual_performance = 1
+      # Now we overwrite if not excluding
+      if "ability_navigation" not in exclude:
+        navigation_performance = pm.Deterministic("navigation_performance", logistic(performance_from_capability_and_demand_batch(ability_nav, demands_distance*(1/2 * demands_behind + 1)) + rightLeftEffect))
+      if "ability_visual" not in exclude:
+        visual_performance = pm.Deterministic("visual_performance", logistic(performance_from_capability_and_demand_batch(ability_visual, np.log(demands_distance/demands_size))))
       task_performance = pm.Bernoulli("task_performance", p=(1 - sigma_performance)*(navigation_performance*visual_performance) + sigma_performance*0.5, observed=taskResults)
     return m
 

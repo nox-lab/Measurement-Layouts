@@ -9,8 +9,8 @@ import pandas as pd
 from measurement_layout_AAIO import setupModel
 
 
-includeIrrelevantFeatures = False
-includeNoise = False
+includeIrrelevantFeatures =  True # I NEED TO ADJUST THIS 
+includeNoise = True
 environmentData = dict()
 abilityMax = {
     "navigationAbility": 5.3,
@@ -48,6 +48,9 @@ if __name__ == "__main__":
   
  
   N = 200  # number of samples
+  all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
+  excluded_capabilities = ["ability_visual"]
+  included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
   np.random.seed(0)
@@ -61,28 +64,30 @@ if __name__ == "__main__":
   environmentData["Xpos"] = df_final["Xpos"].values[0:N]
   successes[successes > -0.9] = 1 # This threshold will vary with the frame rate. 
   successes[successes <= -0.9] = 0
-  m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
+  print(environmentData)
+
+  
+  m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N, exclude = excluded_capabilities)
   plt.plot(np.average(successes, axis=1))
   plt.show()
-    
+  
+  
   with m:
     inference_data = pm.sample(500, target_accept=0.95, cores=2)
     
-  bias_fig, bias_ax = plt.subplots()
-  vis_fig, vis_ax = plt.subplots()
-  nav_fig, nav_ax = plt.subplots()
+  relevant_figs = [(cap, plt.subplots()) for cap in included_capabilities]
   
 
-  for cap, fig, ax in [("ability_visual", vis_fig, vis_ax), ("ability_navigation", nav_fig, nav_ax)]:
+  for cap, fig, ax in relevant_figs:
       estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
       # TODO: Understand the hdi function a bit more (why does this 'just work'?)
       estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
       low_hdis = [l for l,_ in estimate_hdis]
       high_hdis = [u for _,u in estimate_hdis]
       # TODO: Is it justified to do sigmoid of the mean?
-      ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
+      ax.plot([e for e in estimated_p_per_ts], label=f"estimated_{cap}", color="grey")
       # TODO: how does the hdi change after transformation through a sigmoid?
       ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
       plt.xlabel("timestep")
       plt.legend()
-      fig.savefig(f"estimated_{cap}.png")
+      fig.savefig(f"estimated_{cap}_excluding_{", ".join(excluded_capabilities)}.png")
