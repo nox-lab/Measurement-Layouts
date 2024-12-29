@@ -8,6 +8,7 @@ import numpy.typing as npt
 import pandas as pd
 from measurement_layout_AAIO import setupModel
 
+# %% 
 
 includeIrrelevantFeatures =  True # I NEED TO ADJUST THIS 
 includeNoise = True
@@ -65,7 +66,7 @@ if __name__ == "__main__":
   successes[successes > -0.9] = 1 # This threshold will vary with the frame rate. 
   successes[successes <= -0.9] = 0
   print(environmentData)
-
+# %% 
   
   m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N, exclude = excluded_capabilities)
   plt.plot(np.average(successes, axis=1))
@@ -74,11 +75,13 @@ if __name__ == "__main__":
   
   with m:
     inference_data = pm.sample(500, target_accept=0.95, cores=2)
-    
-  relevant_figs = [(cap, plt.subplots()) for cap in included_capabilities]
-  
 
-  for cap, fig, ax in relevant_figs:
+# %% whatever
+  relevant_figs = [(cap, plt.subplots()) for cap in included_capabilities]
+
+# %%
+
+  for cap, (fig, ax) in relevant_figs:
       estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
       # TODO: Understand the hdi function a bit more (why does this 'just work'?)
       estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
@@ -88,6 +91,9 @@ if __name__ == "__main__":
       ax.plot([e for e in estimated_p_per_ts], label=f"estimated_{cap}", color="grey")
       # TODO: how does the hdi change after transformation through a sigmoid?
       ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
+      excluded_capabilities_string = "_".join(excluded_capabilities)
       plt.xlabel("timestep")
       plt.legend()
-      fig.savefig(f"estimated_{cap}_excluding_{", ".join(excluded_capabilities)}.png")
+      fig.savefig(f"estimated_{cap}_excluding_{excluded_capabilities_string}.png")
+
+# %%
