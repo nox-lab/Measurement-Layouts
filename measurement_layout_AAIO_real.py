@@ -50,7 +50,7 @@ if __name__ == "__main__":
  
   N = 200  # number of samples
   all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
-  excluded_capabilities = ["ability_visual"]
+  excluded_capabilities = ["ability_navigation"]
   included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
   performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
   product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
