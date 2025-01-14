@@ -1,0 +1,59 @@
+Loading rhel8/default-ccl
+  Loading requirement: rhel8/global rhel8/slurm rhel8/cclake-env/2024-06-01
+    rhel8/cclake/base glibc/2.28/gcc/4d2cj5pu gcc-runtime/13.3.0/gcc/2sn7kkm3
+    zlib-ng/2.1.6/gcc/mkjcey6m zstd/1.5.6/gcc/l5c7mfsx
+    binutils/2.42/gcc/y33xj6rq intel-oneapi-compilers/2023.2.4/gcc/4lbvg4hv
+    intel-oneapi-mpi/2021.12.1/intel/hlruk24n rhel8/cclake/intel
+/var/spool/slurm/slurmd/job65000243/slurm_script: line 58: .bashrc: No such file or directory
+
+CommandNotFoundError: No command 'conda init'.
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+If your shell is Bash or a Bourne variant, enable conda for the current user with
+
+    $ echo ". /usr/local/Cluster-Apps/miniconda3/4.5.1/etc/profile.d/conda.sh" >> ~/.bashrc
+
+or, for all users, enable conda with
+
+    $ sudo ln -s /usr/local/Cluster-Apps/miniconda3/4.5.1/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+
+The options above will permanently enable the 'conda' command, but they do NOT
+put conda's base (root) environment on PATH.  To do so, run
+
+    $ conda activate
+
+in your terminal, or to put the base environment on PATH permanently, run
+
+    $ echo "conda activate" >> ~/.bashrc
+
+Previous to conda 4.4, the recommended way to activate conda was to modify PATH in
+your ~/.bashrc file.  You should manually remove the line that looks like
+
+    export PATH="/usr/local/Cluster-Apps/miniconda3/4.5.1/bin:$PATH"
+
+^^^ The above line should NO LONGER be in your ~/.bashrc file! ^^^
+
+
+Traceback (most recent call last):
+  File "measurement_layout_AAIO.py", line 2, in <module>
+    import pymc as pm
+ModuleNotFoundError: No module named 'pymc'
+Changed directory to /rds/user/taj29/hpc-work/Measurement-Layouts.
+
+JobID: 65000243
+======
+Time: Thu Nov 21 21:18:51 GMT 2024
+Running on master node: cpu-p-56
+Current directory: /rds/user/taj29/hpc-work/Measurement-Layouts
+
+Nodes allocated:
+================
+cpu-p-56
+
+numtasks=20, numnodes=1, mpi_tasks_per_node=20 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+
+

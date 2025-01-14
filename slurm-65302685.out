@@ -1,0 +1,28 @@
+Loading rhel8/default-ccl
+  Loading requirement: rhel8/global rhel8/slurm rhel8/cclake-env/2024-06-01
+    rhel8/cclake/base glibc/2.28/gcc/4d2cj5pu gcc-runtime/13.3.0/gcc/2sn7kkm3
+    zlib-ng/2.1.6/gcc/mkjcey6m zstd/1.5.6/gcc/l5c7mfsx
+    binutils/2.42/gcc/y33xj6rq intel-oneapi-compilers/2023.2.4/gcc/4lbvg4hv
+    intel-oneapi-mpi/2021.12.1/intel/hlruk24n rhel8/cclake/intel
+Traceback (most recent call last):
+  File "/rds/user/taj29/hpc-work/Measurement-Layouts/measurement_layout_AAIO_real.py", line 9, in <module>
+    from hmmlearn import hmm
+ModuleNotFoundError: No module named 'hmmlearn'
+Changed directory to /rds/user/taj29/hpc-work/Measurement-Layouts.
+
+JobID: 65302685
+======
+Time: Wed Nov 27 21:50:29 GMT 2024
+Running on master node: cpu-p-249
+Current directory: /rds/user/taj29/hpc-work/Measurement-Layouts
+
+Nodes allocated:
+================
+cpu-p-249
+
+numtasks=20, numnodes=1, mpi_tasks_per_node=20 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+
+
