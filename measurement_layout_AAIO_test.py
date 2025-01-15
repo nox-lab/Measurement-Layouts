@@ -117,4 +117,4 @@ for cap, true_mus, fig, ax in [("ability_bias_rl", capability_bias, bias_fig, bi
     ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
     ax.set_xlabel("timestep")
     ax.legend()
-    fig.savefig(f"estimated_{cap}.png")
+    fig.savefig(f"estimated_{cap}_test.png")
