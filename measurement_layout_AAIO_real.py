@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from typing import Callable
 import numpy.typing as npt
 import pandas as pd
-from measurement_layout_AAIO import setupModel
+from measurement_layout_AAIO import setupModel, logistic, rbf_kernel
 
 # %% 
 
@@ -21,29 +21,6 @@ abilityMin = {
     "navigationAbility": 0.0,
     "visualAbility": -999,
 }
-def rbf_kernel(X, length_scale=1.0):
-    """
-    Generates a covariance matrix using the RBF (squared exponential) kernel.
-
-    Parameters:
-    X (numpy.ndarray): The input data, a 1D array of points.
-    length_scale (float): The length scale parameter for the RBF kernel.
-
-    Returns:
-    numpy.ndarray: The covariance matrix.
-    """
-    # Calculate the pairwise squared Euclidean distances
-    sq_dists = np.subtract.outer(X, X) ** 2
-
-    # Compute the covariance matrix using the RBF kernel
-    K = np.exp(-sq_dists / (2 * length_scale ** 2))
-
-    return K
-
-
-def logistic(x):
-    return 1 / (1 + np.exp(-x))
-
 
 if __name__ == "__main__":
   
@@ -68,7 +45,7 @@ if __name__ == "__main__":
   print(environmentData)
 # %% 
   
-  m = setupModel(successes, cholesky=None, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N, exclude = excluded_capabilities)
+  m = setupModel(successes, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N, exclude = excluded_capabilities)
   plt.plot(np.average(successes, axis=1))
   plt.show()
   
@@ -92,8 +69,9 @@ if __name__ == "__main__":
       # TODO: how does the hdi change after transformation through a sigmoid?
       ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
       excluded_capabilities_string = "_".join(excluded_capabilities)
-      plt.xlabel("timestep")
-      plt.legend()
+      ax.set_title(f"Estimated {cap}")
+      ax.set_xlabel("timestep")
+      ax.legend()
       fig.savefig(f"estimated_{cap}_excluding_{excluded_capabilities_string}.png")
 
 # %%
