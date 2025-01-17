@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
 
     with m:
-        inference_data = pm.sample(100, target_accept=0.95, cores=2)
+        inference_data = pm.sample(500, target_accept=0.95, cores=2)
         
     if test_synthetic:
         final_str = "_test.png"
