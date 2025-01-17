@@ -95,7 +95,7 @@ def setupModel(taskResults, environmentData, cholesky=None, includeIrrelevantFea
       task_performance = pm.Bernoulli("task_performance", p=(1 - sigma_performance)*(navigation_performance*visual_performance) + sigma_performance*0.5, observed=taskResults)
     return m
 
-def setupModelSingle(taskResults, environmentData, cholesky=None, includeIrrelevantFeatures=True, includeNoise=True, N = 200, exclude = []):
+def setupModelSingle(taskResults, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200, exclude = []):
   m = pm.Model()
   with m:
       ### Environment Variables as Deterministic
