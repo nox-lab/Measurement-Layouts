@@ -12,6 +12,8 @@ class EvalRewardCallback(EvalCallback):
     def _on_step(self) -> bool:
         if self.eval_freq > 0 and self.n_calls % self.eval_freq == 0:
             for i in range(self.n_eval_episodes):
+                instance_demands = self.instances[i]
+                print(instance_demands)
                 episode_rewards, episode_lengths = evaluate_policy(
                     self.model,
                     self.eval_env,
@@ -23,7 +25,6 @@ class EvalRewardCallback(EvalCallback):
                     callback=self._log_success_callback,
                 )
                 print(f"Reward: {np.mean(episode_rewards)}, Episode length: {np.mean(episode_lengths)}")
-                instance_demands = self.instances[i]
                 data = {
                     'Xpos': instance_demands.Xpos,
                     'reward_behind': instance_demands.reward_behind,
