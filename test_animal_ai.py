@@ -9,6 +9,7 @@ from stable_baselines3.common.callbacks import EvalCallback, StopTrainingOnRewar
 import torch as th
 from ChangeEnvAfterEpisode import EndofEpisodeReward
 from evaluation_reward_ep_wrapper import EvalRewardCallback
+from generating_configs import Demands
 import sys
 import random
 import pandas as pd
@@ -17,7 +18,7 @@ import numpy as np
 
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from animalai.environment import AnimalAIEnvironment
-from generating_configs import gen_config_from_demands_batch_random
+from generating_configs import gen_config_from_demands_batch_random, gen_config_from_demands_batch
 import subprocess
 
 def train_agent_configs(configuration_file_train, configuration_file_eval, env_path_train, env_path_eval, log_bool = False, aai_seed = 2023, watch_train = False, watch_eval = False, num_steps = 10000):
@@ -26,7 +27,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     1, 1000)
     port_eval = port_train - 1
 
-    evaluation_recording_file = "eval_results_legit_curriculum.csv"
+    evaluation_recording_file = "rndom_test_file.csv"
     np.random.seed(0)
     # Create the environment and wrap it...
     aai_env_train = AnimalAIEnvironment( # the environment object
@@ -49,9 +50,11 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     print(port_train)
     # Include callbacks
     runname = "really_short_testing_stopTRAINING" # the name of the run, used for logging
-    N = 200
+    N = 10
+    demands_list = [Demands(3*(i+1)/N, 5, 0, 0) for i in range(N)] 
     training_set, demands_train = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml", time_limit=100, dist_max = 5.6) # the training set, a list of Demands objects, writes to a file.
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75) # the evaluation set, a list of Demands objects, writes to a file.
+    evaluation_set = gen_config_from_demands_batch(demands_list, r"example_batch_eval.yaml", time_limit=75) # the evaluation set, a list of Demands objects, writes to a file.
+    
     aai_env_eval = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_eval,
@@ -63,7 +66,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         resolution=64,
         useRayCasts=True, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=5.0, # the speed at which the simulation runs
+        timescale=1.0, # the speed at which the simulation runs
         log_folder = "aailogseval", # env logs eval
         targetFrameRate=-1
     )
@@ -76,7 +79,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=2, verbose=1)
     callback_for_eval = EndofEpisodeReward(aai_env = aai_env_eval)
     print(demands_list)
-    eval_callback = EvalRewardCallback(evaluation_recording_file, demands_list, env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=10000, deterministic=True, n_eval_episodes = N)
+    eval_callback = EvalRewardCallback(evaluation_recording_file, demands_list, env_eval, callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=1000, deterministic=True, n_eval_episodes = N)
     callback_list_train = CallbackList([callback_for_eval])
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    

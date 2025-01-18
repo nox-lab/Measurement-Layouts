@@ -7,7 +7,11 @@ def gen_config_from_demands(
     reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number : int, filename: str,
 ) -> str:
     # Validate
-    assert reward_size >= 0 and reward_size <= 1.9
+    try:
+      assert reward_size >= 0 and reward_size <= 1.9
+    except:
+      print("size greater than intended range.")
+      print(reward_size)
     try:
       assert reward_distance >= 0 and reward_distance <= 5.3
     except:
@@ -50,6 +54,8 @@ def gen_config_from_demands(
           - !Vector3 {{x: {reward_size}, y: {reward_size}, z: {reward_size}}}
         - !Item
           name: Agent
+          skins:
+          - "panda"
           positions:
           - !Vector3 {{x: 20, y: 0, z: 20}}
           rotations: [{agent_rotation}]
@@ -79,4 +85,3 @@ def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 
     demands_list.append(Demands(size, np.random.uniform(size+0.5,dist_max), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
   return gen_config_from_demands_batch(demands_list, filename, time_limit), demands_list
 
-gen_config_from_demands_batch_random(10, r"example_batch_eval.yaml", time_limit=25)

@@ -15,7 +15,7 @@ if __name__ == "__main__":
     environmentData = dict()
     abilityMax = {
         "navigationAbility": 5.3,
-        "visualAbility": 1.9,
+        "visualAbility": 10,
     }
     abilityMin = {
         "navigationAbility": 0.0,
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     }
 
     # FIGURES TO CREATE ON WHICH WE PUT CAPABILITIES
-
+    
     performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
     product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
     environmentData["abilityMax"] = abilityMax
@@ -31,8 +31,8 @@ if __name__ == "__main__":
     all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
     excluded_capabilities_string = ""
     if test_synthetic:
-        T = 10  # number of time steps
-        N = 50  # number of samples
+        T = 100  # number of time steps
+        N = 500  # number of samples
         learn_time_nav = 0.5*T
         learn_time_vis = 0.2*T
         learn_time_bias = 0.3*T
@@ -102,12 +102,13 @@ if __name__ == "__main__":
         # Visualise the true values of the capability profiles
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
-    else:   
+    else:
+        filename = "eval_results_harder.csv"   
         N = 200  # number of samples
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
-        df_final = pd.read_csv("eval_results_harder.csv")
+        df_final = pd.read_csv(filename)
         successes = df_final["reward"].values # Current in NT form
         successes = successes.reshape((-1, N)) # We want T x N
         T = successes.shape[0]  # number of time steps
@@ -123,10 +124,11 @@ if __name__ == "__main__":
 
     with m:
         inference_data = pm.sample(500, target_accept=0.95, cores=2)
-        
+
     if test_synthetic:
         final_str = "_test.png"
     else:
+        az.to_netcdf(inference_data, f"inference_data_{filename}.nc")
         if excluded_capabilities_string == "":
             final_str = ".png"
         else:
