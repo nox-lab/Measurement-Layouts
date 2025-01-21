@@ -35,5 +35,14 @@ class EvalRewardCallback(EvalCallback):
                 df = pd.DataFrame([data])
                 df.to_csv(self.results_file, mode='a', header=not pd.io.common.file_exists(self.results_file), index=False)
                 
-                
+            episode_rewards, episode_lengths = evaluate_policy(
+                self.model,
+                self.eval_env,
+                n_eval_episodes=1,
+                render=self.render,
+                deterministic=self.deterministic,
+                return_episode_rewards=True,
+                warn=self.warn,
+                callback=self._log_success_callback,
+            )
         return True
