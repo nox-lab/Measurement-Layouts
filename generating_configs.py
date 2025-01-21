@@ -4,7 +4,7 @@ import numpy as np
 
 
 def gen_config_from_demands(
-    reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number : int, filename: str,
+    reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number : int, filename: str, numbered: bool = False
 ) -> str:
     # Validate
     try:
@@ -37,7 +37,8 @@ def gen_config_from_demands(
     else:
       agent_rotation = 90*x_pos + 180
     agent_rotation = agent_rotation % 360 # This stops negative values.
-      
+    final_part = ""
+    
     initial_part = """
     !ArenaConfig
     arenas:"""
@@ -60,28 +61,52 @@ def gen_config_from_demands(
           - !Vector3 {{x: 20, y: 0, z: 20}}
           rotations: [{agent_rotation}]
         """
+    if numbered:
+      distance_away = 15
+      signboard_x = 20+distance_away*np.sin(agent_rotation*np.pi/180)
+      signboard_z = 20+distance_away*np.cos(agent_rotation*np.pi/180)
+      symbolpattern = ["1"*(env_number+1) if i % 2 == 0 else "0"*(env_number+1) for i in range(env_number)]
+      symbolpattern = "/".join(symbolpattern)
+      final_part = f"""
+        - !Item
+          name: SignBoard
+          positions:
+          - !Vector3 {{x: {signboard_x}, y: 0, z: {signboard_z}}}
+          sizes:
+          - !Vector3 {{x: 2, y: 2, z: 2}}
+          rotations: [{agent_rotation+270}]
+          symbolNames:
+          - "{symbolpattern}"
+      """
+          
+          
+      
     with open(filename, "w") as text_file:
-      text_file.write(initial_part + generated_config)
-    return generated_config
+      text_file.write(initial_part + generated_config + final_part)
+    return generated_config + final_part
   
-def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limit: int = 100) -> str:
+def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limit: int = 100, numbered: int = False) -> str:
   new_conf = ""
   initial_part = """
     !ArenaConfig
     arenas:"""
-  for i, env in enumerate(envs):
-    env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, i, f"temp")
+  # THIS INITIAL ENVIRONEMNT NEVER GETS USED, IT WILL GET SKIPPED. WE will make the evaluation run an extra time, to ensure that there is no loss in sync.
+  for i in range(3):
+    env_conf = gen_config_from_demands(5, 2.5, 0, 0, time_limit, i, f"temp", numbered=True)
     new_conf += env_conf
+  for i, env in enumerate(envs):
+    for j in range(3):
+      env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (i+1)*3+j, f"temp", numbered=numbered)
+      new_conf += env_conf
   with open(filename, "w") as text_file:
     text_file.write(initial_part + new_conf)
   return new_conf
-np.random.seed(0)
 
   
-def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3, time_limit = 100) -> tuple[str, list[Demands]]:
+def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3, time_limit = 100, numbered = False) -> tuple[str, list[Demands]]:
   demands_list = []
   for i in range(n_envs):
     size = np.random.uniform(0, size_max) # This should prevent clipping
     demands_list.append(Demands(size, np.random.uniform(size+0.5,dist_max), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
-  return gen_config_from_demands_batch(demands_list, filename, time_limit), demands_list
+  return gen_config_from_demands_batch(demands_list, filename, time_limit, numbered = numbered), demands_list
 
