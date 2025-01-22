@@ -103,7 +103,7 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename = "eval_results_harder.csv"   
+        filename = "fixed_hopefully_test_file.csv"   
         N = 200  # number of samples
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
