@@ -54,7 +54,7 @@ def setupModel(taskResults, environmentData, cholesky=None, includeIrrelevantFea
     T = taskResults.shape[0]
     # Some variables need to be initialised
     '''
-    sigma_performance = 0
+    
     sigma_nav = 0
     sigma_vis = 0
     sigma_bias = 0
@@ -63,6 +63,7 @@ def setupModel(taskResults, environmentData, cholesky=None, includeIrrelevantFea
     ability_bias_rl = 0
     '''
     # Priors
+    sigma_performance = 0
     if includeNoise:
       sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
     if "ability_navigaton" not in exclude:

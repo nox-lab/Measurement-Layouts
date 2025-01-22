@@ -10,7 +10,7 @@ from measurement_layout_AAIO import *
 
 if __name__ == "__main__":
     includeIrrelevantFeatures = True
-    includeNoise=True
+    includeNoise=False
     test_synthetic = False
     environmentData = dict()
     abilityMax = {
