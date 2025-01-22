@@ -65,7 +65,7 @@ def gen_config_from_demands(
       distance_away = 15
       signboard_x = 20+distance_away*np.sin(agent_rotation*np.pi/180)
       signboard_z = 20+distance_away*np.cos(agent_rotation*np.pi/180)
-      symbolpattern = ["1"*(env_number+1) if i % 2 == 0 else "0"*(env_number+1) for i in range(env_number)]
+      symbolpattern = ["1"*(env_number) if i % 2 == 0 else "0"*(env_number) for i in range(env_number)]
       symbolpattern = "/".join(symbolpattern)
       final_part = f"""
         - !Item
@@ -92,7 +92,7 @@ def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limi
     arenas:"""
   # THIS INITIAL ENVIRONEMNT NEVER GETS USED, IT WILL GET SKIPPED. WE will make the evaluation run an extra time, to ensure that there is no loss in sync.
   for i in range(3):
-    env_conf = gen_config_from_demands(5, 2.5, 0, 0, time_limit, i, f"temp", numbered=True)
+    env_conf = gen_config_from_demands(5, 10, 0, 0, time_limit, i, f"temp", numbered=False)
     new_conf += env_conf
   for i, env in enumerate(envs):
     for j in range(3):
@@ -100,7 +100,7 @@ def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limi
       new_conf += env_conf
   with open(filename, "w") as text_file:
     text_file.write(initial_part + new_conf)
-  return new_conf
+  return initial_part + new_conf
 
   
 def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3, time_limit = 100, numbered = False) -> tuple[str, list[Demands]]:

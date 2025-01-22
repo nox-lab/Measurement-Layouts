@@ -5,10 +5,12 @@ import pandas as pd
 from demands import Demands
 
 class EvalRewardCallback(EvalCallback):
-    def __init__(self, results_file, instances : list[Demands] = None, *args, **kwargs):
+    def __init__(self, results_file, instances : list[Demands] = None, aai_env = None, config_file: str = None, *args, **kwargs):
         super(EvalRewardCallback, self).__init__(*args, **kwargs)
         self.instances = instances
         self.results_file = results_file
+        self.aai_env = aai_env
+        self.config = config_file
     def _on_step(self) -> bool:
         if self.eval_freq > 0 and self.n_calls % self.eval_freq == 0:
             for i in range(self.n_eval_episodes):
@@ -35,14 +37,5 @@ class EvalRewardCallback(EvalCallback):
                 df = pd.DataFrame([data])
                 df.to_csv(self.results_file, mode='a', header=not pd.io.common.file_exists(self.results_file), index=False)
                 
-            episode_rewards, episode_lengths = evaluate_policy(
-                self.model,
-                self.eval_env,
-                n_eval_episodes=1,
-                render=self.render,
-                deterministic=self.deterministic,
-                return_episode_rewards=True,
-                warn=self.warn,
-                callback=self._log_success_callback,
-            )
+            self.aai_env.reset(arenas_configurations=self.config)
         return True
