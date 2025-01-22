@@ -91,12 +91,12 @@ def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limi
     !ArenaConfig
     arenas:"""
   # THIS INITIAL ENVIRONEMNT NEVER GETS USED, IT WILL GET SKIPPED. WE will make the evaluation run an extra time, to ensure that there is no loss in sync.
-  for i in range(3):
+  for i in range(2):
     env_conf = gen_config_from_demands(5, 10, 0, 0, time_limit, i, f"temp", numbered=False)
     new_conf += env_conf
   for i, env in enumerate(envs):
     for j in range(3):
-      env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (i+1)*3+j, f"temp", numbered=numbered)
+      env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (i+1)*3+j-1, f"temp", numbered=numbered)
       new_conf += env_conf
   with open(filename, "w") as text_file:
     text_file.write(initial_part + new_conf)
