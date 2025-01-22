@@ -9,7 +9,7 @@ class EndofEpisodeReward(BaseCallback):
 
     :param verbose: (int) Verbosity level 0: not output 1: info 2: debug
     """
-    def __init__(self, aai_env, config : str = None, instances : list[Demands] = None, verbose=0):
+    def __init__(self, aai_env, instances : list[Demands] = None,  config_str : str = None, verbose=0):
         super(EndofEpisodeReward, self).__init__(verbose)
         # Those variables will be accessible in the callback
         # (they are defined in the base class)
@@ -28,7 +28,7 @@ class EndofEpisodeReward(BaseCallback):
         # # Sometimes, for event callback, it is useful
         # # to have access to the parent object
         # self.parent = None  # type: Optional[BaseCallback]
-        self.config = config
+        self.config = config_str
         self.aai_env = aai_env
         self.num_episodes = 0
         self.wins = 0 
