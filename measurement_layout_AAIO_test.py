@@ -103,19 +103,28 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename = "fixed_hopefully_test_file.csv"   
-        N = 200  # number of samples
+        filename = "eval_recording_with_2_initial_filler_and_no_final_reset.csv"  
+        # filename = "fixed_hopefully_test_file.csv" 
+        N = 200  # number of arenas
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
         df_final = pd.read_csv(filename)
         successes = df_final["reward"].values # Current in NT form
         successes = successes.reshape((-1, N)) # We want T x N
+        successes = successes > -0.9
         T = successes.shape[0]  # number of time steps
         environmentData["reward_distance"] = df_final["reward_distance"].values[0:N]
         environmentData["reward_behind"] = df_final["reward_behind"].values[0:N]
         environmentData["reward_size"] = df_final["reward_size"].values[0:N]
         environmentData["Xpos"] = df_final["Xpos"].values[0:N]
+        total_successes = np.mean(successes, axis=1)
+        fig, ax = plt.subplots()
+        ax.bar(range(T), total_successes, color="grey", alpha=0.2)
+        ax.set_xlabel("timestep")
+        ax.set_ylabel("proportion of successes")
+        ax.title.set_text("Successes over time")
+        fig.savefig("successes.png")
         relevant_figs = [([cap], plt.subplots()) for cap in included_capabilities]
 
     # %%
