@@ -156,4 +156,4 @@ if __name__ == "__main__":
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("timestep")
         ax.legend()
-        fig.savefig(f"estimated_{cap}{final_str}")
+        fig.savefig(f"estimated_{cap}{final_str}_based_on_{filename}")
