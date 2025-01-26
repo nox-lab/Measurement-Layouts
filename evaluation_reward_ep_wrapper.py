@@ -3,9 +3,11 @@ from stable_baselines3.common.evaluation import evaluate_policy
 import numpy as np
 import pandas as pd
 from demands import Demands
+from animalai.environment import AnimalAIEnvironment
+from animal_ai_reset_wrapper import AnimalAIReset
 
 class EvalRewardCallback(EvalCallback):
-    def __init__(self, results_file, instances : list[Demands] = None, aai_env = None, config_file: str = None, *args, **kwargs):
+    def __init__(self, results_file, instances : list[Demands] = None, aai_env: AnimalAIReset = None, config_file: str = None, *args, **kwargs):
         super(EvalRewardCallback, self).__init__(*args, **kwargs)
         self.instances = instances
         self.results_file = results_file
@@ -13,6 +15,7 @@ class EvalRewardCallback(EvalCallback):
         self.config = config_file
     def _on_step(self) -> bool:
         if self.eval_freq > 0 and self.n_calls % self.eval_freq == 0:
+            self.aai_env.reset_arenas() # Reset the environment back to its initial state.
             for i in range(self.n_eval_episodes):
                 instance_demands = self.instances[i]
                 print(instance_demands)
