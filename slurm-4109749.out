@@ -1,0 +1,90 @@
+Loading rhel8/default-ccl
+  Loading requirement: rhel8/global rhel8/slurm rhel8/cclake-env/2024-06-01
+    rhel8/cclake/base glibc/2.28/gcc/4d2cj5pu gcc-runtime/13.3.0/gcc/2sn7kkm3
+    zlib-ng/2.1.6/gcc/mkjcey6m zstd/1.5.6/gcc/l5c7mfsx
+    binutils/2.42/gcc/y33xj6rq intel-oneapi-compilers/2023.2.4/gcc/4lbvg4hv
+    intel-oneapi-mpi/2021.12.1/intel/hlruk24n rhel8/cclake/intel
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/data.py:304: FutureWarning: MutableData is deprecated. All Data variables are now mutable. Use Data instead.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/distributions/timeseries.py:297: UserWarning: Initial distribution not specified, defaulting to `Normal.dist(0, 100)`.You can specify an init_dist manually to suppress this warning.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/distributions/timeseries.py:297: UserWarning: Initial distribution not specified, defaulting to `Normal.dist(0, 100)`.You can specify an init_dist manually to suppress this warning.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/distributions/timeseries.py:297: UserWarning: Initial distribution not specified, defaulting to `Normal.dist(0, 100)`.You can specify an init_dist manually to suppress this warning.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/data.py:304: FutureWarning: MutableData is deprecated. All Data variables are now mutable. Use Data instead.
+  warnings.warn(
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Traceback (most recent call last):
+  File "/rds/user/taj29/hpc-work/Measurement-Layouts/measurement_layout_AAIO_test.py", line 126, in <module>
+    inference_data = pm.sample(500, target_accept=0.95, cores=2)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/sampling/mcmc.py", line 772, in sample
+    model.check_start_vals(ip)
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/model/core.py", line 1793, in check_start_vals
+    raise SamplingError(
+pymc.exceptions.SamplingError: Initial evaluation of model at starting point failed!
+Starting values:
+{'sigma_nav_log__': array(-0.26183721), 'ability_navigation': array([ 0.96464684,  0.35889694,  0.59177245,  0.14276643, -0.83129737,
+        0.35327035,  0.92584041,  0.76725182,  0.52049266, -0.86141042,
+        0.97418196,  0.78269851,  0.75038819,  0.15565576,  0.71138918,
+       -0.51561415,  0.60742909,  0.6802335 , -0.36282991,  0.7982485 ,
+       -0.72916414, -0.47331506,  0.34619958,  0.2803989 , -0.72912085,
+       -0.29976223, -0.43605364, -0.12211892, -0.51646218, -0.38332052,
+       -0.36280759, -0.4865761 , -0.56762666,  0.09364053,  0.74804179,
+       -0.3895543 , -0.03251137,  0.66890513,  0.35619436,  0.52142864,
+       -0.2222145 , -0.74537444,  0.51144551, -0.81260519,  0.15058384,
+       -0.44481353,  0.94560396,  0.8805938 ,  0.81211583, -0.86539109,
+        0.88850876,  0.2541982 , -0.20831679, -0.15108206,  0.91421405,
+        0.42239397, -0.47852713, -0.50253803,  0.29852146, -0.68732009,
+       -0.08445076, -0.23845571, -0.15809914,  0.64264464, -0.64734272,
+        0.11511408]), 'sigma_vis_log__': array(-0.34172793), 'ability_visual': array([-0.79672099, -0.52609491,  0.37271238,  0.90671596,  0.12138447,
+        0.50090516, -0.43747754, -0.3152898 ,  0.67140761, -0.42429288,
+       -0.81075382,  0.8257012 , -0.63327173,  0.53122599,  0.29416454,
+        0.22526802, -0.57680086, -0.70378442, -0.59493222,  0.4329882 ,
+        0.73885574,  0.85614678, -0.26980399, -0.79023374,  0.88677523,
+        0.32512349,  0.01351491,  0.07661816,  0.46316691,  0.80217441,
+        0.21544683, -0.90651933,  0.48290945,  0.54016307, -0.81037118,
+       -0.40057604,  0.1139969 , -0.56112162, -0.829003  , -0.28329496,
+        0.72562768, -0.19557451, -0.17573083,  0.39954141, -0.34943979,
+        0.64196941,  0.3238511 , -0.25099791, -0.02846369, -0.26763709,
+       -0.30889432,  0.11779268,  0.51303801, -0.16738414, -0.50988497,
+        0.75927708, -0.5013181 ,  0.46175658, -0.6921046 ,  0.09455547,
+        0.91336368,  0.32177057,  0.12566665, -0.0558003 , -0.17023177,
+       -0.22849325]), 'sigma_bias_log__': array(0.60860395), 'ability_bias_rl': array([ 0.7505537 , -0.61223455,  0.45947086,  0.73639603,  0.42669672,
+       -0.60620547, -0.91597386, -0.20401649, -0.91906786,  0.97356321,
+        0.92775746, -0.74220998, -0.1583546 ,  0.70409488,  0.06371678,
+        0.7915213 ,  0.22555292, -0.05547453, -0.80632356, -0.17872491,
+        0.39215395, -0.321237  , -0.48142995, -0.96726093,  0.8138173 ,
+       -0.77203118, -0.98570127,  0.22664253, -0.91129141, -0.80556342,
+        0.67050796,  0.76020455, -0.79011518,  0.8456033 , -0.32046591,
+        0.15753069, -0.02204564,  0.8397803 , -0.78843836,  0.96486643,
+        0.33228216, -0.8168939 , -0.37198866,  0.925426  ,  0.55951876,
+       -0.99513079, -0.67079846, -0.16957635,  0.61141554, -0.87100034,
+        0.5462395 ,  0.98101495,  0.02585014,  0.80851991,  0.69897692,
+        0.4456228 ,  0.24722938,  0.18560644, -0.37013187, -0.6861102 ,
+       -0.16825154, -0.81460864,  0.51707652, -0.70571466,  0.63723671,
+        0.8630937 ])}
+
+Logp initial evaluation results:
+{'sigma_nav': -0.78, 'ability_navigation': -84.57, 'sigma_vis': -0.82, 'ability_visual': -79.93, 'sigma_bias': -1.31, 'ability_bias_rl': -113.61, 'task_performance': -inf}
+You can call `model.debug()` for more details.
+Changed directory to /rds/user/taj29/hpc-work/Measurement-Layouts.
+
+JobID: 4109749
+======
+Time: Wed Jan 22 23:23:35 GMT 2025
+Running on master node: cpu-p-142
+Current directory: /rds/user/taj29/hpc-work/Measurement-Layouts
+
+Nodes allocated:
+================
+cpu-p-142
+
+numtasks=20, numnodes=1, mpi_tasks_per_node=20 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+
+
