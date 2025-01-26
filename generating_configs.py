@@ -65,7 +65,7 @@ def gen_config_from_demands(
       distance_away = 15
       signboard_x = 20+distance_away*np.sin(agent_rotation*np.pi/180)
       signboard_z = 20+distance_away*np.cos(agent_rotation*np.pi/180)
-      symbolpattern = ["1"*(env_number) if i % 2 == 0 else "0"*(env_number) for i in range(env_number)]
+      symbolpattern = ["1"*(env_number//3+2) if i % 2 == 0 else "0"*(env_number//3+2) for i in range(env_number//3+3)]
       symbolpattern = "/".join(symbolpattern)
       final_part = f"""
         - !Item
@@ -86,17 +86,18 @@ def gen_config_from_demands(
     return generated_config + final_part
   
 def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limit: int = 100, numbered: int = False) -> str:
+  number_of_initial_envs = 0
   new_conf = ""
   initial_part = """
     !ArenaConfig
     arenas:"""
   # THIS INITIAL ENVIRONEMNT NEVER GETS USED, IT WILL GET SKIPPED. WE will make the evaluation run an extra time, to ensure that there is no loss in sync.
-  for i in range(2):
+  for i in range(number_of_initial_envs):
     env_conf = gen_config_from_demands(5, 10, 0, 0, time_limit, i, f"temp", numbered=False)
     new_conf += env_conf
   for i, env in enumerate(envs):
     for j in range(3):
-      env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (i+1)*3+j-1, f"temp", numbered=numbered)
+      env_conf = gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (number_of_initial_envs)+j+3*i, f"temp", numbered=numbered)
       new_conf += env_conf
   with open(filename, "w") as text_file:
     text_file.write(initial_part + new_conf)

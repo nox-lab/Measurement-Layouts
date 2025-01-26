@@ -15,6 +15,7 @@ import random
 import pandas as pd
 import os
 import numpy as np
+from animal_ai_reset_wrapper import AnimalAIReset
 
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from animalai.environment import AnimalAIEnvironment
@@ -28,10 +29,11 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     port_eval = port_train - 1
     N = 200
     training_set, training_demands = gen_config_from_demands_batch_random(N, r"example_batch_train.yaml", time_limit=100, dist_max = 15, numbered = False) # the training set, a list of Demands objects, writes to a file.
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, dist_max = 15, numbered = False) # the evaluation set, a list of Demands objects, writes to a file.
-    evaluation_recording_file = "eval_recording_with_2_initial_filler_and_no_final_reset.csv"
+    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, dist_max = 12, numbered = False) # the evaluation set, a list of Demands objects, writes to a file.
+    evaluation_recording_file = "environment_reset_test_REAL_WORKING_SEEMINGLY.csv"
     np.random.seed(0)
     # Create the environment and wrap it...
+    
     aai_env_train = AnimalAIEnvironment( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_train,
@@ -53,7 +55,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     # Include callbacks
     runname = "really_short_testing_stopTRAINING" # the name of the run, used for logging 
     
-    aai_env_eval = AnimalAIEnvironment( # the environment object
+    aai_env_eval = AnimalAIReset( # the environment object
         seed = aai_seed, # seed for the pseudo random generators
         file_name=env_path_eval,
         arenas_configurations=configuration_file_eval,
@@ -69,13 +71,12 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         targetFrameRate=-1
     )
     print("env eval created")
-    
     #evaluation_set = [Demands(1, 2, 0, 0), Demands(0.1, 2, 0, 0), Demands(1, 1, 0, 1), Demands(1, 5, 0.5, 0), Demands(1, 2, 1, 0)]
     env_train = UnityToGymWrapper(aai_env_train, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
     env_eval = UnityToGymWrapper(aai_env_eval, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
     # Create aai_env_eval_new type using AnimalAIWrapper, fulfilling same interface, same as UnityToGymWrapper, 
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=2, verbose=1)
-    eval_callback = EvalRewardCallback(evaluation_recording_file, demands_list, aai_env = aai_env_eval, eval_env = env_eval, config_file = configuration_file_eval,  callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=15000, deterministic=True, n_eval_episodes = N)
+    eval_callback = EvalRewardCallback(evaluation_recording_file, demands_list, aai_env = aai_env_eval, eval_env = env_eval, config_file = configuration_file_eval,  callback_on_new_best=callback_on_best, best_model_save_path='./logs/', log_path='./logs/', eval_freq=10000, deterministic=True, n_eval_episodes = N)
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function
