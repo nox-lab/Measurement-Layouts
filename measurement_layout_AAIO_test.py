@@ -104,7 +104,8 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename = "environment_reset_test_REAL_WORKING_SEEMINGLY.csv"  
+        filename_no_ext = "environment_reset_test_REAL_WORKING_SEEMINGLY"
+        filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
         N = 200  # number of arenas
         excluded_capabilities = []
@@ -139,7 +140,7 @@ if __name__ == "__main__":
         final_str = "_test.png"
     else:
         if save_samples:    
-            az.to_netcdf(inference_data, f"inference_data_{filename}.nc")
+            az.to_netcdf(inference_data, f"inference_data_{filename_no_ext}.nc")
         if excluded_capabilities_string == "":
             final_str = ".png"
         else:
@@ -158,4 +159,4 @@ if __name__ == "__main__":
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("timestep")
         ax.legend()
-        fig.savefig(f"estimated_{cap}{final_str}_based_on_{filename}")
+        fig.savefig(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}.png")
