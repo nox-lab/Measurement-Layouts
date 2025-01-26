@@ -12,6 +12,7 @@ if __name__ == "__main__":
     includeIrrelevantFeatures = True
     includeNoise=False
     test_synthetic = False
+    save_samples = False
     environmentData = dict()
     abilityMax = {
         "navigationAbility": 5.3,
@@ -137,7 +138,8 @@ if __name__ == "__main__":
     if test_synthetic:
         final_str = "_test.png"
     else:
-        az.to_netcdf(inference_data, f"inference_data_{filename}.nc")
+        if save_samples:    
+            az.to_netcdf(inference_data, f"inference_data_{filename}.nc")
         if excluded_capabilities_string == "":
             final_str = ".png"
         else:
