@@ -103,7 +103,7 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename = "eval_recording_with_2_initial_filler_and_no_final_reset.csv"  
+        filename = "environment_reset_test_REAL_WORKING_SEEMINGLY.csv"  
         # filename = "fixed_hopefully_test_file.csv" 
         N = 200  # number of arenas
         excluded_capabilities = []
