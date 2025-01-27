@@ -24,6 +24,8 @@ if __name__ == "__main__":
     }
 
     # FIGURES TO CREATE ON WHICH WE PUT CAPABILITIES
+    def logit(x):
+        return np.log(x/(1-x))
     
     performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
     product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
@@ -112,6 +114,16 @@ if __name__ == "__main__":
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
         df_final = pd.read_csv(filename)
+        maximum_distance = df_final["reward_distance"].max()
+        minimum_size = df_final["reward_size"].min()
+        nav_max = maximum_distance*1.5 + logit(0.99) # associated to 0.99 nav performance
+        vis_max = logit(0.99) + np.log(maximum_distance) - np.log(minimum_size) # associated to 0.99 vis performance
+        bias_max = 2*logit(0.99) # associated to swapping of success rate from 0.99 to 0.01
+        maximum_capabilities = {
+            "ability_navigation": [nav_max],
+            "ability_visual": [vis_max],
+            "ability_bias_rl": [bias_max, -bias_max]
+        }
         successes = df_final["reward"].values # Current in NT form
         successes = successes.reshape((-1, N)) # We want T x N
         successes = successes > -0.9
@@ -126,7 +138,7 @@ if __name__ == "__main__":
         ax.set_xlabel("timestep")
         ax.set_ylabel("proportion of successes")
         ax.title.set_text("Successes over time")
-        fig.savefig("successes.png")
+        fig.savefig(f"successes_{filename_no_ext}.png")
         relevant_figs = [([cap], plt.subplots()) for cap in included_capabilities]
 
     # %%
@@ -156,6 +168,9 @@ if __name__ == "__main__":
         ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
         # TODO: how does the hdi change after transformation through a sigmoid?
         ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
+        for maximum_cap in maximum_capabilities[cap]:
+            ax.axhline(maximum_cap, color="red", linestyle="--")
+        ax.plot([], [], color="red", linestyle="--", label="Capability bound")
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("timestep")
         ax.legend()
