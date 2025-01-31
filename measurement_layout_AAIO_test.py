@@ -33,9 +33,11 @@ if __name__ == "__main__":
     environmentData["abilityMin"] = abilityMin
     all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
     excluded_capabilities_string = ""
+    maximum_capabilites = None
     if test_synthetic:
-        T = 100  # number of time steps
-        N = 500  # number of samples
+        filename_no_ext = "NOTHING"
+        T = 25  # number of time steps
+        N = 10  # number of samples
         learn_time_nav = 0.5*T
         learn_time_vis = 0.2*T
         learn_time_bias = 0.3*T
@@ -106,7 +108,7 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename_no_ext = "environment_reset_test_REAL_WORKING_SEEMINGLY"
+        filename_no_ext = "working_caps_predictive"
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
         N = 200  # number of arenas
@@ -160,16 +162,22 @@ if __name__ == "__main__":
     for cap, (fig, ax) in relevant_figs:
         cap = cap[0]
         estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
+        
+        # Save the estimated capabilities
+        np.save(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}.npy", estimated_p_per_ts)
         # TODO: Understand the hdi function a bit more (why does this 'just work'?)
         estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
         low_hdis = [l for l,_ in estimate_hdis]
         high_hdis = [u for _,u in estimate_hdis]
+        np.save(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}_low_hdi.npy", np.array(low_hdis))
+        np.save(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}_high_hdi.npy", np.array(high_hdis))
         # TODO: Is it justified to do sigmoid of the mean?
         ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
         # TODO: how does the hdi change after transformation through a sigmoid?
         ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
-        for maximum_cap in maximum_capabilities[cap]:
-            ax.axhline(maximum_cap, color="red", linestyle="--")
+        if maximum_capabilites is not None:
+            for maximum_cap in maximum_capabilities[cap]:
+                ax.axhline(maximum_cap, color="red", linestyle="--")
         ax.plot([], [], color="red", linestyle="--", label="Capability bound")
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("timestep")
