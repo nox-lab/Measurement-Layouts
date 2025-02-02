@@ -116,7 +116,7 @@ if __name__ == "__main__":
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
-        df_final = pd.read_csv(filename)
+        df_final = pd.read_csv("./" + filename)
         maximum_distance = df_final["reward_distance"].max()
         minimum_size = df_final["reward_size"].min()
         nav_max = maximum_distance*1.5 + logit(0.99) # associated to 0.99 nav performance
