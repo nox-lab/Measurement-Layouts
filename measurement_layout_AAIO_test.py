@@ -109,7 +109,7 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename_no_ext = r"./csv_recordings/working_caps_predictive_2"
+        filename_no_ext = r"csv_recordings/working_caps_predictive_2"
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
         N = 200  # number of arenas
