@@ -164,13 +164,13 @@ if __name__ == "__main__":
         estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
         
         # Save the estimated capabilities
-        np.save(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}.npy", estimated_p_per_ts)
+        np.save(f"./estimated_capabilities/estimated_{cap}{final_str}_based_on_{filename_no_ext}.npy", estimated_p_per_ts)
         # TODO: Understand the hdi function a bit more (why does this 'just work'?)
         estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
         low_hdis = [l for l,_ in estimate_hdis]
         high_hdis = [u for _,u in estimate_hdis]
-        np.save(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}_low_hdi.npy", np.array(low_hdis))
-        np.save(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}_high_hdi.npy", np.array(high_hdis))
+        np.save(f"./estimated_capabilities/estimated_{cap}{final_str}_based_on_{filename_no_ext}_low_hdi.npy", np.array(low_hdis))
+        np.save(f"./estimated_capabilities/estimated_{cap}{final_str}_based_on_{filename_no_ext}_high_hdi.npy", np.array(high_hdis))
         # TODO: Is it justified to do sigmoid of the mean?
         ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
         # TODO: how does the hdi change after transformation through a sigmoid?
@@ -182,4 +182,4 @@ if __name__ == "__main__":
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("timestep")
         ax.legend()
-        fig.savefig(f"estimated_{cap}{final_str}_based_on_{filename_no_ext}.png")
+        fig.savefig(f"./estimated_capabilities/estimated_{cap}{final_str}_based_on_{filename_no_ext}.png")

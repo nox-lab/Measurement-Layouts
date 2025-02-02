@@ -7,7 +7,7 @@ from animalai.environment import AnimalAIEnvironment
 from animal_ai_reset_wrapper import AnimalAIReset
 
 class EvalRewardCallback(EvalCallback):
-    def __init__(self, results_file, instances : list[Demands] = None, aai_env: AnimalAIReset = None, config_file: str = None, best_model_path : str = None, *args, **kwargs):
+    def __init__(self, results_file, instances : list[Demands] = None, aai_env: AnimalAIReset = None, config_file: str = None, best_model_path : str = None, num_evals = None, *args, **kwargs):
         super(EvalRewardCallback, self).__init__(*args, **kwargs)
         self.instances = instances
         self.results_file = results_file
@@ -15,10 +15,13 @@ class EvalRewardCallback(EvalCallback):
         self.config = config_file
         self.best_model_path = best_model_path
         self.best_reward = -np.inf
+        self.number_of_evals = 0
+        self.number_of_evals_max = np.inf if num_evals is None else num_evals
     def _on_step(self) -> bool:
         if self.eval_freq > 0 and self.n_calls % self.eval_freq == 0:
             self.aai_env.reset_arenas() # Reset the environment back to its initial state.
             self.total_reward = 0
+            self.number_of_evals += 1
             for i in range(self.n_eval_episodes):
                 instance_demands = self.instances[i]
                 print(instance_demands)
@@ -46,6 +49,10 @@ class EvalRewardCallback(EvalCallback):
             if self.total_reward > self.best_reward and self.best_model_path:
                 print(f"New best reward: {self.total_reward}, saving to {self.best_model_path}")
                 self.best_reward = self.total_reward
-            self.model.save(self.best_model_path)
+            if self.best_model_path:    
+                self.model.save(self.best_model_path)
+                print("model saved!")
             self.aai_env.reset(arenas_configurations=self.config)
+        if self.number_of_evals >= self.number_of_evals_max:
+            return False
         return True

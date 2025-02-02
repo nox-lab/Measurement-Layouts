@@ -104,10 +104,14 @@ def gen_config_from_demands_batch(envs : list[Demands], filename: str, time_limi
   return initial_part + new_conf
 
   
-def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_max = 1.9, dist_max = 5.3, time_limit = 100, numbered = False) -> tuple[str, list[Demands]]:
+def gen_config_from_demands_batch_random(n_envs: int, filename: str, size_min = 0, size_max = 1.9, dist_min = None, dist_max = 5.3, time_limit = 100, numbered = False) -> tuple[str, list[Demands]]:
   demands_list = []
   for i in range(n_envs):
-    size = np.random.uniform(0, size_max) # This should prevent clipping
-    demands_list.append(Demands(size, np.random.uniform(size+0.5,dist_max), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
+    dist_min = size_min + 0.5 if dist_min is None else dist_min
+    if dist_min < size_min + 0.5:
+      dist_min = size_min + 0.5
+      print("Distance min too small, setting to size_min + 0.5, this is to prevent clipping.")
+    size = np.random.uniform(size_min, size_max) # This should prevent clipping
+    demands_list.append(Demands(size, np.random.uniform(dist_min,dist_max), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
   return gen_config_from_demands_batch(demands_list, filename, time_limit, numbered = numbered), demands_list
 
