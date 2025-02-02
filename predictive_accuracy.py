@@ -22,7 +22,7 @@ if __name__ == "__main__":
     
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-    recorded_results = r"example_batch_predictive.csv"
+    recorded_results = r"example_batch_predictive_2.csv"
     
     csv_name = "working_caps_predictive"
     estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_visual.png_based_on_{csv_name}.npy")

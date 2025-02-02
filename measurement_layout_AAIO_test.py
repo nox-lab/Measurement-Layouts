@@ -13,6 +13,7 @@ if __name__ == "__main__":
     includeNoise=False
     test_synthetic = False
     save_samples = False
+    show_max = False
     environmentData = dict()
     abilityMax = {
         "navigationAbility": 5.3,
@@ -108,7 +109,7 @@ if __name__ == "__main__":
         for cap, (fig, ax) in relevant_figs:
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
-        filename_no_ext = "working_caps_predictive"
+        filename_no_ext = r"./csv_recordings/working_caps_predictive_2"
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
         N = 200  # number of arenas
@@ -175,10 +176,10 @@ if __name__ == "__main__":
         ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
         # TODO: how does the hdi change after transformation through a sigmoid?
         ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
-        if maximum_capabilites is not None:
+        if show_max and maximum_capabilites is not None:
             for maximum_cap in maximum_capabilities[cap]:
                 ax.axhline(maximum_cap, color="red", linestyle="--")
-        ax.plot([], [], color="red", linestyle="--", label="Capability bound")
+            ax.plot([], [], color="red", linestyle="--", label="Capability bound")
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("timestep")
         ax.legend()
