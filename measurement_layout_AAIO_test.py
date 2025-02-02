@@ -37,6 +37,7 @@ if __name__ == "__main__":
     maximum_capabilites = None
     if test_synthetic:
         filename_no_ext = "NOTHING"
+        filename_no_ext_or_pref = "NOTHING"
         T = 25  # number of time steps
         N = 10  # number of samples
         learn_time_nav = 0.5*T
