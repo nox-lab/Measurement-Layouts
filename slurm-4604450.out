@@ -1,0 +1,45 @@
+Loading rhel8/default-ccl
+  Loading requirement: rhel8/global rhel8/slurm rhel8/cclake-env/2024-06-01
+    rhel8/cclake/base glibc/2.28/gcc/4d2cj5pu gcc-runtime/13.3.0/gcc/2sn7kkm3
+    zlib-ng/2.1.6/gcc/mkjcey6m zstd/1.5.6/gcc/l5c7mfsx
+    binutils/2.42/gcc/y33xj6rq intel-oneapi-compilers/2023.2.4/gcc/4lbvg4hv
+    intel-oneapi-mpi/2021.12.1/intel/hlruk24n rhel8/cclake/intel
+Traceback (most recent call last):
+  File "/rds/user/taj29/hpc-work/Measurement-Layouts/measurement_layout_AAIO_test.py", line 147, in <module>
+    fig.savefig(f"./estimated_capabilities/successes_{filename_no_ext}.png")
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/matplotlib/figure.py", line 3390, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    result = print_method(
+             ^^^^^^^^^^^^^
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/matplotlib/backend_bases.py", line 2043, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+                                                                 ^^^^^
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/matplotlib/backends/backend_agg.py", line 497, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/matplotlib/backends/backend_agg.py", line 446, in _print_pil
+    mpl.image.imsave(
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/matplotlib/image.py", line 1656, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/PIL/Image.py", line 2600, in save
+    fp = builtins.open(filename, "w+b")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/rds/user/taj29/hpc-work/Measurement-Layouts/estimated_capabilities/successes_csv_recordings/working_caps_predictive_2.png'
+Changed directory to /rds/user/taj29/hpc-work/Measurement-Layouts.
+
+JobID: 4604450
+======
+Time: Sun Feb  2 16:45:15 GMT 2025
+Running on master node: cpu-p-317
+Current directory: /rds/user/taj29/hpc-work/Measurement-Layouts
+
+Nodes allocated:
+================
+cpu-p-317
+
+numtasks=20, numnodes=1, mpi_tasks_per_node=20 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+
+
