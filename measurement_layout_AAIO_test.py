@@ -141,7 +141,7 @@ if __name__ == "__main__":
         ax.set_xlabel("timestep")
         ax.set_ylabel("proportion of successes")
         ax.title.set_text("Successes over time")
-        fig.savefig(f"successes_{filename_no_ext}.png")
+        fig.savefig(f"./estimated_capabilities/successes_{filename_no_ext}.png")
         relevant_figs = [([cap], plt.subplots()) for cap in included_capabilities]
 
     # %%
