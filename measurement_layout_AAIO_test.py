@@ -111,7 +111,7 @@ if __name__ == "__main__":
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
         folder = "csv_recordings"
-        filename_no_ext_or_pref = "working_caps_predictive_2"
+        filename_no_ext_or_pref = "working_caps_predictive_3"
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 

@@ -22,9 +22,9 @@ if __name__ == "__main__":
     
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-    recorded_results = r"./csv_recordings/example_batch_predictive_2_2_same_evals.csv"
+    recorded_results = r"./csv_recordings/example_batch_predictive_3_same_evals.csv"
     
-    csv_name = "working_caps_predictive_2"
+    csv_name = "working_caps_predictive_3"
     estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_visual.png_based_on_{csv_name}.npy")
     estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_navigation.png_based_on_{csv_name}.npy")
     estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_bias_rl.png_based_on_{csv_name}.npy")
