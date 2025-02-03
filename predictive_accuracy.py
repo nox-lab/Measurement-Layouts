@@ -22,9 +22,9 @@ if __name__ == "__main__":
     
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-    recorded_results = r"example_batch_predictive_2.csv"
+    recorded_results = r"./csv_recordings/example_batch_predictive_2_2_same_evals.csv"
     
-    csv_name = "working_caps_predictive"
+    csv_name = "working_caps_predictive_2"
     estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_visual.png_based_on_{csv_name}.npy")
     estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_navigation.png_based_on_{csv_name}.npy")
     estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_bias_rl.png_based_on_{csv_name}.npy")
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
 
     N = 200 
-    csv_file = pd.read_csv(f"{csv_name}.csv")
+    csv_file = pd.read_csv(f"./csv_recordings/{csv_name}.csv")
     demands = csv_file[["Xpos", "reward_distance", "reward_size", "reward_behind"]].to_numpy()
     demands = demands[:N] # We only want the first N because of the fact that they are repeated.
     capability_bias = final_capability_means["bias"]
@@ -52,8 +52,8 @@ if __name__ == "__main__":
     behind = demands[:,3]
     # SELF DEMANDS FOR TESTING WHETHER ML PREDICTS ITSELF EVEN (I GUESS IT KIND OF DOES)
     list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
-    yaml_string, list_of_demands = gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_min = 12, dist_max = 15, numbered = False) # Creates yaml file with same demands as csv file.
-    # gen_config_from_demands_batch(list_of_demands, "example_batch_predictive.yaml") # Creates yaml file with same demands as csv file. 
+    #yaml_string, list_of_demands = gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_min = 12, dist_max = 15, numbered = False) # Creates yaml file with same demands as csv file.
+    gen_config_from_demands_batch(list_of_demands, "example_batch_predictive.yaml") # Creates yaml file with same demands as csv file. 
     # 0.695 predictive accuracy for putting the demands themselves in the yaml file, suggests that maybe something off with the measurement layout but it's okay.
     # Now let's try to use a out-of-distribution set of demands to see how well the model can predict the success of the agent out of distribution. 
     # For mix of in and out of distribution, found accuracy = 0.595. 
@@ -67,11 +67,11 @@ if __name__ == "__main__":
     
     if os.path.exists(recorded_results):
         os.remove(recorded_results)
-
+    
     train_agent_configs(configuration_file_train="example_batch_predictive.yaml", configuration_file_eval="example_batch_predictive.yaml",
                         env_path_train=env_path_train, env_path_eval=env_path_eval, evaluation_recording_file=recorded_results, demands_list = list_of_demands,
                         log_bool = False, aai_seed = 2023, watch_train = False, watch_eval = True, num_steps = 1, eval_freq = 1, save_model = False,
-                        load_model = r"./logs/best_model.zip", N = N, max_evaluations=1)
+                        load_model = r"./logs/best_model_2.zip", N = N, max_evaluations=1)
     
     recorded_results = pd.read_csv(recorded_results)
     rewards_received = recorded_results["reward"]

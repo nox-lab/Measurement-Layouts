@@ -7,15 +7,15 @@
         - !Item
           name: GoodGoal
           positions:
-          - !Vector3 {x: 20.0, y: 0, z: 28.989021001682257}
+          - !Vector3 {x: 27.562801027671036, y: 0, z: 20.0}
           rotations: [0]
           sizes:
-          - !Vector3 {x: 1.87236197908806, y: 1.87236197908806, z: 1.87236197908806}
+          - !Vector3 {x: 0.7777144851337718, y: 0.7777144851337718, z: 0.7777144851337718}
         - !Item
           name: Agent
           skins:
           - "panda"
           positions:
           - !Vector3 {x: 20, y: 0, z: 20}
-          rotations: [0]
+          rotations: [90]
         
