@@ -77,7 +77,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     callback_on_best = StopTrainingOnRewardThreshold(reward_threshold=2, verbose=1)
     eval_callback = EvalRewardCallback(evaluation_recording_file, demands_list, aai_env = aai_env_eval, eval_env = env_eval,
                                        config_file = configuration_file_eval,  callback_on_new_best=callback_on_best,
-                                       best_model_path= save_model , eval_freq=eval_freq, deterministic=True, n_eval_episodes = N,
+                                       best_model_path= save_model , eval_freq=eval_freq, deterministic=False, n_eval_episodes = N,
                                        num_evals = max_evaluations)
     # NEED TO CREATE AN ANNOTATED SET FOR EVALUATION USE that is used for evaluation.
    
@@ -96,14 +96,14 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 if __name__ == "__main__":
     N = 200
     N_train = 500
-    training_set, training_demands = gen_config_from_demands_batch_random(N_train, r"example_batch_train.yaml", time_limit=75, size_min = 0.2, dist_max = 7, numbered = False) # the training set, a list of Demands objects, writes to a file.
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, size_min = 0.2, dist_max = 12, numbered = False) # the evaluation set, a list of Demands objects, writes to a file.
+    training_set, training_demands = gen_config_from_demands_batch_random(N_train, r"example_batch_train.yaml", time_limit=75, size_min = 0.2, dist_max = 10, numbered = False) # the training set, a list of Demands objects, writes to a file.
+    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, size_min = 0.2, dist_max = 15, numbered = False) # the evaluation set, a list of Demands objects, writes to a file.
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
     configuration_file_eval = r"example_batch_eval.yaml"
-    model_name = r"./logs/best_model_3.zip"
-    recording_file = r"./csv_recordings/example_batch_predictive_3.csv"
+    model_name = r"./logs/best_model_4.zip"
+    recording_file = r"./csv_recordings/example_batch_predictive_4_harder_train10eval15.csv"
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name,
                                   demands_list = demands_list, env_path_train = env_path_train, env_path_eval = env_path_eval,

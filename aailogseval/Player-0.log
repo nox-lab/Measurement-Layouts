@@ -10,11 +10,11 @@ Direct3D:
     VRAM:     1906 MB
     Driver:   32.0.15.6119
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.211 seconds
+- Completed reload, in  0.170 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.347000 ms
+UnloadTime: 1.318100 ms
 Environment loaded with options:
   PlayerMode: False
   useCamera: True
@@ -36,7 +36,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -55,6 +57,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -74,10 +77,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -96,6 +97,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -117,7 +120,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -136,6 +140,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -213,10 +218,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -236,7 +239,6 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -256,6 +258,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -275,6 +279,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -288,13 +293,15 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -314,8 +321,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -335,6 +340,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -355,6 +361,7 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -393,7 +400,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -413,6 +419,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -433,7 +440,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -452,6 +460,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
@@ -466,7 +475,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -474,7 +482,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -532,10 +541,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -554,7 +561,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -574,9 +583,7 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -659,7 +666,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -679,6 +688,7 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -756,7 +766,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -775,7 +788,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -795,6 +807,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -836,6 +849,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -874,7 +888,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -894,7 +907,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -913,7 +929,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -936,6 +951,7 @@ Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -956,7 +972,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -975,9 +992,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -998,7 +1014,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1017,6 +1034,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1036,7 +1054,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1056,7 +1073,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
@@ -1077,8 +1093,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1098,6 +1112,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1159,9 +1174,7 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1180,7 +1193,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1200,6 +1216,7 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1221,7 +1238,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1240,6 +1258,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1278,10 +1297,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1313,16 +1329,15 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1341,7 +1356,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1361,6 +1375,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1380,10 +1395,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1422,7 +1434,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1461,7 +1475,6 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1481,10 +1494,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1525,9 +1535,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1566,7 +1575,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1586,6 +1594,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1627,7 +1637,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1647,7 +1659,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1666,10 +1680,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1688,6 +1700,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1707,7 +1720,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1729,7 +1741,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1748,7 +1761,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1767,6 +1783,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1786,9 +1803,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -1808,7 +1822,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1827,10 +1844,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1850,7 +1865,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1863,13 +1879,16 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1882,7 +1901,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1892,6 +1910,7 @@ Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1912,7 +1931,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1969,10 +1989,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -1992,6 +2011,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2030,10 +2051,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2052,7 +2071,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2073,7 +2095,7 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2093,6 +2115,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2132,7 +2157,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2151,6 +2178,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2171,7 +2199,6 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2214,6 +2241,7 @@ Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2233,7 +2261,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2246,13 +2275,16 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2273,7 +2305,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2292,7 +2325,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2312,7 +2348,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2331,6 +2368,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2370,6 +2409,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2390,7 +2430,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2452,9 +2494,7 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2473,7 +2513,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2493,9 +2532,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2534,7 +2572,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2554,7 +2595,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2573,9 +2615,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2614,6 +2655,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2653,6 +2695,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2673,7 +2716,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2692,10 +2737,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2714,7 +2756,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2774,7 +2819,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2793,6 +2839,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2833,7 +2880,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2855,7 +2901,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2915,6 +2962,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
@@ -2935,7 +2983,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2954,7 +3005,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -2973,7 +3027,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -2993,10 +3046,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3015,7 +3066,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3034,7 +3087,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3053,7 +3109,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3066,13 +3125,15 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3092,7 +3153,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3111,8 +3175,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3171,10 +3233,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3193,7 +3255,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3212,6 +3277,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3231,7 +3297,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3251,7 +3316,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3270,6 +3338,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3289,10 +3358,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3311,7 +3377,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3330,10 +3399,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3371,7 +3438,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
@@ -3392,6 +3458,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3412,7 +3479,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3432,7 +3501,6 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Current pass mark: 0
-Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3472,7 +3540,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3491,6 +3560,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3510,7 +3580,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3529,10 +3602,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3552,7 +3623,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3571,6 +3644,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3590,7 +3664,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3654,6 +3730,7 @@ Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3672,8 +3749,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3694,7 +3769,6 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3736,7 +3810,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3755,7 +3831,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
@@ -3776,7 +3851,9 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3795,10 +3872,8 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
 Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3817,6 +3892,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3836,6 +3912,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3855,10 +3932,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3877,6 +3951,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
+Flushed log queue to CSV file.
 Current pass mark: 0
 Episode Begin
 Value of showNotification: False
@@ -3898,7 +3973,8 @@ Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3917,9 +3993,7 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
-Flushed log queue to CSV file.
+Current pass mark: 0
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3939,7 +4013,9 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3958,7 +4034,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3978,7 +4057,8 @@ Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
 Flushed log queue to CSV file.
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -3997,7 +4077,10 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Current pass mark: 0
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
+Flushed log queue to CSV file.
 Episode Begin
 Value of showNotification: False
 Current Pass Mark: 0
@@ -4057,7 +4140,6 @@ Current Pass Mark: 0
 Number of Goals Collected: 0
 Resetting Arena
 Spawnables has 4 entries
-Flushed log queue to CSV file.
 Setting up 6 worker threads for Enlighten.
 Flushed log queue to CSV file.
 Flushed log queue to CSV file.
@@ -4065,7 +4147,7 @@ Memory Statistics:
 [ALLOC_TEMP_TLS] TLS Allocator
   StackAllocators : 
     [ALLOC_TEMP_MAIN]
-      Peak usage frame count: [2.0 KB-4.0 KB]: 501 frames, [4.0 KB-8.0 KB]: 4905 frames, [16.0 KB-32.0 KB]: 412 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [2.0 KB-4.0 KB]: 5107 frames, [4.0 KB-8.0 KB]: 10266 frames, [8.0 KB-16.0 KB]: 3 frames, [16.0 KB-32.0 KB]: 630 frames, [2.0 MB-4.0 MB]: 1 frames
       Initial Block Size 4.0 MB
       Current Block Size 4.0 MB
       Peak Allocated Bytes 2.3 MB
@@ -4077,8 +4159,8 @@ Memory Statistics:
       Overflow Count 0
     [ALLOC_TEMP_Loading.PreloadManager]
       Initial Block Size 256.0 KB
-      Current Block Size 276.0 KB
-      Peak Allocated Bytes 270.5 KB
+      Current Block Size 272.0 KB
+      Peak Allocated Bytes 266.6 KB
       Overflow Count 4
     [ALLOC_TEMP_Background Job.Worker 8]
       Initial Block Size 32.0 KB
@@ -4242,16 +4324,16 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_DEFAULT_MAIN]
-      Peak usage frame count: [8.0 MB-16.0 MB]: 5819 frames
+      Peak usage frame count: [8.0 MB-16.0 MB]: 16007 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 14.5 MB
+      Peak Allocated memory 14.4 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
-      Peak usage frame count: [16.0 MB-32.0 MB]: 5819 frames
+      Peak usage frame count: [16.0 MB-32.0 MB]: 16007 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 17.9 MB
+      Peak Allocated memory 18.0 MB
       Peak Large allocation bytes 16.0 MB
 [ALLOC_TEMP_JOB_1_FRAME]
   Initial Block Size 2.0 MB
@@ -4274,22 +4356,22 @@ Memory Statistics:
   Overflow Count (too large) 0
   Overflow Count (full) 0
 [ALLOC_GFX] Dual Thread Allocator
-  Peak main deferred allocation count 2
+  Peak main deferred allocation count 1
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_GFX_MAIN]
-      Peak usage frame count: [1.0 MB-2.0 MB]: 5818 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [1.0 MB-2.0 MB]: 16006 frames, [2.0 MB-4.0 MB]: 1 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
       Peak Allocated memory 2.7 MB
       Peak Large allocation bytes 0 B
     [ALLOC_GFX_THREAD]
-      Peak usage frame count: [256.0 KB-0.5 MB]: 3 frames, [0.5 MB-1.0 MB]: 5816 frames
+      Peak usage frame count: [256.0 KB-0.5 MB]: 165 frames, [0.5 MB-1.0 MB]: 15842 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 0.6 MB
+      Peak Allocated memory 0.7 MB
       Peak Large allocation bytes 0 B
 [ALLOC_CACHEOBJECTS] Dual Thread Allocator
   Peak main deferred allocation count 2
@@ -4298,13 +4380,13 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_CACHEOBJECTS_MAIN]
-      Peak usage frame count: [16.0 MB-32.0 MB]: 5819 frames
+      Peak usage frame count: [16.0 MB-32.0 MB]: 16007 frames
       Requested Block Size 4.0 MB
       Peak Block count 5
       Peak Allocated memory 29.0 MB
       Peak Large allocation bytes 11.8 MB
     [ALLOC_CACHEOBJECTS_THREAD]
-      Peak usage frame count: [1.0 MB-2.0 MB]: 5818 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [1.0 MB-2.0 MB]: 16006 frames, [2.0 MB-4.0 MB]: 1 frames
       Requested Block Size 4.0 MB
       Peak Block count 1
       Peak Allocated memory 2.8 MB
@@ -4316,13 +4398,13 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_TYPETREE_MAIN]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 5819 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 16007 frames
       Requested Block Size 2.0 MB
       Peak Block count 1
       Peak Allocated memory 4.7 KB
       Peak Large allocation bytes 0 B
     [ALLOC_TYPETREE_THREAD]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 5819 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 16007 frames
       Requested Block Size 2.0 MB
       Peak Block count 1
       Peak Allocated memory 5.4 KB

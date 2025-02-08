@@ -10,7 +10,7 @@ from demands import Demands
 import random
 from animalai.environment import AnimalAIEnvironment
 from animal_ai_reset_wrapper import AnimalAIReset
-from test_animal_ai import train_agent_configs
+
 import os 
 
 
@@ -22,7 +22,10 @@ if __name__ == "__main__":
     
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-    recorded_results = r"./csv_recordings/example_batch_predictive_3_same_evals.csv"
+    recorded_results = r"./csv_recordings/example_batch_predictive_3_random_evals_OOD.csv"
+    # Seems to do better with a non-deterministic agent.
+    model_path = r"./logs/best_model_3.zip"
+    load_eval = True
     
     csv_name = "working_caps_predictive_3"
     estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_visual.png_based_on_{csv_name}.npy")
@@ -39,49 +42,114 @@ if __name__ == "__main__":
 
 
     N = 200 
-    csv_file = pd.read_csv(f"./csv_recordings/{csv_name}.csv")
-    demands = csv_file[["Xpos", "reward_distance", "reward_size", "reward_behind"]].to_numpy()
-    demands = demands[:N] # We only want the first N because of the fact that they are repeated.
+
     capability_bias = final_capability_means["bias"]
     capability_nav = final_capability_means["navigation"]
     capability_vis = final_capability_means["visual"]
-
-    xpos = demands[:,0]
-    distance = demands[:,1]
-    reward_size = demands[:,2]
-    behind = demands[:,3]
-    # SELF DEMANDS FOR TESTING WHETHER ML PREDICTS ITSELF EVEN (I GUESS IT KIND OF DOES)
-    list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
-    #yaml_string, list_of_demands = gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_min = 12, dist_max = 15, numbered = False) # Creates yaml file with same demands as csv file.
-    gen_config_from_demands_batch(list_of_demands, "example_batch_predictive.yaml") # Creates yaml file with same demands as csv file. 
+    if load_eval:
+        csv_file = pd.read_csv(recorded_results)
+        demands = csv_file[["Xpos", "reward_distance", "reward_size", "reward_behind"]].to_numpy()
+        demands = demands[:N] # We only want the first N because of the fact that they are repeated.
+        print("Using evaluations already made")
+        skip_model = True
+        xpos = demands[:,0]
+        distance = demands[:,1]
+        reward_size = demands[:,2]
+        behind = demands[:,3]
+        # SELF DEMANDS FOR TESTING WHETHER ML PREDICTS ITSELF EVEN (I GUESS IT KIND OF DOES)
+        list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
+    else:
+        skip_model = False
+        yaml_string, list_of_demands = gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = 12, numbered = False) # Creates yaml file with same demands as csv file.
+        xpos = np.array([demand.Xpos for demand in list_of_demands])
+        distance = np.array([demand.reward_distance for demand in list_of_demands])
+        reward_size = np.array([demand.reward_size for demand in list_of_demands])
+        behind = np.array([demand.reward_behind for demand in list_of_demands])
+    # gen_config_from_demands_batch(list_of_demands, "example_batch_predictive.yaml") # Creates yaml file with same demands as csv file. 
     # 0.695 predictive accuracy for putting the demands themselves in the yaml file, suggests that maybe something off with the measurement layout but it's okay.
     # Now let's try to use a out-of-distribution set of demands to see how well the model can predict the success of the agent out of distribution. 
     # For mix of in and out of distribution, found accuracy = 0.595. 
     # 0.69 predictive accuracy for distance between 12 and 15, nice! ML is able to somewhat predict out of distribution cases.
-
+    # 0.57 prediciive accuracy for new OOD, this one actually took consideration of the behind rewards as well, unlikw previous. So I guess still something. 
+    # 0.8 accuracy with random new tested agent, working backwards movement this time. 
     rightlefteffect_ = capability_bias * xpos
     perf_nav = logistic(capability_nav - distance*(behind*0.5+1.0) + rightlefteffect_)
     perf_vis = logistic(capability_vis - np.log(distance/reward_size))
     probabilities_of_success = perf_nav*perf_vis
+    for i, probability_of_success in enumerate(probabilities_of_success):
+        print(f"Probability of success for arena {i}: {probability_of_success}. Demands are {list_of_demands[i]}")
+        
     successes_predicted = probabilities_of_success > 0.5 
+    print("proportion of predicted successes: ", np.mean(successes_predicted))
     
-    if os.path.exists(recorded_results):
-        os.remove(recorded_results)
-    
-    train_agent_configs(configuration_file_train="example_batch_predictive.yaml", configuration_file_eval="example_batch_predictive.yaml",
-                        env_path_train=env_path_train, env_path_eval=env_path_eval, evaluation_recording_file=recorded_results, demands_list = list_of_demands,
-                        log_bool = False, aai_seed = 2023, watch_train = False, watch_eval = True, num_steps = 1, eval_freq = 1, save_model = False,
-                        load_model = r"./logs/best_model_2.zip", N = N, max_evaluations=1)
+
+            
+    if not skip_model:
+        from test_animal_ai import train_agent_configs
+        if os.path.exists(recorded_results):
+            answer = input("Do you want to delete the recorded results file? (y/n)")
+            if answer == "y":
+                os.remove(recorded_results)
+            else:
+                print("Abortin")
+                exit()
+        print(f"Using model at {model_path}")
+        train_agent_configs(configuration_file_train="example_batch_predictive.yaml", configuration_file_eval="example_batch_predictive.yaml",
+                            env_path_train=env_path_train, env_path_eval=env_path_eval, evaluation_recording_file=recorded_results, demands_list = list_of_demands,
+                            log_bool = False, aai_seed = 2023, watch_train = False, watch_eval = True, num_steps = 1, eval_freq = 1, save_model = False,
+                            load_model = model_path, N = N, max_evaluations=1)
     
     recorded_results = pd.read_csv(recorded_results)
     rewards_received = recorded_results["reward"]
     rewards_received = rewards_received.to_numpy()
+    
+    
     # Should be N length vector by default
     assert rewards_received.shape[0] == N
     # We want to match the elements in the vector to the success probabilities
     successes = rewards_received > -0.9
+    print("Proportion of successes: ", np.mean(successes))
     log_likelihood = np.sum(np.log(probabilities_of_success[successes])) + np.sum(np.log(1-probabilities_of_success))
+    print("Comparing the predicted successes to the actual successes")
+    print("Mean of this comparison: ", np.mean(successes == successes_predicted))
     success_error = sum(abs(successes.astype(int) - successes_predicted.astype(int)))
     print(f"Log likelihood: {log_likelihood}")
     print(f"accuracy : { 1 - success_error/N}") # 0 error corresponds to 1.0 accuracy (perfect)
+    # false positive rate
+    false_positive_rate = sum((successes == 0) & (successes_predicted == 1))/sum(successes == 0)
+    print(f"False positive rate: {false_positive_rate}")
+    # false negative rate
+    false_negative_rate = sum((successes == 1) & (successes_predicted == 0))/sum(successes == 1)
+    print(f"False negative rate: {false_negative_rate}")
+    brier_score = np.mean((successes.astype(int) - probabilities_of_success)**2)
+    print(brier_score)
     
+    
+    # Apply a baseline for prediction as well. Do it from the mean of the succcesses.
+    assert rewards_received[0] == csv_file["reward"].to_numpy()[-N]
+    successes_from_initial_eval = rewards_received > -0.9
+    baseline = np.mean(successes_from_initial_eval.astype(int))
+    baseline_brier_score = np.mean((successes_from_initial_eval.astype(int) - baseline)**2)
+    baseline_accuracies = []
+    for sample in range(1000):
+        random_number = np.random.rand(N)
+        baseline_predicted = random_number < baseline
+        baseline_error = sum(abs(baseline_predicted.astype(int) - successes.astype(int)))
+        baseline_accuracy = 1 - baseline_error/N
+        baseline_accuracies.append(baseline_accuracy)
+        # false positive rate
+        false_positive_rate_baseline = sum((successes == 0) & (baseline_predicted == 1))/sum(successes == 0)
+        # false negative rate
+        false_negative_rate_baseline = sum((successes == 1) & (baseline_predicted == 0))/sum(successes == 1)
+    initial_evaluation_successes = pd.read_csv(rf"./csv_recordings/{csv_name}.csv")["reward"].to_numpy()[-N:] > -0.9
+    print(initial_evaluation_successes.shape)
+    print("Success rate during initial evaluation: ", np.mean(initial_evaluation_successes))
+    print("Success rate in predictive arenas", np.mean(successes))
+    print("Baseline brier score: ", baseline_brier_score)
+    print("Model brier score: ", brier_score)
+    if baseline_brier_score > brier_score:
+        print("Model is better than baseline")
+        print("good")
+    fig, ax = plt.subplots()
+    ax.hist(baseline_accuracies)
+    plt.show()
