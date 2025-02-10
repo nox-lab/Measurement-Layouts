@@ -1,21 +1,21 @@
 
-    !ArenaConfig
-    arenas:
-      299: !Arena
-        timeLimit: 100
-        items:
-        - !Item
-          name: GoodGoal
-          positions:
-          - !Vector3 {x: 20, y: 0, z: 25}
-          rotations: [0]
-          sizes:
-          - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-        - !Item
-          name: Agent
-          skins:
-          - "panda"
-          positions:
-          - !Vector3 {x: 20, y: 0, z: 20}
-          rotations: [180]
-        
+        !ArenaConfig
+        arenas:
+          599: !Arena
+            timeLimit: 100
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.65147894358049, y: 0, z: 20.0}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9190422767056444, y: 0.9190422767056444, z: 0.9190422767056444}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            

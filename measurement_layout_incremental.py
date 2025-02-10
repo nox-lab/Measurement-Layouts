@@ -11,6 +11,7 @@ from collections import OrderedDict
 from particles import SMC
 from particles.collectors import Moments
 import pandas as pd
+import os
 
 # X is navigation, visual, bias, [distance, szie, behind, x_pos]
 N = 200
@@ -19,8 +20,8 @@ product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] 
 performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
 def logistic(x):
     return 1 / (1 + np.exp(-x))
-  
-df_caps = pd.read_csv(r"csv_recordings/working_caps_predictive_4_harder_train10eval15.csv")
+filename = r"working_caps_predictive_4_harder_train10eval15"
+df_caps = pd.read_csv(rf"csv_recordings/{filename}.csv")
 distance = df_caps["reward_distance"][:N].to_numpy()
 behind = df_caps["reward_behind"][:N].to_numpy()
 reward_size = df_caps["reward_size"][:N].to_numpy()
@@ -33,7 +34,7 @@ reg_prior_dict['sigmavis'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
 reg_prior_dict['sigmabias'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
 reg_prior_dict['x0'] = dists.MvNormal(cov = np.eye(3))
 reg_prior = dists.StructDist(reg_prior_dict)
-noise_level = 0.1
+noise_level = 0.0
 noisy_model_performance = np.sum(rewards_from_evaluation[-N:] > -0.9)/N
 print(len(rewards_from_evaluation)/N)
 overall_performance = np.reshape(rewards_from_evaluation, (T, N))
@@ -68,7 +69,7 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
 
     def PY(self, t, xp, x):
         rightlefteffect = product_on_time_varying(x[:, 2], xpos)
-        perf_nav = logistic(performance_from_capability_and_demand_batch(x[:, 0], distance*(behind+1.0)) + rightlefteffect)
+        perf_nav = logistic(performance_from_capability_and_demand_batch(x[:, 0], distance*(behind*0.5+1.0)) + rightlefteffect)
         perf_vis = logistic(performance_from_capability_and_demand_batch(x[:, 1], np.log(distance/reward_size)))
         final_prob = noise_level*noisy_model_performance + (1-noise_level) * perf_nav * perf_vis
         final_prob = np.swapaxes(final_prob, 0, 1)
@@ -104,6 +105,22 @@ if __name__ == "__main__":
   processed_chain = my_pmmh.summaries.moments
   print(processed_chain)
   fig, ax = plt.subplots(1, 1, figsize=(10, 6))
+  nav_est = [mom["mean"][0] for mom in processed_chain]
+  vis_est = [mom["mean"][1] for mom in processed_chain]
+  bias_est = [mom["mean"][2] for mom in processed_chain]
+  nav_var = [mom["var"][0] for mom in processed_chain]
+  vis_var = [mom["var"][1] for mom in processed_chain]
+  bias_var = [mom["var"][2] for mom in processed_chain]
+  if not os.path.exists(rf"estimated_capabilities/{filename}"):
+    os.makedirs(rf"estimated_capabilities/{filename}")
+  
+  np.save(rf"estimated_capabilities/{filename}/navigation_est", nav_est)
+  np.save(rf"estimated_capabilities/{filename}/visual_est", vis_est)
+  np.save(rf"estimated_capabilities/{filename}/bias_est", bias_est)
+  np.save(rf"estimated_capabilities/{filename}/navigation_var", nav_var)
+  np.save(rf"estimated_capabilities/{filename}/visual_var", vis_var)
+  np.save(rf"estimated_capabilities/{filename}/bias_var", bias_var)
+  
   ax.plot(time_steps, [mom["mean"][0:3] for mom in processed_chain], label=["Estimated navigation", "Estimated visual", "Estimated bias"])
   ax.plot(time_steps, [mom["var"][0:3] + mom["mean"][0:3] for mom in processed_chain], alpha = 0.2)
   ax.plot(time_steps, [mom["mean"][0:3] - mom["var"][0:3] for mom in processed_chain], alpha = 0.2)
@@ -116,5 +133,29 @@ if __name__ == "__main__":
   ax.set_xlabel("Time")
   ax.set_ylabel("Capability")   
   ax.legend()
+  
+  fig3, ax3 = plt.subplots(2, 2, figsize=(10, 6))
+  ax3[0,0].plot(time_steps, nav_est, label="Estimated navigation")
+  ax3[0,0].plot(time_steps, [mom["var"][0] + mom["mean"][0] for mom in processed_chain], alpha = 0.2)
+  ax3[0,0].plot(time_steps, [mom["mean"][0] - mom["var"][0] for mom in processed_chain], alpha = 0.2)
+  ax3[0,0].set_xlabel("Time")
+  ax3[0,0].set_ylabel("Capability")
+  ax3[0,0].legend()
+  ax3[0,1].plot(time_steps, vis_est, label="Estimated visual")
+  ax3[0,1].plot(time_steps, [mom["var"][1] + mom["mean"][1] for mom in processed_chain], alpha = 0.2)
+  ax3[0,1].plot(time_steps, [mom["mean"][1] - mom["var"][1] for mom in processed_chain], alpha = 0.2)
+  ax3[0,1].set_xlabel("Time")
+  ax3[0,1].set_ylabel("Capability")
+  ax3[0,1].legend()
+  ax3[1,0].plot(time_steps, bias_est, label="Estimated bias")
+  ax3[1,0].plot(time_steps, [mom["var"][2] + mom["mean"][2] for mom in processed_chain], alpha = 0.2)
+  ax3[1,0].plot(time_steps, [mom["mean"][2] - mom["var"][2] for mom in processed_chain], alpha = 0.2)
+  ax3[1,0].set_xlabel("Time")
+  ax3[1,0].set_ylabel("Capability")
+  ax3[1,0].legend()
+  ax3[1,1].plot(time_steps, overall_successes, label="Success rate")
+  ax3[1,1].set_xlabel("Time")
+  ax3[1,1].set_ylabel("Success rate")
+  fig3.savefig(rf"estimated_capabilities/{filename}/estimated_capabilities.png")
   plt.show()
   #print(np.mean(processed_chain, 0))

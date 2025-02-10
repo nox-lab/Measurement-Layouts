@@ -108,17 +108,18 @@ class ConfigGenerator:
         np.random.seed(seed)
         demands_list = []
         i = 0
-        while i <= range(n_envs):
-            dist_min = size_max + 0.5 if dist_min is None else dist_min
-            if dist_min < size_max + 0.5:
-                dist_min = size_max + 0.5
-                print("Distance min too small, setting to size_min + 0.5, this is to prevent clipping.")
+        dist_min = size_max + 0.5 if dist_min is None else dist_min
+        if dist_min < size_max + 0.5:
+            dist_min = size_max + 0.5
+            print("Distance min too small, setting to size_min + 0.5, this is to prevent clipping.")
+        while i < n_envs:
             size = np.random.uniform(size_min, size_max)  # This should prevent clipping
             xpos_choice = np.random.choice([-1, 0, 1])
             reward_behind_choice = np.random.choice([0, 0.5, 1])
             if reward_behind_choice == 0.5 and xpos_choice == 0 and self.precise:
                 continue
             demands_list.append(Demands(size, np.random.uniform(dist_min, dist_max), reward_behind_choice, xpos_choice))
+            i += 1
         return self.gen_config_from_demands_batch(demands_list, filename, time_limit, numbered=numbered), demands_list
 
     def gen_config_from_demands_precise(
@@ -167,7 +168,6 @@ class ConfigGenerator:
         if goal_direction == "none none":
             raise ValueError(f"The reward is in contradicting directions {goal_direction}, this is not allowed.")
         angle_of_reward = angles_dictionary[goal_direction]
-        print("angle of reward is ", angle_of_reward)
         angle_of_reward = angle_of_reward * np.pi / 180 # convert to radians for sin and cos functions.
         goal_x_pos += reward_distance *np.sin(angle_of_reward)
         goal_z_pos += reward_distance * np.cos(angle_of_reward)
@@ -215,23 +215,6 @@ class ConfigGenerator:
         with open(filename, "w") as text_file:
             text_file.write(self.initial_part + generated_config + final_part)
         return generated_config + final_part
-
-    def gen_config_from_demands_batch_random_precise(self, n_envs: int, filename: str, size_min=0, size_max=1.9, dist_min=None, dist_max=5.3, time_limit=100, numbered=False) -> tuple[str, List[Demands]]:
-        demands_list = []
-        i = 0
-        while i <= n_envs:
-            dist_min = size_max + 0.5 if dist_min is None else dist_min
-            if dist_min < size_max + 0.5:
-                dist_min = size_max + 0.5
-                print("Distance min too small, setting to size_min + 0.5, this is to prevent clipping.")
-            size = np.random.uniform(size_min, size_max)  # This should prevent clipping
-            xpos_choice = np.random.choice([-1, 0, 1])
-            reward_behind_choice = np.random.choice([0, 0.5, 1])
-            if reward_behind_choice == 0.5 and xpos_choice == 0:
-                continue
-            i += 1
-            demands_list.append(Demands(size, np.random.uniform(dist_min, dist_max), np.random.choice([0, 0.5, 1]), np.random.choice([-1, 0, 1])))
-        return self.gen_config_from_demands_batch(demands_list, filename, time_limit, numbered=numbered), demands_list
     
     def clean_yaml_file(self, filename: str) -> None:
             import re

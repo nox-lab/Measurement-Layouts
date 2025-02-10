@@ -20,6 +20,7 @@ from animal_ai_reset_wrapper import AnimalAIReset
 from mlagents_envs.envs.unity_gym_env import UnityToGymWrapper
 from animalai.environment import AnimalAIEnvironment
 from generating_configs import gen_config_from_demands_batch_random, gen_config_from_demands_batch
+from generating_configs_class import ConfigGenerator
 import subprocess
 
 
@@ -96,14 +97,15 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 if __name__ == "__main__":
     N = 200
     N_train = 500
-    training_set, training_demands = gen_config_from_demands_batch_random(N_train, r"example_batch_train.yaml", time_limit=75, size_min = 0.2, dist_max = 10, numbered = False) # the training set, a list of Demands objects, writes to a file.
-    evaluation_set, demands_list = gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=75, size_min = 0.2, dist_max = 15, numbered = False) # the evaluation set, a list of Demands objects, writes to a file.
+    config_generator = ConfigGenerator(precise = True)
+    dumb_string, demands_list_train = config_generator.gen_config_from_demands_batch_random(N_train, r"example_batch_train.yaml", time_limit=100, dist_max=8, numbered = False, seed = 0)
+    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N_train, r"example_batch_eval.yaml", time_limit=75, dist_max=10, numbered = False, seed = 1)
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
     configuration_file_eval = r"example_batch_eval.yaml"
-    model_name = r"./logs/best_model_4.zip"
-    recording_file = r"./csv_recordings/example_batch_predictive_4_harder_train10eval15.csv"
+    model_name = r"./logs/best_model_5_precise_.zip"
+    recording_file = r"./csv_recordings/working_caps_predictive_5_harder_train8eval10_precise.csv"
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name,
                                   demands_list = demands_list, env_path_train = env_path_train, env_path_eval = env_path_eval,

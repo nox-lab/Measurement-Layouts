@@ -7,6 +7,7 @@ from measurement_layout_AAIO import setupModelSingle
 import pandas as pd
 from generating_configs import gen_config_from_demands_batch_random, gen_config_from_demands_batch
 from demands import Demands
+from generating_configs_class import ConfigGenerator
 import random
 from animalai.environment import AnimalAIEnvironment
 from animal_ai_reset_wrapper import AnimalAIReset
@@ -19,18 +20,24 @@ def logistic(x):
 
 
 if __name__ == "__main__":
-    
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
-    recorded_results = r"./csv_recordings/example_batch_predictive_3_random_evals_OOD.csv"
-    # Seems to do better with a non-deterministic agent.
-    model_path = r"./logs/best_model_3.zip"
-    load_eval = True
     
-    csv_name = "working_caps_predictive_3"
-    estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_visual.png_based_on_{csv_name}.npy")
-    estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_navigation.png_based_on_{csv_name}.npy")
-    estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\estimated_ability_bias_rl.png_based_on_{csv_name}.npy")
+    config_generator = ConfigGenerator(precise = False)
+    N = 200
+    model_name = "best_model"
+    folder_name = "working_caps_predictive"
+    load_eval = False
+    
+    recorded_results = rf"./csv_recordings/predictive_data/{model_name}/true_results_for_prediction.csv"   
+    max_distance = np.max(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_distance"].to_numpy()[-N:]) # This will force in distribution.
+    estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name}\visual_est.npy")
+    estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name}\navigation_est.npy")
+    estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name}\bias_est.npy")
+
+    # Seems to do better with a non-deterministic agent.
+    model_path = rf"./logs/{model_name}.zip"
+
 
 
     final_capability_means = {
@@ -40,8 +47,6 @@ if __name__ == "__main__":
     }
 
 
-
-    N = 200 
 
     capability_bias = final_capability_means["bias"]
     capability_nav = final_capability_means["navigation"]
@@ -60,7 +65,7 @@ if __name__ == "__main__":
         list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
     else:
         skip_model = False
-        yaml_string, list_of_demands = gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = 12, numbered = False) # Creates yaml file with same demands as csv file.
+        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, numbered = False) # Creates yaml file with same demands as csv file.
         xpos = np.array([demand.Xpos for demand in list_of_demands])
         distance = np.array([demand.reward_distance for demand in list_of_demands])
         reward_size = np.array([demand.reward_size for demand in list_of_demands])
@@ -122,15 +127,17 @@ if __name__ == "__main__":
     false_negative_rate = sum((successes == 1) & (successes_predicted == 0))/sum(successes == 1)
     print(f"False negative rate: {false_negative_rate}")
     brier_score = np.mean((successes.astype(int) - probabilities_of_success)**2)
-    print(brier_score)
+    print(f"brier score:{brier_score}")
     
     
     # Apply a baseline for prediction as well. Do it from the mean of the succcesses.
-    assert rewards_received[0] == csv_file["reward"].to_numpy()[-N]
+    #assert rewards_received[0] == csv_file["reward"].to_numpy()[-N]
     successes_from_initial_eval = rewards_received > -0.9
     baseline = np.mean(successes_from_initial_eval.astype(int))
     baseline_brier_score = np.mean((successes_from_initial_eval.astype(int) - baseline)**2)
     baseline_accuracies = []
+    baseline_FN = []
+    baseline_FP = []
     for sample in range(1000):
         random_number = np.random.rand(N)
         baseline_predicted = random_number < baseline
@@ -139,17 +146,44 @@ if __name__ == "__main__":
         baseline_accuracies.append(baseline_accuracy)
         # false positive rate
         false_positive_rate_baseline = sum((successes == 0) & (baseline_predicted == 1))/sum(successes == 0)
+        baseline_FP.append(false_positive_rate_baseline)
         # false negative rate
         false_negative_rate_baseline = sum((successes == 1) & (baseline_predicted == 0))/sum(successes == 1)
-    initial_evaluation_successes = pd.read_csv(rf"./csv_recordings/{csv_name}.csv")["reward"].to_numpy()[-N:] > -0.9
+        baseline_FN.append(false_negative_rate_baseline)
+    initial_evaluation_successes = pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward"].to_numpy()[-N:] > -0.9
     print(initial_evaluation_successes.shape)
     print("Success rate during initial evaluation: ", np.mean(initial_evaluation_successes))
     print("Success rate in predictive arenas", np.mean(successes))
     print("Baseline brier score: ", baseline_brier_score)
     print("Model brier score: ", brier_score)
+    print("Baseline accuracy: ", np.mean(baseline_accuracies))
+    print("Variance of baseline accuracies: ", np.var(baseline_accuracies))
+    
     if baseline_brier_score > brier_score:
         print("Model is better than baseline")
         print("good")
+    
+    result_data = {
+        "initial_evaluation_success_rate": np.mean(initial_evaluation_successes),
+        "accuracy": 1 - success_error/N,
+        "false_positive_rate": false_positive_rate,
+        "false_negative_rate": false_negative_rate,
+        "brier_score": brier_score,
+        "baseline_brier_score": baseline_brier_score,
+        "baseline_accuracy": np.mean(baseline_accuracies),
+        "baseline_accuracy_variance": np.var(baseline_accuracies),
+        "baseline_FP": np.mean(baseline_FP),
+        "baseline_FN": np.mean(baseline_FN),
+    }
+    df = pd.DataFrame([result_data])
+    df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
+    
     fig, ax = plt.subplots()
-    ax.hist(baseline_accuracies)
+    ax.hist(baseline_accuracies, alpha = 0.5, label = "Baseline accuracies")
+    ax.hist(baseline_FP, alpha = 0.5, label = "Baseline false positive rates")
+    ax.hist(baseline_FN, alpha = 0.5, label = "Baseline false negative rates")
+    ax.set_title("Baseline accuracies, false positive rates and false negative rates")
+    ax.set_xlabel("Rate")
+    ax.set_ylabel("Frequency")
+    ax.legend()
     plt.show()
