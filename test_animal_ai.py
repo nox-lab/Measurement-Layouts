@@ -104,7 +104,7 @@ if __name__ == "__main__":
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
     configuration_file_eval = r"example_batch_eval.yaml"
-    model_name = r"./logs/best_model_5_precise_.zip"
+    model_name = r"./logs/best_model_5_precise.zip"
     recording_file = r"./csv_recordings/working_caps_predictive_5_harder_train8eval10_precise.csv"
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name,

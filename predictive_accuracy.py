@@ -25,10 +25,11 @@ if __name__ == "__main__":
     
     config_generator = ConfigGenerator(precise = False)
     N = 200
-    model_name = "best_model"
-    folder_name = "working_caps_predictive"
+    model_name = "best_model_5_precise"
+    folder_name = "working_caps_predictive_5_harder_train8eval10_precise"
     load_eval = False
-    
+    if not os.path.exists(rf"./csv_recordings/predictive_data/{model_name}"):
+        os.makedirs(rf"./csv_recordings/predictive_data/{model_name}")
     recorded_results = rf"./csv_recordings/predictive_data/{model_name}/true_results_for_prediction.csv"   
     max_distance = np.max(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_distance"].to_numpy()[-N:]) # This will force in distribution.
     estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name}\visual_est.npy")

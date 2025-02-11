@@ -20,7 +20,7 @@ product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] 
 performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
 def logistic(x):
     return 1 / (1 + np.exp(-x))
-filename = r"working_caps_predictive_4_harder_train10eval15"
+filename = r"working_caps_predictive_5_harder_train8eval10_precise"
 df_caps = pd.read_csv(rf"csv_recordings/{filename}.csv")
 distance = df_caps["reward_distance"][:N].to_numpy()
 behind = df_caps["reward_behind"][:N].to_numpy()
@@ -153,7 +153,7 @@ if __name__ == "__main__":
   ax3[1,0].set_xlabel("Time")
   ax3[1,0].set_ylabel("Capability")
   ax3[1,0].legend()
-  ax3[1,1].plot(time_steps, overall_successes, label="Success rate")
+  ax3[1,1].bar(time_steps, overall_successes, label="Success rate")
   ax3[1,1].set_xlabel("Time")
   ax3[1,1].set_ylabel("Success rate")
   fig3.savefig(rf"estimated_capabilities/{filename}/estimated_capabilities.png")

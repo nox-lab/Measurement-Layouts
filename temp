@@ -7,7 +7,7 @@
             - !Item
               name: GoodGoal
               positions:
-              - !Vector3 {x: 24.65147894358049, y: 0, z: 20.0}
+              - !Vector3 {x: 24.18219274615281, y: 0, z: 20.0}
               rotations: [0]
               sizes:
               - !Vector3 {x: 0.9190422767056444, y: 0.9190422767056444, z: 0.9190422767056444}
