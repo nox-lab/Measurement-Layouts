@@ -98,14 +98,14 @@ if __name__ == "__main__":
     N = 200
     N_train = 500
     config_generator = ConfigGenerator(precise = True)
-    dumb_string, demands_list_train = config_generator.gen_config_from_demands_batch_random(N_train, r"example_batch_train.yaml", time_limit=100, dist_max=8, numbered = False, seed = 0)
-    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N_train, r"example_batch_eval.yaml", time_limit=75, dist_max=10, numbered = False, seed = 1)
+    dumb_string, demands_list_train = config_generator.gen_config_from_demands_batch_random(N_train, r"example_batch_train.yaml", time_limit=100, dist_max=15, numbered = False, seed = 0)
+    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N_train, r"example_batch_eval.yaml", time_limit=75, dist_max=15, numbered = False, seed = 1)
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
     configuration_file_eval = r"example_batch_eval.yaml"
-    model_name = r"./logs/best_model_5_precise.zip"
-    recording_file = r"./csv_recordings/working_caps_predictive_5_harder_train8eval10_precise.csv"
+    model_name = r"./logs/best_model_6_precise.zip"
+    recording_file = r"./csv_recordings/working_caps_predictive_6_harder_train15eval15_precise.csv"
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name,
                                   demands_list = demands_list, env_path_train = env_path_train, env_path_eval = env_path_eval,
