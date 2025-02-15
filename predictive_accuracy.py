@@ -23,11 +23,11 @@ if __name__ == "__main__":
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     
-    config_generator = ConfigGenerator(precise = False)
+    config_generator = ConfigGenerator(precise = True)
     N = 200
-    model_name = "best_model_5_precise"
-    folder_name = "working_caps_predictive_5_harder_train8eval10_precise"
-    load_eval = False
+    model_name = "best_model_11_precise"
+    folder_name = "working_caps_predictive_11_BIGREWARDS_3TO6_evaldist15_traindist_8"
+    load_eval = True
     if not os.path.exists(rf"./csv_recordings/predictive_data/{model_name}"):
         os.makedirs(rf"./csv_recordings/predictive_data/{model_name}")
     recorded_results = rf"./csv_recordings/predictive_data/{model_name}/true_results_for_prediction.csv"   
@@ -133,7 +133,8 @@ if __name__ == "__main__":
     
     # Apply a baseline for prediction as well. Do it from the mean of the succcesses.
     #assert rewards_received[0] == csv_file["reward"].to_numpy()[-N]
-    successes_from_initial_eval = rewards_received > -0.9
+    initial_evaluation_successes = pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward"].to_numpy()[-N:] > -0.9
+    successes_from_initial_eval = initial_evaluation_successes
     baseline = np.mean(successes_from_initial_eval.astype(int))
     baseline_brier_score = np.mean((successes_from_initial_eval.astype(int) - baseline)**2)
     baseline_accuracies = []

@@ -10,14 +10,15 @@ from demands import Demands
 import numpy as np
 
 # IMPORTANT! Replace configuration file with the correct path here:
-configuration_file = r"example_batch_predictive.yaml"
+configuration_file = r"example_batch_train.yaml"
 test = False
+config_generator = ConfigGenerator(precise = True)
+config_generator.gen_config_from_demands_batch_random(20, configuration_file, time_limit=100, dist_max=15, numbered = True)
 #config, demands = gen_config_from_demands_batch_random(10, configuration_file, time_limit=75, dist_max=15, numbered = True)
 # for demand in demands:
 #     print(demand)
 if test:
     # This tests if the class is generating arenas correctly, should match with original function.
-    config_generator = ConfigGenerator(precise = False)
     envs_demands = []
     xpos_choices = [-1, 0, 1]
     reward_behind_choices = [0, 0.5, 1]
@@ -41,15 +42,10 @@ if test:
 
     assert random_file == another_random_file
 
-print(config_generator.gen_config_from_demands_batch(envs_demands, configuration_file, numbered = False))
-print(gen_config_from_demands_batch(envs_demands, configuration_file, time_limit = 100, numbered = False))
-
 
 
 with open(configuration_file) as f:
     print(f.read()) 
-for env in envs_demands:
-    print(env)
 # IMPORTANT! Replace the path to the application .exe here:
 env_path = r"..\WINDOWS\AAI\Animal-AI.exe"
 

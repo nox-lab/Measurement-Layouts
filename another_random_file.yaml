@@ -6,7 +6,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -23,7 +23,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -40,7 +40,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -67,7 +67,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 4: !Arena
 timeLimit: 100
 items:
@@ -84,7 +84,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 5: !Arena
 timeLimit: 100
 items:
@@ -101,14 +101,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 6: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -125,7 +125,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -142,7 +142,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -169,7 +169,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 10: !Arena
 timeLimit: 100
 items:
@@ -186,7 +186,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 11: !Arena
 timeLimit: 100
 items:
@@ -203,14 +203,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 12: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -220,14 +220,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 13: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -237,14 +237,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 14: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -254,14 +254,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 15: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -278,7 +278,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -295,7 +295,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -312,7 +312,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -329,7 +329,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -346,7 +346,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -363,7 +363,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -373,14 +373,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 22: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -390,14 +390,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 23: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -407,7 +407,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 24: !Arena
 timeLimit: 100
 items:
@@ -465,7 +465,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -475,14 +475,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 28: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -492,14 +492,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 29: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -509,14 +509,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 30: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -526,14 +526,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 31: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -543,14 +543,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 32: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -560,7 +560,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 33: !Arena
 timeLimit: 100
 items:
@@ -577,7 +577,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 34: !Arena
 timeLimit: 100
 items:
@@ -594,7 +594,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 35: !Arena
 timeLimit: 100
 items:
@@ -611,14 +611,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 36: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -628,14 +628,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 37: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -645,14 +645,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 38: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -662,14 +662,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 39: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -679,14 +679,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 40: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -696,14 +696,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 41: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -713,7 +713,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 42: !Arena
 timeLimit: 100
 items:
@@ -730,7 +730,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 43: !Arena
 timeLimit: 100
 items:
@@ -747,7 +747,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 44: !Arena
 timeLimit: 100
 items:
@@ -764,14 +764,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 45: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -781,14 +781,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 46: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -798,14 +798,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 47: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -815,14 +815,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 48: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -839,7 +839,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -856,7 +856,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -883,7 +883,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 52: !Arena
 timeLimit: 100
 items:
@@ -900,7 +900,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 53: !Arena
 timeLimit: 100
 items:
@@ -917,14 +917,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 54: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -934,14 +934,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 55: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -951,14 +951,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 56: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -968,7 +968,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 57: !Arena
 timeLimit: 100
 items:
@@ -1026,7 +1026,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1043,7 +1043,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1060,7 +1060,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1077,7 +1077,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1094,7 +1094,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1111,7 +1111,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1128,7 +1128,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1138,14 +1138,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 67: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1155,14 +1155,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 68: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1172,14 +1172,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 69: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1189,14 +1189,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 70: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1206,14 +1206,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 71: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1223,7 +1223,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 72: !Arena
 timeLimit: 100
 items:
@@ -1240,7 +1240,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 73: !Arena
 timeLimit: 100
 items:
@@ -1257,7 +1257,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 74: !Arena
 timeLimit: 100
 items:
@@ -1274,14 +1274,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 75: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1298,7 +1298,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1315,7 +1315,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1332,7 +1332,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1342,14 +1342,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 79: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1359,14 +1359,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 80: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1376,14 +1376,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 81: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1393,14 +1393,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 82: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1410,14 +1410,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 83: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1427,14 +1427,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 84: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1451,7 +1451,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1468,7 +1468,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1485,7 +1485,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1495,14 +1495,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 88: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1512,14 +1512,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 89: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1529,14 +1529,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 90: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1553,7 +1553,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1570,7 +1570,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1597,7 +1597,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 94: !Arena
 timeLimit: 100
 items:
@@ -1614,7 +1614,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 95: !Arena
 timeLimit: 100
 items:
@@ -1631,7 +1631,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 96: !Arena
 timeLimit: 100
 items:
@@ -1689,7 +1689,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1699,14 +1699,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 100: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1716,13 +1716,30 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 101: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
+- !Vector3 {x: 25, y: 0, z: 20}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [90]
+102: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
 - !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
@@ -1734,30 +1751,13 @@ skins:
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
 rotations: [180]
-102: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 25, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
 103: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1767,14 +1767,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 104: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1784,14 +1784,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 105: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1808,7 +1808,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1825,7 +1825,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1842,7 +1842,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1852,14 +1852,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 109: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1869,14 +1869,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 110: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1886,7 +1886,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 111: !Arena
 timeLimit: 100
 items:
@@ -1944,7 +1944,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1954,14 +1954,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [180]
 115: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -1971,13 +1971,30 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [180]
 116: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
+- !Vector3 {x: 20, y: 0, z: 25}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [180]
+117: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
 - !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
@@ -1988,31 +2005,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
-117: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
 118: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2022,14 +2022,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 119: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2039,14 +2039,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 120: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2056,14 +2056,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 121: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2073,14 +2073,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 122: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2090,7 +2090,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 123: !Arena
 timeLimit: 100
 items:
@@ -2107,7 +2107,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 124: !Arena
 timeLimit: 100
 items:
@@ -2124,7 +2124,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 125: !Arena
 timeLimit: 100
 items:
@@ -2141,7 +2141,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 126: !Arena
 timeLimit: 100
 items:
@@ -2158,7 +2158,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 127: !Arena
 timeLimit: 100
 items:
@@ -2175,7 +2175,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 128: !Arena
 timeLimit: 100
 items:
@@ -2192,14 +2192,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 129: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2209,14 +2209,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 130: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2226,14 +2226,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 131: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2243,14 +2243,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 132: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2267,7 +2267,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2284,7 +2284,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2301,7 +2301,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2311,14 +2311,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 136: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2328,14 +2328,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 137: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2345,14 +2345,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 138: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2362,14 +2362,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 139: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2379,14 +2379,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 140: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2396,14 +2396,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 141: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2420,7 +2420,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2437,7 +2437,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2454,7 +2454,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2464,14 +2464,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 145: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2481,14 +2481,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 146: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2498,7 +2498,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 147: !Arena
 timeLimit: 100
 items:
@@ -2515,7 +2515,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 148: !Arena
 timeLimit: 100
 items:
@@ -2532,7 +2532,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 149: !Arena
 timeLimit: 100
 items:
@@ -2549,14 +2549,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 150: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2566,14 +2566,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [180]
 151: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2583,14 +2583,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [180]
 152: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2600,14 +2600,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [180]
 153: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2617,14 +2617,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 154: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2634,13 +2634,30 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 155: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
+- !Vector3 {x: 15, y: 0, z: 20}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [90]
+156: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
 - !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
@@ -2652,30 +2669,13 @@ skins:
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
 rotations: [0]
-156: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 15, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
 157: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2685,14 +2685,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 158: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2702,7 +2702,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 159: !Arena
 timeLimit: 100
 items:
@@ -2719,7 +2719,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 160: !Arena
 timeLimit: 100
 items:
@@ -2736,7 +2736,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 161: !Arena
 timeLimit: 100
 items:
@@ -2753,14 +2753,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 162: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2777,7 +2777,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2794,7 +2794,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2811,7 +2811,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2828,7 +2828,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2845,7 +2845,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2913,7 +2913,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2923,14 +2923,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 172: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2940,13 +2940,30 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 173: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
+- !Vector3 {x: 25, y: 0, z: 20}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [0]
+174: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
 - !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
@@ -2957,31 +2974,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
-174: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 25, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 175: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -2991,14 +2991,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 176: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3008,14 +3008,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 177: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3025,14 +3025,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 178: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3042,14 +3042,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 179: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3059,14 +3059,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 180: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3083,7 +3083,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3100,7 +3100,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3117,7 +3117,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3127,14 +3127,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 184: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3144,14 +3144,31 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 185: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [0]
+186: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3162,30 +3179,13 @@ skins:
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
 rotations: [270]
-186: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 15, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
 187: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3195,13 +3195,30 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 188: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
+- !Vector3 {x: 20, y: 0, z: 25}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [270]
+189: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
 - !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
@@ -3212,31 +3229,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
-189: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 25, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 190: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3246,14 +3246,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 191: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3263,7 +3263,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 192: !Arena
 timeLimit: 100
 items:
@@ -3280,7 +3280,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 193: !Arena
 timeLimit: 100
 items:
@@ -3297,7 +3297,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 194: !Arena
 timeLimit: 100
 items:
@@ -3314,14 +3314,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 195: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3331,14 +3331,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 196: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3348,14 +3348,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 197: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3365,14 +3365,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 198: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3382,14 +3382,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 199: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3399,14 +3399,31 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 200: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [0]
+201: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3417,30 +3434,13 @@ skins:
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
 rotations: [270]
-201: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 25, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
 202: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3450,14 +3450,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 203: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3467,14 +3467,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 204: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3484,14 +3484,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 205: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3501,14 +3501,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 206: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3518,14 +3518,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 207: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3535,14 +3535,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 208: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3552,14 +3552,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 209: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3569,14 +3569,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 210: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3593,7 +3593,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3610,7 +3610,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3678,7 +3678,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3688,14 +3688,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [180]
 217: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3705,14 +3705,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [180]
 218: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3722,14 +3722,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [180]
 219: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3746,7 +3746,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3763,7 +3763,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3780,7 +3780,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3790,14 +3790,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 223: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3807,14 +3807,31 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 224: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [90]
+225: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3825,30 +3842,13 @@ skins:
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
 rotations: [270]
-225: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 15, y: 0, z: 20}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
 226: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3858,13 +3858,30 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 227: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
+- !Vector3 {x: 25, y: 0, z: 20}
+rotations: [0]
+sizes:
+- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
+- !Item
+name: Agent
+skins:
+- "panda"
+positions:
+- !Vector3 {x: 20, y: 0, z: 20}
+rotations: [270]
+228: !Arena
+timeLimit: 100
+items:
+- !Item
+name: GoodGoal
+positions:
 - !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
@@ -3876,30 +3893,13 @@ skins:
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
 rotations: [0]
-228: !Arena
-timeLimit: 100
-items:
-- !Item
-name: GoodGoal
-positions:
-- !Vector3 {x: 20, y: 0, z: 25}
-rotations: [0]
-sizes:
-- !Vector3 {x: 0.5, y: 0.5, z: 0.5}
-- !Item
-name: Agent
-skins:
-- "panda"
-positions:
-- !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
 229: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3909,14 +3909,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 230: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3926,14 +3926,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 231: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3943,14 +3943,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 232: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3960,14 +3960,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 233: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -3977,14 +3977,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 234: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4001,7 +4001,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4018,7 +4018,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4035,7 +4035,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4052,7 +4052,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4069,7 +4069,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4086,7 +4086,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4096,14 +4096,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 241: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4113,14 +4113,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 242: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4130,7 +4130,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [90]
 243: !Arena
 timeLimit: 100
 items:
@@ -4147,7 +4147,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 244: !Arena
 timeLimit: 100
 items:
@@ -4164,7 +4164,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 245: !Arena
 timeLimit: 100
 items:
@@ -4181,14 +4181,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 246: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4198,14 +4198,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 247: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4215,14 +4215,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 248: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4232,14 +4232,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 249: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4249,14 +4249,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 250: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4266,14 +4266,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 251: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4283,14 +4283,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 252: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4300,14 +4300,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 253: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4317,14 +4317,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 254: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4334,14 +4334,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [0]
 255: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4351,14 +4351,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 256: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4368,14 +4368,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 257: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4385,7 +4385,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [0]
 258: !Arena
 timeLimit: 100
 items:
@@ -4402,7 +4402,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 259: !Arena
 timeLimit: 100
 items:
@@ -4419,7 +4419,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 260: !Arena
 timeLimit: 100
 items:
@@ -4436,7 +4436,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [90]
+rotations: [270]
 261: !Arena
 timeLimit: 100
 items:
@@ -4453,7 +4453,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 262: !Arena
 timeLimit: 100
 items:
@@ -4470,7 +4470,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 263: !Arena
 timeLimit: 100
 items:
@@ -4487,14 +4487,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 264: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4504,14 +4504,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 265: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4521,14 +4521,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 266: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4538,14 +4538,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [270]
 267: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4555,14 +4555,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 268: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4572,14 +4572,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 269: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4589,14 +4589,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [270]
+rotations: [180]
 270: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4606,14 +4606,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 271: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4623,14 +4623,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 272: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4640,14 +4640,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [90]
 273: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4664,7 +4664,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4681,7 +4681,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4698,7 +4698,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4708,14 +4708,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 277: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4725,14 +4725,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 278: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4742,14 +4742,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 279: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4759,14 +4759,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 280: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4776,14 +4776,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 281: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4793,14 +4793,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 282: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4810,14 +4810,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 283: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4827,14 +4827,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 284: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 25, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4844,7 +4844,7 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [90]
 285: !Arena
 timeLimit: 100
 items:
@@ -4902,7 +4902,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4919,7 +4919,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4936,7 +4936,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 15, y: 0, z: 20}
+- !Vector3 {x: 20, y: 0, z: 25}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4953,7 +4953,7 @@ items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4963,14 +4963,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 292: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4980,14 +4980,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 293: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -4997,14 +4997,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 294: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -5014,14 +5014,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 295: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -5031,14 +5031,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 296: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 25, y: 0, z: 20}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -5048,14 +5048,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [0]
+rotations: [270]
 297: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -5065,14 +5065,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 298: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -5082,14 +5082,14 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]
 299: !Arena
 timeLimit: 100
 items:
 - !Item
 name: GoodGoal
 positions:
-- !Vector3 {x: 20, y: 0, z: 25}
+- !Vector3 {x: 15, y: 0, z: 20}
 rotations: [0]
 sizes:
 - !Vector3 {x: 0.5, y: 0.5, z: 0.5}
@@ -5099,4 +5099,4 @@ skins:
 - "panda"
 positions:
 - !Vector3 {x: 20, y: 0, z: 20}
-rotations: [180]
+rotations: [0]

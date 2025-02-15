@@ -1,4 +1,4 @@
-from typing import Callable, List
+from typing import Callable, List, Union, Iterable
 from demands import Demands
 import numpy as np
 
@@ -87,18 +87,23 @@ class ConfigGenerator:
             text_file.write(self.initial_part + generated_config + final_part)
         return generated_config + final_part
 
-    def gen_config_from_demands_batch(self, envs: List[Demands], filename: str, time_limit: int = 100, numbered: int = False) -> str:
+    def gen_config_from_demands_batch(self, envs: List[Demands], filename: str, time_limit: Union[int, Iterable] = 100, numbered: int = False) -> str:
         number_of_initial_envs = 0
         new_conf = ""
+        time_iterable = isinstance(time_limit, Iterable)
+        if time_iterable:
+            assert len(time_limit) == len(envs)
         for i in range(number_of_initial_envs):
-            env_conf = self.gen_config_from_demands(5, 10, 0, 0, time_limit, i, f"temp", numbered=False)
+            tl_input = int(time_limit[i]) if time_iterable else time_limit
+            env_conf = self.gen_config_from_demands(5, 10, 0, 0, tl_input, i, f"temp", numbered=False)
             new_conf += env_conf
         for i, env in enumerate(envs):
             for j in range(3):
+                tl_input = int(time_limit[i]) if time_iterable else time_limit
                 if self.precise:
-                    env_conf = self.gen_config_from_demands_precise(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
+                    env_conf = self.gen_config_from_demands_precise(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
                 else:
-                    env_conf = self.gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, time_limit, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
+                    env_conf = self.gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
                 new_conf += env_conf
         with open(filename, "w") as text_file:
             text_file.write(self.initial_part + new_conf)
@@ -131,6 +136,8 @@ class ConfigGenerator:
         except:
             print("size greater than intended range.")
             print(reward_size)
+            if reward_size > 6:
+                raise ValueError(f"Size is too large, {reward_size}")
         assert reward_behind in [0, 0.5, 1]
         assert x_pos in [-1, 0, 1]
         goal_x_pos, goal_z_pos = 20, 20  # Centre point

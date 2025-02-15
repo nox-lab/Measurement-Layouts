@@ -14,148 +14,98 @@ import pandas as pd
 import os
 
 # X is navigation, visual, bias, [distance, szie, behind, x_pos]
-N = 200
+class incremental_measurement_layout():
+  def __init__(self, N, folder, filename):
+    # Folder will specify where to save teh 
+    self.N = N
+    self.folder = folder
+    self.noise_level = 0.0
+    self.filename = filename
+    self.environmentData = pd.read_csv(rf"csv_recordings/{filename}.csv")
+    rewards_from_evaluation = self.environmentData["reward"].to_numpy()
+    self.T = int(len(rewards_from_evaluation)/N)  # number of time steps
+    self.noisy_model_performance = np.sum(rewards_from_evaluation[-N:] > -0.9)/N
+    self.overall_performance = np.reshape(rewards_from_evaluation, (self.T, N))
+    self.overall_successes = np.average(self.overall_performance > -0.9, axis = 1) # Sum over N
+    
+  def logistic(self, x):
+      return 1 / (1 + np.exp(-x))
+    
+  def base_test(self, layout):
+    performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
+    product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
+    np.random.seed(0)
+    T = self.T 
+    learn_time_nav = 0.5*T
+    learn_time_vis = 0.2*T
+    learn_time_bias = 0.3*T
+    time_steps = np.linspace(1, T, T)
+    capability_nav = self.logistic((time_steps - learn_time_nav)/(T/5))*5.6 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
+    capability_vis = self.logistic((time_steps - learn_time_vis)/(T/5))*1.9
+    capability_bias = self.logistic((time_steps- learn_time_bias)/(T/5))*1
+    
+    xpos = np.random.choice([-1, 0, 1], self.N)
+    distance = np.random.uniform(0, 5.6, self.N)
+    reward_size = np.random.uniform(0, 1.9, self.N)
+    behind = np.random.choice([0, 0.5, 1], self.N)
+    
+    # Task capability creation, representing a range of arenas
+    rightlefteffect_ = product_on_time_varying(capability_bias, xpos)
+    perf_nav = self.logistic(performance_from_capability_and_demand_batch(capability_nav, distance*(behind*0.5+1.0)) + rightlefteffect_)
+    perf_vis = self.logistic(performance_from_capability_and_demand_batch(capability_vis, np.log(distance/reward_size)))
+    self.successes = np.random.binomial(1, perf_nav*perf_vis, (T, self.N)) == 1
+    self.estimate_capabilities(layout, cap_labels = ["nav", "visual", "bias"])
+    print("Base test done")
 
-product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
-performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
-def logistic(x):
-    return 1 / (1 + np.exp(-x))
-filename = r"working_caps_predictive_5_harder_train8eval10_precise"
-df_caps = pd.read_csv(rf"csv_recordings/{filename}.csv")
-distance = df_caps["reward_distance"][:N].to_numpy()
-behind = df_caps["reward_behind"][:N].to_numpy()
-reward_size = df_caps["reward_size"][:N].to_numpy()
-xpos = df_caps["Xpos"][:N].to_numpy()
-rewards_from_evaluation = df_caps["reward"].to_numpy()
-T = int(len(rewards_from_evaluation)/N)  # number of time steps
-reg_prior_dict = OrderedDict()
-reg_prior_dict['sigmanav'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
-reg_prior_dict['sigmavis'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
-reg_prior_dict['sigmabias'] = dists.TruncNormal(mu=0, sigma=1, a = 0, b = 99)
-reg_prior_dict['x0'] = dists.MvNormal(cov = np.eye(3))
-reg_prior = dists.StructDist(reg_prior_dict)
-noise_level = 0.0
-noisy_model_performance = np.sum(rewards_from_evaluation[-N:] > -0.9)/N
-print(len(rewards_from_evaluation)/N)
-overall_performance = np.reshape(rewards_from_evaluation, (T, N))
-overall_successes = np.average(overall_performance > -0.9, axis = 1) # Sum over N
-print(overall_successes.shape)
-print(T)
+  def real_capabilities(self, layout, cap_labels = ["nav", "visual", "bias"]):
+    T = self.T
+    successes = self.environmentData["reward"].to_numpy() > -0.9
+    
+    print(successes.shape)
+    successes = successes.astype(int)
+    self.successes = successes.reshape((T, self.N))
+    self.estimate_capabilities(layout, cap_labels)
 
-# Now with variable variance !
-class Measurement_Layout_AAIO(ssm.StateSpaceModel):
-    default_params = {'sigmanav': 1,
-                      'sigmavis': 1,
-                      'sigmabias': 1,
-                     }
-
-    def PX0(self):
-        return dists.IndepProd(dists.Normal(loc=0, scale = self.sigmanav),
-                               dists.Normal(loc=0, scale = self.sigmavis),
-                               dists.Normal(loc=0, scale = self.sigmabias),
-                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
-                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
-                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
-                               )
-
-    def PX(self, t, xp):
-        return dists.IndepProd(dists.Normal(loc=xp[:, 0], scale = xp[:, 3]),
-                               dists.Normal(loc=xp[:, 1], scale = xp[:, 4]),
-                               dists.Normal(loc=xp[:, 2], scale = xp[:, 5]),
-                               dists.Dirac(loc=xp[:, 3]),
-                               dists.Dirac(loc=xp[:, 4]),
-                               dists.Dirac(loc=xp[:, 5]),
-                               )
-
-    def PY(self, t, xp, x):
-        rightlefteffect = product_on_time_varying(x[:, 2], xpos)
-        perf_nav = logistic(performance_from_capability_and_demand_batch(x[:, 0], distance*(behind*0.5+1.0)) + rightlefteffect)
-        perf_vis = logistic(performance_from_capability_and_demand_batch(x[:, 1], np.log(distance/reward_size)))
-        final_prob = noise_level*noisy_model_performance + (1-noise_level) * perf_nav * perf_vis
-        final_prob = np.swapaxes(final_prob, 0, 1)
-        observations_kwargs = tuple([dists.Binomial(1, p = final_prob[_]) for _ in range(N)])
-        return dists.IndepProd(*observations_kwargs)
+  def estimate_capabilities(self, layout, cap_labels = ["nav", "visual", "bias"]):
       
-
-if __name__ == "__main__":
-  print(T)
-  performance_from_capability_and_demand_batch: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]-demand)
-  product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
-  np.random.seed(0)
-  learn_time_nav = 0.5*T
-  learn_time_vis = 0.2*T
-  learn_time_bias = 0.3*T
-  time_steps = np.linspace(1, T, T)
-#   capability_nav = logistic((time_steps - learn_time_nav)/(T/5))*5.6 #particular point where significant learning occurs, and rate at which this is is determined by the denominator
-#   capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
-#   capability_bias = logistic((time_steps- learn_time_bias)/(T/5))*1
-#   # Task capability creation, representing a range of arenas
-#   rightlefteffect_ = product_on_time_varying(capability_bias, xpos)
-#   perf_nav = logistic(performance_from_capability_and_demand_batch(capability_nav, distance*(behind*0.5+1.0)) + rightlefteffect_)
-#   perf_vis = logistic(performance_from_capability_and_demand_batch(capability_vis, np.log(distance/reward_size)))
-  #   successes = np.random.binomial(1, perf_nav*perf_vis, (T, N)) == 1
-
-  successes = df_caps["reward"].to_numpy() > -0.9
-  print(successes.shape)
-  successes = successes.astype(int)
-  successes = successes.reshape((T, N))
-  fk_model = ssm.Bootstrap(ssm=Measurement_Layout_AAIO(), data=successes)
-  my_pmmh = SMC(N=500, fk=fk_model, collect = [Moments()])
-  my_pmmh.run()
-  processed_chain = my_pmmh.summaries.moments
-  print(processed_chain)
-  fig, ax = plt.subplots(1, 1, figsize=(10, 6))
-  nav_est = [mom["mean"][0] for mom in processed_chain]
-  vis_est = [mom["mean"][1] for mom in processed_chain]
-  bias_est = [mom["mean"][2] for mom in processed_chain]
-  nav_var = [mom["var"][0] for mom in processed_chain]
-  vis_var = [mom["var"][1] for mom in processed_chain]
-  bias_var = [mom["var"][2] for mom in processed_chain]
-  if not os.path.exists(rf"estimated_capabilities/{filename}"):
-    os.makedirs(rf"estimated_capabilities/{filename}")
-  
-  np.save(rf"estimated_capabilities/{filename}/navigation_est", nav_est)
-  np.save(rf"estimated_capabilities/{filename}/visual_est", vis_est)
-  np.save(rf"estimated_capabilities/{filename}/bias_est", bias_est)
-  np.save(rf"estimated_capabilities/{filename}/navigation_var", nav_var)
-  np.save(rf"estimated_capabilities/{filename}/visual_var", vis_var)
-  np.save(rf"estimated_capabilities/{filename}/bias_var", bias_var)
-  
-  ax.plot(time_steps, [mom["mean"][0:3] for mom in processed_chain], label=["Estimated navigation", "Estimated visual", "Estimated bias"])
-  ax.plot(time_steps, [mom["var"][0:3] + mom["mean"][0:3] for mom in processed_chain], alpha = 0.2)
-  ax.plot(time_steps, [mom["mean"][0:3] - mom["var"][0:3] for mom in processed_chain], alpha = 0.2)
-  ax2 = ax.twinx()
-  ax2.set_ylabel("Success rate")
-  ax2.bar(range(T), overall_successes, alpha = 0.2, color = "grey")
-  #   ax.plot(time_steps, capability_nav, label="true capability")
-  #   ax.plot(time_steps, capability_vis, label="true capability")
-  #   ax.plot(time_steps, capability_bias, label="true capability")
-  ax.set_xlabel("Time")
-  ax.set_ylabel("Capability")   
-  ax.legend()
-  
-  fig3, ax3 = plt.subplots(2, 2, figsize=(10, 6))
-  ax3[0,0].plot(time_steps, nav_est, label="Estimated navigation")
-  ax3[0,0].plot(time_steps, [mom["var"][0] + mom["mean"][0] for mom in processed_chain], alpha = 0.2)
-  ax3[0,0].plot(time_steps, [mom["mean"][0] - mom["var"][0] for mom in processed_chain], alpha = 0.2)
-  ax3[0,0].set_xlabel("Time")
-  ax3[0,0].set_ylabel("Capability")
-  ax3[0,0].legend()
-  ax3[0,1].plot(time_steps, vis_est, label="Estimated visual")
-  ax3[0,1].plot(time_steps, [mom["var"][1] + mom["mean"][1] for mom in processed_chain], alpha = 0.2)
-  ax3[0,1].plot(time_steps, [mom["mean"][1] - mom["var"][1] for mom in processed_chain], alpha = 0.2)
-  ax3[0,1].set_xlabel("Time")
-  ax3[0,1].set_ylabel("Capability")
-  ax3[0,1].legend()
-  ax3[1,0].plot(time_steps, bias_est, label="Estimated bias")
-  ax3[1,0].plot(time_steps, [mom["var"][2] + mom["mean"][2] for mom in processed_chain], alpha = 0.2)
-  ax3[1,0].plot(time_steps, [mom["mean"][2] - mom["var"][2] for mom in processed_chain], alpha = 0.2)
-  ax3[1,0].set_xlabel("Time")
-  ax3[1,0].set_ylabel("Capability")
-  ax3[1,0].legend()
-  ax3[1,1].bar(time_steps, overall_successes, label="Success rate")
-  ax3[1,1].set_xlabel("Time")
-  ax3[1,1].set_ylabel("Success rate")
-  fig3.savefig(rf"estimated_capabilities/{filename}/estimated_capabilities.png")
-  plt.show()
-  #print(np.mean(processed_chain, 0))
+    filename = self.filename
+    folder = self.folder
+    layout = layout(self.N, self.environmentData, noiselevel = self.noise_level, noisy_model_performance = self.noisy_model_performance)
+    fk_model = ssm.Bootstrap(ssm=layout, data=self.successes)
+    my_pmmh = SMC(N=500, fk=fk_model, collect = [Moments()])
+    my_pmmh.run()
+    processed_chain = my_pmmh.summaries.moments
+    print(processed_chain)
+    capability_profiles = dict()
+    if not os.path.exists(rf"{folder}/{filename}"):
+      os.makedirs(rf"{folder}/{filename}")
+    for i in range(len(cap_labels)):
+      capability_profiles[cap_labels[i]] = dict()
+      capability_profiles[cap_labels[i]]["mean"] = [mom["mean"][i] for mom in processed_chain]
+      capability_profiles[cap_labels[i]]["var"] = [mom["var"][i] for mom in processed_chain]
+      np.save(rf"{folder}/{filename}/{cap_labels[i]}_est", capability_profiles[cap_labels[i]]["mean"])
+      np.save(rf"{folder}/{filename}/{cap_labels[i]}_var", capability_profiles[cap_labels[i]]["var"])
+      
+    
+    time_steps = np.linspace(1, self.T, self.T)
+    T = self.T
+    num_caps = len(processed_chain[0]["mean"])/2 # Number of mean vectors we have
+    num_rows = int(num_caps//2 + 1)
+    fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
+    print(num_rows)
+    counter = 0
+    for i in range(num_rows):
+      for j in range(2):
+        if i == num_rows - 1 and j == 1:
+          continue
+        if counter >= num_caps:
+          break
+        print(i, j)
+        ax3[i, j].plot(time_steps, [mom["mean"][counter] for mom in processed_chain], label=cap_labels[counter])
+        ax3[i, j].legend()
+        counter += 1
+    ax3[num_rows - 1,1].bar(time_steps, self.overall_successes, label="Success rate")
+    ax3[num_rows - 1 ,1].set_xlabel("Time")
+    ax3[num_rows - 1,1].set_ylabel("Success rate")
+    fig3.savefig(rf"{folder}/{filename}/estimated_capabilities.png")
+    #print(np.mean(processed_chain, 0))
