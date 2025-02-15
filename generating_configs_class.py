@@ -1,6 +1,8 @@
 from typing import Callable, List, Union, Iterable
 from demands import Demands
 import numpy as np
+import random
+from ruamel.yaml import YAML
 
 class ConfigGenerator:
     def __init__(self, precise = False):
@@ -237,3 +239,28 @@ class ConfigGenerator:
                 file.writelines(cleaned_lines)
 
             print("Unnecessary whitespace removed. Cleaned YAML saved as cleaned_output.yaml")
+
+    # Randomize positions of all items in the configuration file.
+    def randomize_positions(self, data):
+        for arena in data['arenas'].values():
+            for item in arena['items']:
+                for position in item['positions']: # Randomize all positions, or just the axis you'd like within the boundary of the arena.
+                    position['x'] = random.randint(1, 40)  # Randomize x
+                    position['y'] = random.randint(1, 15)  # Randomize y
+                    position['z'] = random.randint(1, 40)  # Randomize z
+
+    # Load the configuration file. Please adjust the file path to match your configuration file.
+    def random_positions(self, file_path: str, output_path: str) -> None:
+
+        yaml = YAML()
+        yaml.preserve_quotes = True
+
+        with open(file_path, 'r') as f:
+            data = yaml.load(f)
+
+        self.randomize_positions(data)
+
+        with open(output_path, 'w') as f:
+            yaml.dump(data, f)
+
+        print("Updated YAML configuration saved. Please check the output file.")

@@ -66,7 +66,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         base_port=port_eval, # the port to use for communication between python and the Unity environment
         inference = watch_eval, # set to True if you want to watch the agent play
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
-        resolution=64,
+        resolution=128,
         useRayCasts=True, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
         timescale=5, # the speed at which the simulation runs
@@ -105,9 +105,9 @@ if __name__ == "__main__":
     config_generator = ConfigGenerator(precise = True)
     # Currently we have been using random demands, but we can make them SPECIAL
     demands_list_train = []
-    dumb_string = config_generator.gen_config_from_demands_batch_random(N_train, filename=r"example_batch_train.yaml", dist_max = 8, size_min = 3, size_max = 6, numbered = False)
-    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=100, dist_max=15, size_min = 3, size_max = 6, numbered = False, seed = 1)
-    eval_freq = 3000
+    dumb_string = config_generator.gen_config_from_demands_batch_random(N_train, filename=r"example_batch_train.yaml", dist_max = 5, size_min = 1, size_max = 4, numbered = False)
+    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=100, dist_max=15, size_min = 0.5, size_max = 4, numbered = False, seed = 1)
+    eval_freq = 20000
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
@@ -117,4 +117,4 @@ if __name__ == "__main__":
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name, eval_freq = eval_freq,
                                   demands_list = demands_list, env_path_train = env_path_train, env_path_eval = env_path_eval,
-                                  watch_train = False, watch_eval=False,  num_steps = 50e3, N = N, random_agent = False)
+                                  watch_train = False, watch_eval=False,  num_steps = 1e6, N = N, random_agent = False)

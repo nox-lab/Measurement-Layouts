@@ -10,9 +10,11 @@ from demands import Demands
 import numpy as np
 
 # IMPORTANT! Replace configuration file with the correct path here:
-configuration_file = r"GIBSONA_test.yaml"
+configuration_file = r"C:\Users\talha\Documents\iib_projects\Variations\Variations\Main-suite\Target (capabilities) suite\Containment\Spawner\Main_Target_Spawner_D1_FC0\00000_dis_medi.yaml"
 test = False
 config_generator = ConfigGenerator(precise = True)
+
+#config_generator.random_positions(configuration_file, configuration_file)
 #config, demands = gen_config_from_demands_batch_random(10, configuration_file, time_limit=75, dist_max=15, numbered = True)
 # for demand in demands:
 #     print(demand)

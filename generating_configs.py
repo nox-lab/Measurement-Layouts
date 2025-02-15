@@ -1,6 +1,11 @@
 from typing import Callable
 from demands import Demands
 import numpy as np
+  # IMPORTANT! Please install ruamel.yaml package before running this script. You can do so by running the following command:
+# pip install ruamel.yaml
+
+from ruamel.yaml import YAML
+import random
 
 
 def gen_config_from_demands(
@@ -191,3 +196,4 @@ def gen_config_from_demands_precise(
     with open(filename, "w") as text_file:
       text_file.write(initial_part + generated_config + final_part)
     return generated_config + final_part
+
