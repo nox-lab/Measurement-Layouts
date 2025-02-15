@@ -17,9 +17,12 @@ for file in os.scandir(directory):
     filename = filename.decode()
     if filename.endswith(".csv"):
         print(filename)
-    incremental_estimator = incremental_measurement_layout(200, "estimated_capabilities", f"filename")
-    incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
-    continue
+        filename = filename[:-4] # removes the last 4 characters.
+        print(filename)
+        filename = filename.split("\\")[-1] # Removes the parent folder.
+        print(filename)
+        incremental_estimator = incremental_measurement_layout(200, "estimated_capabilities/no_navigation", filename)
+        incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
 
     
 

@@ -11,12 +11,39 @@ from generating_configs_class import ConfigGenerator
 import random
 from animalai.environment import AnimalAIEnvironment
 from animal_ai_reset_wrapper import AnimalAIReset
+from xgboost import XGBClassifier
 
 import os 
 
 
 def logistic(x):
     return 1/(1+np.exp(-x))
+
+def brierDecomp(preds, outs):
+    brier = 1 / len(preds) * sum((preds - outs) ** 2)
+    bins = np.linspace(0, 1, 11)
+    binCenters = (bins[:-1] + bins[1:]) / 2
+    binPredInds = np.digitize(preds, binCenters)
+    binnedPreds = bins[binPredInds]
+
+    binTrueFreqs = np.zeros(10)
+    binPredFreqs = np.zeros(10)
+    binCounts = np.zeros(10)
+
+    for i in range(10):
+        idx = (preds >= bins[i]) & (preds < bins[i + 1])
+
+        binTrueFreqs[i] = np.sum(outs[idx]) / np.sum(idx) if np.sum(idx) > 0 else 0
+
+        binPredFreqs[i] = np.mean(preds[idx]) if np.sum(idx) > 0 else 0
+        binCounts[i] = np.sum(idx)
+
+    calibration = np.sum(binCounts * (binTrueFreqs - binPredFreqs) ** 2) / np.sum(binCounts) if np.sum(
+        binCounts) > 0 else 0
+    refinement = np.sum(binCounts * (binTrueFreqs * (1 - binTrueFreqs))) / np.sum(binCounts) if np.sum(
+        binCounts) > 0 else 0
+
+    return brier, calibration, refinement
 
 
 if __name__ == "__main__":
@@ -127,7 +154,7 @@ if __name__ == "__main__":
     # false negative rate
     false_negative_rate = sum((successes == 1) & (successes_predicted == 0))/sum(successes == 1)
     print(f"False negative rate: {false_negative_rate}")
-    brier_score = np.mean((successes.astype(int) - probabilities_of_success)**2)
+    brier_score, calibration_score, refinement_score = brierDecomp(probabilities_of_success, successes)
     print(f"brier score:{brier_score}")
     
     
@@ -136,7 +163,7 @@ if __name__ == "__main__":
     initial_evaluation_successes = pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward"].to_numpy()[-N:] > -0.9
     successes_from_initial_eval = initial_evaluation_successes
     baseline = np.mean(successes_from_initial_eval.astype(int))
-    baseline_brier_score = np.mean((successes_from_initial_eval.astype(int) - baseline)**2)
+    baseline_brier_score, calibration_score, refinement_score = brierDecomp(baseline*np.ones(N), successes)
     baseline_accuracies = []
     baseline_FN = []
     baseline_FP = []
@@ -188,4 +215,33 @@ if __name__ == "__main__":
     ax.set_xlabel("Rate")
     ax.set_ylabel("Frequency")
     ax.legend()
+    
+    evaluation_for_capabilities_data = pd.read_csv(rf"./csv_recordings/{folder_name}.csv")
+    
+    inputFeatures = ["Xpos", "reward_distance", "reward_size", "reward_behind"]
+    outputFeatures = ["reward"]
+    
+    XTrain = evaluation_for_capabilities_data[inputFeatures].to_numpy()[-N:]
+    YTrain = evaluation_for_capabilities_data[outputFeatures].to_numpy()[-N:] > 0.9
+    
+    XTest = recorded_results[inputFeatures].to_numpy()
+    YTest = recorded_results[outputFeatures].to_numpy() > 0.9
+    
+    model = XGBClassifier(objective='binary:logistic')
+    # Set up KFold cross-validation
+
+    model.fit(XTrain, YTrain)
+    # Make predictions on the test data
+    yPredictions = model.predict_proba(XTest)[:, 1]  # Get the probabilities for the positive class
+    YTest = YTest.flatten()
+    brierScoreXGBoost, calibrationXGBoost, refinementXGBoost = brierDecomp(yPredictions, YTest)
     plt.show()
+    print(f"XGBoost brier score: {brierScoreXGBoost}")
+    XGBoost_success_prediction= yPredictions > 0.5
+    print("XGBoost accuracy: ", np.mean(XGBoost_success_prediction == YTest), 
+          "XGBoost FN", sum((YTest == 1) & (~XGBoost_success_prediction))/sum(YTest == 1), 
+          "XGBoost FP", sum((YTest == 0) & (XGBoost_success_prediction))/sum(YTest == 0))
+    print(f"Baseline brier score: {baseline_brier_score}")
+    print(f"Model brier score: {brier_score}")
+    
+  

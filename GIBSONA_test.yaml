@@ -1,0 +1,105 @@
+!ArenaConfig
+
+proc_meta:
+  proc_labels:
+  - !ProcIfLabels
+    value: [agent.positions.0.x, agent.positions.0.z, GoodGoal.positions.0.x, GoodGoal.positions.0.z]
+    cases: [[20, 4, 26, 30], [20, 4, 12, 15], [20, 4, 26, 15], 
+            [20, 36, 26, 30], [20, 36, 12, 15], [20, 36, 26, 15], 
+            [4, 4, 26, 30], [4, 4, 12, 15], [4, 4, 26, 15], 
+            [36, 4, 26, 30], [36, 4, 12, 15], [36, 4, 26, 15], 
+            [4, 36, 26, 30], [4, 36, 12, 15], [4, 36, 26, 15], 
+            [36, 36, 26, 30], [36, 36, 12, 15], [36, 36, 26, 15]]
+              
+    labels: [dis_medi, dis_close, dis_close, 
+            dis_close, dis_medi, dis_medi, 
+            dis_far, dis_close, dis_medi, 
+            dis_medi, dis_medi, dis_close, 
+            dis_medi, dis_medi, dis_far, 
+            dis_close, dis_far, dis_medi]
+
+
+arenas:
+  0: !Arena
+    pass_mark: 
+    - !ProcIf
+      value: GoodGoal.sizes.0.x
+      cases: [1,2,3,4,5]
+      then: [0,1,2,3,4]
+    t: 250
+
+    items:
+    - !Item
+      name: Agent
+      id: agent
+      positions:
+      - !ProcList [!Vector3 {x: 20, y: 0, z: 4}, !Vector3 {x: 20, y: 0, z: 36}, 
+                   !Vector3 {x: 4, y: 0, z: 4},!Vector3 {x: 36, y: 0, z: 4}, 
+                   !Vector3 {x: 4, y: 0, z: 36}, !Vector3 {x: 36, y: 0, z: 36}]
+      rotations:
+      - !ProcIf
+        value: agent.positions.0.z
+        cases: [4, 36]
+        then: [0, 180]
+
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 30} 
+      rotations: [90]
+      colors: 
+      - !ProcColor 8
+      sizes:
+      - !Vector3 {x: 6, y: 3, z: 1}
+
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 14, y: 0, z: 30} 
+      rotations: [90]
+      colors: 
+      - !ProcColor 8
+      sizes:
+      - !Vector3 {x: 6, y: 3, z: 1}
+
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 12, y: 3.5, z: 30} 
+      rotations: [90]
+      colors: 
+      - !ProcColor 8
+      sizes:
+      - !Vector3 {x: 6, y: 1, z: 5}
+
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 12, y: 1.5, z: 22} 
+      rotations: [90]
+      colors: 
+      - !ProcColor 8
+      sizes:
+      - !Vector3 {x: 0.1, y: 6.5, z: 5}
+
+    - !Item
+      name: Ramp
+      positions:
+      - !Vector3 {x: 12, y: 0, z: 22} 
+      rotations: [0]
+      colors: 
+      - !ProcColor 8
+      sizes:
+      - !Vector3 {x: 0.1, y: 0.1, z: 0.1}
+
+
+    - !Item
+      name: GoodGoal
+      id: GoodGoal 
+      positions:
+      - !ProcList [!Vector3 {x: 26, y: 0, z: 30},!Vector3 {x: 12, y: 0, z: 15},!Vector3 {x: 26, y: 0, z: 15}]     
+      sizes:
+      - !ProcVector3Scaled
+        scales: [1, 2, 3, 4, 5]
+
+    

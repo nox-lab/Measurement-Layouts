@@ -75,7 +75,6 @@ class incremental_measurement_layout():
     my_pmmh = SMC(N=500, fk=fk_model, collect = [Moments()])
     my_pmmh.run()
     processed_chain = my_pmmh.summaries.moments
-    print(processed_chain)
     capability_profiles = dict()
     if not os.path.exists(rf"{folder}/{filename}"):
       os.makedirs(rf"{folder}/{filename}")
@@ -92,7 +91,6 @@ class incremental_measurement_layout():
     num_caps = len(processed_chain[0]["mean"])/2 # Number of mean vectors we have
     num_rows = int(num_caps//2 + 1)
     fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
-    print(num_rows)
     counter = 0
     for i in range(num_rows):
       for j in range(2):
@@ -100,7 +98,6 @@ class incremental_measurement_layout():
           continue
         if counter >= num_caps:
           break
-        print(i, j)
         ax3[i, j].plot(time_steps, [mom["mean"][counter] for mom in processed_chain], label=cap_labels[counter])
         ax3[i, j].legend()
         counter += 1
