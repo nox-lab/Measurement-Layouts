@@ -50,7 +50,7 @@ class EvalRewardCallback(EvalCallback):
                 print(f"New best reward: {self.total_reward}, saving to {self.best_model_path}")
                 self.best_reward = self.total_reward
             if self.best_model_path:    
-                self.model.save(self.best_model_path)
+                self.model.save(self.best_model_path+ f"_{self.n_calls}.zip")
                 print("model saved!")
             self.aai_env.reset(arenas_configurations=self.config)
         if self.number_of_evals >= self.number_of_evals_max:

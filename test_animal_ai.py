@@ -66,7 +66,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         base_port=port_eval, # the port to use for communication between python and the Unity environment
         inference = watch_eval, # set to True if you want to watch the agent play
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
-        resolution=128,
+        resolution=64,
         useRayCasts=True, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
         timescale=5, # the speed at which the simulation runs
@@ -89,7 +89,8 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     if load_model:
         model = PPO.load(load_model, env_train, tensorboard_log="./tensorboardLogsopeningymaze")
     else:
-        model = PPO("CnnPolicy", env_train,  n_steps = 2048, batch_size = 64, clip_range=0.2, ent_coef=0.01, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
+        # For the 2M progression : model = PPO("CnnPolicy", env_train,  n_steps = 4096, batch_size = 64, clip_range=0.2, ent_coef=0.01, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
+        model = PPO("CnnPolicy", env_train,  n_steps = 4096, batch_size = 64, clip_range=0.2, ent_coef=0.01, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogsopeningymaze") # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483
     
     # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug 
     
@@ -102,19 +103,19 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 if __name__ == "__main__":
     N = 200
     N_train = 400
-    config_generator = ConfigGenerator(precise = True)
+    config_generator = ConfigGenerator(very_precise = True)
     # Currently we have been using random demands, but we can make them SPECIAL
     demands_list_train = []
-    dumb_string = config_generator.gen_config_from_demands_batch_random(N_train, filename=r"example_batch_train.yaml", dist_max = 5, size_min = 1, size_max = 4, numbered = False)
-    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=100, dist_max=15, size_min = 0.5, size_max = 4, numbered = False, seed = 1)
-    eval_freq = 20000
+    dumb_string = config_generator.gen_config_from_demands_batch_random(N_train, filename=r"example_batch_train.yaml", time_limit=200, dist_max = 8, size_min = 0.5, size_max = 6, numbered = False, seed = 101)
+    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=200, dist_max=15, size_min = 0.5, size_max = 6, numbered = False, seed = 1)
+    eval_freq = 40000
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
     configuration_file_eval = r"example_batch_eval.yaml"
-    model_name = r"./logs/best_model_12_precise.zip"
-    recording_file = r"./csv_recordings/working_caps_predictive_12_navigation_evolution.csv"
+    model_name = r"./logs/model_progression/progressionmodel_2M"
+    recording_file = r"./progression_model_results_2M.csv"
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name, eval_freq = eval_freq,
                                   demands_list = demands_list, env_path_train = env_path_train, env_path_eval = env_path_eval,
-                                  watch_train = False, watch_eval=False,  num_steps = 1e6, N = N, random_agent = False)
+                                  watch_train = False, watch_eval=False,  num_steps = 2e6, N = N, random_agent = False)

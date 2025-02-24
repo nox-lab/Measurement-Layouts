@@ -1,0 +1,6115 @@
+!ArenaConfig
+arenas:
+  0: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  1: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  2: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 1.5, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  3: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  4: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  5: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 2.2, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  6: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  7: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  8: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 2.2, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  9: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  10: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 2.2, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  11: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  12: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 1.5, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  13: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  14: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 2.2, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  15: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  16: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.8, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  17: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 2.2, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  18: !Arena
+    passMark: 1
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 1.5, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 24, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 2.0, y: 2.0, z: 2.0}
+
+  19: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  20: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  21: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  22: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  23: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  24: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  25: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  26: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  27: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  28: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  29: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  30: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  31: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  32: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  33: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  34: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  35: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  36: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  37: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  38: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  39: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  40: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  41: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  42: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  43: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  44: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  45: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  46: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  47: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  48: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  49: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  50: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  51: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  52: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  53: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  54: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  55: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  56: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  57: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  58: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  59: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  60: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  61: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  62: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  63: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  64: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  65: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  66: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  67: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  68: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  69: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  70: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  71: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  72: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  73: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  74: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  75: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  76: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  77: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  78: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  79: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  80: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  81: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  82: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  83: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  84: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  85: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  86: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  87: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  88: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  89: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  90: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  91: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  92: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  93: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  94: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  95: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  96: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  97: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  98: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  99: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  100: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  101: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  102: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  103: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  104: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  105: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  106: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  107: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  108: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  109: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  110: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  111: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  112: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  113: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  114: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  115: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  116: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 36}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  117: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  118: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 15.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 31, y: 0.6, z: 1}
+      - !Vector3 {x: 8, y: 0.6, z: 1}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 31, y: 0, z: 31}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  119: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  120: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  121: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  122: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  123: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  124: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  125: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  126: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  127: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  128: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  129: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  130: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  131: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  132: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  133: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  134: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  135: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  136: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  137: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  138: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  139: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  140: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  141: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  142: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  143: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  144: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  145: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  146: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  147: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  148: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  149: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  150: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  151: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  152: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  153: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  154: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  155: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  156: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  157: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  158: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  159: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  160: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  161: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  162: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  163: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  164: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  165: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  166: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  167: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  168: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  169: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  170: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  171: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  172: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  173: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  174: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  175: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  176: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  177: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  178: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  179: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  180: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  181: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  182: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  183: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  184: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  185: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  186: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 128, b: 128}
+      - !RGB {r: 128, g: 128, b: 128}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  187: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  188: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  189: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  190: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  191: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  192: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  193: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  194: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 255}
+      - !RGB {r: 0, g: 255, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  195: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  196: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  197: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  198: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  199: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 128, b: 0}
+      - !RGB {r: 0, g: 128, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  200: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  201: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  202: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  203: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 0, b: 255}
+      - !RGB {r: 0, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  204: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 3, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  205: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  206: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 0, g: 255, b: 0}
+      - !RGB {r: 0, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  207: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  208: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  209: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  210: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  211: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 0}
+      - !RGB {r: 255, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  212: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  213: !Arena
+    passMark: 2
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 17, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 3.0, y: 3.0, z: 3.0}
+
+  214: !Arena
+    passMark: 4
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 5.0, y: 5.0, z: 5.0}
+
+  215: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 255, b: 0}
+      - !RGB {r: 255, g: 255, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  216: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 7}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 192, g: 192, b: 192}
+      - !RGB {r: 192, g: 192, b: 192}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 35}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  217: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 1}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 255, g: 0, b: 255}
+      - !RGB {r: 255, g: 0, b: 255}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 10, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+
+  218: !Arena
+    passMark: 3
+    timeLimit: 500
+    items:
+    - !Item
+      name: Agent
+      positions:
+      - !Vector3 {x: 23, y: 0, z: 13}
+      rotations: [0]
+    - !Item
+      name: Wall
+      positions:
+      - !Vector3 {x: 10.5, y: 0, z: 20}
+      - !Vector3 {x: 36, y: 0, z: 20}
+      rotations: [0, 0]
+      colors:
+      - !RGB {r: 128, g: 0, b: 0}
+      - !RGB {r: 128, g: 0, b: 0}
+      sizes:
+      - !Vector3 {x: 21, y: 0.6, z: 5}
+      - !Vector3 {x: 8, y: 0.6, z: 5}
+    - !Item
+      name: GoodGoal
+      positions:
+      - !Vector3 {x: 36, y: 0, z: 26}
+      sizes:
+      - !Vector3 {x: 4.0, y: 4.0, z: 4.0}
+

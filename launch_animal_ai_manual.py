@@ -10,9 +10,13 @@ from demands import Demands
 import numpy as np
 
 # IMPORTANT! Replace configuration file with the correct path here:
-configuration_file = r"C:\Users\talha\Documents\iib_projects\Variations\Variations\Main-suite\Target (capabilities) suite\Containment\Spawner\Main_Target_Spawner_D1_FC0\00000_dis_medi.yaml"
+configuration_file = r"example_eval.yaml"
 test = False
-config_generator = ConfigGenerator(precise = True)
+config_generator = ConfigGenerator(very_precise = True)
+
+config_string, demands_list = config_generator.gen_config_from_demands_batch_random(3, configuration_file, time_limit=75, dist_max=15, size_max = 0.2, numbered = True)
+for demand in demands_list:
+    print(demand)
 
 #config_generator.random_positions(configuration_file, configuration_file)
 #config, demands = gen_config_from_demands_batch_random(10, configuration_file, time_limit=75, dist_max=15, numbered = True)
@@ -45,8 +49,8 @@ config_generator = ConfigGenerator(precise = True)
 
 
 
-with open(configuration_file) as f:
-    print(f.read()) 
+# with open(configuration_file) as f:
+#     print(f.read()) 
 # IMPORTANT! Replace the path to the application .exe here:
 env_path = r"..\WINDOWS\AAI\Animal-AI.exe"
 

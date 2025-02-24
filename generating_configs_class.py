@@ -5,11 +5,12 @@ import random
 from ruamel.yaml import YAML
 
 class ConfigGenerator:
-    def __init__(self, precise = False):
+    def __init__(self, precise = False, very_precise = False, uncentred = False):
         self.initial_part = """
         !ArenaConfig
         arenas:"""
         self.precise = precise
+        self.very_precise = very_precise
 
     def gen_config_from_demands(
         self, reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number: int, filename: str, numbered: bool = False
@@ -102,8 +103,12 @@ class ConfigGenerator:
         for i, env in enumerate(envs):
             for j in range(3):
                 tl_input = int(time_limit[i]) if time_iterable else time_limit
+                if self.precise and self.very_precise:
+                    raise ValueError("Cannot be both precise and very precise.")
                 if self.precise:
                     env_conf = self.gen_config_from_demands_precise(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
+                elif self.very_precise:
+                    env_conf = self.gen_config_from_demands_super_precise(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
                 else:
                     env_conf = self.gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
                 new_conf += env_conf
@@ -121,8 +126,12 @@ class ConfigGenerator:
             print("Distance min too small, setting to size_min + 0.5, this is to prevent clipping.")
         while i < n_envs:
             size = np.random.uniform(size_min, size_max)  # This should prevent clipping
-            xpos_choice = np.random.choice([-1, 0, 1])
-            reward_behind_choice = np.random.choice([0, 0.5, 1])
+            if not self.very_precise:
+                xpos_choice = np.random.choice([-1, 0, 1])
+                reward_behind_choice = np.random.choice([0, 0.5, 1])
+            else:
+                xpos_choice = np.random.choice([-1, 1])
+                reward_behind_choice = np.random.uniform(0, 1)
             if reward_behind_choice == 0.5 and xpos_choice == 0 and self.precise:
                 continue
             demands_list.append(Demands(size, np.random.uniform(dist_min, dist_max), reward_behind_choice, xpos_choice))
@@ -220,10 +229,76 @@ class ConfigGenerator:
               symbolNames:
               - "{symbolpattern}"
           """
-
         with open(filename, "w") as text_file:
             text_file.write(self.initial_part + generated_config + final_part)
         return generated_config + final_part
+          
+    def gen_config_from_demands_super_precise(
+        self, reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number: int, filename: str, numbered: bool = False
+    ) -> str:
+        # Validate
+        try:
+            assert reward_size >= 0 and reward_size <= 1.9
+        except:
+            print("size greater than intended range.")
+            print(reward_size)
+            if reward_size > 6:
+                raise ValueError(f"Size is too large, {reward_size}")
+        assert 0 <= reward_behind <= 1
+        assert x_pos in [-1, 1]
+        goal_x_pos, goal_z_pos = 20, 20
+        rotation_angle = 180*reward_behind*x_pos
+        rotation_angle = rotation_angle * np.pi / 180 # convert to  radians cause numpy accepts radians.
+        goal_x_pos += reward_distance  * np.sin(rotation_angle)
+        goal_z_pos += reward_distance * np.cos(rotation_angle)
+        agent_rotation = 0
+        final_part = ""
+
+        generated_config = f"""
+          {env_number}: !Arena
+            timeLimit: {time_limit}
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {{x: {goal_x_pos}, y: 0, z: {goal_z_pos}}}
+              rotations: [0]
+              sizes:
+              - !Vector3 {{x: {reward_size}, y: {reward_size}, z: {reward_size}}}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {{x: 20, y: 0, z: 20}}
+              rotations: [{agent_rotation}]
+            """
+        if numbered:
+            distance_away = 15
+            signboard_x = 20 + distance_away * np.sin(agent_rotation * np.pi / 180)
+            signboard_z = 20 + distance_away * np.cos(agent_rotation * np.pi / 180)
+            symbolpattern = ["1" * (env_number // 3 + 2) if i % 2 == 0 else "0" * (env_number // 3 + 2) for i in range(env_number // 3 + 3)]
+            symbolpattern = "/".join(symbolpattern)
+            final_part = f"""
+            - !Item
+              name: SignBoard
+              positions:
+              - !Vector3 {{x: {signboard_x}, y: 0, z: {signboard_z}}}
+              sizes:
+              - !Vector3 {{x: 2, y: 2, z: 2}}
+              rotations: [{agent_rotation + 270}]
+              symbolNames:
+              - "{symbolpattern}"
+          """
+        with open(filename, "w") as text_file:
+            text_file.write(self.initial_part + generated_config + final_part)
+        return generated_config + final_part
+        
+        
+        
+        
+
+
     
     def clean_yaml_file(self, filename: str) -> None:
             import re
