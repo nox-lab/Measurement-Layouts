@@ -14,7 +14,7 @@ from animalai.environment import AnimalAIEnvironment
 from animal_ai_reset_wrapper import AnimalAIReset
 from xgboost import XGBClassifier
 from various_measurement_layouts import Measurement_Layout_AAIO, Measurement_Layout_AAIO_NO_NAVIGATION, Measurement_Layout_AAIO_precise
-
+from collections import OrderedDict
 import os 
 
 
@@ -48,12 +48,11 @@ def brierDecomp(preds, outs):
     return brier, calibration, refinement
 
 
-def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder, model_name, load_eval = True, precise = True):
+def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder, model_name, N,  load_eval = True, precise = True, noise_level = 0.0):
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     
     config_generator = ConfigGenerator(precise = precise)
-    N = 200
     if not os.path.exists(rf"./csv_recordings/predictive_data/{model_name}"):
         os.makedirs(rf"./csv_recordings/predictive_data/{model_name}")
     recorded_results = rf"./csv_recordings/predictive_data/{model_name}/true_results_for_prediction.csv"   
@@ -66,26 +65,25 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     folder_name_caps = added_folder + "/" + folder_name
     
     estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\visual_est.npy")
-    estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\navigation_est.npy")
     estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\bias_est.npy")
-
+    noise_estimate = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\noise_est.npy") # This is the noise estimate.
+    print(noise_estimate)
     # Seems to do better with a non-deterministic agent.
     model_path = rf"./logs/{model_name}.zip"
+    noise_final = noise_estimate[-1]
 
 
 
-    final_capability_means = {
-        "navigation": estimated_navigation[-1],
-        "visual": estimated_visual[-1],
-        "bias": estimated_bias[-1]
-    }
+    final_capability_means = OrderedDict()
+    if layout != Measurement_Layout_AAIO_NO_NAVIGATION:
+        estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\navigation_est.npy")
+        final_capability_means["navigation"] = estimated_navigation[-1]
+    final_capability_means["visual"] = estimated_visual[-1]
+    final_capability_means["bias"] = estimated_bias[-1]
 
 
 
-    capability_bias = final_capability_means["bias"]
-    capability_nav = final_capability_means["navigation"]
-    capability_vis = final_capability_means["visual"]
-    measurement_layout_itself = layout(N, pd.read_csv(rf"./csv_recordings/{folder_name}.csv"), noiselevel = 0.0, noisy_model_performance = proportion_of_successes) 
+    measurement_layout_itself = layout(N, pd.read_csv(rf"./csv_recordings/{folder_name}.csv"), noiselevel = noise_level, noisy_model_performance = proportion_of_successes) 
     if load_eval:
         csv_file = pd.read_csv(recorded_results)
         demands = csv_file[["Xpos", "reward_distance", "reward_size", "reward_behind"]].to_numpy()
@@ -112,9 +110,12 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     # 0.69 predictive accuracy for distance between 12 and 15, nice! ML is able to somewhat predict out of distribution cases.
     # 0.57 prediciive accuracy for new OOD, this one actually took consideration of the behind rewards as well, unlikw previous. So I guess still something. 
     # 0.8 accuracy with random new tested agent, working backwards movement this time.
-    measurement_layout_itself.PY(x = np.array([[final_capability_means["navigation"], final_capability_means["visual"], final_capability_means["bias"]]]), t = None, xp = None)
+    input_to_observations = [final_capability_means[key] for key in final_capability_means]
+    num_keys = len(final_capability_means)
+    input_to_observations.extend([1]*num_keys)
+    input_to_observations.append(noise_final)
+    measurement_layout_itself.PY(x = np.array([input_to_observations]), t = None, xp = None)
     probabilities_of_success = (measurement_layout_itself.arena_outcomes).flatten()
-    print(probabilities_of_success)
     for i, probability_of_success in enumerate(probabilities_of_success):
         print(f"Probability of success for arena {i}: {probability_of_success}. Demands are {list_of_demands[i]}")
         
@@ -155,10 +156,12 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     print(f"Log likelihood: {log_likelihood}")
     print(f"accuracy : { 1 - success_error/N}") # 0 error corresponds to 1.0 accuracy (perfect)
     # false positive rate
-    false_positive_rate = sum((successes == 0) & (successes_predicted == 1))/sum(successes == 0)
+    false_positive_rate = sum((successes == 0) & (successes_predicted == 1))/len(successes)
+    true_positive_rate = sum((successes == 1) & (successes_predicted == 1))/len(successes)
+    true_negative_rate = sum((successes == 0) & (successes_predicted == 0))/len(successes)
     print(f"False positive rate: {false_positive_rate}")
     # false negative rate
-    false_negative_rate = sum((successes == 1) & (successes_predicted == 0))/sum(successes == 1)
+    false_negative_rate = sum((successes == 1) & (successes_predicted == 0))/len(successes)
     print(f"False negative rate: {false_negative_rate}")
     brier_score, calibration_score, refinement_score = brierDecomp(probabilities_of_success, successes)
     print(f"brier score:{brier_score}")
@@ -176,6 +179,8 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     baseline_test_FN = []
     baseline_FP = []
     baseline_test_FP = []
+    baseline_TP = []
+    baseline_TN = []
     for sample in range(1000):
         random_number = np.random.rand(N)
         random_number_again = np.random.rand(N)
@@ -188,13 +193,17 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         baseline_accuracies.append(baseline_accuracy)
         baseline_test_accuracies.append(baseline_accuracy)
         # false positive rate
-        false_positive_rate_baseline = sum((successes == 0) & (baseline_predicted == 1))/sum(successes == 0)
+        false_positive_rate_baseline = sum((successes == 0) & (baseline_predicted == 1))/len(baseline_predicted)
+        true_positive_rate_baseline = sum((successes == 1) & (baseline_predicted == 1))/len(baseline_predicted)
+        baseline_TP.append(true_positive_rate_baseline)
         baseline_FP.append(false_positive_rate_baseline)
-        baseline_test_FP.append(sum((baseline_predicted == 1) & (baseline_test == 0))/sum(baseline_predicted == 1))
+        baseline_test_FP.append(sum((baseline_predicted == 1) & (baseline_test == 0))/len(baseline_predicted))
         # false negative rate
-        false_negative_rate_baseline = sum((successes == 1) & (baseline_predicted == 0))/sum(successes == 1)
+        false_negative_rate_baseline = sum((successes == 1) & (baseline_predicted == 0))/len(baseline_predicted)
+        true_negative_rate_baseline = sum((successes == 0) & (baseline_predicted == 0))/len(baseline_predicted)
+        baseline_TN.append(true_negative_rate_baseline)
         baseline_FN.append(false_negative_rate_baseline)
-        baseline_test_FN.append(sum((baseline_predicted == 0) & (baseline_test == 1))/sum(baseline_predicted == 0))
+        baseline_test_FN.append(sum((baseline_predicted == 0) & (baseline_test == 1))/len(baseline_predicted))
     initial_evaluation_successes = pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward"].to_numpy()[-N:] > -0.9
     print(initial_evaluation_successes.shape)
     print("Success rate during initial evaluation: ", np.mean(initial_evaluation_successes))
@@ -210,18 +219,18 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     
     
     
-    fig, ax = plt.subplots()
-    ax.hist(baseline_accuracies, alpha = 0.5, label = "Baseline accuracies", color = "b")
-    ax.hist(baseline_FP, alpha = 0.5, label = "Baseline false positive rates", color = "b")
-    ax.hist(baseline_FN, alpha = 0.5, label = "Baseline false negative rates", color = "b")
-    ax.hist(baseline_accuracies, alpha = 0.5, label = "Baseline test accuracies", color = "r")
-    ax.hist(baseline_FP, alpha = 0.5, label = "Baseline test false positive rates", color = "r")
-    ax.hist(baseline_FN, alpha = 0.5, label = "Baseline test false negative rates", color = "r")
-    ax.set_title("Baseline accuracies, false positive rates and false negative rates")
-    ax.set_xlabel("Rate")
-    ax.set_ylabel("Frequency")
-    ax.legend()
-    
+    # fig, ax = plt.subplots()
+    # ax.hist(baseline_accuracies, alpha = 0.5, label = "Baseline accuracies", color = "b")
+    # ax.hist(baseline_FP, alpha = 0.5, label = "Baseline false positive rates", color = "b")
+    # ax.hist(baseline_FN, alpha = 0.5, label = "Baseline false negative rates", color = "b")
+    # ax.hist(baseline_accuracies, alpha = 0.5, label = "Baseline test accuracies", color = "r")
+    # ax.hist(baseline_FP, alpha = 0.5, label = "Baseline test false positive rates", color = "r")
+    # ax.hist(baseline_FN, alpha = 0.5, label = "Baseline test false negative rates", color = "r")
+    # ax.set_title("Baseline accuracies, false positive rates and false negative rates")
+    # ax.set_xlabel("Rate")
+    # ax.set_ylabel("Frequency")
+    # ax.legend()
+    # plt.show()
     evaluation_for_capabilities_data = pd.read_csv(rf"./csv_recordings/{folder_name}.csv")
     
     inputFeatures = ["Xpos", "reward_distance", "reward_size", "reward_behind"]
@@ -241,43 +250,78 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     yPredictions = model.predict_proba(XTest)[:, 1]  # Get the probabilities for the positive class
     YTest = YTest.flatten()
     brierScoreXGBoost, calibrationXGBoost, refinementXGBoost = brierDecomp(yPredictions, YTest)
-    plt.show()
+
     print(f"XGBoost brier score: {brierScoreXGBoost}")
     XGBoost_success_prediction= yPredictions > 0.5
     XGBoost_accuracy = np.mean(XGBoost_success_prediction == YTest)
-    XGBoost_FN = sum((YTest == 1) & (~XGBoost_success_prediction))/sum(YTest == 1)
-    XGBoost_FP = sum((YTest == 0) & (XGBoost_success_prediction))/sum(YTest == 0)
+    XGBoost_FN = sum((YTest == 1) & (~XGBoost_success_prediction))/len(YTest)
+    XGBoost_FP = sum((YTest == 0) & (XGBoost_success_prediction))/len(YTest)
+    XGBoost_TN = sum((YTest == 0) & (~XGBoost_success_prediction))/len(YTest)
+    XGBoost_TP = sum((YTest == 1) & (XGBoost_success_prediction))/len(YTest)
     print(f"XGBoost accuracy: {XGBoost_accuracy}", 
           "XGBoost FN:", XGBoost_FN, 
           "XGBoost FP: ", XGBoost_FP)
     print(f"Baseline brier score: {baseline_brier_score}")
     print(f"Model brier score: {brier_score}")
     
+    original_dataframe = pd.read_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv")
     
-    result_data = {
+    result_data_model = {
+        "model_name": model_name,
+        "N_predict": N,
+        "model_used" : layout.__name__,
         "initial_evaluation_success_rate": np.mean(initial_evaluation_successes),
         "predictive_evaluation_success_rate": np.mean(successes),
-        "accuracy": 1 - success_error/N,
-        "false_positive_rate": false_positive_rate,
-        "false_negative_rate": false_negative_rate,
         "brier_score": brier_score,
-        "baseline_brier_score_XGBOOST": brierScoreXGBoost,
-        "baseline_accuracy_XGBOOST": XGBoost_accuracy,
-        "baseline_FP_XGBOOST": XGBoost_FP,
-        "baseline_FN_XGBOOST": XGBoost_FN,
-        "baseline_brier_score": baseline_brier_score,
-        "baseline_accuracy": np.mean(baseline_accuracies),
-        "baseline_accuracy_variance": np.var(baseline_accuracies),
-        "baseline_FP": np.mean(baseline_FP),
-        "baseline_FN": np.mean(baseline_FN),
+        "accuracy": 1 - success_error/N,
+        "fpr": false_positive_rate,
+        "fnr": false_negative_rate,
+        "tpr": true_positive_rate, 
+        "tnr": true_negative_rate, 
     }
-    df = pd.DataFrame([result_data])
+    df = pd.DataFrame([result_data_model])
+    # Check if the dataframe already exists in the CSV file
     df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
-  
-N = 200
-model_name = "model_progression/progressionmodel_2M_2000000"
-folder_name = "progression_model_results_2M"
-added_folder = ""
-precise = True
-layout = Measurement_Layout_AAIO
-prediction_accuracy(layout, folder_name, added_folder, model_name, load_eval = True, precise = precise)
+    result_data_XGBOOST = {
+        "model_name": model_name,
+        "N_predict": N,
+        "model_used" : "XGBoost",
+        "initial_evaluation_success_rate": np.mean(initial_evaluation_successes),
+        "predictive_evaluation_success_rate": np.mean(successes),
+        "brier_score": brierScoreXGBoost,
+        "accuracy": XGBoost_accuracy,
+        "fpr": XGBoost_FP,
+        "fnr": XGBoost_FN,
+        "tpr": XGBoost_TP,
+        "tnr": XGBoost_TN,
+    }
+    
+    df = pd.DataFrame([result_data_XGBOOST])
+    if not original_dataframe[(original_dataframe['model_name'] == model_name) & 
+                              (original_dataframe['N_predict'] == N) & 
+                              (original_dataframe['model_used'] == "XGBoost")].empty:
+        print("Model results already exist in the CSV file. Skipping update.")
+    else:
+        df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
+    
+    result_data_baseline = {
+        "model_name": model_name,
+        "N_predict": N,
+        "model_used" : "proportional",
+        "initial_evaluation_success_rate": np.mean(initial_evaluation_successes),
+        "predictive_evaluation_success_rate": np.mean(successes),
+        "brier_score": baseline_brier_score,
+        "accuracy": np.mean(baseline_accuracies),
+        "fpr": np.mean(baseline_FP),
+        "fnr": np.mean(baseline_FN),
+        "tpr": np.mean(baseline_TP),
+        "tnr": np.mean(baseline_TN),
+    }
+    df = pd.DataFrame([result_data_baseline])
+    
+    if not original_dataframe[(original_dataframe['model_name'] == model_name) & 
+                              (original_dataframe['N_predict'] == N) & 
+                              (original_dataframe['model_used'] == "proportional")].empty:
+        print("Model results already exist in the CSV file. Skipping update.")
+    else:
+        df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)

@@ -31,6 +31,7 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
         self.noiselevel = noiselevel
         self.noisy_model_performance = noisy_model_performance
         self.N = N
+        self.T = environmentData["reward_distance"].shape[0]/N
         self.arena_outcomes = []
         
     def logistic(self, x):
@@ -41,18 +42,20 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
         return dists.IndepProd(dists.Normal(loc=0, scale = self.sigmanav),
                                dists.Normal(loc=0, scale = self.sigmavis),
                                dists.Normal(loc=0, scale = self.sigmabias),
-                               dists.TruncNormal(mu=0, sigma = 0.3, a = 0, b = 99),
-                               dists.TruncNormal(mu=0, sigma = 0.3, a = 0, b = 99),
-                               dists.TruncNormal(mu=0, sigma = 0.3, a = 0, b = 99),
+                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
+                               dists.Uniform(a=0, b=1),
                                )
 
     def PX(self, t, xp):
         return dists.IndepProd(dists.Normal(loc=xp[:, 0], scale = xp[:, 3]),
                                dists.Normal(loc=xp[:, 1], scale = xp[:, 4]),
                                dists.Normal(loc=xp[:, 2], scale = xp[:, 5]),
-                               dists.Dirac(loc=xp[:, 3]),
-                               dists.Dirac(loc=xp[:, 4]),
-                               dists.Dirac(loc=xp[:, 5]),
+                               dists.TruncNormal(mu=xp[:, 3], sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=xp[:, 4], sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=xp[:, 5], sigma = 1, a = 0, b = 99),
+                               dists.Uniform(a=0, b=1),
                                )
 
     def PY(self, t, xp, x):
@@ -62,6 +65,7 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
         perf_nav = self.logistic(performance_from_capability_and_demand_batch(x[:, 0], self.distance*(self.behind*0.5+1.0)) + rightlefteffect)
         perf_vis = self.logistic(performance_from_capability_and_demand_batch(x[:, 1], np.log(self.distance/self.reward_size)))
         final_prob = self.noiselevel*self.noisy_model_performance + (1-self.noiselevel) * perf_nav * perf_vis
+        final_prob = x[:, 6]*self.noisy_model_performance + (1-x[:, 6]) * perf_nav * perf_vis
         final_prob = np.swapaxes(final_prob, 0, 1)
         observations_kwargs = tuple([dists.Binomial(1, p = final_prob[_]) for _ in range(self.N)])
         self.arena_outcomes = final_prob
@@ -111,6 +115,7 @@ class Measurement_Layout_AAIO_precise(ssm.StateSpaceModel):
                                dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
                                dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
                                dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
+                               dists.Uniform(a=0, b=1)
                                )
 
     def PX(self, t, xp):
@@ -120,6 +125,7 @@ class Measurement_Layout_AAIO_precise(ssm.StateSpaceModel):
                                dists.Dirac(loc=xp[:, 3]),
                                dists.Dirac(loc=xp[:, 4]),
                                dists.Dirac(loc=xp[:, 5]),
+                               dists.Uniform(a=0, b=1)
                                )
 
     def PY(self, t, xp, x):
@@ -130,7 +136,7 @@ class Measurement_Layout_AAIO_precise(ssm.StateSpaceModel):
         rightlefteffect = product_on_time_varying(x[:, 2], extent_of_lr)
         perf_nav = self.logistic(performance_from_capability_and_demand_batch(x[:, 0], self.distance*(1+extent_of_turning*1) + rightlefteffect))
         perf_vis = self.logistic(performance_from_capability_and_demand_batch(x[:, 1], np.log(self.distance/self.reward_size)))
-        final_prob = self.noiselevel*self.noisy_model_performance + (1-self.noiselevel) * perf_nav * perf_vis
+        final_prob = x[:, 6]*self.noisy_model_performance + (1-x[:, 6]) * perf_nav * perf_vis
         final_prob = np.swapaxes(final_prob, 0, 1)
         self.arena_outcomes = final_prob
         observations_kwargs = tuple([dists.Binomial(1, p = final_prob[_]) for _ in range(self.N)])

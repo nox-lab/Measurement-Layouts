@@ -15,11 +15,11 @@ import os
 
 # X is navigation, visual, bias, [distance, szie, behind, x_pos]
 class incremental_measurement_layout():
-  def __init__(self, N, folder, filename, testing = False):
+  def __init__(self, N, folder, filename, testing = False, noise_level = 0.0):
     # Folder will specify where to save teh 
     self.N = N
     self.folder = folder
-    self.noise_level = 0.0
+    self.noise_level = noise_level
     self.filename = filename
     self.T = 0
     if not testing:
@@ -108,7 +108,7 @@ class incremental_measurement_layout():
     self.estimate_capabilities(layout, cap_labels = ["nav", "visual", "bias"])
     print("Base test done")
 
-  def real_capabilities(self, layout, cap_labels = ["nav", "visual", "bias"]):
+  def real_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"]):
     T = self.T
     successes = self.environmentData["reward"].to_numpy() > -0.9
     
@@ -117,8 +117,8 @@ class incremental_measurement_layout():
     self.successes = successes.reshape((T, self.N))
     self.estimate_capabilities(layout, cap_labels)
 
-  def estimate_capabilities(self, layout, cap_labels = ["nav", "visual", "bias"]):
-      
+  def estimate_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"]):
+    # Noise should be at the end of the cap_labels every single time because we don't care about it, well I mean we do but we don't want to plot it.
     filename = self.filename
     folder = self.folder
     layout = layout(self.N, self.environmentData, noiselevel = self.noise_level, noisy_model_performance = self.noisy_model_performance)
@@ -131,14 +131,17 @@ class incremental_measurement_layout():
       os.makedirs(rf"{folder}/{filename}")
     for i in range(len(cap_labels)):
       capability_profiles[cap_labels[i]] = dict()
-      capability_profiles[cap_labels[i]]["mean"] = [mom["mean"][i] for mom in processed_chain]
-      capability_profiles[cap_labels[i]]["var"] = [mom["var"][i] for mom in processed_chain]
+      j = i
+      if cap_labels[i] == "noise":
+        j = -1
+      capability_profiles[cap_labels[i]]["mean"] = [mom["mean"][j] for mom in processed_chain]
+      capability_profiles[cap_labels[i]]["var"] = [mom["var"][j] for mom in processed_chain]
       np.save(rf"{folder}/{filename}/{cap_labels[i]}_est", capability_profiles[cap_labels[i]]["mean"])
       np.save(rf"{folder}/{filename}/{cap_labels[i]}_var", capability_profiles[cap_labels[i]]["var"])
       
     
     time_steps = np.linspace(1, self.T, self.T)
-    num_caps = len(processed_chain[0]["mean"])/2 # Number of mean vectors we have
+    num_caps = len(processed_chain[0]["mean"])/2  # Number of mean vectors we have
     num_rows = int(num_caps//2 + 1)
     fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
     counter = 0
