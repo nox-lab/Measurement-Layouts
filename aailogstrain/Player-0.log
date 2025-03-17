@@ -10,11 +10,11 @@ Direct3D:
     VRAM:     1906 MB
     Driver:   32.0.15.6119
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.202 seconds
+- Completed reload, in  0.165 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.087900 ms
+UnloadTime: 2.060400 ms
 Environment loaded with options:
   PlayerMode: False
   useCamera: True
@@ -49,7 +49,7 @@ Memory Statistics:
 [ALLOC_TEMP_TLS] TLS Allocator
   StackAllocators : 
     [ALLOC_TEMP_MAIN]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 1 frames, [16.0 KB-32.0 KB]: 1 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 2 frames, [2.0 MB-4.0 MB]: 1 frames
       Initial Block Size 4.0 MB
       Current Block Size 4.0 MB
       Peak Allocated Bytes 2.3 MB
@@ -72,12 +72,12 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 6]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 1.3 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 0]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 4.1 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 10]
       Initial Block Size 32.0 KB
@@ -107,12 +107,12 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 4]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 24.9 KB
+      Peak Allocated Bytes 4.1 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 3]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 0.6 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 12]
       Initial Block Size 32.0 KB
@@ -162,7 +162,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 9]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 6.1 KB
+      Peak Allocated Bytes 336 B
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 13]
       Initial Block Size 32.0 KB
@@ -187,7 +187,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 2]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 24.9 KB
+      Peak Allocated Bytes 1.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 3]
       Initial Block Size 32.0 KB
@@ -229,13 +229,13 @@ Memory Statistics:
       Peak usage frame count: [8.0 MB-16.0 MB]: 3 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 14.5 MB
+      Peak Allocated memory 14.3 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
       Peak usage frame count: [16.0 MB-32.0 MB]: 3 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 17.9 MB
+      Peak Allocated memory 18.0 MB
       Peak Large allocation bytes 16.0 MB
 [ALLOC_TEMP_JOB_1_FRAME]
   Initial Block Size 2.0 MB
@@ -258,7 +258,7 @@ Memory Statistics:
   Overflow Count (too large) 0
   Overflow Count (full) 0
 [ALLOC_GFX] Dual Thread Allocator
-  Peak main deferred allocation count 2
+  Peak main deferred allocation count 1
     [ALLOC_BUCKET]
       Large Block size 4.0 MB
       Used Block count 1

@@ -106,8 +106,8 @@ if __name__ == "__main__":
     config_generator = ConfigGenerator(very_precise = True)
     # Currently we have been using random demands, but we can make them SPECIAL
     demands_list_train = []
-    dumb_string = config_generator.gen_config_from_demands_batch_random(N_train, filename=r"example_batch_train.yaml", time_limit=200, dist_max = 8, size_min = 0.5, size_max = 6, numbered = False, seed = 101)
-    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=200, dist_max=15, size_min = 0.5, size_max = 6, numbered = False, seed = 1)
+    dumb_string = config_generator.gen_config_from_demands_batch_random(N_train, filename=r"example_batch_train.yaml", time_limit=100, dist_max = 8, size_min = 0.5, size_max = 6, numbered = False, seed = 101)
+    dumb_string_2, demands_list = config_generator.gen_config_from_demands_batch_random(N, r"example_batch_eval.yaml", time_limit=100, dist_max=15, size_min = 0.5, size_max = 6, numbered = False, seed = 1)
     eval_freq = 40000
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"

@@ -1,16 +1,16 @@
 
         !ArenaConfig
         arenas:
-          2999: !Arena
-            timeLimit: 150
+          8: !Arena
+            timeLimit: 75
             items:
             - !Item
               name: GoodGoal
               positions:
-              - !Vector3 {x: 16.50602786761071, y: 0, z: 29.862187174393476}
+              - !Vector3 {x: 14.309843597354464, y: 0, z: 24.932770501762825}
               rotations: [0]
               sizes:
-              - !Vector3 {x: 1.317778154148016, y: 1.317778154148016, z: 1.317778154148016}
+              - !Vector3 {x: 0.17835460015641597, y: 0.17835460015641597, z: 0.17835460015641597}
             - !Item
               name: Agent
               skins:
@@ -19,3 +19,13 @@
               - !Vector3 {x: 20, y: 0, z: 20}
               rotations: [0]
             
+            - !Item
+              name: SignBoard
+              positions:
+              - !Vector3 {x: 20.0, y: 0, z: 35.0}
+              sizes:
+              - !Vector3 {x: 2, y: 2, z: 2}
+              rotations: [270]
+              symbolNames:
+              - "1111/0000/1111/0000/1111"
+          

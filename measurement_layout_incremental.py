@@ -15,13 +15,14 @@ import os
 
 # X is navigation, visual, bias, [distance, szie, behind, x_pos]
 class incremental_measurement_layout():
-  def __init__(self, N, folder, filename, testing = False, noise_level = 0.0):
+  def __init__(self, N, folder, filename, testing = False, noise_level: np.ndarray = np.array([0.0, 1.0]), draws = 1):
     # Folder will specify where to save teh 
     self.N = N
     self.folder = folder
     self.noise_level = noise_level
     self.filename = filename
     self.T = 0
+    self.draws = draws
     if not testing:
       self.environmentData = pd.read_csv(rf"csv_recordings/{filename}.csv")
       rewards_from_evaluation = self.environmentData["reward"].to_numpy()
@@ -105,7 +106,7 @@ class incremental_measurement_layout():
     ax_demands.set_ylabel("reward size")
     ax_demands.title.set_text("Demands for arenas")
     fig_demands.savefig(rf"{self.folder}/{self.filename}/demands.png")
-    self.estimate_capabilities(layout, cap_labels = ["nav", "visual", "bias"])
+    self.estimate_capabilities(layout, cap_labels = ["nav", "visual", "bias", "noise"])
     print("Base test done")
 
   def real_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"]):
@@ -123,7 +124,7 @@ class incremental_measurement_layout():
     folder = self.folder
     layout = layout(self.N, self.environmentData, noiselevel = self.noise_level, noisy_model_performance = self.noisy_model_performance)
     fk_model = ssm.Bootstrap(ssm=layout, data=self.successes)
-    my_pmmh = SMC(N=1000, fk=fk_model, collect = [Moments()])
+    my_pmmh = SMC(N=2000, fk=fk_model, collect = [Moments()])
     my_pmmh.run()
     processed_chain = my_pmmh.summaries.moments
     capability_profiles = dict()
@@ -134,9 +135,11 @@ class incremental_measurement_layout():
       j = i
       if cap_labels[i] == "noise":
         j = -1
+        print("Noise")
       capability_profiles[cap_labels[i]]["mean"] = [mom["mean"][j] for mom in processed_chain]
       capability_profiles[cap_labels[i]]["var"] = [mom["var"][j] for mom in processed_chain]
       np.save(rf"{folder}/{filename}/{cap_labels[i]}_est", capability_profiles[cap_labels[i]]["mean"])
+      print(f"Saving {cap_labels[i]} to {folder}/{filename}/{cap_labels[i]}_est")
       np.save(rf"{folder}/{filename}/{cap_labels[i]}_var", capability_profiles[cap_labels[i]]["var"])
       
     
@@ -156,9 +159,9 @@ class incremental_measurement_layout():
         if self.test:
           ax3[i, j].plot(time_steps, self.capabilities[capability_name], label="True " + capability_name)
         ax3[i, j].plot(time_steps, [mom["mean"][counter] for mom in processed_chain], label=capability_name, color = "grey")
-        ax3[i, j].fill_between(time_steps, np.array([mom["mean"][counter] for mom in processed_chain]) + 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), np.array([mom["mean"][counter] for mom in processed_chain]) - 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), alpha = 0.2, label = f"confidence {capability_name}", color = "grey")
+        ax3[i, j].fill_between(time_steps, np.array([mom["mean"][counter] for mom in processed_chain]) + 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), np.array([mom["mean"][counter] for mom in processed_chain]) - 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), alpha = 0.2, label = f"confidence {capability_name}", color = "grey")
         # this y lim line should stop the graph from being too zoomed out.
-        ax3[i, j].set_ylim(np.min((np.array([mom["mean"][counter] for mom in processed_chain]) - 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]), 
+        ax3[i, j].set_ylim(np.min((np.array([mom["mean"][counter] for mom in processed_chain]) - 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]), 
         np.max((np.array([mom["mean"][counter] for mom in processed_chain]) + 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]))
         # if cap_labels[counter] == "nav":
         #   ax3[i, j].set_ylim(0, 10)

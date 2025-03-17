@@ -28,12 +28,12 @@ environmentData["abilityMax"] = abilityMax
 environmentData["abilityMin"] = abilityMin
 all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
 
-N = 200  # number of samples
-timepoint = 10
+N = 1000  # number of samples
+timepoint = 49
 excluded_capabilities = []
 excluded_capabilities_string = "_".join(excluded_capabilities)
 included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
-df_final = pd.read_csv("eval_results_harder.csv").loc[timepoint*N:(timepoint+1)*N]
+df_final = pd.read_csv("csv_recordings/progression_model_results_2M_N1000.csv").loc[timepoint*N:(timepoint+1)*N]
 df_final = df_final.loc[np.random.choice(df_final.index, N, replace=False)]
 successes = df_final["reward"]
 
@@ -47,6 +47,9 @@ environmentData["Xpos"] = df_final["Xpos"].values[0:N]
 # environmentData["reward_behind"] = 0
 # environmentData["reward_size"] = df_final["Size"].values
 # environmentData["Xpos"] = 0
+
+# Could assess model fit by going over all of the possible posterior samples and seeing how well they fit the data.
+# Could also assess the predictive accuracy of the model by looking at the posterior predictive distribution.
     
     
 relevant_figs = [([cap], plt.subplots()) for cap in included_capabilities]
