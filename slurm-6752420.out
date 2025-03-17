@@ -1,0 +1,43 @@
+Loading rhel8/default-ccl
+  Loading requirement: rhel8/global rhel8/slurm rhel8/cclake-env/2024-06-01
+    rhel8/cclake/base glibc/2.28/gcc/4d2cj5pu gcc-runtime/13.3.0/gcc/2sn7kkm3
+    zlib-ng/2.1.6/gcc/mkjcey6m zstd/1.5.6/gcc/l5c7mfsx
+    binutils/2.42/gcc/y33xj6rq intel-oneapi-compilers/2023.2.4/gcc/4lbvg4hv
+    intel-oneapi-mpi/2021.12.1/intel/hlruk24n rhel8/cclake/intel
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/data.py:304: FutureWarning: MutableData is deprecated. All Data variables are now mutable. Use Data instead.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/distributions/timeseries.py:297: UserWarning: Initial distribution not specified, defaulting to `Normal.dist(0, 100)`.You can specify an init_dist manually to suppress this warning.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/distributions/timeseries.py:297: UserWarning: Initial distribution not specified, defaulting to `Normal.dist(0, 100)`.You can specify an init_dist manually to suppress this warning.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/distributions/timeseries.py:297: UserWarning: Initial distribution not specified, defaulting to `Normal.dist(0, 100)`.You can specify an init_dist manually to suppress this warning.
+  warnings.warn(
+/home/taj29/.conda/envs/measurement_layouts/lib/python3.11/site-packages/pymc/data.py:304: FutureWarning: MutableData is deprecated. All Data variables are now mutable. Use Data instead.
+  warnings.warn(
+Auto-assigning NUTS sampler...
+Initializing NUTS using jitter+adapt_diag...
+Multiprocess sampling (2 chains in 2 jobs)
+NUTS: [sigma_nav, ability_navigation, sigma_vis, ability_visual, sigma_bias, ability_bias_rl]
+Sampling 2 chains, 0 divergences ━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00 / 0:29:39
+Sampling 2 chains for 1_000 tune and 500 draw iterations (2_000 + 1_000 draws total) took 1780 seconds.
+We recommend running at least 4 chains for robust computation of convergence diagnostics
+The rhat statistic is larger than 1.01 for some parameters. This indicates problems during sampling. See https://arxiv.org/abs/1903.08008 for details
+The effective sample size per chain is smaller than 100 for some parameters.  A higher number is needed for reliable rhat and ess computation. See https://arxiv.org/abs/1903.08008 for details
+Changed directory to /rds/user/taj29/hpc-work/Measurement-Layouts.
+
+JobID: 6752420
+======
+Time: Mon Mar 17 19:07:39 GMT 2025
+Running on master node: cpu-p-286
+Current directory: /rds/user/taj29/hpc-work/Measurement-Layouts
+
+Nodes allocated:
+================
+cpu-p-286
+
+numtasks=20, numnodes=1, mpi_tasks_per_node=20 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+
+
