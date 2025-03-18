@@ -115,7 +115,7 @@ if __name__ == "__main__":
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
-        N = 200  # number of arenas
+        N = 1000  # number of arenas
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
