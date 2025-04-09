@@ -97,6 +97,19 @@ def setupModel(taskResults, environmentData, cholesky=None, includeIrrelevantFea
   return m
 
 def setupModelSingle(taskResults, environmentData, includeIrrelevantFeatures=True, includeNoise=True, N = 200, exclude = []):
+  """Sets up single time measurement layout to infer capabilities
+
+  Args:
+      taskResults (array {1, 0}): Information on the task outcome (1 for success, 0 for failure)
+      environmentData (dict): Information on the metafeatures of the environment for each task.
+      includeIrrelevantFeatures (bool, optional): Include biases. Defaults to True.
+      includeNoise (bool, optional): Include extra proportion of successes noise component. Defaults to True.
+      N (int, optional): Number of arenas being considered. Defaults to 200.
+      exclude (list, optional): Excluding visual/navigation . Defaults to [], or nothing excluded.
+
+  Returns:
+      _type_: _description_
+  """
   m = pm.Model()
   with m:
     ### Environment Variables as Deterministic

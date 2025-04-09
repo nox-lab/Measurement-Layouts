@@ -124,7 +124,7 @@ class incremental_measurement_layout():
     folder = self.folder
     layout = layout(self.N, self.environmentData, noiselevel = self.noise_level, noisy_model_performance = self.noisy_model_performance)
     fk_model = ssm.Bootstrap(ssm=layout, data=self.successes)
-    my_pmmh = SMC(N=2000, fk=fk_model, collect = [Moments()])
+    my_pmmh = SMC(N=10000, fk=fk_model, collect = [Moments()])
     my_pmmh.run()
     processed_chain = my_pmmh.summaries.moments
     capability_profiles = dict()

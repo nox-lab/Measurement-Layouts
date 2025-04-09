@@ -111,11 +111,11 @@ if __name__ == "__main__":
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
         folder = "csv_recordings"
-        filename_no_ext_or_pref = "progression_model_results_2M_N1000"
+        filename_no_ext_or_pref = "camera_with_frame_stacking_400k"
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
-        N = 1000  # number of arenas
+        N = 100  # number of arenas
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
@@ -144,7 +144,7 @@ if __name__ == "__main__":
         ax.set_xlabel("timestep")
         ax.set_ylabel("proportion of successes")
         ax.title.set_text("Successes over time")
-        fig.savefig(f"./estimated_capabilities/successes_{filename_no_ext_or_pref}.png")
+        fig.savefig(f"./estimated_capabilities/{filename_no_ext_or_pref}/successes.png")
         relevant_figs = [([cap], plt.subplots()) for cap in included_capabilities]
 
     # %%

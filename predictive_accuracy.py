@@ -5,7 +5,6 @@ import numpy.typing as npt
 import numpy as np
 from measurement_layout_AAIO import setupModelSingle
 import pandas as pd
-from generating_configs import gen_config_from_demands_batch_random, gen_config_from_demands_batch
 from demands import Demands
 from generating_configs_class import ConfigGenerator
 import random
@@ -16,6 +15,7 @@ from xgboost import XGBClassifier
 from various_measurement_layouts import Measurement_Layout_AAIO, Measurement_Layout_AAIO_NO_NAVIGATION, Measurement_Layout_AAIO_precise
 from collections import OrderedDict
 import os 
+from multipledispatch import dispatch
 
 
 def logistic(x):
@@ -48,13 +48,49 @@ def brierDecomp(preds, outs):
     return brier, calibration, refinement
 
 
-def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder, model_name, N,  load_eval = True, precise = True, noise_level = 0.0, cap_time = -1, N_eval=None):
+def extract_capabilities(layout : ssm.StateSpaceModel, folder_name: str, added_folder:str , cap_time:int = -1, full:bool = False):
+    folder_name_caps = added_folder + "/" + folder_name
+    if full:
+        estimated_file_ext = "FULL"
+    else:
+        estimated_file_ext = ""
+    estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\visual_est{estimated_file_ext}.npy")
+    estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\bias_est{estimated_file_ext}.npy")
+    try:
+        noise_estimate = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\noise_est{estimated_file_ext}.npy") # This is the noise estimate.
+    except:
+        noise_estimate = np.zeros(len(estimated_visual))
+        print("No noise file found, assuming no noise.")
+    noise_final = noise_estimate[cap_time]
+
+
+
+    final_capability_means = OrderedDict()
+    if layout != Measurement_Layout_AAIO_NO_NAVIGATION:
+        estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\navigation_est{estimated_file_ext}.npy")
+        final_capability_means["navigation"] = estimated_navigation[cap_time]
+    final_capability_means["visual"] = estimated_visual[cap_time]
+    final_capability_means["bias"] = estimated_bias[cap_time]
+    
+    return final_capability_means, noise_final
+
+def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder, model_name, N, config_modifier, load_eval = True, noise_level = 0.0, cap_time = -1, N_eval=None, full = False, caps : dict = None):
     if N_eval is None:
         N_eval = N
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
+    if config_modifier == "very_precise":
+        config_generator = ConfigGenerator(very_precise = True)
+    elif config_modifier == "precise":
+        config_generator = ConfigGenerator(precise = True)
+    elif config_modifier == "closed":
+        config_generator = ConfigGenerator(closed = True)
     
-    config_generator = ConfigGenerator(precise = precise)
+    T = int(len(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_distance"].to_numpy()) / N_eval)
+    if cap_time < 0:
+        cap_time = int(T) + cap_time - 1
+    proportion_of_successes = np.mean(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward"].to_numpy()[(cap_time)*N_eval:(cap_time+1)*N_eval] > -0.9)
+    print(f"prop_succeses = {proportion_of_successes}")
     if not os.path.exists(rf"./csv_recordings/predictive_data/{model_name}"):
         os.makedirs(rf"./csv_recordings/predictive_data/{model_name}")
     recorded_results = rf"./csv_recordings/predictive_data/{model_name}/true_results_for_prediction.csv"   
@@ -62,29 +98,14 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     min_distance = np.min(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_distance"].to_numpy()[-N:])
     max_size = np.max(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_size"].to_numpy()[-N:])
     min_size = np.min(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_size"].to_numpy()[-N:])
-    proportion_of_successes = np.mean(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward"].to_numpy()[-N:] > -0.9)
-    
-    folder_name_caps = added_folder + "/" + folder_name
-    
-    estimated_visual = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\visual_est.npy")
-    estimated_bias = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\bias_est.npy")
-    noise_estimate = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\noise_est.npy") # This is the noise estimate.
-    print(noise_estimate)
-    # Seems to do better with a non-deterministic agent.
     model_path = rf"./logs/{model_name}.zip"
-    noise_final = noise_estimate[cap_time]
-
-
-
-    final_capability_means = OrderedDict()
-    if layout != Measurement_Layout_AAIO_NO_NAVIGATION:
-        estimated_navigation = np.load(rf"C:\Users\talha\Documents\iib_projects\Measurement-Layouts\estimated_capabilities\{folder_name_caps}\navigation_est.npy")
-        final_capability_means["navigation"] = estimated_navigation[cap_time]
-    final_capability_means["visual"] = estimated_visual[cap_time]
-    final_capability_means["bias"] = estimated_bias[cap_time]
-
-
-
+    if not caps:  
+        final_capability_means, noise_final = extract_capabilities(layout, folder_name, added_folder, cap_time = cap_time, full = full)
+        cap_names = ["navigation", "visual", "bias"]
+    else:
+        final_capability_means = caps
+        cap_names = ["ability_navigation", "ability_visual", "ability_bias_rl"]
+        noise_final = 0.2
     if load_eval:
         csv_file = pd.read_csv(recorded_results)
         demands = csv_file[["Xpos", "reward_distance", "reward_size", "reward_behind"]].to_numpy()
@@ -99,7 +120,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
     else:
         skip_model = False
-        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, numbered = False) # Creates yaml file with same demands as csv file.
+        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=150, numbered = False) # Creates yaml file with same demands as csv file.
         xpos = np.array([demand.Xpos for demand in list_of_demands])
         distance = np.array([demand.reward_distance for demand in list_of_demands])
         reward_size = np.array([demand.reward_size for demand in list_of_demands])
@@ -125,7 +146,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         print(f"Using model at {model_path}")
         train_agent_configs(configuration_file_train="example_batch_predictive.yaml", configuration_file_eval="example_batch_predictive.yaml",
                             env_path_train=env_path_train, env_path_eval=env_path_eval, evaluation_recording_file=recorded_results, demands_list = list_of_demands,
-                            log_bool = False, aai_seed = 2023, watch_train = False, watch_eval = False, num_steps = 1, eval_freq = 1, save_model = False,
+                            log_bool = False, aai_seed = 2023, watch_train = False, watch_eval = True, num_steps = 1, eval_freq = 1, save_model = False,
                             load_model = model_path, N = N, max_evaluations=1)
     
     recorded_results = pd.read_csv(recorded_results)
@@ -141,16 +162,18 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     input_to_observations.append(noise_final)
     measurement_layout_itself.PY(x = np.array([input_to_observations]), t = None, xp = None)
     probabilities_of_success = (measurement_layout_itself.arena_outcomes).flatten()
+    
     for i, probability_of_success in enumerate(probabilities_of_success):
         if i % 10 != 0:
             continue
         print(f"P(y) arena {i}: Demands are {list_of_demands[i]}.")
-        print(f'visual_capability = {final_capability_means["visual"]}')
+        
+        print(f'visual_capability = {final_capability_means[cap_names[1]]}')
         if layout != Measurement_Layout_AAIO_NO_NAVIGATION:
-            print(f'navigation_capability = {final_capability_means["navigation"]}')
-            print(f"P_nav = {logistic(final_capability_means['navigation'] - distance[i]*(behind[i]*0.5+1.0))})")
-        print(f'bias_capability = {final_capability_means["bias"]}')
-        print(f"small_appearance = {np.log(list_of_demands[i].reward_distance/list_of_demands[i].reward_size)} , P_vis = {logistic(final_capability_means['visual'] - np.log(list_of_demands[i].reward_distance/list_of_demands[i].reward_size))}")
+            print(f'navigation_capability = {final_capability_means[cap_names[0]]}')
+            print(f"P_nav unbiased = {logistic(final_capability_means[cap_names[0]] - distance[i]*(behind[i]*0.5+1.0))})")
+        print(f'bias_capability = {final_capability_means[cap_names[2]]}')
+        print(f"small_appearance = {np.log(list_of_demands[i].reward_distance/list_of_demands[i].reward_size)} , P_vis = {logistic(final_capability_means[cap_names[1]] - np.log(list_of_demands[i].reward_distance/list_of_demands[i].reward_size))}")
         print(f"Predicted probability of success {probability_of_success}, noise level {noise_final}, noisy_prob = {proportion_of_successes}")
     successes_predicted = probabilities_of_success > 0.5 
     print("proportion of predicted successes: ", np.mean(successes_predicted))
@@ -179,7 +202,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     print(f"brier score:{brier_score}")
     
     if cap_time < 0:
-        cap_time = len(estimated_visual) + cap_time # I hate doing this
+        cap_time = len(final_capability_means[cap_names[1]]) + cap_time # I hate doing this
     
     # Apply a baseline for prediction as well. Do it from the mean of the succcesses.
     #assert rewards_received[0] == csv_file["reward"].to_numpy()[-N]
@@ -338,3 +361,4 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         print("Model results already exist in the CSV file. Skipping update.")
     else:
         df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
+    return brier_score, brierScoreXGBoost, baseline_brier_score

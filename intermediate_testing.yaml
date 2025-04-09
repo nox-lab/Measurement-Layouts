@@ -1,0 +1,29 @@
+
+          59: !Arena
+            passMark: 0
+            timeLimit: 250
+            items:
+            - !Item
+              name: Agent
+              positions:
+              - !Vector3 {x: 20, y: 1, z: 1}
+              rotations: [0]
+            - !Item
+              name: Wall
+              positions:
+              - !Vector3 {x: 11.075, y: 0, z: 8.425}
+              - !Vector3 {x: 28.925, y: 0, z: 8.425}
+              rotations: [225, 135,]
+              colors: 
+              - !RGB {r: 153, g: 153, b: 153}
+              - !RGB {r: 153, g: 153, b: 153}
+              sizes:
+              - !Vector3 {x: 21, y: 5, z: .5}
+              - !Vector3 {x: 21, y: 5, z: .5}
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 15.85}      
+              sizes:
+              - !Vector3 {x: 1, y: 1, z: 1}
+                

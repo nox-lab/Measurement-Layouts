@@ -5,12 +5,13 @@ import random
 from ruamel.yaml import YAML
 
 class ConfigGenerator:
-    def __init__(self, precise = False, very_precise = False, uncentred = False):
+    def __init__(self, precise = False, very_precise = False, uncentred = False, closed = False):
         self.initial_part = """
         !ArenaConfig
         arenas:"""
         self.precise = precise
         self.very_precise = very_precise
+        self.closed = closed
 
     def gen_config_from_demands(
         self, reward_size: float, reward_distance: float, reward_behind: float, x_pos: float, time_limit: float, env_number: int, filename: str, numbered: bool = False
@@ -109,6 +110,8 @@ class ConfigGenerator:
                     env_conf = self.gen_config_from_demands_precise(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
                 elif self.very_precise:
                     env_conf = self.gen_config_from_demands_super_precise(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
+                elif self.closed:
+                    env_conf = self.gen_config_closed(env.reward_behind, env.reward_distance,(number_of_initial_envs) + j + 3 * i)
                 else:
                     env_conf = self.gen_config_from_demands(env.reward_size, env.reward_distance, env.reward_behind, env.Xpos, tl_input, (number_of_initial_envs) + j + 3 * i, f"temp", numbered=numbered)
                 new_conf += env_conf
@@ -339,3 +342,46 @@ class ConfigGenerator:
             yaml.dump(data, f)
 
         print("Updated YAML configuration saved. Please check the output file.")
+        
+    def gen_config_closed(self, angle_required, dist, env_number = 0) -> str:
+        # Validate
+        
+        # assume a 10m long wall
+        initial_z = 1
+        wall_offset_x = dist * np.sin(angle_required * np.pi / 180)
+        wall_offset_z = dist * np.cos(angle_required * np.pi / 180)
+        wall_offset_x = round(wall_offset_x, 2)
+        wall_offset_z = round(wall_offset_z, 2)
+        initial_gap = 3
+        the_yaml_output = f"""
+          {env_number}: !Arena
+            passMark: 0
+            timeLimit: 250
+            items:
+            - !Item
+              name: Agent
+              positions:
+              - !Vector3 {{x: 20, y: 1, z: {initial_z}}}
+              rotations: [0]
+            - !Item
+              name: Wall
+              positions:
+              - !Vector3 {{x: {20 - wall_offset_x/2 - initial_gap/2}, y: 0, z: {initial_z+wall_offset_z/2}}}
+              - !Vector3 {{x: {20 + wall_offset_x/2 + initial_gap/2}, y: 0, z: {initial_z+wall_offset_z/2}}}
+              rotations: [{180+(90-angle_required)}, {180-(90-angle_required)},]
+              colors: 
+              - !RGB {{r: 153, g: 153, b: 153}}
+              - !RGB {{r: 153, g: 153, b: 153}}
+              sizes:
+              - !Vector3 {{x: {dist}, y: 5, z: .5}}
+              - !Vector3 {{x: {dist}, y: 5, z: .5}}
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {{x: 20, y: 0, z: {initial_z + wall_offset_z}}}      
+              sizes:
+              - !Vector3 {{x: 1, y: 1, z: 1}}
+                """
+        with open("intermediate_testing.yaml", "w") as text_file:
+            text_file.write(the_yaml_output)
+        return the_yaml_output

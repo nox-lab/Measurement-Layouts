@@ -5,18 +5,19 @@ import os
 from generating_configs_class import ConfigGenerator
 from animalai.environment import AnimalAIEnvironment
 from mlagents_envs.exception import UnityCommunicationException
-from generating_configs import gen_config_from_demands_batch
 from demands import Demands
 import numpy as np
 
 # IMPORTANT! Replace configuration file with the correct path here:
-configuration_file = r"example_eval.yaml"
-test = False
+configuration_file = r"example_batch_eval.yaml"
+# test = False
 config_generator = ConfigGenerator(very_precise = True)
 
-config_string, demands_list = config_generator.gen_config_from_demands_batch_random(3, configuration_file, time_limit=75, dist_max=15, size_max = 0.2, numbered = True)
-for demand in demands_list:
-    print(demand)
+config_generator.gen_config_closed(0, 10)
+
+# config_string, demands_list = config_generator.gen_config_from_demands_batch_random(3, configuration_file, time_limit=75, dist_max=15, size_max = 0.2, numbered = True)
+# for demand in demands_list:
+#     print(demand)
 
 #config_generator.random_positions(configuration_file, configuration_file)
 #config, demands = gen_config_from_demands_batch_random(10, configuration_file, time_limit=75, dist_max=15, numbered = True)

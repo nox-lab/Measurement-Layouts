@@ -6,13 +6,18 @@ from typing import Callable
 import numpy.typing as npt
 import pandas as pd
 from measurement_layout_AAIO import *
+import os
+from various_measurement_layouts import Measurement_Layout_AAIO
+from predictive_accuracy import prediction_accuracy
+import re
+import json
 
 includeIrrelevantFeatures = True
 includeNoise=False
 test_synthetic = False
 environmentData = dict()
 abilityMax = {
-    "navigationAbility": 20,
+    "navigationAbility": 35,
     "visualAbility": 10,
 }
 abilityMin = {
@@ -28,16 +33,18 @@ environmentData["abilityMax"] = abilityMax
 environmentData["abilityMin"] = abilityMin
 all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
 
-N = 1000  # number of samples
-timepoint = 49
+N = 100  # number of samples
 excluded_capabilities = []
 excluded_capabilities_string = "_".join(excluded_capabilities)
 included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
-df_final = pd.read_csv("csv_recordings/progression_model_results_2M_N1000.csv").loc[timepoint*N:(timepoint+1)*N]
-df_final = df_final.loc[np.random.choice(df_final.index, N, replace=False)]
+df_final = pd.read_csv("csv_recordings/camera_with_frame_stacking_400k.csv")
 successes = df_final["reward"]
+print(successes)
+T = int(len(successes.to_numpy().flatten())/N)
+print(f"Number of timepoints = {T}")
 
 successes = successes > -0.9 # SHould be reduced to 1s and 0s
+print(f"average successes = {np.average(successes)}")
 
 environmentData["reward_distance"] = df_final["reward_distance"].values[0:N]
 environmentData["reward_behind"] = df_final["reward_behind"].values[0:N]
@@ -50,19 +57,68 @@ environmentData["Xpos"] = df_final["Xpos"].values[0:N]
 
 # Could assess model fit by going over all of the possible posterior samples and seeing how well they fit the data.
 # Could also assess the predictive accuracy of the model by looking at the posterior predictive distribution.
-    
-    
-relevant_figs = [([cap], plt.subplots()) for cap in included_capabilities]
 
 
 
 # %%
 if __name__ == "__main__":
-    m = setupModelSingle(successes, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
-
-
-    with m:
-        inference_data = pm.sample(500, target_accept=0.95, cores=2)
+    brier_scores_all = {"baseline": [], "model": []}
+    capabilities_for_single = {"ability_navigation": [], "ability_visual": [], "ability_bias_rl": []}
+    for timepoint in range(T):
         
-    az.plot_posterior(inference_data["posterior"][["ability_navigation", "ability_visual", "ability_bias_rl"]])
-    plt.show()
+        df_final = pd.read_csv("csv_recordings/camera_with_frame_stacking_400k.csv").loc[timepoint*N:(timepoint+1)*N-1]
+        successes = df_final["reward"]
+
+        successes = successes > -0.9 # SHould be reduced to 1s and 0s
+        print(successes)
+        print(f"average successes = {np.average(successes)}")
+        
+        
+        m = setupModelSingle(successes, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
+
+
+        with m:
+            inference_data = pm.sample(1000, target_accept=0.95, cores=2)
+
+        capabilities_out = inference_data["posterior"][["ability_navigation", "ability_visual", "ability_bias_rl"]].mean()
+        print(capabilities_out)
+
+        for i, cap in enumerate(included_capabilities):
+            capabilities_for_single[cap].append(capabilities_out[cap])
+        # az.plot_posterior(inference_data["posterior"][["ability_navigation", "ability_visual", "ability_bias_rl"]])
+        # plt.show()
+        
+        
+        def sorted_alphanumeric(data):
+            convert = lambda text: int(text) if text.isdigit() else text.lower()
+            alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
+            return sorted(data, key=alphanum_key)
+
+        # log_dir = "./logs/camera_with_frame_stacking_400k"
+        # files = os.listdir(log_dir)
+        # files = [f for f in files]
+        # files = sorted_alphanumeric(files)
+        # print("Files in logs directory:", files)
+        # model = files[timepoint]
+        # model_name = f"{log_dir}/{model}"[6:-4] # remove the .zip
+        # noise_level = np.array([0, 0.4])
+        # layout = Measurement_Layout_AAIO
+        # added_folder = ""
+        # folder_name = "camera_with_frame_stacking_400k"
+        # N_eval = N
+        # N_predict = 50
+        # precise = True
+        # full_ML = True
+        # print(model_name)
+        # print(f"Model {model_name} testing for predictive accuracy.")
+        # brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, load_eval = True, config_modifier="very_precise",
+        #                     noise_level = noise_level, cap_time = timepoint, N_eval = N_eval, caps = capabilities_out)
+        # print(f"Brier score for model {model_name} is {brier_score}.")
+        # print(f"Brier score for XGBOOST model {model_name} is {brier_score_XGBOOST}.")
+        # print(f"Brier score for baseline model {model_name} is {brier_score_baseline}")
+        # brier_scores_all["baseline"].append(brier_score_baseline)
+        # brier_scores_all["model"].append(brier_score)
+    # json.dump(brier_scores_all, open("brier_scores_all_framestack.json", "w"))
+    for single_capability in capabilities_for_single:
+        capabilities_for_single[single_capability] = np.array(capabilities_for_single[single_capability])
+        np.savez(f"estimated_capabilities/camera_with_frame_stacking_400k/{single_capability}_single.npz", capabilities_for_single[single_capability])
