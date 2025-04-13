@@ -169,7 +169,7 @@ class incremental_measurement_layout():
         counter += 1
     
     ax3[num_rows - 1,1].bar(time_steps, self.overall_successes, label="Success rate")
-    ax3[num_rows - 1 ,1].set_xlabel("Time")
+    ax3[num_rows - 1 ,1].set_xlabel("Optimisation Steps")
     ax3[num_rows - 1,1].set_ylabel("Success rate")
     fig3.savefig(rf"{folder}/{filename}/estimated_capabilities.png")
     #print(np.mean(processed_chain, 0))

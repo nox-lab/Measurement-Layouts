@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
 
     with m:
-        inference_data = pm.sample(500, target_accept=0.95, cores=2)
+        inference_data = pm.sample(1000, target_accept=0.95, cores=2)
 
     if test_synthetic:
         final_str = "_test.png"
@@ -184,6 +184,6 @@ if __name__ == "__main__":
                 ax.axhline(maximum_cap, color="red", linestyle="--")
             ax.plot([], [], color="red", linestyle="--", label="Capability bound")
         ax.set_title(f"Estimated {cap}")
-        ax.set_xlabel("timestep")
+        ax.set_xlabel("Optimisation Steps")
         ax.legend()
         fig.savefig(f"./estimated_capabilities/{filename_no_ext_or_pref}/{cap}_profile_FULL.png")

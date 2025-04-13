@@ -1,0 +1,10 @@
+Using raycasts for observations was found to quickly plateau, despite picking up successes. It was very heavily limited by the perceived size of the reward, and would get very successful at finding these. However, for rewards that were further away, the agent would improve only marginally over optimisation steps.
+
+Two changes were made: using image observations (direct pixels from the screen, which could provide more information due to anti-aliasing effects (even if a small amount of the screeen shows reward, this can be seen as a smudge in the pixels, or a change in its values that could be picked up by the agent). The other change that was made was the use of frame-stacking. 
+
+For the first set, evaluations were performed every 10,000 steps and 500,000 training steps were made. This gives 50 different optimisation steps from which the reward is evaluated. 
+
+For the second set, evaluations were performed every 40,000 steps and 2,000,000 training steps were made. This was done with the intention of finding more prominent evolution of capabilities. 
+
+For the second set, using a slightly modified measurement layout which excluded the navigation ability, as it appeared uninformative, was appropriate. The way that this was removed was through putting the bias term ($E_{RL}$) in the visual performance calculation now, rather than the navigation performance. This way the navigation performance could be removed. The result from this is described in Figure \ref{fig:removal_navigation_model_trained_results}. One can see two periods in which the agent had lost most of its biases: between timesteps 10 and 20 and between timesteps 40 and 50. Otherwise, it appears to stay fluctuating around a non-zero mean bias. The visual capability increases significantly at the start and is increasing slowly with further training, which is expressed in the increased proportion of agent successes over time.
+
