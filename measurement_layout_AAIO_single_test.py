@@ -33,11 +33,11 @@ environmentData["abilityMax"] = abilityMax
 environmentData["abilityMin"] = abilityMin
 all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
 
-N = 100  # number of samples
+N = 200  # number of samples
 excluded_capabilities = []
 excluded_capabilities_string = "_".join(excluded_capabilities)
 included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
-df_final = pd.read_csv("csv_recordings/camera_with_frame_stacking_400k.csv")
+df_final = pd.read_csv("csv_recordings/progression_model_results_400k_camera.csv")
 successes = df_final["reward"]
 print(successes)
 T = int(len(successes.to_numpy().flatten())/N)
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     capabilities_for_single = {"ability_navigation": [], "ability_visual": [], "ability_bias_rl": []}
     for timepoint in range(T):
         
-        df_final = pd.read_csv("csv_recordings/camera_with_frame_stacking_400k.csv").loc[timepoint*N:(timepoint+1)*N-1]
+        df_final = pd.read_csv("csv_recordings/progression_model_results_400k_camera.csv").loc[timepoint*N:(timepoint+1)*N-1]
         successes = df_final["reward"]
 
         successes = successes > -0.9 # SHould be reduced to 1s and 0s
@@ -94,31 +94,31 @@ if __name__ == "__main__":
             alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
             return sorted(data, key=alphanum_key)
 
-        # log_dir = "./logs/camera_with_frame_stacking_400k"
-        # files = os.listdir(log_dir)
-        # files = [f for f in files]
-        # files = sorted_alphanumeric(files)
-        # print("Files in logs directory:", files)
-        # model = files[timepoint]
-        # model_name = f"{log_dir}/{model}"[6:-4] # remove the .zip
-        # noise_level = np.array([0, 0.4])
-        # layout = Measurement_Layout_AAIO
-        # added_folder = ""
-        # folder_name = "camera_with_frame_stacking_400k"
-        # N_eval = N
-        # N_predict = 50
-        # precise = True
-        # full_ML = True
-        # print(model_name)
-        # print(f"Model {model_name} testing for predictive accuracy.")
-        # brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, load_eval = True, config_modifier="very_precise",
-        #                     noise_level = noise_level, cap_time = timepoint, N_eval = N_eval, caps = capabilities_out)
-        # print(f"Brier score for model {model_name} is {brier_score}.")
-        # print(f"Brier score for XGBOOST model {model_name} is {brier_score_XGBOOST}.")
-        # print(f"Brier score for baseline model {model_name} is {brier_score_baseline}")
-        # brier_scores_all["baseline"].append(brier_score_baseline)
-        # brier_scores_all["model"].append(brier_score)
-    # json.dump(brier_scores_all, open("brier_scores_all_framestack.json", "w"))
-    for single_capability in capabilities_for_single:
-        capabilities_for_single[single_capability] = np.array(capabilities_for_single[single_capability])
-        np.savez(f"estimated_capabilities/camera_with_frame_stacking_400k/{single_capability}_single.npz", capabilities_for_single[single_capability])
+        log_dir = "./logs/model_progression_camera"
+        files = os.listdir(log_dir)
+        files = [f for f in files]
+        files = sorted_alphanumeric(files)
+        print("Files in logs directory:", files)
+        model = files[timepoint]
+        model_name = f"{log_dir}/{model}"[6:-4] # remove the .zip
+        noise_level = np.array([0, 0.2])
+        layout = Measurement_Layout_AAIO
+        added_folder = ""
+        folder_name = "progression_model_results_400k_camera"
+        N_eval = N
+        N_predict = 100
+        precise = True
+        full_ML = True
+        print(model_name)
+        print(f"Model {model_name} testing for predictive accuracy.")
+        brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, load_eval = True, config_modifier="very_precise",
+                            noise_level = noise_level, cap_time = timepoint, N_eval = N_eval, caps = capabilities_out, seed = 2)
+        print(f"Brier score for model {model_name} is {brier_score}.")
+        print(f"Brier score for XGBOOST model {model_name} is {brier_score_XGBOOST}.")
+        print(f"Brier score for baseline model {model_name} is {brier_score_baseline}")
+        brier_scores_all["baseline"].append(brier_score_baseline)
+        brier_scores_all["model"].append(brier_score)
+    json.dump(brier_scores_all, open("brier_scores_all_camera_single.json", "w"))
+    # for single_capability in capabilities_for_single:
+    #     capabilities_for_single[single_capability] = np.array(capabilities_for_single[single_capability])
+    #     np.savez(f"estimated_capabilities/camera_with_frame_stacking_400k/{single_capability}_single.npz", capabilities_for_single[single_capability])

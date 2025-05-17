@@ -20,7 +20,7 @@ import os
 # Now with variable variance !
 class Measurement_Layout_AAIO(ssm.StateSpaceModel):
     # Changing the priors leads to very different capability estimates. 
-    def __init__(self, N : int, environmentData : DataFrame, sigmanav = 10, sigmavis = 1, sigmabias = 1, noiselevel: np.ndarray = np.array([0, 1]), noisy_model_performance = 0):
+    def __init__(self, N : int, environmentData : DataFrame, sigmanav = 5, sigmavis = 1, sigmabias = 1, noiselevel: np.ndarray = np.array([0, 1]), noisy_model_performance = 0):
         self.sigmanav = sigmanav
         self.sigmavis = sigmavis
         self.sigmabias = sigmabias

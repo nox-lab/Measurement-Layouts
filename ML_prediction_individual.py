@@ -20,14 +20,14 @@ if added_folder != "" and measurement_layout_used == Measurement_Layout_AAIO:
     print("Measurement layout is default, but an added folder is specified.")
     raise ValueError
     
-noise_level = np.array([0, 0.2])
+noise_level = np.array([0, 0.4])
 capabilities_path = rf"estimated_capabilities/"
-N_eval = 100
-filename = r"camera_with_frame_stacking_400k"
+N_eval = 200
+filename = r"raycasts_with_frame_stacking_500k"
 incremental_estimator = incremental_measurement_layout(N_eval, capabilities_path, filename=filename, noise_level=noise_level)
 incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
-# raycasts + framestacking might be worth doing.
-N_predict = 50
+#raycasts + framestacking might be worth doing.
+N_predict = 200
 folder_name = filename
 precise = True
 full_ML = False
@@ -41,17 +41,20 @@ def sorted_alphanumeric(data):
     alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
     return sorted(data, key=alphanum_key)
 
-log_dir = "./logs/camera_with_frame_stacking_400k/"
+log_dir = fr"./logs/{filename}/" # should end in a /
 files = os.listdir(log_dir)
 files = [f for f in files]
 files = sorted_alphanumeric(files)
 print("Files in logs directory:", files)
+
+
+# renaming files
 # num_training_steps = 25000
 # i = 2
 # for file in files:
 #     model_trainingsteps = num_training_steps*i
 #     file_path_name = f"{log_dir}/{file}"
-#     os.rename(file_path_name, f"./logs/model_progression_camera/progressionmodel_400k_camera_{model_trainingsteps+400_000}.zip")
+#     os.rename(file_path_name, f"./logs/raycasts_with_frame_stacking.zip")
 #     i += 1
 
 all_brier_scores = {
@@ -60,32 +63,36 @@ all_brier_scores = {
     "XGBOOST": [],
 }
 added_config_type = "very_precise"
-# for model in files:
-#     model_name = f"{log_dir}{model}"[6:-4] # remove the .zip
-#     print(model_name)
-#     print(f"Model {model_name} testing for predictive accuracy.")
-#     if i < 40:
-#         brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, load_eval = True, config_modifier = added_config_type,
-#                         noise_level = noise_level, cap_time = i, N_eval = N_eval, full=full_ML)
-#     else:
-#         i+=1
-#         continue
-#     all_brier_scores["baseline"].append(brier_score_baseline)
-#     all_brier_scores["model"].append(brier_score)
-#     all_brier_scores["XGBOOST"].append(brier_score_XGBOOST)
-#     print(f"Brier score for model {model_name} is {brier_score}.")
-#     print(f"Brier score for XGBOOST model {model_name} is {brier_score_XGBOOST}.")
-#     print(f"Brier score for baseline model {model_name} is {brier_score}")
-#     i += 1
+for model in files:
+    model_name = f"{log_dir}{model}"[6:-4] # remove the .zip
+    print(model_name)
+    print(f"Model {model_name} testing for predictive accuracy.")
+    brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, seed = 2, load_eval = True, config_modifier = added_config_type,
+                        noise_level = noise_level, cap_time = i, N_eval = N_eval, full=full_ML)
+    all_brier_scores["baseline"].append(brier_score_baseline)
+    all_brier_scores["model"].append(brier_score)
+    all_brier_scores["XGBOOST"].append(brier_score_XGBOOST)
+    print(f"Brier score for model {model_name} is {brier_score}.")
+    print(f"Brier score for XGBOOST model {model_name} is {brier_score_XGBOOST}.")
+    print(f"Brier score for baseline model {model_name} is {brier_score}")
+    i += 1
 
-# fig, ax = plt.subplots()
+fig, ax = plt.subplots()
 
-# for key in all_brier_scores:
-#     ax.plot(range(len(all_brier_scores[key])), all_brier_scores[key], marker = "o", linestyle= "-", label = "Brier score for " + key)
-# ax.set_title("Brier scores for different models")
-# ax.set_xlabel("Time")
-# ax.set_ylabel("Brier score")
-# ax.legend()
-# fig.savefig(f"brier_scores_{filename}.png")
-# print("Brier scores saved.")
-# json.dump(all_brier_scores, open(f"all_brier_scores_{filename}.json", "w"))
+for key in all_brier_scores:
+    ax.plot(range(len(all_brier_scores[key])), all_brier_scores[key], marker = "o", linestyle= "-", label = "Brier score for " + key)
+ax.set_title("Brier scores for different models")
+ax.set_xlabel("Time")
+ax.set_ylabel("Brier score")
+ax.legend()
+fig.savefig(f"brier_scores_{filename}.png")
+print("Brier scores saved.")
+if os.path.exists(f"all_brier_scores_{filename}.json"):
+    current_brier_scores = json.load(open(f"all_brier_scores_{filename}.json", "r"))
+    for key in all_brier_scores:
+        if key == "model" and full_ML:
+            current_brier_scores["model_full"] = all_brier_scores[key]
+            continue
+        current_brier_scores[key] = all_brier_scores[key]
+    
+json.dump(current_brier_scores, open(f"all_brier_scores_{filename}.json", "w"))

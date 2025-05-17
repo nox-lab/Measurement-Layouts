@@ -176,9 +176,9 @@ if __name__ == "__main__":
         np.save(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL_low_hdi.npy", np.array(low_hdis))
         np.save(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL_high_hdi.npy", np.array(high_hdis))
         # TODO: Is it justified to do sigmoid of the mean?
-        ax.plot([e for e in estimated_p_per_ts], label="estimated", color="grey")
+        ax.plot([e for e in estimated_p_per_ts], label="Mean Estimate", color="grey")
         # TODO: how does the hdi change after transformation through a sigmoid?
-        ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", alpha=0.2)
+        ax.fill_between([i for i in range(T)], [l for l in low_hdis], [h for h in high_hdis], color="grey", label = "95% HDI", alpha=0.2)
         if show_max and maximum_capabilites is not None:
             for maximum_cap in maximum_capabilities[cap]:
                 ax.axhline(maximum_cap, color="red", linestyle="--")

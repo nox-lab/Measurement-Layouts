@@ -74,7 +74,7 @@ def extract_capabilities(layout : ssm.StateSpaceModel, folder_name: str, added_f
     
     return final_capability_means, noise_final
 
-def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder, model_name, N, config_modifier, load_eval = True, noise_level = 0.0, cap_time = -1, N_eval=None, full = False, caps : dict = None):
+def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder, model_name, N, config_modifier, seed, load_eval = True, noise_level = 0.0, cap_time = -1, N_eval=None, full = False, caps : dict = None):
     if N_eval is None:
         N_eval = N
     env_path_train = r"..\WINDOWS\AAI\Animal-AI.exe"
@@ -85,6 +85,8 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         config_generator = ConfigGenerator(precise = True)
     elif config_modifier == "closed":
         config_generator = ConfigGenerator(closed = True)
+    else:
+        config_generator = ConfigGenerator()
     
     T = int(len(pd.read_csv(rf"./csv_recordings/{folder_name}.csv")["reward_distance"].to_numpy()) / N_eval)
     if cap_time < 0:
@@ -120,7 +122,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
     else:
         skip_model = False
-        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=150, numbered = False) # Creates yaml file with same demands as csv file.
+        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=150, numbered = False, seed = seed) # Creates yaml file with same demands as csv file.
         xpos = np.array([demand.Xpos for demand in list_of_demands])
         distance = np.array([demand.reward_distance for demand in list_of_demands])
         reward_size = np.array([demand.reward_size for demand in list_of_demands])

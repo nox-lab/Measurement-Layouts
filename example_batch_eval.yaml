@@ -5401,3 +5401,5403 @@
               - !Vector3 {x: 20, y: 0, z: 20}
               rotations: [0]
             
+          300: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.241066518114415, y: 0, z: 23.711140528441966}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.65535810183247, y: 1.65535810183247, z: 1.65535810183247}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          301: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.241066518114415, y: 0, z: 23.711140528441966}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.65535810183247, y: 1.65535810183247, z: 1.65535810183247}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          302: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.241066518114415, y: 0, z: 23.711140528441966}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.65535810183247, y: 1.65535810183247, z: 1.65535810183247}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          303: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.014827831157174, y: 0, z: 25.818878588430014}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8396924245987458, y: 0.8396924245987458, z: 0.8396924245987458}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          304: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.014827831157174, y: 0, z: 25.818878588430014}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8396924245987458, y: 0.8396924245987458, z: 0.8396924245987458}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          305: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.014827831157174, y: 0, z: 25.818878588430014}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8396924245987458, y: 0.8396924245987458, z: 0.8396924245987458}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          306: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.15455835782213, y: 0, z: 27.99329153317706}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.169219348005186, y: 1.169219348005186, z: 1.169219348005186}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          307: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.15455835782213, y: 0, z: 27.99329153317706}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.169219348005186, y: 1.169219348005186, z: 1.169219348005186}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          308: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.15455835782213, y: 0, z: 27.99329153317706}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.169219348005186, y: 1.169219348005186, z: 1.169219348005186}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          309: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.828168488722394, y: 0, z: 11.172489064613364}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9520189815350526, y: 1.9520189815350526, z: 1.9520189815350526}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          310: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.828168488722394, y: 0, z: 11.172489064613364}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9520189815350526, y: 1.9520189815350526, z: 1.9520189815350526}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          311: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.828168488722394, y: 0, z: 11.172489064613364}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9520189815350526, y: 1.9520189815350526, z: 1.9520189815350526}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          312: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.12045225141855, y: 0, z: 31.97796459843409}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9621105562826233, y: 1.9621105562826233, z: 1.9621105562826233}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          313: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.12045225141855, y: 0, z: 31.97796459843409}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9621105562826233, y: 1.9621105562826233, z: 1.9621105562826233}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          314: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.12045225141855, y: 0, z: 31.97796459843409}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9621105562826233, y: 1.9621105562826233, z: 1.9621105562826233}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          315: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.132983770138488, y: 0, z: 26.327045517305706}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4887999466779744, y: 1.4887999466779744, z: 1.4887999466779744}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          316: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.132983770138488, y: 0, z: 26.327045517305706}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4887999466779744, y: 1.4887999466779744, z: 1.4887999466779744}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          317: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.132983770138488, y: 0, z: 26.327045517305706}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4887999466779744, y: 1.4887999466779744, z: 1.4887999466779744}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          318: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 33.55907162327131, y: 0, z: 16.641882017983274}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5393278509445599, y: 0.5393278509445599, z: 0.5393278509445599}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          319: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 33.55907162327131, y: 0, z: 16.641882017983274}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5393278509445599, y: 0.5393278509445599, z: 0.5393278509445599}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          320: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 33.55907162327131, y: 0, z: 16.641882017983274}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5393278509445599, y: 0.5393278509445599, z: 0.5393278509445599}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          321: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.67649677786244, y: 0, z: 9.868767922527804}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9712197821573513, y: 0.9712197821573513, z: 0.9712197821573513}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          322: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.67649677786244, y: 0, z: 9.868767922527804}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9712197821573513, y: 0.9712197821573513, z: 0.9712197821573513}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          323: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.67649677786244, y: 0, z: 9.868767922527804}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9712197821573513, y: 0.9712197821573513, z: 0.9712197821573513}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          324: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.513021611748584, y: 0, z: 11.704003921110056}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.536413213099253, y: 1.536413213099253, z: 1.536413213099253}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          325: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.513021611748584, y: 0, z: 11.704003921110056}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.536413213099253, y: 1.536413213099253, z: 1.536413213099253}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          326: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.513021611748584, y: 0, z: 11.704003921110056}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.536413213099253, y: 1.536413213099253, z: 1.536413213099253}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          327: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.655050096402647, y: 0, z: 24.487084525196533}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9048219396518733, y: 0.9048219396518733, z: 0.9048219396518733}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          328: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.655050096402647, y: 0, z: 24.487084525196533}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9048219396518733, y: 0.9048219396518733, z: 0.9048219396518733}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          329: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.655050096402647, y: 0, z: 24.487084525196533}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9048219396518733, y: 0.9048219396518733, z: 0.9048219396518733}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          330: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.772349895492358, y: 0, z: 15.14693347064302}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8932596256593679, y: 0.8932596256593679, z: 0.8932596256593679}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          331: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.772349895492358, y: 0, z: 15.14693347064302}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8932596256593679, y: 0.8932596256593679, z: 0.8932596256593679}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          332: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.772349895492358, y: 0, z: 15.14693347064302}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8932596256593679, y: 0.8932596256593679, z: 0.8932596256593679}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          333: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 12.288762955067778, y: 0, z: 29.815852185121955}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.819779655059981, y: 1.819779655059981, z: 1.819779655059981}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          334: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 12.288762955067778, y: 0, z: 29.815852185121955}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.819779655059981, y: 1.819779655059981, z: 1.819779655059981}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          335: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 12.288762955067778, y: 0, z: 29.815852185121955}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.819779655059981, y: 1.819779655059981, z: 1.819779655059981}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          336: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.84589608851443, y: 0, z: 22.894021236821953}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9459970722609083, y: 0.9459970722609083, z: 0.9459970722609083}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          337: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.84589608851443, y: 0, z: 22.894021236821953}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9459970722609083, y: 0.9459970722609083, z: 0.9459970722609083}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          338: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.84589608851443, y: 0, z: 22.894021236821953}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9459970722609083, y: 0.9459970722609083, z: 0.9459970722609083}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          339: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.288459334892742, y: 0, z: 13.717136538165065}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7485344638789011, y: 0.7485344638789011, z: 0.7485344638789011}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          340: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.288459334892742, y: 0, z: 13.717136538165065}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7485344638789011, y: 0.7485344638789011, z: 0.7485344638789011}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          341: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.288459334892742, y: 0, z: 13.717136538165065}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7485344638789011, y: 0.7485344638789011, z: 0.7485344638789011}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          342: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.194478846406877, y: 0, z: 16.1072160649804}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.311427707443283, y: 1.311427707443283, z: 1.311427707443283}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          343: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.194478846406877, y: 0, z: 16.1072160649804}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.311427707443283, y: 1.311427707443283, z: 1.311427707443283}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          344: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.194478846406877, y: 0, z: 16.1072160649804}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.311427707443283, y: 1.311427707443283, z: 1.311427707443283}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          345: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 34.25774285405754, y: 0, z: 21.57400229438517}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3463131156867807, y: 1.3463131156867807, z: 1.3463131156867807}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          346: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 34.25774285405754, y: 0, z: 21.57400229438517}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3463131156867807, y: 1.3463131156867807, z: 1.3463131156867807}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          347: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 34.25774285405754, y: 0, z: 21.57400229438517}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3463131156867807, y: 1.3463131156867807, z: 1.3463131156867807}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          348: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.727616178879046, y: 0, z: 15.29045640063093}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8321491014852325, y: 0.8321491014852325, z: 0.8321491014852325}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          349: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.727616178879046, y: 0, z: 15.29045640063093}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8321491014852325, y: 0.8321491014852325, z: 0.8321491014852325}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          350: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.727616178879046, y: 0, z: 15.29045640063093}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8321491014852325, y: 0.8321491014852325, z: 0.8321491014852325}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          351: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.44588092052367, y: 0, z: 14.88441658960646}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0419120688999306, y: 1.0419120688999306, z: 1.0419120688999306}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          352: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.44588092052367, y: 0, z: 14.88441658960646}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0419120688999306, y: 1.0419120688999306, z: 1.0419120688999306}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          353: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.44588092052367, y: 0, z: 14.88441658960646}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0419120688999306, y: 1.0419120688999306, z: 1.0419120688999306}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          354: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.762472856343656, y: 0, z: 10.64143435679947}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5452007441802678, y: 1.5452007441802678, z: 1.5452007441802678}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          355: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.762472856343656, y: 0, z: 10.64143435679947}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5452007441802678, y: 1.5452007441802678, z: 1.5452007441802678}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          356: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.762472856343656, y: 0, z: 10.64143435679947}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5452007441802678, y: 1.5452007441802678, z: 1.5452007441802678}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          357: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.574587447404538, y: 0, z: 11.20803588248757}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9161081995304909, y: 0.9161081995304909, z: 0.9161081995304909}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          358: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.574587447404538, y: 0, z: 11.20803588248757}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9161081995304909, y: 0.9161081995304909, z: 0.9161081995304909}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          359: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.574587447404538, y: 0, z: 11.20803588248757}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9161081995304909, y: 0.9161081995304909, z: 0.9161081995304909}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          360: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.576100145747741, y: 0, z: 16.48608827807968}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7151345730053673, y: 0.7151345730053673, z: 0.7151345730053673}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          361: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.576100145747741, y: 0, z: 16.48608827807968}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7151345730053673, y: 0.7151345730053673, z: 0.7151345730053673}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          362: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.576100145747741, y: 0, z: 16.48608827807968}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7151345730053673, y: 0.7151345730053673, z: 0.7151345730053673}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          363: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.007441633226684, y: 0, z: 22.66868859705193}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3759396872511185, y: 1.3759396872511185, z: 1.3759396872511185}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          364: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.007441633226684, y: 0, z: 22.66868859705193}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3759396872511185, y: 1.3759396872511185, z: 1.3759396872511185}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          365: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.007441633226684, y: 0, z: 22.66868859705193}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3759396872511185, y: 1.3759396872511185, z: 1.3759396872511185}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          366: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 32.14654629839676, y: 0, z: 24.496909456468494}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.632292222085701, y: 1.632292222085701, z: 1.632292222085701}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          367: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 32.14654629839676, y: 0, z: 24.496909456468494}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.632292222085701, y: 1.632292222085701, z: 1.632292222085701}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          368: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 32.14654629839676, y: 0, z: 24.496909456468494}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.632292222085701, y: 1.632292222085701, z: 1.632292222085701}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          369: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.405066646880904, y: 0, z: 20.57991955999202}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9732135435576001, y: 1.9732135435576001, z: 1.9732135435576001}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          370: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.405066646880904, y: 0, z: 20.57991955999202}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9732135435576001, y: 1.9732135435576001, z: 1.9732135435576001}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          371: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.405066646880904, y: 0, z: 20.57991955999202}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9732135435576001, y: 1.9732135435576001, z: 1.9732135435576001}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          372: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 10.465489556912376, y: 0, z: 8.511533217798709}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7047450131712545, y: 1.7047450131712545, z: 1.7047450131712545}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          373: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 10.465489556912376, y: 0, z: 8.511533217798709}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7047450131712545, y: 1.7047450131712545, z: 1.7047450131712545}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          374: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 10.465489556912376, y: 0, z: 8.511533217798709}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7047450131712545, y: 1.7047450131712545, z: 1.7047450131712545}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          375: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.065566603133465, y: 0, z: 29.44469060364672}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4805346329570674, y: 1.4805346329570674, z: 1.4805346329570674}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          376: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.065566603133465, y: 0, z: 29.44469060364672}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4805346329570674, y: 1.4805346329570674, z: 1.4805346329570674}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          377: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.065566603133465, y: 0, z: 29.44469060364672}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4805346329570674, y: 1.4805346329570674, z: 1.4805346329570674}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          378: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.03210494198819, y: 0, z: 25.677163209103103}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5155463920028479, y: 0.5155463920028479, z: 0.5155463920028479}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          379: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.03210494198819, y: 0, z: 25.677163209103103}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5155463920028479, y: 0.5155463920028479, z: 0.5155463920028479}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          380: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.03210494198819, y: 0, z: 25.677163209103103}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5155463920028479, y: 0.5155463920028479, z: 0.5155463920028479}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          381: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.663488591703139, y: 0, z: 8.82627730375061}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6643219430603313, y: 1.6643219430603313, z: 1.6643219430603313}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          382: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.663488591703139, y: 0, z: 8.82627730375061}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6643219430603313, y: 1.6643219430603313, z: 1.6643219430603313}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          383: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.663488591703139, y: 0, z: 8.82627730375061}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6643219430603313, y: 1.6643219430603313, z: 1.6643219430603313}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          384: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 32.13070468919028, y: 0, z: 15.40293416234391}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7183373467375955, y: 0.7183373467375955, z: 0.7183373467375955}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          385: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 32.13070468919028, y: 0, z: 15.40293416234391}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7183373467375955, y: 0.7183373467375955, z: 0.7183373467375955}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          386: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 32.13070468919028, y: 0, z: 15.40293416234391}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7183373467375955, y: 0.7183373467375955, z: 0.7183373467375955}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          387: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.640658989691637, y: 0, z: 8.616639551022198}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.544008093764739, y: 1.544008093764739, z: 1.544008093764739}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          388: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.640658989691637, y: 0, z: 8.616639551022198}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.544008093764739, y: 1.544008093764739, z: 1.544008093764739}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          389: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.640658989691637, y: 0, z: 8.616639551022198}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.544008093764739, y: 1.544008093764739, z: 1.544008093764739}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          390: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.007015238037788, y: 0, z: 10.328353780180692}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5977006137134429, y: 1.5977006137134429, z: 1.5977006137134429}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          391: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.007015238037788, y: 0, z: 10.328353780180692}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5977006137134429, y: 1.5977006137134429, z: 1.5977006137134429}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          392: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.007015238037788, y: 0, z: 10.328353780180692}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5977006137134429, y: 1.5977006137134429, z: 1.5977006137134429}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          393: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.639504175056285, y: 0, z: 31.776699780829524}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.458588456810603, y: 1.458588456810603, z: 1.458588456810603}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          394: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.639504175056285, y: 0, z: 31.776699780829524}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.458588456810603, y: 1.458588456810603, z: 1.458588456810603}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          395: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.639504175056285, y: 0, z: 31.776699780829524}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.458588456810603, y: 1.458588456810603, z: 1.458588456810603}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          396: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.781100744916905, y: 0, z: 15.604612553032066}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7201885601258647, y: 0.7201885601258647, z: 0.7201885601258647}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          397: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.781100744916905, y: 0, z: 15.604612553032066}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7201885601258647, y: 0.7201885601258647, z: 0.7201885601258647}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          398: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.781100744916905, y: 0, z: 15.604612553032066}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7201885601258647, y: 0.7201885601258647, z: 0.7201885601258647}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          399: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.185405538237234, y: 0, z: 26.136972551755537}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9223741924287837, y: 0.9223741924287837, z: 0.9223741924287837}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          400: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.185405538237234, y: 0, z: 26.136972551755537}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9223741924287837, y: 0.9223741924287837, z: 0.9223741924287837}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          401: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.185405538237234, y: 0, z: 26.136972551755537}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9223741924287837, y: 0.9223741924287837, z: 0.9223741924287837}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          402: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.666858429819271, y: 0, z: 32.95816396700473}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9717005167787744, y: 0.9717005167787744, z: 0.9717005167787744}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          403: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.666858429819271, y: 0, z: 32.95816396700473}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9717005167787744, y: 0.9717005167787744, z: 0.9717005167787744}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          404: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.666858429819271, y: 0, z: 32.95816396700473}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9717005167787744, y: 0.9717005167787744, z: 0.9717005167787744}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          405: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.44913918257083, y: 0, z: 17.166181391421414}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5672548880311774, y: 0.5672548880311774, z: 0.5672548880311774}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          406: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.44913918257083, y: 0, z: 17.166181391421414}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5672548880311774, y: 0.5672548880311774, z: 0.5672548880311774}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          407: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.44913918257083, y: 0, z: 17.166181391421414}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5672548880311774, y: 0.5672548880311774, z: 0.5672548880311774}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          408: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.169637142433366, y: 0, z: 18.047520384061848}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5753179954475338, y: 1.5753179954475338, z: 1.5753179954475338}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          409: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.169637142433366, y: 0, z: 18.047520384061848}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5753179954475338, y: 1.5753179954475338, z: 1.5753179954475338}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          410: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.169637142433366, y: 0, z: 18.047520384061848}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5753179954475338, y: 1.5753179954475338, z: 1.5753179954475338}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          411: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.05076660377636, y: 0, z: 11.427409107341864}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.958697363652175, y: 0.958697363652175, z: 0.958697363652175}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          412: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.05076660377636, y: 0, z: 11.427409107341864}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.958697363652175, y: 0.958697363652175, z: 0.958697363652175}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          413: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.05076660377636, y: 0, z: 11.427409107341864}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.958697363652175, y: 0.958697363652175, z: 0.958697363652175}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          414: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.20305469615593, y: 0, z: 11.88443317502396}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5353418022441216, y: 1.5353418022441216, z: 1.5353418022441216}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          415: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.20305469615593, y: 0, z: 11.88443317502396}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5353418022441216, y: 1.5353418022441216, z: 1.5353418022441216}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          416: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.20305469615593, y: 0, z: 11.88443317502396}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5353418022441216, y: 1.5353418022441216, z: 1.5353418022441216}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          417: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.791915302669732, y: 0, z: 18.473301956093007}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0001588911862884, y: 1.0001588911862884, z: 1.0001588911862884}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          418: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.791915302669732, y: 0, z: 18.473301956093007}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0001588911862884, y: 1.0001588911862884, z: 1.0001588911862884}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          419: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.791915302669732, y: 0, z: 18.473301956093007}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0001588911862884, y: 1.0001588911862884, z: 1.0001588911862884}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          420: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.487373348060471, y: 0, z: 19.676270802474377}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.2759013977516946, y: 1.2759013977516946, z: 1.2759013977516946}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          421: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.487373348060471, y: 0, z: 19.676270802474377}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.2759013977516946, y: 1.2759013977516946, z: 1.2759013977516946}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          422: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.487373348060471, y: 0, z: 19.676270802474377}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.2759013977516946, y: 1.2759013977516946, z: 1.2759013977516946}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          423: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.98113857689816, y: 0, z: 6.113500480726303}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9234655280183302, y: 1.9234655280183302, z: 1.9234655280183302}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          424: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.98113857689816, y: 0, z: 6.113500480726303}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9234655280183302, y: 1.9234655280183302, z: 1.9234655280183302}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          425: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.98113857689816, y: 0, z: 6.113500480726303}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9234655280183302, y: 1.9234655280183302, z: 1.9234655280183302}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          426: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.29736871005744, y: 0, z: 18.244794942566145}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7664949228485698, y: 1.7664949228485698, z: 1.7664949228485698}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          427: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.29736871005744, y: 0, z: 18.244794942566145}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7664949228485698, y: 1.7664949228485698, z: 1.7664949228485698}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          428: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.29736871005744, y: 0, z: 18.244794942566145}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7664949228485698, y: 1.7664949228485698, z: 1.7664949228485698}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          429: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.910356543024673, y: 0, z: 22.57960077465453}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1100543055010186, y: 1.1100543055010186, z: 1.1100543055010186}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          430: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.910356543024673, y: 0, z: 22.57960077465453}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1100543055010186, y: 1.1100543055010186, z: 1.1100543055010186}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          431: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.910356543024673, y: 0, z: 22.57960077465453}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1100543055010186, y: 1.1100543055010186, z: 1.1100543055010186}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          432: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.67284148535972, y: 0, z: 15.46446333320807}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4106412429586908, y: 1.4106412429586908, z: 1.4106412429586908}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          433: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.67284148535972, y: 0, z: 15.46446333320807}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4106412429586908, y: 1.4106412429586908, z: 1.4106412429586908}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          434: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.67284148535972, y: 0, z: 15.46446333320807}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4106412429586908, y: 1.4106412429586908, z: 1.4106412429586908}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          435: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.632745608614208, y: 0, z: 27.04736193939118}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.15910666102778, y: 1.15910666102778, z: 1.15910666102778}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          436: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.632745608614208, y: 0, z: 27.04736193939118}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.15910666102778, y: 1.15910666102778, z: 1.15910666102778}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          437: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.632745608614208, y: 0, z: 27.04736193939118}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.15910666102778, y: 1.15910666102778, z: 1.15910666102778}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          438: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.3948836700564, y: 0, z: 22.03931356763471}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0234813958311832, y: 1.0234813958311832, z: 1.0234813958311832}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          439: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.3948836700564, y: 0, z: 22.03931356763471}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0234813958311832, y: 1.0234813958311832, z: 1.0234813958311832}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          440: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.3948836700564, y: 0, z: 22.03931356763471}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0234813958311832, y: 1.0234813958311832, z: 1.0234813958311832}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          441: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.324354062478129, y: 0, z: 19.72034191466442}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7080719340285295, y: 0.7080719340285295, z: 0.7080719340285295}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          442: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.324354062478129, y: 0, z: 19.72034191466442}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7080719340285295, y: 0.7080719340285295, z: 0.7080719340285295}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          443: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.324354062478129, y: 0, z: 19.72034191466442}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7080719340285295, y: 0.7080719340285295, z: 0.7080719340285295}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          444: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.292965187930374, y: 0, z: 27.69583056974573}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3560737773193845, y: 1.3560737773193845, z: 1.3560737773193845}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          445: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.292965187930374, y: 0, z: 27.69583056974573}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3560737773193845, y: 1.3560737773193845, z: 1.3560737773193845}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          446: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.292965187930374, y: 0, z: 27.69583056974573}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.3560737773193845, y: 1.3560737773193845, z: 1.3560737773193845}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          447: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.026736721690927, y: 0, z: 10.526676279184791}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7339887504576414, y: 0.7339887504576414, z: 0.7339887504576414}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          448: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.026736721690927, y: 0, z: 10.526676279184791}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7339887504576414, y: 0.7339887504576414, z: 0.7339887504576414}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          449: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.026736721690927, y: 0, z: 10.526676279184791}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7339887504576414, y: 0.7339887504576414, z: 0.7339887504576414}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          450: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.916066796884678, y: 0, z: 22.754508735110857}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5486394879716856, y: 0.5486394879716856, z: 0.5486394879716856}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          451: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.916066796884678, y: 0, z: 22.754508735110857}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5486394879716856, y: 0.5486394879716856, z: 0.5486394879716856}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          452: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.916066796884678, y: 0, z: 22.754508735110857}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5486394879716856, y: 0.5486394879716856, z: 0.5486394879716856}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          453: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.644147398790537, y: 0, z: 15.413994364615299}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.819483995908143, y: 1.819483995908143, z: 1.819483995908143}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          454: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.644147398790537, y: 0, z: 15.413994364615299}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.819483995908143, y: 1.819483995908143, z: 1.819483995908143}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          455: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.644147398790537, y: 0, z: 15.413994364615299}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.819483995908143, y: 1.819483995908143, z: 1.819483995908143}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          456: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.35867177639204, y: 0, z: 23.735942714584795}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9591813878989828, y: 1.9591813878989828, z: 1.9591813878989828}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          457: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.35867177639204, y: 0, z: 23.735942714584795}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9591813878989828, y: 1.9591813878989828, z: 1.9591813878989828}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          458: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.35867177639204, y: 0, z: 23.735942714584795}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9591813878989828, y: 1.9591813878989828, z: 1.9591813878989828}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          459: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.342818727964094, y: 0, z: 20.193321236347128}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.437210619472706, y: 1.437210619472706, z: 1.437210619472706}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          460: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.342818727964094, y: 0, z: 20.193321236347128}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.437210619472706, y: 1.437210619472706, z: 1.437210619472706}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          461: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.342818727964094, y: 0, z: 20.193321236347128}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.437210619472706, y: 1.437210619472706, z: 1.437210619472706}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          462: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.999967067341439, y: 0, z: 27.768783891213303}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.029509128312737, y: 1.029509128312737, z: 1.029509128312737}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          463: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.999967067341439, y: 0, z: 27.768783891213303}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.029509128312737, y: 1.029509128312737, z: 1.029509128312737}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          464: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.999967067341439, y: 0, z: 27.768783891213303}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.029509128312737, y: 1.029509128312737, z: 1.029509128312737}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          465: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.10485658210626, y: 0, z: 22.39339998799707}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1596821038880003, y: 1.1596821038880003, z: 1.1596821038880003}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          466: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.10485658210626, y: 0, z: 22.39339998799707}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1596821038880003, y: 1.1596821038880003, z: 1.1596821038880003}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          467: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.10485658210626, y: 0, z: 22.39339998799707}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1596821038880003, y: 1.1596821038880003, z: 1.1596821038880003}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          468: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.912929569777607, y: 0, z: 15.428651943760428}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6374173907154943, y: 1.6374173907154943, z: 1.6374173907154943}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          469: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.912929569777607, y: 0, z: 15.428651943760428}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6374173907154943, y: 1.6374173907154943, z: 1.6374173907154943}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          470: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 19.912929569777607, y: 0, z: 15.428651943760428}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6374173907154943, y: 1.6374173907154943, z: 1.6374173907154943}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          471: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 8.097475814163156, y: 0, z: 19.10477220053108}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1943801306788773, y: 1.1943801306788773, z: 1.1943801306788773}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          472: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 8.097475814163156, y: 0, z: 19.10477220053108}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1943801306788773, y: 1.1943801306788773, z: 1.1943801306788773}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          473: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 8.097475814163156, y: 0, z: 19.10477220053108}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1943801306788773, y: 1.1943801306788773, z: 1.1943801306788773}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          474: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.842231855922563, y: 0, z: 22.46779912295652}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1957866758504434, y: 1.1957866758504434, z: 1.1957866758504434}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          475: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.842231855922563, y: 0, z: 22.46779912295652}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1957866758504434, y: 1.1957866758504434, z: 1.1957866758504434}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          476: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.842231855922563, y: 0, z: 22.46779912295652}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1957866758504434, y: 1.1957866758504434, z: 1.1957866758504434}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          477: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.729227670821725, y: 0, z: 16.901357337680494}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5345709175674134, y: 1.5345709175674134, z: 1.5345709175674134}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          478: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.729227670821725, y: 0, z: 16.901357337680494}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5345709175674134, y: 1.5345709175674134, z: 1.5345709175674134}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          479: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.729227670821725, y: 0, z: 16.901357337680494}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5345709175674134, y: 1.5345709175674134, z: 1.5345709175674134}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          480: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.281854397340656, y: 0, z: 12.049035177957919}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5343726969835727, y: 0.5343726969835727, z: 0.5343726969835727}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          481: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.281854397340656, y: 0, z: 12.049035177957919}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5343726969835727, y: 0.5343726969835727, z: 0.5343726969835727}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          482: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.281854397340656, y: 0, z: 12.049035177957919}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5343726969835727, y: 0.5343726969835727, z: 0.5343726969835727}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          483: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.24235532165909, y: 0, z: 15.50589843497875}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9624869675092753, y: 1.9624869675092753, z: 1.9624869675092753}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          484: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.24235532165909, y: 0, z: 15.50589843497875}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9624869675092753, y: 1.9624869675092753, z: 1.9624869675092753}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          485: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 13.24235532165909, y: 0, z: 15.50589843497875}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.9624869675092753, y: 1.9624869675092753, z: 1.9624869675092753}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          486: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.163327521331208, y: 0, z: 16.865737381816075}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.8721830301129014, y: 1.8721830301129014, z: 1.8721830301129014}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          487: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.163327521331208, y: 0, z: 16.865737381816075}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.8721830301129014, y: 1.8721830301129014, z: 1.8721830301129014}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          488: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.163327521331208, y: 0, z: 16.865737381816075}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.8721830301129014, y: 1.8721830301129014, z: 1.8721830301129014}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          489: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.391710277758104, y: 0, z: 10.856940847438477}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0032669439090542, y: 1.0032669439090542, z: 1.0032669439090542}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          490: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.391710277758104, y: 0, z: 10.856940847438477}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0032669439090542, y: 1.0032669439090542, z: 1.0032669439090542}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          491: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.391710277758104, y: 0, z: 10.856940847438477}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0032669439090542, y: 1.0032669439090542, z: 1.0032669439090542}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          492: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.525627226246261, y: 0, z: 25.534509719393434}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5105476358479475, y: 1.5105476358479475, z: 1.5105476358479475}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          493: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.525627226246261, y: 0, z: 25.534509719393434}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5105476358479475, y: 1.5105476358479475, z: 1.5105476358479475}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          494: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.525627226246261, y: 0, z: 25.534509719393434}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.5105476358479475, y: 1.5105476358479475, z: 1.5105476358479475}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          495: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.804765647064958, y: 0, z: 25.901768702215666}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7084169872670967, y: 1.7084169872670967, z: 1.7084169872670967}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          496: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.804765647064958, y: 0, z: 25.901768702215666}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7084169872670967, y: 1.7084169872670967, z: 1.7084169872670967}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          497: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.804765647064958, y: 0, z: 25.901768702215666}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7084169872670967, y: 1.7084169872670967, z: 1.7084169872670967}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          498: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 27.207444475763033, y: 0, z: 27.213349356285423}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.792556229013061, y: 0.792556229013061, z: 0.792556229013061}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          499: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 27.207444475763033, y: 0, z: 27.213349356285423}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.792556229013061, y: 0.792556229013061, z: 0.792556229013061}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          500: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 27.207444475763033, y: 0, z: 27.213349356285423}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.792556229013061, y: 0.792556229013061, z: 0.792556229013061}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          501: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.069563631962055, y: 0, z: 14.305546394840345}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8929002519071548, y: 0.8929002519071548, z: 0.8929002519071548}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          502: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.069563631962055, y: 0, z: 14.305546394840345}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8929002519071548, y: 0.8929002519071548, z: 0.8929002519071548}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          503: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.069563631962055, y: 0, z: 14.305546394840345}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8929002519071548, y: 0.8929002519071548, z: 0.8929002519071548}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          504: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 34.52471379328071, y: 0, z: 22.302061242748604}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8205398564443718, y: 0.8205398564443718, z: 0.8205398564443718}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          505: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 34.52471379328071, y: 0, z: 22.302061242748604}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8205398564443718, y: 0.8205398564443718, z: 0.8205398564443718}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          506: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 34.52471379328071, y: 0, z: 22.302061242748604}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.8205398564443718, y: 0.8205398564443718, z: 0.8205398564443718}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          507: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.317031750415772, y: 0, z: 23.97396968190457}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.586170856779141, y: 0.586170856779141, z: 0.586170856779141}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          508: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.317031750415772, y: 0, z: 23.97396968190457}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.586170856779141, y: 0.586170856779141, z: 0.586170856779141}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          509: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.317031750415772, y: 0, z: 23.97396968190457}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.586170856779141, y: 0.586170856779141, z: 0.586170856779141}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          510: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.67167673911441, y: 0, z: 20.246873583769535}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7984218851406, y: 0.7984218851406, z: 0.7984218851406}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          511: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.67167673911441, y: 0, z: 20.246873583769535}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7984218851406, y: 0.7984218851406, z: 0.7984218851406}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          512: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.67167673911441, y: 0, z: 20.246873583769535}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7984218851406, y: 0.7984218851406, z: 0.7984218851406}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          513: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.335446046762733, y: 0, z: 13.484828124954273}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7771331233261565, y: 0.7771331233261565, z: 0.7771331233261565}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          514: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.335446046762733, y: 0, z: 13.484828124954273}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7771331233261565, y: 0.7771331233261565, z: 0.7771331233261565}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          515: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 9.335446046762733, y: 0, z: 13.484828124954273}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7771331233261565, y: 0.7771331233261565, z: 0.7771331233261565}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          516: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.36387416500282, y: 0, z: 14.477572301025676}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6207942906925789, y: 0.6207942906925789, z: 0.6207942906925789}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          517: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.36387416500282, y: 0, z: 14.477572301025676}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6207942906925789, y: 0.6207942906925789, z: 0.6207942906925789}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          518: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.36387416500282, y: 0, z: 14.477572301025676}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6207942906925789, y: 0.6207942906925789, z: 0.6207942906925789}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          519: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.216328415996347, y: 0, z: 18.937509507974916}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4824417163951082, y: 1.4824417163951082, z: 1.4824417163951082}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          520: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.216328415996347, y: 0, z: 18.937509507974916}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4824417163951082, y: 1.4824417163951082, z: 1.4824417163951082}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          521: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.216328415996347, y: 0, z: 18.937509507974916}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4824417163951082, y: 1.4824417163951082, z: 1.4824417163951082}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          522: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.5041042743075, y: 0, z: 18.639319044441034}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7522810714476977, y: 1.7522810714476977, z: 1.7522810714476977}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          523: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.5041042743075, y: 0, z: 18.639319044441034}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7522810714476977, y: 1.7522810714476977, z: 1.7522810714476977}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          524: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.5041042743075, y: 0, z: 18.639319044441034}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7522810714476977, y: 1.7522810714476977, z: 1.7522810714476977}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          525: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.677246277209626, y: 0, z: 33.560047190226044}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5424042546529096, y: 0.5424042546529096, z: 0.5424042546529096}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          526: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.677246277209626, y: 0, z: 33.560047190226044}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5424042546529096, y: 0.5424042546529096, z: 0.5424042546529096}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          527: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.677246277209626, y: 0, z: 33.560047190226044}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5424042546529096, y: 0.5424042546529096, z: 0.5424042546529096}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          528: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.141501048785877, y: 0, z: 11.032086104924755}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.73975047551614, y: 0.73975047551614, z: 0.73975047551614}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          529: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.141501048785877, y: 0, z: 11.032086104924755}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.73975047551614, y: 0.73975047551614, z: 0.73975047551614}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          530: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 18.141501048785877, y: 0, z: 11.032086104924755}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.73975047551614, y: 0.73975047551614, z: 0.73975047551614}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          531: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.65189227617953, y: 0, z: 16.79428496271645}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1696155273923816, y: 1.1696155273923816, z: 1.1696155273923816}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          532: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.65189227617953, y: 0, z: 16.79428496271645}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1696155273923816, y: 1.1696155273923816, z: 1.1696155273923816}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          533: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 23.65189227617953, y: 0, z: 16.79428496271645}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1696155273923816, y: 1.1696155273923816, z: 1.1696155273923816}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          534: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.046532830937455, y: 0, z: 7.102015293700392}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4658434664674942, y: 1.4658434664674942, z: 1.4658434664674942}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          535: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.046532830937455, y: 0, z: 7.102015293700392}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4658434664674942, y: 1.4658434664674942, z: 1.4658434664674942}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          536: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.046532830937455, y: 0, z: 7.102015293700392}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.4658434664674942, y: 1.4658434664674942, z: 1.4658434664674942}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          537: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 10.960620529687702, y: 0, z: 15.808015510042988}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7194336252167266, y: 1.7194336252167266, z: 1.7194336252167266}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          538: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 10.960620529687702, y: 0, z: 15.808015510042988}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7194336252167266, y: 1.7194336252167266, z: 1.7194336252167266}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          539: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 10.960620529687702, y: 0, z: 15.808015510042988}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7194336252167266, y: 1.7194336252167266, z: 1.7194336252167266}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          540: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.87753580019852, y: 0, z: 21.467730900964256}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9432234284832456, y: 0.9432234284832456, z: 0.9432234284832456}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          541: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.87753580019852, y: 0, z: 21.467730900964256}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9432234284832456, y: 0.9432234284832456, z: 0.9432234284832456}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          542: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.87753580019852, y: 0, z: 21.467730900964256}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.9432234284832456, y: 0.9432234284832456, z: 0.9432234284832456}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          543: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.72939972556182, y: 0, z: 32.74013887680609}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.8881392529105598, y: 1.8881392529105598, z: 1.8881392529105598}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          544: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.72939972556182, y: 0, z: 32.74013887680609}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.8881392529105598, y: 1.8881392529105598, z: 1.8881392529105598}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          545: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 17.72939972556182, y: 0, z: 32.74013887680609}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.8881392529105598, y: 1.8881392529105598, z: 1.8881392529105598}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          546: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.27869431208152, y: 0, z: 24.83327695681969}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7883750252332216, y: 0.7883750252332216, z: 0.7883750252332216}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          547: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.27869431208152, y: 0, z: 24.83327695681969}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7883750252332216, y: 0.7883750252332216, z: 0.7883750252332216}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          548: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 21.27869431208152, y: 0, z: 24.83327695681969}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.7883750252332216, y: 0.7883750252332216, z: 0.7883750252332216}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          549: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.384267939782035, y: 0, z: 23.623376225222046}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6142538328241295, y: 0.6142538328241295, z: 0.6142538328241295}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          550: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.384267939782035, y: 0, z: 23.623376225222046}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6142538328241295, y: 0.6142538328241295, z: 0.6142538328241295}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          551: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 28.384267939782035, y: 0, z: 23.623376225222046}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6142538328241295, y: 0.6142538328241295, z: 0.6142538328241295}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          552: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.806156185177766, y: 0, z: 29.277671015661774}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.2411743988444877, y: 1.2411743988444877, z: 1.2411743988444877}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          553: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.806156185177766, y: 0, z: 29.277671015661774}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.2411743988444877, y: 1.2411743988444877, z: 1.2411743988444877}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          554: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.806156185177766, y: 0, z: 29.277671015661774}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.2411743988444877, y: 1.2411743988444877, z: 1.2411743988444877}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          555: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.099149736578006, y: 0, z: 24.7419197170754}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7710160446307253, y: 1.7710160446307253, z: 1.7710160446307253}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          556: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.099149736578006, y: 0, z: 24.7419197170754}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7710160446307253, y: 1.7710160446307253, z: 1.7710160446307253}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          557: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.099149736578006, y: 0, z: 24.7419197170754}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7710160446307253, y: 1.7710160446307253, z: 1.7710160446307253}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          558: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 8.30625369169505, y: 0, z: 16.185038440674994}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6620979930458553, y: 0.6620979930458553, z: 0.6620979930458553}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          559: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 8.30625369169505, y: 0, z: 16.185038440674994}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6620979930458553, y: 0.6620979930458553, z: 0.6620979930458553}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          560: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 8.30625369169505, y: 0, z: 16.185038440674994}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.6620979930458553, y: 0.6620979930458553, z: 0.6620979930458553}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          561: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.98172848809993, y: 0, z: 19.30980898263781}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6825048868785928, y: 1.6825048868785928, z: 1.6825048868785928}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          562: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.98172848809993, y: 0, z: 19.30980898263781}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6825048868785928, y: 1.6825048868785928, z: 1.6825048868785928}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          563: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.98172848809993, y: 0, z: 19.30980898263781}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6825048868785928, y: 1.6825048868785928, z: 1.6825048868785928}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          564: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 29.753421327934333, y: 0, z: 19.032926251163}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6806744344837512, y: 1.6806744344837512, z: 1.6806744344837512}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          565: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 29.753421327934333, y: 0, z: 19.032926251163}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6806744344837512, y: 1.6806744344837512, z: 1.6806744344837512}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          566: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 29.753421327934333, y: 0, z: 19.032926251163}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.6806744344837512, y: 1.6806744344837512, z: 1.6806744344837512}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          567: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.14078703565247, y: 0, z: 19.16777090916008}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0799487994976134, y: 1.0799487994976134, z: 1.0799487994976134}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          568: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.14078703565247, y: 0, z: 19.16777090916008}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0799487994976134, y: 1.0799487994976134, z: 1.0799487994976134}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          569: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 25.14078703565247, y: 0, z: 19.16777090916008}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.0799487994976134, y: 1.0799487994976134, z: 1.0799487994976134}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          570: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.84649248224558, y: 0, z: 15.173006065066577}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.638794073975717, y: 1.638794073975717, z: 1.638794073975717}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          571: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.84649248224558, y: 0, z: 15.173006065066577}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.638794073975717, y: 1.638794073975717, z: 1.638794073975717}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          572: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 16.84649248224558, y: 0, z: 15.173006065066577}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.638794073975717, y: 1.638794073975717, z: 1.638794073975717}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          573: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.967322839153798, y: 0, z: 11.413536361120766}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.973083373380174, y: 1.973083373380174, z: 1.973083373380174}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          574: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.967322839153798, y: 0, z: 11.413536361120766}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.973083373380174, y: 1.973083373380174, z: 1.973083373380174}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          575: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 15.967322839153798, y: 0, z: 11.413536361120766}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.973083373380174, y: 1.973083373380174, z: 1.973083373380174}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          576: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 12.799575711989803, y: 0, z: 29.355907761656567}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1048307081587738, y: 1.1048307081587738, z: 1.1048307081587738}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          577: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 12.799575711989803, y: 0, z: 29.355907761656567}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1048307081587738, y: 1.1048307081587738, z: 1.1048307081587738}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          578: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 12.799575711989803, y: 0, z: 29.355907761656567}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.1048307081587738, y: 1.1048307081587738, z: 1.1048307081587738}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          579: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.168921599317045, y: 0, z: 34.17277597356727}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.966576784231719, y: 1.966576784231719, z: 1.966576784231719}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          580: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.168921599317045, y: 0, z: 34.17277597356727}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.966576784231719, y: 1.966576784231719, z: 1.966576784231719}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          581: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 20.168921599317045, y: 0, z: 34.17277597356727}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.966576784231719, y: 1.966576784231719, z: 1.966576784231719}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          582: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.58928696296137, y: 0, z: 12.159153668950351}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7868456568068407, y: 1.7868456568068407, z: 1.7868456568068407}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          583: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.58928696296137, y: 0, z: 12.159153668950351}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7868456568068407, y: 1.7868456568068407, z: 1.7868456568068407}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          584: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 24.58928696296137, y: 0, z: 12.159153668950351}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.7868456568068407, y: 1.7868456568068407, z: 1.7868456568068407}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          585: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.203954177222172, y: 0, z: 24.64594635557479}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5490492632299238, y: 0.5490492632299238, z: 0.5490492632299238}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          586: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.203954177222172, y: 0, z: 24.64594635557479}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5490492632299238, y: 0.5490492632299238, z: 0.5490492632299238}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          587: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 31.203954177222172, y: 0, z: 24.64594635557479}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5490492632299238, y: 0.5490492632299238, z: 0.5490492632299238}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          588: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.332458662238384, y: 0, z: 18.205673943712686}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.625936478762763, y: 1.625936478762763, z: 1.625936478762763}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          589: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.332458662238384, y: 0, z: 18.205673943712686}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.625936478762763, y: 1.625936478762763, z: 1.625936478762763}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          590: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 14.332458662238384, y: 0, z: 18.205673943712686}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.625936478762763, y: 1.625936478762763, z: 1.625936478762763}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          591: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.095796382084197, y: 0, z: 9.581369025129009}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5927601084461009, y: 0.5927601084461009, z: 0.5927601084461009}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          592: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.095796382084197, y: 0, z: 9.581369025129009}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5927601084461009, y: 0.5927601084461009, z: 0.5927601084461009}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          593: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 11.095796382084197, y: 0, z: 9.581369025129009}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.5927601084461009, y: 0.5927601084461009, z: 0.5927601084461009}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          594: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.04403836351566, y: 0, z: 26.648556055851028}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.858973561156257, y: 0.858973561156257, z: 0.858973561156257}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          595: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.04403836351566, y: 0, z: 26.648556055851028}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.858973561156257, y: 0.858973561156257, z: 0.858973561156257}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          596: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 22.04403836351566, y: 0, z: 26.648556055851028}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 0.858973561156257, y: 0.858973561156257, z: 0.858973561156257}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          597: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.02803855662554, y: 0, z: 19.177481261083283}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.864975272301903, y: 1.864975272301903, z: 1.864975272301903}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          598: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.02803855662554, y: 0, z: 19.177481261083283}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.864975272301903, y: 1.864975272301903, z: 1.864975272301903}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            
+          599: !Arena
+            timeLimit: 150
+            items:
+            - !Item
+              name: GoodGoal
+              positions:
+              - !Vector3 {x: 26.02803855662554, y: 0, z: 19.177481261083283}
+              rotations: [0]
+              sizes:
+              - !Vector3 {x: 1.864975272301903, y: 1.864975272301903, z: 1.864975272301903}
+            - !Item
+              name: Agent
+              skins:
+              - "panda"
+              positions:
+              - !Vector3 {x: 20, y: 0, z: 20}
+              rotations: [0]
+            

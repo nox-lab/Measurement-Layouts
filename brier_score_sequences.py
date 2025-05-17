@@ -27,7 +27,7 @@ df = pd.read_csv(r"csv_recordings\predictive_data\predictive_results_for_agents.
 # ]
 
 # Extracting data points for the other two sequences
-model_steps_2 = np.arange(36)  # Steps from 40000 to 2000000
+model_steps_2 = np.arange(40)  # Steps from 40000 to 2000000
 # brier_scores_2 = [
 #     0.17337808203490276, 0.17830042465770793, 0.1782296865950011, 0.1654475201031205,
 #     0.17884793319958547, 0.1740263653028287, 0.18427187489752592, 0.17438116092365888,
@@ -67,7 +67,7 @@ model_steps_2 = np.arange(36)  # Steps from 40000 to 2000000
 # # Plot all three sequences with appropriate labels
 # plt.plot(model_steps, brier_scores, marker='o', linestyle='-', color='b', label='N = 200')
 
-with open(r"brier_scores_all_framestack.json", "r") as f:
+with open(r"all_brier_scores_progression_model_results_400k_camera_better.json", "r") as f:
     data = json.load(f)
 plt.figure(figsize=(10, 5))
 
@@ -77,8 +77,9 @@ plt.figure(figsize=(10, 5))
 plt.plot(model_steps_2, data["baseline"], marker='o', linestyle='-', color='b', label='Baseline')
 #plt.plot(model_steps_2, predicted_brier_scores, marker='o', linestyle='-', color='b', alpha = 0.5, label='Baseline expected')
 plt.plot(model_steps_2, data["model_single"], marker='s', linestyle='-', color='r', label='Single-time ML')
-#plt.plot(model_steps_2, data["model_full"], marker='s', linestyle='-', color='g', label='Full ML')
+# plt.plot(model_steps_2, data["model_full"], marker='s', linestyle='-', color='g', label='Full ML')
 plt.plot(model_steps_2, data["model"], marker='s', linestyle='-', color='m', label='Incremental ML')
+
 
 # plt.plot(model_steps_3, brier_scores_3, marker='^', linestyle='-', color='g', label='N = 100')
 # expected imagine p(y) = 0.7, now 0.7 of the time will be 1 but 0.3 of the time will be zero,
@@ -86,9 +87,9 @@ plt.plot(model_steps_2, data["model"], marker='s', linestyle='-', color='m', lab
 # Labels and title
 plt.xlabel("Optimisation Steps")
 plt.ylabel("Brier Score")
-plt.title("Brier Score over Model Progression (Incremental, Full)")
+plt.title("Brier Score over Model Progression")
 plt.legend()
 plt.grid(True)
-plt.savefig("brier_score_incremental_vs_full.png")
+plt.savefig("brier_score_incremental_vs_full_framestacking.png")
 # Show the combined plot
 plt.show()

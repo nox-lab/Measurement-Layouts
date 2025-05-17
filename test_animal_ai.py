@@ -48,7 +48,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         inference=watch_train, # set to True if you want to watch the agent play
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts=False, # set to True if you want to use raycasts
+        useRayCasts=True, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
         timescale=2, # the speed at which the simulation runs
         log_folder="aailogstrain", # env logs train
@@ -69,7 +69,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         inference = watch_eval, # set to True if you want to watch the agent play
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts=False, # set to True if you want to use raycasts
+        useRayCasts=True, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
         timescale=2, # the speed at which the simulation runs
         log_folder = "aailogseval", # env logs eval
@@ -84,7 +84,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     env_train = Monitor(env_train, filename=None, allow_early_resets=True) # Monitor the environment to log the rewards and other information
     env_train = DummyVecEnv([lambda: env_train])
     env_train = VecTransposeImage(env_train) # Transpose the image to match the expected input shape of the model
-    #env_train = VecFrameStack(env_train, n_stack=4, channels_order='first')
+    env_train = VecFrameStack(env_train, n_stack=4, channels_order='first')
 
     # --- Evaluation Environment ---
     env_eval = UnityToGymWrapper(aai_env_eval, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True)
@@ -92,7 +92,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     env_eval = Monitor(env_eval, filename=None, allow_early_resets=True) # Monitor the environment to log the rewards and other information
     env_eval = DummyVecEnv([lambda: env_eval])
     env_eval = VecTransposeImage(env_eval) # Transpose the image to match the expected input shape of the model
-    #env_eval = VecFrameStack(env_eval, n_stack=4, channels_order='first')
+    env_eval = VecFrameStack(env_eval, n_stack=4, channels_order='first')
     
     obs_train = env_train.reset()
     obs_eval = env_eval.reset()
@@ -129,7 +129,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
 # IMPORTANT! Replace the path to the application and the configuration file with the correct paths here:
 # Still need to report the error
 if __name__ == "__main__":
-    N = 100
+    N = 200
     N_train = 200
     config_generator = ConfigGenerator(very_precise = True)
     # Currently we have been using random demands, but we can make them SPECIAL
@@ -141,8 +141,8 @@ if __name__ == "__main__":
     env_path_eval = r"..\WINDOWS\AAI - Copy\Animal-AI.exe"
     configuration_file_train = r"example_batch_train.yaml"  # !!!!! ODD NUMBER OF ARENAS REQUIRED skips arenas for some reason !!!!!
     configuration_file_eval = r"example_batch_eval.yaml"
-    model_name = r"logs/camera_with_frame_stacking_400k/model_FS_camera"
-    recording_file = r"csv_recordings/camera_with_frame_stacking_400k.csv"
+    model_name = r"logs/raycasts_with_frame_stacking_500k/model_FS_ray"
+    recording_file = r"csv_recordings/raycasts_with_frame_stacking_500k.csv"
     rewards = train_agent_configs(configuration_file_train = configuration_file_train, configuration_file_eval = configuration_file_eval,
                                   evaluation_recording_file = recording_file, save_model = model_name, eval_freq = eval_freq,
                                   demands_list = demands_list, env_path_train = env_path_train, env_path_eval = env_path_eval,

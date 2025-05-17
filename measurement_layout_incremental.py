@@ -118,13 +118,14 @@ class incremental_measurement_layout():
     self.successes = successes.reshape((T, self.N))
     self.estimate_capabilities(layout, cap_labels)
 
-  def estimate_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"]):
+  def estimate_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"], squared_bias = False):
+    # This function estimates the capabilities of the agent using the SMC algorithm.
     # Noise should be at the end of the cap_labels every single time because we don't care about it, well I mean we do but we don't want to plot it.
     filename = self.filename
     folder = self.folder
     layout = layout(self.N, self.environmentData, noiselevel = self.noise_level, noisy_model_performance = self.noisy_model_performance)
     fk_model = ssm.Bootstrap(ssm=layout, data=self.successes)
-    my_pmmh = SMC(N=10000, fk=fk_model, collect = [Moments()])
+    my_pmmh = SMC(N=3000, fk=fk_model, collect = [Moments()])
     my_pmmh.run()
     processed_chain = my_pmmh.summaries.moments
     capability_profiles = dict()
@@ -155,21 +156,25 @@ class incremental_measurement_layout():
         if counter >= num_caps:
           break
         capability_name = cap_labels[counter]
-        ax3[i, j].set_title(f"Estimated {capability_name} capabilities")
+        ax3[i, j].set_title(f"Estimated {capability_name}")
+        if i != num_rows - 1 or j != 1:
+          ax3[i, j].set_ylabel("Capability Value (a.u.)")
         if self.test:
           ax3[i, j].plot(time_steps, self.capabilities[capability_name], label="True " + capability_name)
-        ax3[i, j].plot(time_steps, [mom["mean"][counter] for mom in processed_chain], label=capability_name, color = "grey")
-        ax3[i, j].fill_between(time_steps, np.array([mom["mean"][counter] for mom in processed_chain]) + 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), np.array([mom["mean"][counter] for mom in processed_chain]) - 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), alpha = 0.2, label = f"confidence {capability_name}", color = "grey")
+        ax3[i, j].plot(time_steps, [mom["mean"][counter] for mom in processed_chain], label=r"$\mu$", color = "grey")
+        ax3[i, j].fill_between(time_steps, np.array([mom["mean"][counter] for mom in processed_chain]) + 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), np.array([mom["mean"][counter] for mom in processed_chain]) - 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), alpha = 0.2, label = fr"$\mu \pm 2\sigma$", color = "grey")
         # this y lim line should stop the graph from being too zoomed out.
         ax3[i, j].set_ylim(np.min((np.array([mom["mean"][counter] for mom in processed_chain]) - 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]), 
         np.max((np.array([mom["mean"][counter] for mom in processed_chain]) + 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]))
         # if cap_labels[counter] == "nav":
         #   ax3[i, j].set_ylim(0, 10)
+        ax3[i,  j].set_xlabel("Optimisation Steps")
         ax3[i, j].legend()
         counter += 1
-    
-    ax3[num_rows - 1,1].bar(time_steps, self.overall_successes, label="Success rate")
-    ax3[num_rows - 1 ,1].set_xlabel("Optimisation Steps")
-    ax3[num_rows - 1,1].set_ylabel("Success rate")
+    ax3[num_rows - 1, 1].set_title("Evolution of Success Rate")
+    ax3[num_rows - 1,1].bar(time_steps, self.overall_successes, label="Success Rate")
+    ax3[num_rows - 1, 1].set_xlabel("Optimisation Steps")
+    ax3[num_rows - 1,1].set_ylabel("Success Rate")
+    fig3.tight_layout()
     fig3.savefig(rf"{folder}/{filename}/estimated_capabilities.png")
     #print(np.mean(processed_chain, 0))
