@@ -112,10 +112,12 @@ if __name__ == "__main__":
     else:
         folder = "csv_recordings"
         filename_no_ext_or_pref = "raycasts_with_frame_stacking_500k" # WRITE THE NAME OF THE FILE HERE
+        print("usinf file", filename_no_ext_or_pref)
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
         N = 200  # number of arenas
+        print("N = ", N)
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
