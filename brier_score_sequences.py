@@ -66,8 +66,8 @@ model_steps_2 = np.arange(40)  # Steps from 40000 to 2000000
 
 # # Plot all three sequences with appropriate labels
 # plt.plot(model_steps, brier_scores, marker='o', linestyle='-', color='b', label='N = 200')
-
-with open(r"all_brier_scores_progression_model_results_400k_camera_better.json", "r") as f:
+folder_name = "raycasts_with_frame_stacking_500k"
+with open(rf"all_brier_scores_{folder_name}.json", "r") as f:
     data = json.load(f)
 plt.figure(figsize=(10, 5))
 
@@ -87,9 +87,9 @@ plt.plot(model_steps_2, data["model"], marker='s', linestyle='-', color='m', lab
 # Labels and title
 plt.xlabel("Optimisation Steps")
 plt.ylabel("Brier Score")
-plt.title("Brier Score over Model Progression")
+plt.title("Brier Score over Model Training")
 plt.legend()
 plt.grid(True)
-plt.savefig("brier_score_incremental_vs_full_framestacking.png")
+plt.savefig(f"brier_score_incremental_vs_full_{folder_name}.png")
 # Show the combined plot
 plt.show()
