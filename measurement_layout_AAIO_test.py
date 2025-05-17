@@ -111,11 +111,11 @@ if __name__ == "__main__":
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
         folder = "csv_recordings"
-        filename_no_ext_or_pref = "camera_with_frame_stacking_400k"
+        filename_no_ext_or_pref = "raycasts_with_frame_stacking_500k" # WRITE THE NAME OF THE FILE HERE
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
-        N = 100  # number of arenas
+        N = 200  # number of arenas
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
         included_capabilities = [c for c in all_capabilities if c not in excluded_capabilities]
