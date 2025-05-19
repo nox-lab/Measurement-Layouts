@@ -16,7 +16,7 @@ import os
 # X is navigation, visual, bias, [distance, szie, behind, x_pos]
 class incremental_measurement_layout():
   def __init__(self, N, folder, filename, testing = False, noise_level: np.ndarray = np.array([0.0, 1.0]), draws = 1):
-    # Folder will specify where to save teh 
+    # Folder will specify where to save teh
     self.N = N
     self.folder = folder
     self.noise_level = noise_level
