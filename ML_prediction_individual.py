@@ -9,7 +9,7 @@ import re
 import json
 from various_measurement_layouts import Measurement_Layout_AAIO, Measurement_Layout_AAIO_NO_NAVIGATION, Measurement_Layout_AAIO_precise, Measurement_Layout_AAIO_SMOOTH
 
-capabilities_list = ["navigation", "visual", "bias", "noise"]
+capabilities_list = ["Navigation", "Visual", "Bias", "Noise"]
 measurement_layout_used = Measurement_Layout_AAIO
 added_folder = ""
 
@@ -23,14 +23,14 @@ if added_folder != "" and measurement_layout_used == Measurement_Layout_AAIO:
 noise_level = np.array([0, 0.4])
 capabilities_path = rf"estimated_capabilities/"
 N_eval = 200
-filename = r"raycasts_with_frame_stacking_500k"
-incremental_estimator = incremental_measurement_layout(N_eval, capabilities_path, filename=filename, noise_level=noise_level)
-incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
+filename = r"progression_model_results_400k_camera"
+# incremental_estimator = incremental_measurement_layout(N_eval, capabilities_path, filename=filename, noise_level=noise_level)
+# incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
 #raycasts + framestacking might be worth doing.
-N_predict = 200
+N_predict = 100
 folder_name = filename
 precise = True
-full_ML = False
+full_ML = True
 
 layout = measurement_layout_used
 
@@ -63,7 +63,10 @@ all_brier_scores = {
     "XGBOOST": [],
 }
 added_config_type = "very_precise"
+print(files)
 for model in files:
+    if i == 40:
+        break
     model_name = f"{log_dir}{model}"[6:-4] # remove the .zip
     print(model_name)
     print(f"Model {model_name} testing for predictive accuracy.")

@@ -66,7 +66,7 @@ model_steps_2 = np.arange(40)  # Steps from 40000 to 2000000
 
 # # Plot all three sequences with appropriate labels
 # plt.plot(model_steps, brier_scores, marker='o', linestyle='-', color='b', label='N = 200')
-folder_name = "raycasts_with_frame_stacking_500k"
+folder_name = "progression_model_results_400k_camera"
 with open(rf"all_brier_scores_{folder_name}.json", "r") as f:
     data = json.load(f)
 plt.figure(figsize=(10, 5))
@@ -77,7 +77,7 @@ plt.figure(figsize=(10, 5))
 plt.plot(model_steps_2, data["baseline"], marker='o', linestyle='-', color='b', label='Baseline')
 #plt.plot(model_steps_2, predicted_brier_scores, marker='o', linestyle='-', color='b', alpha = 0.5, label='Baseline expected')
 plt.plot(model_steps_2, data["model_single"], marker='s', linestyle='-', color='r', label='Single-time ML')
-# plt.plot(model_steps_2, data["model_full"], marker='s', linestyle='-', color='g', label='Full ML')
+plt.plot(model_steps_2, data["model_full"], marker='s', linestyle='-', color='g', label='Full ML')
 plt.plot(model_steps_2, data["model"], marker='s', linestyle='-', color='m', label='Incremental ML')
 
 
