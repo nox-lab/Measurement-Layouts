@@ -111,7 +111,7 @@ if __name__ == "__main__":
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
         folder = "csv_recordings"
-        filename_no_ext_or_pref = "progression_model_results_400k_camera" # WRITE THE NAME OF THE FILE HERE
+        filename_no_ext_or_pref = "raycasts_with_frame_stacking_500k" # WRITE THE NAME OF THE FILE HERE
         print("usinf file", filename_no_ext_or_pref)
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
