@@ -122,7 +122,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
     else:
         skip_model = False
-        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=150, numbered = False, seed = seed) # Creates yaml file with same demands as csv file.
+        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=300, numbered = False, seed = seed) # Creates yaml file with same demands as csv file.
         xpos = np.array([demand.Xpos for demand in list_of_demands])
         distance = np.array([demand.reward_distance for demand in list_of_demands])
         reward_size = np.array([demand.reward_size for demand in list_of_demands])
@@ -139,6 +139,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     if not skip_model:
         from test_animal_ai import train_agent_configs
         if os.path.exists(recorded_results):
+            print(f"Found results file at {recorded_results}")
             answer = input("Do you want to delete the recorded results file? (y/n)")
             if answer == "y":
                 os.remove(recorded_results)

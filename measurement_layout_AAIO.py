@@ -68,13 +68,13 @@ def setupModel(taskResults, environmentData, cholesky=None, includeIrrelevantFea
       sigma_performance = pm.Uniform("sigma_noise", lower=0, upper=1)
     if "ability_navigaton" not in exclude:
       sigma_nav = pm.HalfNormal("sigma_nav", sigma=1.0)
-      ability_nav = pm.GaussianRandomWalk("ability_navigation", mu = 0, sigma = sigma_nav, shape = T)
+      ability_nav = pm.GaussianRandomWalk("Navigation", mu = 0, sigma = sigma_nav, shape = T)
     if "ability_bias_rl" not in exclude:
       sigma_vis = pm.HalfNormal("sigma_vis", sigma=1.0)
-      ability_visual = pm.GaussianRandomWalk("ability_visual", mu = 0, sigma = sigma_vis, shape = T)
+      ability_visual = pm.GaussianRandomWalk("Visual", mu = 0, sigma = sigma_vis, shape = T)
     if (includeIrrelevantFeatures) :
       sigma_bias = pm.HalfNormal("sigma_bias", sigma=1.0)
-      ability_bias_rl = pm.GaussianRandomWalk("ability_bias_rl", mu = 0, sigma = sigma_bias, shape = T)                  # [-inf,inf] A parameter to determine whether left or right have an influence. It's expected to be zero, but negative would be left influence and positive a right influence (or vice versa :-)
+      ability_bias_rl = pm.GaussianRandomWalk("Bias", mu = 0, sigma = sigma_bias, shape = T)                  # [-inf,inf] A parameter to determine whether left or right have an influence. It's expected to be zero, but negative would be left influence and positive a right influence (or vice versa :-)
       abilityMin["rightLeftBias"] = -np.inf
       abilityMax["rightLeftBias"] = np.inf
 

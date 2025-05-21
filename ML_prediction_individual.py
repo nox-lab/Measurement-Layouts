@@ -24,13 +24,14 @@ noise_level = np.array([0, 0.4])
 capabilities_path = rf"estimated_capabilities/"
 N_eval = 200
 filename = r"progression_model_results_400k_camera"
-# incremental_estimator = incremental_measurement_layout(N_eval, capabilities_path, filename=filename, noise_level=noise_level)
+incremental_estimator = incremental_measurement_layout(N_eval, capabilities_path, filename=filename, noise_level=noise_level)
+# incremental_estimator.conditional_min_array_tests()
 # incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
 #raycasts + framestacking might be worth doing.
-N_predict = 100
+N_predict = 400
 folder_name = filename
 precise = True
-full_ML = True
+full_ML = False
 
 layout = measurement_layout_used
 
@@ -70,7 +71,7 @@ for model in files:
     model_name = f"{log_dir}{model}"[6:-4] # remove the .zip
     print(model_name)
     print(f"Model {model_name} testing for predictive accuracy.")
-    brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, seed = 2, load_eval = True, config_modifier = added_config_type,
+    brier_score, brier_score_XGBOOST, brier_score_baseline = prediction_accuracy(layout, folder_name, added_folder, model_name, N_predict, seed = 2, load_eval = False, config_modifier = added_config_type,
                         noise_level = noise_level, cap_time = i, N_eval = N_eval, full=full_ML)
     all_brier_scores["baseline"].append(brier_score_baseline)
     all_brier_scores["model"].append(brier_score)
@@ -80,22 +81,22 @@ for model in files:
     print(f"Brier score for baseline model {model_name} is {brier_score}")
     i += 1
 
-fig, ax = plt.subplots()
+# fig, ax = plt.subplots()
 
-for key in all_brier_scores:
-    ax.plot(range(len(all_brier_scores[key])), all_brier_scores[key], marker = "o", linestyle= "-", label = "Brier score for " + key)
-ax.set_title("Brier scores for different models")
-ax.set_xlabel("Time")
-ax.set_ylabel("Brier score")
-ax.legend()
-fig.savefig(f"brier_scores_{filename}.png")
-print("Brier scores saved.")
-if os.path.exists(f"all_brier_scores_{filename}.json"):
-    current_brier_scores = json.load(open(f"all_brier_scores_{filename}.json", "r"))
-    for key in all_brier_scores:
-        if key == "model" and full_ML:
-            current_brier_scores["model_full"] = all_brier_scores[key]
-            continue
-        current_brier_scores[key] = all_brier_scores[key]
+# for key in all_brier_scores:
+#     ax.plot(range(len(all_brier_scores[key])), all_brier_scores[key], marker = "o", linestyle= "-", label = "Brier score for " + key)
+# ax.set_title("Brier scores for different models")
+# ax.set_xlabel("Time")
+# ax.set_ylabel("Brier score")
+# ax.legend()
+# fig.savefig(f"brier_scores_{filename}.png")
+# print("Brier scores saved.")
+# if os.path.exists(f"all_brier_scores_{filename}.json"):
+#     current_brier_scores = json.load(open(f"all_brier_scores_{filename}.json", "r"))
+#     for key in all_brier_scores:
+#         if key == "model" and full_ML:
+#             current_brier_scores["model_full"] = all_brier_scores[key]
+#             continue
+#         current_brier_scores[key] = all_brier_scores[key]
     
-json.dump(current_brier_scores, open(f"all_brier_scores_{filename}.json", "w"))
+# json.dump(current_brier_scores, open(f"all_brier_scores_{filename}.json", "w"))

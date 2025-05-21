@@ -57,7 +57,12 @@ module load rhel8/default-ccl              # REQUIRED - loads the basic environm
 #! Insert additional module load commands after this line if needed:
 eval "$(conda shell.bash hook)"
 conda activate measurement_layouts
-python measurement_layout_AAIO_test.py
+python measurement_layout_AAIO_test.py test
+python measurement_layout_AAIO_test.py camera_with_frame_stacking_400k
+python measurement_layout_AAIO_test.py raycasts_with_frame_stacking_500k
+python measurement_layout_AAIO_test.py progression_model_results_2M_N1000 1000
+python measurement_layout_AAIO_test.py progression_model_results_400k_camera
+
 #! Full path to application executable: 
 application=""
 

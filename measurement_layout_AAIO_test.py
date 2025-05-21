@@ -7,11 +7,33 @@ from typing import Callable
 import numpy.typing as npt
 import pandas as pd
 from measurement_layout_AAIO import *
+import sys
+import os
 
 if __name__ == "__main__":
+    for args in sys.argv:
+        print(args)
+    if len(sys.argv) > 1:
+        filename_no_ext_or_pref = sys.argv[1]
+        print("using file", filename_no_ext_or_pref)
+        print(len(sys.argv))
+    else:
+        filename_no_ext_or_pref = "raycasts_with_frame_stacking_400k"
+        print("using file", filename_no_ext_or_pref)
+    if sys.argv[1] == "test":
+        test_synthetic = True
+    else:   
+        test_synthetic = False
+        
+    if len(sys.argv) > 2:
+        N = int(sys.argv[2])
+        print("specified N = ", N)
+    else:
+        N = 200
+        print("default N = ", N)
+    exit()
     includeIrrelevantFeatures = True
     includeNoise=False
-    test_synthetic = False
     save_samples = False
     show_max = False
     environmentData = dict()
@@ -32,14 +54,14 @@ if __name__ == "__main__":
     product_on_time_varying: Callable[[npt.ArrayLike,npt.ArrayLike], npt.ArrayLike] = lambda capability, demand : (capability[:,None]*demand)
     environmentData["abilityMax"] = abilityMax
     environmentData["abilityMin"] = abilityMin
-    all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
+    all_capabilities = ["Navigation", "Visual", "Bias"]
     excluded_capabilities_string = ""
     maximum_capabilites = None
     if test_synthetic:
         filename_no_ext = "NOTHING"
         filename_no_ext_or_pref = "NOTHING"
-        T = 25  # number of time steps
-        N = 10  # number of samples
+        T = 10  # number of time steps
+        N = 25  # number of samples
         learn_time_nav = 0.5*T
         learn_time_vis = 0.2*T
         learn_time_bias = 0.3*T
@@ -48,7 +70,7 @@ if __name__ == "__main__":
         capability_vis = logistic((time_steps - learn_time_vis)/(T/5))*1.9
         capability_bias = logistic((time_steps- 30)/(T/5))
         np.random.seed(0)
-        included_capabilities = [["ability_navigation", capability_nav], ["ability_visual", capability_vis], ["ability_bias_rl", capability_bias]]
+        included_capabilities = [["Navigation", capability_nav], ["Visual", capability_vis], ["Bias", capability_bias]]
         relevant_figs = [(cap, plt.subplots()) for cap in included_capabilities]
         # Task demand creation, representing a range of arenas
         behind = np.random.choice([0, 0.5, 1], N) # 0 if in front of agent's front facing direction, 0.5 if l/r of agent's front facing direction, 1 if behind agent's front facing direction
@@ -86,9 +108,9 @@ if __name__ == "__main__":
                 else:
                     color = colors[8]
             ax_demands.plot(distance[i], reward_size[i], marker="o", color=color, alpha=0.2)
-        ax_demands.set_xlabel("distance")
-        ax_demands.set_ylabel("reward size")
-        ax_demands.title.set_text("Demands for arenas")
+        ax_demands.set_xlabel("Distance")
+        ax_demands.set_ylabel("Reward Size")
+        ax_demands.title.set_text("Arena Demands")
         fig_demands.savefig("demands.png")
 
 
@@ -111,12 +133,10 @@ if __name__ == "__main__":
             ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
     else:
         folder = "csv_recordings"
-        filename_no_ext_or_pref = "raycasts_with_frame_stacking_500k" # WRITE THE NAME OF THE FILE HERE
         print("usinf file", filename_no_ext_or_pref)
         filename_no_ext = folder + r"/" + filename_no_ext_or_pref
         filename = filename_no_ext + ".csv"
         # filename = "fixed_hopefully_test_file.csv" 
-        N = 200  # number of arenas
         print("N = ", N)
         excluded_capabilities = []
         excluded_capabilities_string = "_".join(excluded_capabilities)
@@ -187,5 +207,6 @@ if __name__ == "__main__":
             ax.plot([], [], color="red", linestyle="--", label="Capability bound")
         ax.set_title(f"Estimated {cap}")
         ax.set_xlabel("Optimisation Steps")
+        ax.set_ylabel("Capability Value (a.u.)")
         ax.legend()
         fig.savefig(f"./estimated_capabilities/{filename_no_ext_or_pref}/{cap}_profile_FULL.png")

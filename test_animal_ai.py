@@ -48,9 +48,9 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         inference=watch_train, # set to True if you want to watch the agent play
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts=True, # set to True if you want to use raycasts
+        useRayCasts=False, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=2, # the speed at which the simulation runs
+        timescale=5, # the speed at which the simulation runs
         log_folder="aailogstrain", # env logs train
         targetFrameRate= -1 # no limit on frame rate, fast as possible.
     )
@@ -69,9 +69,9 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         inference = watch_eval, # set to True if you want to watch the agent play
         useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts=True, # set to True if you want to use raycasts
+        useRayCasts=False, # set to True if you want to use raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=2, # the speed at which the simulation runs
+        timescale=5, # the speed at which the simulation runs
         log_folder = "aailogseval", # env logs eval
         targetFrameRate=-1
     )
@@ -84,7 +84,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     env_train = Monitor(env_train, filename=None, allow_early_resets=True) # Monitor the environment to log the rewards and other information
     env_train = DummyVecEnv([lambda: env_train])
     env_train = VecTransposeImage(env_train) # Transpose the image to match the expected input shape of the model
-    env_train = VecFrameStack(env_train, n_stack=4, channels_order='first')
+    # env_train = VecFrameStack(env_train, n_stack=4, channels_order='first')
 
     # --- Evaluation Environment ---
     env_eval = UnityToGymWrapper(aai_env_eval, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True)
@@ -92,7 +92,7 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
     env_eval = Monitor(env_eval, filename=None, allow_early_resets=True) # Monitor the environment to log the rewards and other information
     env_eval = DummyVecEnv([lambda: env_eval])
     env_eval = VecTransposeImage(env_eval) # Transpose the image to match the expected input shape of the model
-    env_eval = VecFrameStack(env_eval, n_stack=4, channels_order='first')
+    # env_eval = VecFrameStack(env_eval, n_stack=4, channels_order='first')
     
     obs_train = env_train.reset()
     obs_eval = env_eval.reset()

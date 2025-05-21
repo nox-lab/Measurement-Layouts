@@ -15,7 +15,7 @@ import os
 
 # X is navigation, visual, bias, [distance, szie, behind, x_pos]
 class incremental_measurement_layout():
-  def __init__(self, N, folder, filename, testing = False, noise_level: np.ndarray = np.array([0.0, 1.0]), draws = 1):
+  def __init__(self, N, folder, filename, testing = False, noise_level: np.ndarray = np.array([0.0, 1.0]), draws = 1, squared_bias = False):
     # Folder will specify where to save teh
     self.N = N
     self.folder = folder
@@ -23,6 +23,7 @@ class incremental_measurement_layout():
     self.filename = filename
     self.T = 0
     self.draws = draws
+    self.squared_bias = squared_bias
     if not testing:
       self.environmentData = pd.read_csv(rf"csv_recordings/{filename}.csv")
       rewards_from_evaluation = self.environmentData["reward"].to_numpy()
@@ -47,14 +48,15 @@ class incremental_measurement_layout():
     learn_time_vis = 0.2*T
     learn_time_bias = 0.3*T
     max_dist = 5.3
+    max_vis = 1.9
     time_steps = np.linspace(1, T, T)
     capability_nav = self.logistic((time_steps - learn_time_nav)/(T/5))*max_dist #particular point where significant learning occurs, and rate at which this is is determined by the denominator
-    capability_vis = self.logistic((time_steps - learn_time_vis)/(T/5))*1.9
+    capability_vis = self.logistic((time_steps - learn_time_vis)/(T/5))*max_vis
     capability_bias = self.logistic((time_steps- learn_time_bias)/(T/5))
     
-    self.capabilities["nav"] = capability_nav
-    self.capabilities["visual"] = capability_vis
-    self.capabilities["bias"] = capability_bias
+    self.capabilities["Navigation"] = capability_nav
+    self.capabilities["Visual"] = capability_vis
+    self.capabilities["Bias"] = capability_bias
     
     xpos = np.random.choice([-1, 0, 1], self.N)
     distance = np.random.uniform(0, max_dist, self.N)
@@ -105,8 +107,8 @@ class incremental_measurement_layout():
     ax_demands.set_xlabel("distance")
     ax_demands.set_ylabel("reward size")
     ax_demands.title.set_text("Demands for arenas")
-    fig_demands.savefig(rf"{self.folder}/{self.filename}/demands.png")
-    self.estimate_capabilities(layout, cap_labels = ["nav", "visual", "bias", "noise"])
+    fig_demands.savefig(rf"{self.folder}/{self.filename}/demands_test.png")
+    self.estimate_capabilities(layout, cap_labels = ["Navigation", "Visual", "Bias", "Noise"])
     print("Base test done")
 
   def real_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"]):
@@ -117,6 +119,47 @@ class incremental_measurement_layout():
     successes = successes.astype(int)
     self.successes = successes.reshape((T, self.N))
     self.estimate_capabilities(layout, cap_labels)
+
+  def conditional_min_array(self, a, b):
+      a = np.asarray(a)
+      b = np.asarray(b)
+      same_sign = np.sign(a) == np.sign(b)
+      return np.where(same_sign, np.minimum(np.abs(a), np.abs(b)), 0.0)
+
+
+  def conditional_min_array_tests(self):
+      a = np.array([1, 2, 3])
+      b = np.array([-1, -2, -3])
+      print("a:", a)
+      print("b:", b)
+      result = self.conditional_min_array(a, b)
+      print("Result:", result)
+      assert np.array_equal(result, np.array([0, 0, 0]))
+
+      a = np.array([-1, -2, -3])
+      b = np.array([1, 2, 3])
+      print("a:", a)
+      print("b:", b)
+      result = self.conditional_min_array(a, b)
+      print("Result:", result)
+      assert np.array_equal(result, np.array([0, 0, 0]))
+
+      a = np.array([0, 0, 0])
+      b = np.array([0, 0, 0])
+      print("a:", a)
+      print("b:", b)
+      result = self.conditional_min_array(a, b)
+      print("Result:", result)
+      assert np.array_equal(result, np.array([0, 0, 0]))
+      
+      a = np.array([1, 2, 3])
+      b = np.array([2, 1, 0])
+      print("a:", a)
+      print("b:", b)
+      result = self.conditional_min_array(a, b)
+      print("Result:", result)
+      assert np.array_equal(result, np.array([1, 1, 0]))
+    
 
   def estimate_capabilities(self, layout, cap_labels = ["nav", "visual", "bias", "noise"], squared_bias = False):
     # This function estimates the capabilities of the agent using the SMC algorithm.
@@ -149,6 +192,8 @@ class incremental_measurement_layout():
     num_rows = int(num_caps//2 + 1)
     fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
     counter = 0
+    added_extension = "_sqbias" if self.squared_bias else ""
+    
     for i in range(num_rows):
       for j in range(2):
         if i == num_rows - 1 and j == 1:
@@ -156,16 +201,32 @@ class incremental_measurement_layout():
         if counter >= num_caps:
           break
         capability_name = cap_labels[counter]
-        ax3[i, j].set_title(f"Estimated {capability_name}")
+        capability_mean = [mom["mean"][counter] for mom in processed_chain]
+        capability_var = [mom["var"][counter] for mom in processed_chain]
+        capability_mean = np.array(capability_mean)
+        capability_var = np.array(capability_var)
+        capability_upper = capability_mean + 2*np.sqrt(capability_var)
+        capability_lower = capability_mean - 2*np.sqrt(capability_var)
+        added_title_modifier = ""
+        if capability_name.lower() == "bias" and self.squared_bias:
+            capability_mean = capability_mean**2
+            capability_upper_sq = np.maximum(capability_upper**2, capability_lower**2)
+            capability_lower_sq = self.conditional_min_array(capability_lower, capability_upper)**2
+            capability_upper = capability_upper_sq
+            capability_lower = capability_lower_sq
+            added_title_modifier = " (squared)"
+
+          
+        ax3[i, j].set_title(f"Estimated {capability_name}{added_title_modifier}")
         if i != num_rows - 1 or j != 1:
           ax3[i, j].set_ylabel("Capability Value (a.u.)")
         if self.test:
-          ax3[i, j].plot(time_steps, self.capabilities[capability_name], label="True " + capability_name)
-        ax3[i, j].plot(time_steps, [mom["mean"][counter] for mom in processed_chain], label=r"$\mu$", color = "grey")
-        ax3[i, j].fill_between(time_steps, np.array([mom["mean"][counter] for mom in processed_chain]) + 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), np.array([mom["mean"][counter] for mom in processed_chain]) - 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])), alpha = 0.2, label = fr"$\mu \pm 2\sigma$", color = "grey")
+          ax3[i, j].plot(time_steps, self.capabilities[capability_name], label="True")
+        ax3[i, j].plot(time_steps, capability_mean, label=r"$\mu$", color = "grey")
+        ax3[i, j].fill_between(time_steps, capability_upper, capability_lower, alpha = 0.2, label = fr"$\mu \pm 2\sigma$", color = "grey")
         # this y lim line should stop the graph from being too zoomed out.
-        ax3[i, j].set_ylim(np.min((np.array([mom["mean"][counter] for mom in processed_chain]) - 2*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]), 
-        np.max((np.array([mom["mean"][counter] for mom in processed_chain]) + 1*np.sqrt(np.array([mom["var"][counter] for mom in processed_chain])))[0:-1]))
+        ax3[i, j].set_ylim(np.min(capability_lower), 
+        np.max(capability_upper))
         # if cap_labels[counter] == "nav":
         #   ax3[i, j].set_ylim(0, 10)
         ax3[i,  j].set_xlabel("Optimisation Steps")
@@ -176,5 +237,5 @@ class incremental_measurement_layout():
     ax3[num_rows - 1, 1].set_xlabel("Optimisation Steps")
     ax3[num_rows - 1,1].set_ylabel("Success Rate")
     fig3.tight_layout()
-    fig3.savefig(rf"{folder}/{filename}/estimated_capabilities.png")
+    fig3.savefig(rf"{folder}/{filename}/estimated_capabilities{added_extension}.png")
     #print(np.mean(processed_chain, 0))
