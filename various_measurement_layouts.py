@@ -20,7 +20,7 @@ import os
 # Now with variable variance !
 class Measurement_Layout_AAIO(ssm.StateSpaceModel):
     # Changing the priors leads to very different capability estimates. 
-    def __init__(self, N : int, environmentData : DataFrame, sigmanav = 1, sigmavis = 1, sigmabias = 1, noiselevel: np.ndarray = np.array([0, 1]), noisy_model_performance = 0):
+    def __init__(self, N : int, environmentData : DataFrame, sigmanav = 10, sigmavis = 1, sigmabias = 1, noiselevel: np.ndarray = np.array([0, 1]), noisy_model_performance = 0):
         self.sigmanav = sigmanav
         self.sigmavis = sigmavis
         self.sigmabias = sigmabias
@@ -44,7 +44,7 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
         return dists.IndepProd(dists.Normal(loc=0, scale = self.sigmanav),
                                dists.Normal(loc=0, scale = self.sigmavis),
                                dists.Normal(loc=0, scale = self.sigmabias),
-                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=0, sigma = 5, a = 0, b = 99),
                                dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
                                dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
                                dists.Uniform(a=self.noise_min, b=self.noise_max),
@@ -55,8 +55,8 @@ class Measurement_Layout_AAIO(ssm.StateSpaceModel):
                                dists.Normal(loc=xp[:, 1], scale = xp[:, 4]),
                                dists.Normal(loc=xp[:, 2], scale = xp[:, 5]),
                                dists.TruncNormal(mu=xp[:, 3], sigma = 1, a = 0, b = 99),
-                               dists.TruncNormal(mu=xp[:, 4], sigma = 1, a = 0, b = 99),
-                               dists.TruncNormal(mu=xp[:, 5], sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=xp[:, 4], sigma = 0.5, a = 0, b = 99),
+                               dists.TruncNormal(mu=xp[:, 5], sigma = 0.5, a = 0, b = 99),
                                dists.Uniform(a=self.noise_min, b=self.noise_max),
                                )
 
@@ -147,7 +147,7 @@ class Measurement_Layout_AAIO_precise(ssm.StateSpaceModel):
 
 # Now with variable variance !
 class Measurement_Layout_AAIO_NO_NAVIGATION(ssm.StateSpaceModel):
-    def __init__(self, N : int, environmentData : DataFrame, sigmavis = 10, sigmabias = 10, noiselevel: np.ndarray = np.array([0, 1]), noisy_model_performance = 0):
+    def __init__(self, N : int, environmentData : DataFrame, sigmavis = 1, sigmabias = 1, noiselevel: np.ndarray = np.array([0, 1]), noisy_model_performance = 0):
         self.sigmavis = sigmavis
         self.sigmabias = sigmabias
         self.distance = environmentData["reward_distance"][:N].to_numpy()
@@ -171,8 +171,8 @@ class Measurement_Layout_AAIO_NO_NAVIGATION(ssm.StateSpaceModel):
     def PX0(self):
         return dists.IndepProd(dists.Normal(loc=0, scale = self.sigmavis),
                                dists.Normal(loc=0, scale = self.sigmabias),
-                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
-                               dists.TruncNormal(mu=0, sigma = 1, a = 0, b = 99),
+                               dists.TruncNormal(mu=0, sigma = 0.5, a = 0, b = 99),
+                               dists.TruncNormal(mu=0, sigma = 0.5, a = 0, b = 99),
                                dists.Uniform(a=self.noise_min, b=self.noise_max),
                                )
 

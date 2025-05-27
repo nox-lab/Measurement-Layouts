@@ -122,7 +122,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
         list_of_demands = [Demands(reward_size[i], distance[i], behind[i], xpos[i]) for i in range(N)]
     else:
         skip_model = False
-        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=300, numbered = False, seed = seed) # Creates yaml file with same demands as csv file.
+        yaml_string, list_of_demands = config_generator.gen_config_from_demands_batch_random(N, "example_batch_predictive.yaml", dist_max = max_distance, dist_min = min_distance, size_max = max_size, size_min = min_size, time_limit=150, numbered = False, seed = seed) # Creates yaml file with same demands as csv file.
         xpos = np.array([demand.Xpos for demand in list_of_demands])
         distance = np.array([demand.reward_distance for demand in list_of_demands])
         reward_size = np.array([demand.reward_size for demand in list_of_demands])
@@ -276,10 +276,11 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     outputFeatures = ["reward"]
     
     XTrain = evaluation_for_capabilities_data[inputFeatures].to_numpy()[-N_eval:]
-    YTrain = evaluation_for_capabilities_data[outputFeatures].to_numpy()[cap_time*N_eval:(cap_time+1)*N_eval] > 0.9
+    
+    YTrain = evaluation_for_capabilities_data[outputFeatures].to_numpy()[cap_time*N_eval:(cap_time+1)*N_eval] > -0.9
     
     XTest = recorded_results[inputFeatures].to_numpy()
-    YTest = recorded_results[outputFeatures].to_numpy() > 0.9
+    YTest = recorded_results[outputFeatures].to_numpy() > -0.9
     
     model = XGBClassifier(objective='binary:logistic')
     # Set up KFold cross-validation
@@ -287,6 +288,7 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
     model.fit(XTrain, YTrain)
     # Make predictions on the test data
     yPredictions = model.predict_proba(XTest)[:, 1]  # Get the probabilities for the positive class
+    print(yPredictions)
     YTest = YTest.flatten()
     brierScoreXGBoost, calibrationXGBoost, refinementXGBoost = brierDecomp(yPredictions, YTest)
 
@@ -341,7 +343,8 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
                               (original_dataframe['model_used'] == "XGBoost")].empty:
         print("Model results already exist in the CSV file. Skipping update.")
     else:
-        df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
+        pass
+    df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
     
     result_data_baseline = {
         "model_name": model_name,
@@ -363,5 +366,6 @@ def prediction_accuracy(layout : ssm.StateSpaceModel, folder_name, added_folder,
                               (original_dataframe['model_used'] == "proportional")].empty:
         print("Model results already exist in the CSV file. Skipping update.")
     else:
-        df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
+        pass
+    df.to_csv(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv", mode='a', header=not pd.io.common.file_exists(rf"./csv_recordings/predictive_data/predictive_results_for_agents.csv"), index=False)
     return brier_score, brierScoreXGBoost, baseline_brier_score

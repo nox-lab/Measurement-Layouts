@@ -31,18 +31,19 @@ def train_agent_single_config(configuration_file, env_path , log_bool = False, a
         inference=watch, # set to True if you want to watch the agent play
         useCamera=True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts=False, # set to True if you want to use raycasts
+        useRayCasts=True, # set to True if you want to use raycasts
         no_graphics=False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=5
+        timescale=5,
+        log_folder = "aailogs_training_test"
     )
 
-    env = UnityToGymWrapper(aai_env, uint8_visual=True, allow_multiple_obs=False, flatten_branched=True) # the wrapper for the environment
+    env = UnityToGymWrapper(aai_env, uint8_visual=True, allow_multiple_obs=True, flatten_branched=True) # the wrapper for the environment
     
     runname = "closed_45_angle_straight_path" # the name of the run, used for logging
 
     policy_kwargs = dict(activation_fn=th.nn.ReLU) # the policy kwargs for the PPO agent, such as the activation function
     
-    model = PPO("CnnPolicy", env,  n_steps = 4096, batch_size = 64, clip_range=0.2, ent_coef=0.01, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogs" + runname) # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483    # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
+    model = PPO("MlpPolicy", env,  n_steps = 4096, batch_size = 64, clip_range=0.2, ent_coef=0.01, policy_kwargs=policy_kwargs, verbose=1, tensorboard_log="./tensorboardLogs" + runname) # the PPO agent, HYPERPARAMETERS FROM https://arxiv.org/pdf/1909.07483    # verbosity level: 0 for no output, 1 for info messages (such as device or wrappers used), 2 for debug messages
     
     model.learn(num_steps, reset_num_timesteps=False)
     

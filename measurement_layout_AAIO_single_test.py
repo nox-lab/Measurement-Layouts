@@ -34,7 +34,7 @@ environmentData["abilityMin"] = abilityMin
 all_capabilities = ["ability_navigation", "ability_visual", "ability_bias_rl"]
 
 N = 200  # number of samples
-folder_name = "raycasts_with_frame_stacking_500k"
+folder_name = "raycasts_alone_500k"
 df_final = pd.read_csv(f"csv_recordings/{folder_name}.csv")
 excluded_capabilities = []
 excluded_capabilities_string = "_".join(excluded_capabilities)

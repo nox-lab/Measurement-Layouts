@@ -171,13 +171,14 @@ class incremental_measurement_layout():
     my_pmmh = SMC(N=3000, fk=fk_model, collect = [Moments()])
     my_pmmh.run()
     processed_chain = my_pmmh.summaries.moments
+    print(processed_chain)
     capability_profiles = dict()
     if not os.path.exists(rf"{folder}/{filename}"):
       os.makedirs(rf"{folder}/{filename}")
     for i in range(len(cap_labels)):
       capability_profiles[cap_labels[i]] = dict()
       j = i
-      if cap_labels[i] == "noise":
+      if cap_labels[i].lower() == "noise":
         j = -1
         print("Noise")
       capability_profiles[cap_labels[i]]["mean"] = [mom["mean"][j] for mom in processed_chain]
@@ -193,7 +194,7 @@ class incremental_measurement_layout():
     fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
     counter = 0
     added_extension = "_sqbias" if self.squared_bias else ""
-    
+    print(f"Mean {cap_labels[i]}: {capability_profiles[cap_labels[i]]['mean']}")
     for i in range(num_rows):
       for j in range(2):
         if i == num_rows - 1 and j == 1:
@@ -201,8 +202,8 @@ class incremental_measurement_layout():
         if counter >= num_caps:
           break
         capability_name = cap_labels[counter]
-        capability_mean = [mom["mean"][counter] for mom in processed_chain]
-        capability_var = [mom["var"][counter] for mom in processed_chain]
+        capability_mean = capability_profiles[capability_name]["mean"]
+        capability_var = capability_profiles[capability_name]["var"]
         capability_mean = np.array(capability_mean)
         capability_var = np.array(capability_var)
         capability_upper = capability_mean + 2*np.sqrt(capability_var)
