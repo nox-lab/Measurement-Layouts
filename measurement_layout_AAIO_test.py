@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print("using file", filename_no_ext_or_pref)
         print(len(sys.argv))
     else:
-        filename_no_ext_or_pref = "raycasts_with_frame_stacking_400k"
+        filename_no_ext_or_pref = "camera_with_frame_stacking_400k"
         print("using file", filename_no_ext_or_pref)
     if sys.argv[1] == "test":
         test_synthetic = True
@@ -31,7 +31,6 @@ if __name__ == "__main__":
     else:
         N = 200
         print("default N = ", N)
-    exit()
     includeIrrelevantFeatures = True
     includeNoise=False
     save_samples = False
@@ -60,8 +59,8 @@ if __name__ == "__main__":
     if test_synthetic:
         filename_no_ext = "NOTHING"
         filename_no_ext_or_pref = "NOTHING"
-        T = 10  # number of time steps
-        N = 25  # number of samples
+        T = 100  # number of time steps
+        N = 500  # number of samples
         learn_time_nav = 0.5*T
         learn_time_vis = 0.2*T
         learn_time_bias = 0.3*T
@@ -122,15 +121,15 @@ if __name__ == "__main__":
         prop_successes = np.mean(successes, axis=1)
         figtest, axtest = plt.subplots()
         axtest.bar(range(T), prop_successes, color="grey", label = "successes proportion", alpha=0.2)
-        axtest.plot(range(T), capability_nav/5.3, label="True capability navigation value")
-        axtest.plot(range(T), capability_vis/1.9, label="True capability visual value")
-        axtest.plot(range(T), capability_bias, label="True capability bias value")
+        axtest.plot(range(T), capability_nav/5.3, label="True")
+        axtest.plot(range(T), capability_vis/1.9, label="True")
+        axtest.plot(range(T), capability_bias, label="True")
         axtest.set_xlabel("timestep")
         axtest.legend()
         figtest.savefig("true_values.png")
         # Visualise the true values of the capability profiles
         for cap, (fig, ax) in relevant_figs:
-            ax.plot(range(T), cap[1], label=f"True capability {cap[0]} value")
+            ax.plot(range(T), cap[1], label=f"Ground Truth Evolution")
     else:
         folder = "csv_recordings"
         print("usinf file", filename_no_ext_or_pref)
@@ -172,9 +171,12 @@ if __name__ == "__main__":
     # %%
     m = setupModel(successes, environmentData=environmentData, includeIrrelevantFeatures=includeIrrelevantFeatures, includeNoise=includeNoise, N = N)
 
-
-    with m:
-        inference_data = pm.sample(1000, target_accept=0.95, cores=2)
+    if not os.path.exists(f"./estimated_capabilities/{filename_no_ext_or_pref}"):
+        with m:
+            inference_data = pm.sample(1000, target_accept=0.95, cores=2)
+        no_path = True
+    else:
+        no_path = False
 
     if test_synthetic:
         final_str = "_test.png"
@@ -187,14 +189,20 @@ if __name__ == "__main__":
             final_str = "_excluding_" + excluded_capabilities_string + ".png"
     for cap, (fig, ax) in relevant_figs:
         cap = cap[0]
-        estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
+        if no_path:
+            estimated_p_per_ts = inference_data["posterior"][f"{cap}"].mean(dim=["chain", "draw"])
+            estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
+            low_hdis = [l for l,_ in estimate_hdis]
+            high_hdis = [u for _,u in estimate_hdis]
+        else:
+            estimated_p_per_ts = np.load(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL.npy")
+            low_hdis = np.load(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL_low_hdi.npy")
+            high_hdis = np.load(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL_high_hdi.npy")
         
         # Save the estimated capabilities
         np.save(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL.npy", estimated_p_per_ts)
         # TODO: Understand the hdi function a bit more (why does this 'just work'?)
-        estimate_hdis = az.hdi(inference_data["posterior"][f"{cap}"], hdi_prob=0.95)[f"{cap}"]
-        low_hdis = [l for l,_ in estimate_hdis]
-        high_hdis = [u for _,u in estimate_hdis]
+
         np.save(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL_low_hdi.npy", np.array(low_hdis))
         np.save(f"./estimated_capabilities/{filename_no_ext_or_pref}/_estimated_{cap}_FULL_high_hdi.npy", np.array(high_hdis))
         # TODO: Is it justified to do sigmoid of the mean?

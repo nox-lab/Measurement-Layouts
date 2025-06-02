@@ -10,17 +10,17 @@ Direct3D:
     VRAM:     1906 MB
     Driver:   32.0.15.6119
 Begin MonoManager ReloadAssembly
-- Completed reload, in  0.238 seconds
+- Completed reload, in  0.128 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.081700 ms
+UnloadTime: 0.897000 ms
 Environment loaded with options:
   PlayerMode: False
-  useCamera: False
+  useCamera: True
   Resolution: 64
   grayscale: False
-  useRayCasts: True
+  useRayCasts: False
   raysPerSide: 2
   rayMaxDegrees: 60
 Registered Communicator in Agent.
@@ -55,7 +55,7 @@ Memory Statistics:
 [ALLOC_TEMP_TLS] TLS Allocator
   StackAllocators : 
     [ALLOC_TEMP_MAIN]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 1 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 2 frames, [2.0 MB-4.0 MB]: 1 frames
       Initial Block Size 4.0 MB
       Current Block Size 4.0 MB
       Peak Allocated Bytes 2.3 MB
@@ -68,7 +68,7 @@ Memory Statistics:
     [ALLOC_TEMP_Loading.PreloadManager]
       Initial Block Size 256.0 KB
       Current Block Size 276.0 KB
-      Peak Allocated Bytes 270.5 KB
+      Peak Allocated Bytes 271.9 KB
       Overflow Count 4
     [ALLOC_TEMP_Background Job.Worker 8]
       Initial Block Size 32.0 KB
@@ -78,12 +78,12 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 6]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 0.8 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 0]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 24.9 KB
+      Peak Allocated Bytes 1.3 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 10]
       Initial Block Size 32.0 KB
@@ -98,7 +98,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 5]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 13.9 KB
+      Peak Allocated Bytes 2.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 14]
       Initial Block Size 32.0 KB
@@ -118,7 +118,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 3]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 1.3 KB
+      Peak Allocated Bytes 2.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 12]
       Initial Block Size 32.0 KB
@@ -183,17 +183,17 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 7]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 0.6 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 1]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 0.8 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Job.Worker 2]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 6.1 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 3]
       Initial Block Size 32.0 KB
@@ -208,7 +208,7 @@ Memory Statistics:
     [ALLOC_TEMP_Job.Worker 10]
       Initial Block Size 256.0 KB
       Current Block Size 256.0 KB
-      Peak Allocated Bytes 1.9 KB
+      Peak Allocated Bytes 24.9 KB
       Overflow Count 0
     [ALLOC_TEMP_Background Job.Worker 0]
       Initial Block Size 32.0 KB
@@ -232,16 +232,16 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_DEFAULT_MAIN]
-      Peak usage frame count: [8.0 MB-16.0 MB]: 2 frames
+      Peak usage frame count: [8.0 MB-16.0 MB]: 3 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 14.4 MB
+      Peak Allocated memory 14.3 MB
       Peak Large allocation bytes 0 B
     [ALLOC_DEFAULT_THREAD]
-      Peak usage frame count: [16.0 MB-32.0 MB]: 2 frames
+      Peak usage frame count: [16.0 MB-32.0 MB]: 3 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 17.8 MB
+      Peak Allocated memory 17.9 MB
       Peak Large allocation bytes 16.0 MB
 [ALLOC_TEMP_JOB_1_FRAME]
   Initial Block Size 2.0 MB
@@ -270,16 +270,16 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_GFX_MAIN]
-      Peak usage frame count: [1.0 MB-2.0 MB]: 1 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [1.0 MB-2.0 MB]: 2 frames, [2.0 MB-4.0 MB]: 1 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
       Peak Allocated memory 2.7 MB
       Peak Large allocation bytes 0 B
     [ALLOC_GFX_THREAD]
-      Peak usage frame count: [0.5 MB-1.0 MB]: 2 frames
+      Peak usage frame count: [256.0 KB-0.5 MB]: 3 frames
       Requested Block Size 16.0 MB
       Peak Block count 1
-      Peak Allocated memory 0.6 MB
+      Peak Allocated memory 491.1 KB
       Peak Large allocation bytes 0 B
 [ALLOC_CACHEOBJECTS] Dual Thread Allocator
   Peak main deferred allocation count 2
@@ -288,16 +288,16 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_CACHEOBJECTS_MAIN]
-      Peak usage frame count: [16.0 MB-32.0 MB]: 2 frames
+      Peak usage frame count: [16.0 MB-32.0 MB]: 3 frames
       Requested Block Size 4.0 MB
       Peak Block count 5
       Peak Allocated memory 29.0 MB
       Peak Large allocation bytes 11.8 MB
     [ALLOC_CACHEOBJECTS_THREAD]
-      Peak usage frame count: [1.0 MB-2.0 MB]: 1 frames, [2.0 MB-4.0 MB]: 1 frames
+      Peak usage frame count: [1.0 MB-2.0 MB]: 2 frames, [2.0 MB-4.0 MB]: 1 frames
       Requested Block Size 4.0 MB
       Peak Block count 1
-      Peak Allocated memory 2.8 MB
+      Peak Allocated memory 2.9 MB
       Peak Large allocation bytes 0 B
 [ALLOC_TYPETREE] Dual Thread Allocator
   Peak main deferred allocation count 0
@@ -306,13 +306,13 @@ Memory Statistics:
       Used Block count 1
       Peak Allocated bytes 2.3 MB
     [ALLOC_TYPETREE_MAIN]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 2 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 3 frames
       Requested Block Size 2.0 MB
       Peak Block count 1
       Peak Allocated memory 4.7 KB
       Peak Large allocation bytes 0 B
     [ALLOC_TYPETREE_THREAD]
-      Peak usage frame count: [4.0 KB-8.0 KB]: 2 frames
+      Peak usage frame count: [4.0 KB-8.0 KB]: 3 frames
       Requested Block Size 2.0 MB
       Peak Block count 1
       Peak Allocated memory 5.4 KB

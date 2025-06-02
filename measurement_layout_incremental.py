@@ -24,6 +24,7 @@ class incremental_measurement_layout():
     self.T = 0
     self.draws = draws
     self.squared_bias = squared_bias
+    self.show_max = False
     if not testing:
       self.environmentData = pd.read_csv(rf"csv_recordings/{filename}.csv")
       rewards_from_evaluation = self.environmentData["reward"].to_numpy()
@@ -31,6 +32,8 @@ class incremental_measurement_layout():
       self.noisy_model_performance = np.sum(rewards_from_evaluation[-N:] > -0.9)/N
       self.overall_performance = np.reshape(rewards_from_evaluation, (self.T, N))
       self.overall_successes = np.average(self.overall_performance > -0.9, axis = 1) # Sum over N
+      self.maximum_distance = self.environmentData["reward_distance"].max()
+      self.minimum_size = self.environmentData["reward_size"].min()
     else: 
       self.capabilities = dict()
     self.test = False
@@ -191,13 +194,24 @@ class incremental_measurement_layout():
     time_steps = np.linspace(1, self.T, self.T)
     num_caps = len(processed_chain[0]["mean"])/2  # Number of mean vectors we have
     num_rows = int(num_caps//2 + 1)
-    fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
+    if len(cap_labels) == 3:
+      fig3 = plt.figure(figsize=(10, 6))
+      gs = fig3.add_gridspec(2,2)
+      ax1_sub = fig3.add_subplot(gs[0, 0])
+      ax2_sub = fig3.add_subplot(gs[0, 1])
+      ax3_sub = fig3.add_subplot(gs[1, :])
+      ax3 = np.array([[ax1_sub, ax2_sub], [ax3_sub, ax3_sub]])
+
+    else:
+      fig3, ax3 = plt.subplots(num_rows, 2, figsize=(10, 6))
     counter = 0
     added_extension = "_sqbias" if self.squared_bias else ""
     print(f"Mean {cap_labels[i]}: {capability_profiles[cap_labels[i]]['mean']}")
     for i in range(num_rows):
       for j in range(2):
         if i == num_rows - 1 and j == 1:
+          continue
+        if i == num_rows - 1 and j == 0 and len(cap_labels) == 3:
           continue
         if counter >= num_caps:
           break
@@ -224,10 +238,12 @@ class incremental_measurement_layout():
         if self.test:
           ax3[i, j].plot(time_steps, self.capabilities[capability_name], label="True")
         ax3[i, j].plot(time_steps, capability_mean, label=r"$\mu$", color = "grey")
+        if self.show_max and "nav" in capability_name.lower():
+          ax3[i, j].axhline(self.maximum_distance*1.5, color = "red", linestyle = "--", label=r"$C_{nav, max}$")
+        if self.show_max and "visual" in capability_name.lower():
+          ax3[i, j].axhline(np.log(self.maximum_distance/self.minimum_size), color = "red", linestyle = "--", label=r"$C_{vis, max, 95\%}$")
         ax3[i, j].fill_between(time_steps, capability_upper, capability_lower, alpha = 0.2, label = fr"$\mu \pm 2\sigma$", color = "grey")
         # this y lim line should stop the graph from being too zoomed out.
-        ax3[i, j].set_ylim(np.min(capability_lower), 
-        np.max(capability_upper))
         # if cap_labels[counter] == "nav":
         #   ax3[i, j].set_ylim(0, 10)
         ax3[i,  j].set_xlabel("Optimisation Steps")

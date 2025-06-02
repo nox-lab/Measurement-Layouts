@@ -7,10 +7,11 @@ import matplotlib.pyplot as plt
 from predictive_accuracy import prediction_accuracy
 import re
 import json
+
 from various_measurement_layouts import Measurement_Layout_AAIO, Measurement_Layout_AAIO_NO_NAVIGATION, Measurement_Layout_AAIO_precise, Measurement_Layout_AAIO_SMOOTH
 
-capabilities_list = ["Navigation", "Visual", "Bias", "Noise"]
-measurement_layout_used = Measurement_Layout_AAIO
+capabilities_list = ["Visual", "Bias", "Noise"]
+measurement_layout_used = Measurement_Layout_AAIO_NO_NAVIGATION
 added_folder = ""
 
 if "navigation" in capabilities_list and measurement_layout_used == Measurement_Layout_AAIO_NO_NAVIGATION:
@@ -22,13 +23,14 @@ if added_folder != "" and measurement_layout_used == Measurement_Layout_AAIO:
     
 noise_level = np.array([0, 0.4])
 capabilities_path = rf"estimated_capabilities/"
-N_eval = 200
-filename = r"progression_model_results_400k_camera"
+N_eval = 1000
+filename = r"progression_model_results_2M_N1000"
 incremental_estimator = incremental_measurement_layout(N_eval, capabilities_path, filename=filename, noise_level=noise_level)
-# incremental_estimator.conditional_min_array_tests()
-# incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
+incremental_estimator.show_max = True
+incremental_estimator.conditional_min_array_tests()
+incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
 #raycasts + framestacking might be worth doing.
-N_predict = 100
+# N_predict = 100
 folder_name = filename
 precise = True
 full_ML = False

@@ -46,12 +46,12 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         play=False, # note that this is set to False for training
         base_port=port_train, # the port to use for communication between python and the Unity environment
         inference=watch_train, # set to True if you want to watch the agent play
-        useCamera= False, # set to False if you don't want to use the camera (no visual observations)
+        useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts= True, # set to True if you want to use raycasts
+        useRayCasts= False, # set to True if you want to use raycasts
         raysPerSide = 2, # number of rays per side, assuming you are using raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=10, # the speed at which the simulation runs
+        timescale=5, # the speed at which the simulation runs
         log_folder="aailogstrain", # env logs train
         targetFrameRate= -1 # no limit on frame rate, fast as possible.
     )
@@ -68,12 +68,12 @@ def train_agent_configs(configuration_file_train, configuration_file_eval, env_p
         play=False, # note that this is set to False for training
         base_port=port_eval, # the port to use for communication between python and the Unity environment
         inference = watch_eval, # set to True if you want to watch the agent play
-        useCamera= False, # set to False if you don't want to use the camera (no visual observations)
+        useCamera= True, # set to False if you don't want to use the camera (no visual observations)
         resolution=64,
-        useRayCasts= True, # set to True if you want to use raycasts
+        useRayCasts= False, # set to True if you want to use raycasts
         raysPerSide = 2, # number of rays per side, assuming you are using raycasts
         no_graphics= False, # set to True if you don't want to use the graphics ('headless' mode)
-        timescale=10, # the speed at which the simulation runs
+        timescale=5, # the speed at which the simulation runs
         log_folder = "aailogseval", # env logs eval
         targetFrameRate=-1
     )

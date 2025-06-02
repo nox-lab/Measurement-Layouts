@@ -32,7 +32,7 @@ from various_measurement_layouts import Measurement_Layout_AAIO, Measurement_Lay
 #         incremental_estimator.real_capabilities(measurement_layout_used, capabilities_list)
 
 measurement_layout_used = Measurement_Layout_AAIO
-incremental_estimator = incremental_measurement_layout(500, "estimated_capabilities/testing_incremental", filename="", testing= True, noise_level = np.array([0.0, 0.3]))
+incremental_estimator = incremental_measurement_layout(200, "estimated_capabilities/testing_incremental", filename="", testing= True, noise_level = np.array([0.0, 0.3]))
 incremental_estimator.base_test(measurement_layout_used)
 
     

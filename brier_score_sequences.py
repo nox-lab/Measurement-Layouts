@@ -27,7 +27,7 @@ model_steps = np.arange(50)  # Optimisation steps 1 to 50
 # ]
 
 # Extracting data points for the other two sequences
-model_steps_2 = np.arange(40)  # Steps from 40000 to 2000000
+model_steps_2 = np.arange(36)  # Steps from 40000 to 2000000
 # brier_scores_2 = [
 #     0.17337808203490276, 0.17830042465770793, 0.1782296865950011, 0.1654475201031205,
 #     0.17884793319958547, 0.1740263653028287, 0.18427187489752592, 0.17438116092365888,
@@ -66,7 +66,7 @@ model_steps_2 = np.arange(40)  # Steps from 40000 to 2000000
 
 # # Plot all three sequences with appropriate labels
 # plt.plot(model_steps, brier_scores, marker='o', linestyle='-', color='b', label='N = 200')
-folder_name = r"progression_model_results_400k_camera"
+folder_name = r"camera_with_frame_stacking_400k"
 with open(rf"all_brier_scores_{folder_name}.json", "r") as f:
     data = json.load(f)
 plt.figure(figsize=(10, 5))
